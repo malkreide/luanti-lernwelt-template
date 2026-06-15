@@ -56,7 +56,7 @@ A complete theme is just one declarative table:
 
 ```lua
 lernwelt.register_world({
-    id    = "gluehpilz",
+    id    = "gluehpilz",   -- must equal the mod name (folder / mod.conf); may be omitted
     title = "Gluehpilz-Wald",
     config    = { peaceful = true, damage = false, freeze_time = "day" },
     blocks    = { { suffix = "pilz_rot", name = "Roter Leuchtpilz", color = "#e74c3c", glow = 7 } },
@@ -78,9 +78,16 @@ In game:
 ## Make your own world
 
 1. Copy `lernwelt_beispiel`, rename the folder (e.g. `lernwelt_drachenhort`)
-2. Change `name` in `mod.conf`
-3. Edit `init.lua`: swap `id`, `title`, blocks, zones, creatures, ranks, tags
+2. Change `name` in `mod.conf` to that same folder name
+3. Edit `init.lua`: set `id` to the **same** mod name (or omit `id` — it
+   defaults to the mod name), then swap `title`, blocks, zones, creatures,
+   ranks and tags
 4. Optional: add your own PNG textures and reference them
+
+> **Why `id` must equal the mod name:** every block, item and animal is
+> registered in the `<id>:` namespace, and Luanti only lets a mod register
+> items in its own namespace. The engine enforces this and fails early with a
+> clear message if they differ.
 
 ## Project Structure
 

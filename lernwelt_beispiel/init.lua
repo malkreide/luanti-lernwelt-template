@@ -18,8 +18,10 @@
 
 lernwelt.register_world({
 
-    -- internal prefix (best kept identical to the mod name)
-    id    = "gluehpilz",
+    -- internal prefix: MUST equal the mod name (here "lernwelt_beispiel"),
+    -- because all nodes/items are registered in the "<id>:" namespace.
+    -- You can also omit this line entirely - it then defaults to the mod name.
+    id    = "lernwelt_beispiel",
     title = "Gluehpilz-Wald",
 
     -- --- 1) Peaceful world (all optional; these are the defaults) ---

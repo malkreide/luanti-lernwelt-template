@@ -17,11 +17,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `lernwelt_tiefsee` first-join **starter kit** (logbook, submarine, coral
   blocks and one spawn egg per sea animal) for immediate in-game testing,
   toggleable via the `lernwelt_tiefsee_starter_kit` setting
+- `lernwelt_tiefsee` chat command `/tiefsee_teststation` (priv: `server`) that
+  builds a small ready-made station — glass floor, the four learning boards and
+  a Tauchkapsel — in front of the player
 
 ### Changed
 - Renamed the theme folder/mod `tiefsee` → `lernwelt_tiefsee` (mod name now
   equals the world id, keeping all nodes/items in the `lernwelt_tiefsee:`
   namespace and following the `lernwelt_*` theme convention)
+- `register_world` now defaults `def.id` to the calling mod name and asserts
+  that an explicit `id` matches it, with a clear error message. This fixes a
+  latent crash: a theme whose `id` differed from its mod name (e.g. the old
+  example `id = "gluehpilz"` in mod `lernwelt_beispiel`) tried to register
+  nodes/items in a foreign namespace, which strict Luanti builds reject
+- Example theme `lernwelt_beispiel` now uses `id = "lernwelt_beispiel"`
+  (was `"gluehpilz"`); the theme title stays "Gluehpilz-Wald". Note: nodes are
+  now `lernwelt_beispiel:*` instead of `gluehpilz:*`, so blocks placed in an
+  existing test world from the old version become unknown nodes
 - `lernwelt/locale/lernwelt.tr` — translation template listing every engine
   source string (not loaded by Luanti; copy to `lernwelt.<lang>.tr`)
 - `CONTRIBUTING.md` with a step-by-step guide for contributing translations

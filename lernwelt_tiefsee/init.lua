@@ -298,4 +298,60 @@ core.register_on_joinplayer(function(player)
     end)
 end)
 
+-- ------------------------------------------------------------
+--  D) EXTRA: TEST STATION  (chat command for quick setup)
+--  "/tiefsee_teststation" builds a small ready-made station in
+--  front of you: a glass floor, the four learning boards and a
+--  Tauchkapsel. Handy for testing or for an adult to prepare the
+--  world. It overwrites the nodes where it builds, so it needs
+--  the "server" privilege.
+-- ------------------------------------------------------------
+local STATION_BOARDS = {
+    WORLD_ID .. ":tafel_riff",
+    WORLD_ID .. ":tafel_offenes_meer",
+    WORLD_ID .. ":tafel_tiefsee",
+    WORLD_ID .. ":tafel_meeresboden",
+}
+
+local function build_test_station(player)
+    local base    = vector.round(player:get_pos())
+    local floor_y = base.y - 1
+    local glass   = WORLD_ID .. ":stationsglas"
+
+    -- 7 wide (x: -3..3) x 4 deep (z: +2..+5) glass floor in front of you
+    for dx = -3, 3 do
+        for dz = 2, 5 do
+            core.set_node({ x = base.x + dx, y = floor_y, z = base.z + dz }, { name = glass })
+        end
+    end
+
+    -- the four learning boards on the floor, panels facing back to you
+    local xs = { -3, -1, 1, 3 }
+    for i, board in ipairs(STATION_BOARDS) do
+        if core.registered_nodes[board] then
+            core.set_node({ x = base.x + xs[i], y = floor_y + 1, z = base.z + 3 },
+                { name = board, param2 = 2 })
+        end
+    end
+
+    -- a Tauchkapsel ready to board
+    core.add_entity({ x = base.x, y = floor_y + 1.5, z = base.z + 5 },
+        WORLD_ID .. ":tauchkapsel")
+end
+
+core.register_chatcommand("tiefsee_teststation", {
+    description = "Baut eine kleine Tiefsee-Test-Station vor dir " ..
+                  "(Glasboden, 4 Lern-Tafeln, Tauchkapsel)",
+    privs = { server = true },
+    func = function(name)
+        local player = core.get_player_by_name(name)
+        if not player then
+            return false, "Dieser Befehl funktioniert nur im Spiel."
+        end
+        build_test_station(player)
+        return true, "Test-Station gebaut! Sie steht vor dir Richtung Norden " ..
+                     "(+Z): Glasboden, vier Lern-Tafeln und eine Tauchkapsel."
+    end,
+})
+
 core.log("action", "[lernwelt_tiefsee] Theme 'Tiefsee-Retter' registered (on lernwelt engine).")

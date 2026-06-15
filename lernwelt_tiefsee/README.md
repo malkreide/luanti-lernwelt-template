@@ -59,10 +59,14 @@ Abschalten: in der `minetest.conf` bzw. den Welt-Einstellungen
 Platzieren → Rechtsklick zum Einsteigen → **W/S** fahren, **A/D** lenken,
 **Springen** = auftauchen, **Schleichen** = abtauchen, **Rechtsklick** = aussteigen.
 
-## Nützliche Befehle (aus der Engine)
+## Nützliche Befehle
 
-- `/lernplan` – Übersicht aller Lern-Zonen und ihrer Lehrplan-21-Bezüge (für Eltern/Lehrpersonen)
-- `/lernwelt` – Status + empfohlene `minetest.conf`-Zeilen
+- `/tiefsee_teststation` – baut eine kleine fertige Test-Station vor dir
+  (Glasboden, alle 4 Lern-Tafeln, eine Tauchkapsel). Praktisch zum Testen oder
+  zum Vorbereiten durch die Erwachsenen. Benötigt das `server`-Privileg
+  (im Einzelspieler automatisch vorhanden); überschreibt die Blöcke am Bauort.
+- `/lernplan` – Übersicht aller Lern-Zonen und ihrer Lehrplan-21-Bezüge (für Eltern/Lehrpersonen, aus der Engine)
+- `/lernwelt` – Status + empfohlene `minetest.conf`-Zeilen (aus der Engine)
 
 ## Eigene Grafiken & Sounds
 
