@@ -86,7 +86,7 @@ Im Spiel:
 ## Projektstruktur
 
 ```
-lernwelt-template/
+luanti-lernwelt-template/
 ├── lernwelt/                 # Engine-Mod (das wiederverwendbare Framework)
 │   ├── init.lua              # laedt die API-Module
 │   ├── settingtypes.txt      # HUD-Schalter
