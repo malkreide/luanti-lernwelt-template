@@ -7,8 +7,10 @@ Die Rettungs- und Rang-Sounds kommen aus der Engine-Mod "lernwelt"
 Dieses Thema braucht nur EINE eigene .ogg-Datei (Mono, kurz) mit GENAU
 diesem Namen:
 
-  lernwelt_tiefsee_motor.ogg  -> leiser Brumm-/Motorloop (laeuft, solange
-                                man in der Tauchkapsel sitzt)
+  lernwelt_tiefsee_motor.ogg    -> leiser Brumm-/Motorloop (laeuft, solange
+                                  man in der Tauchkapsel sitzt)
+  lernwelt_tiefsee_whale.ogg    -> Walgesang (gelegentlich als Ambient-Sound)
+  lernwelt_tiefsee_ambient.ogg  -> leise Unterwasser-/Blasengeraeusche (Ambient)
 
 Wichtig:
 - Fehlt die Datei, funktioniert das Thema trotzdem - es kommt nur kein

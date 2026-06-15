@@ -65,6 +65,9 @@ lernwelt.register_world({
                   done = "Richtig! Clownfische sind orange-weiss." },
                 { type = "rescue", creature = "clownfisch", count = 2,
                   done = "Stark! Zwei Clownfische gerettet." },
+                { type = "quiz", question = "Womit beginnt das Wort 'Krabbe'?",
+                  options = { "K", "B", "T" }, answer = 1,
+                  done = "Richtig! 'Krabbe' beginnt mit K." },
             },
         },
         {
@@ -102,6 +105,10 @@ lernwelt.register_world({
                   done = "Richtig! Ein Seestern hat 5 Arme." },
                 { type = "rescue", creature = "seestern", count = 2,
                   done = "Klasse! Zwei Seesterne gerettet." },
+                { type = "pattern",
+                  sequence = { "#e74c3c", "#f1c40f", "#e74c3c" },
+                  palette  = { { "#e74c3c", "Rot" }, { "#f1c40f", "Gelb" }, { "#3498db", "Blau" } },
+                  done = "Super! Muster rot-gelb-rot gelegt." },
             },
         },
     },
@@ -117,7 +124,7 @@ lernwelt.register_world({
         },
         {
             id = "schildkroete", name = "Schildkroete", zone = "riff",
-            color = "#27ae60", size = 0.8, speed = 0.7, swims = true,
+            color = "#27ae60", size = 0.8, speed = 0.7, swims = true, family = 2,
             food = "Seegras", power = "Lebt sehr lange",
             heart = "#82e0aa",
             rescue_text = "Gerettet! Die Schildkroete paddelt gemuetlich davon.",
@@ -163,6 +170,50 @@ lernwelt.register_world({
             food = "Plankton", power = "Glibberig und leuchtet",
             heart = "#a3e4d7",
             rescue_text = "Gerettet! Die Qualle schwebt sanft davon.",
+        },
+        {
+            id = "seepferdchen", name = "Seepferdchen", zone = "riff",
+            color = "#f5b041", size = 0.4, speed = 0.5, swims = true,
+            food = "Plankton", power = "Schwimmt aufrecht",
+            heart = "#fad7a0",
+            rescue_text = "Gerettet! Das Seepferdchen schaukelt davon.",
+        },
+        {
+            id = "krabbe", name = "Krabbe", zone = "riff",
+            color = "#e74c3c", size = 0.4, speed = 0.5, swims = true,
+            food = "Algen", power = "Laeuft seitwaerts",
+            heart = "#f5b7b1",
+            rescue_text = "Gerettet! Die Krabbe krabbelt seitwaerts ins Riff.",
+        },
+        {
+            id = "delfin", name = "Delfin", zone = "offenes_meer",
+            color = "#5dade2", size = 1.2, speed = 2.0, swims = true, family = 2,
+            food = "Fische", power = "Springt und klickt",
+            heart = "#aed6f1",
+            rescue_text = "Gerettet! Der Delfin springt vor Freude.",
+        },
+        {
+            id = "rochen", name = "Rochen", zone = "meeresboden",
+            color = "#34495e", size = 1.0, speed = 0.8, swims = true,
+            food = "Muscheln", power = "Gleitet wie ein Drachen",
+            heart = "#d6dbdf",
+            rescue_text = "Gerettet! Der Rochen gleitet lautlos davon.",
+        },
+        {
+            id = "seekuh", name = "Seekuh", zone = "meeresboden",
+            color = "#95a5a6", size = 1.3, speed = 0.4, swims = true, family = 1,
+            food = "Seegras", power = "Ganz sanft und langsam",
+            heart = "#d7dbdd",
+            rescue_text = "Gerettet! Die Seekuh schwimmt gemuetlich weiter.",
+        },
+        {
+            -- legendary, rare: never auto-spawns (egg/manual only)
+            id = "goldwal", name = "Goldener Wal", zone = "offenes_meer",
+            color = "#f1c40f", size = 2.4, speed = 0.5, swims = true,
+            glow = 6, rare = true,
+            food = "Sonnenlicht", power = "Sehr selten und magisch",
+            heart = "#fff2a8",
+            rescue_text = "Der legendaere Goldene Wal schenkt dir ein Leuchten!",
         },
     },
 
@@ -210,7 +261,7 @@ core.register_entity(WORLD_ID .. ":tauchkapsel", {
             "[fill:16x16:#5dade2", "[fill:16x16:#f1c40f",
         },
     },
-    _driver = nil, _motor = nil,
+    _driver = nil, _passenger = nil, _motor = nil, _bubble = 0,
 
     on_rightclick = function(self, clicker)
         if not (clicker and clicker:is_player()) then return end
@@ -219,15 +270,28 @@ core.register_entity(WORLD_ID .. ":tauchkapsel", {
             clicker:set_detach()
             clicker:set_eye_offset({ x = 0, y = 0, z = 0 }, { x = 0, y = 0, z = 0 })
             self._driver = nil
+            self.object:set_properties({ glow = 0 })
             if self._motor then core.sound_stop(self._motor); self._motor = nil end
+            core.chat_send_player(name, "Du steigst aus der Tauchkapsel aus.")
+        elseif self._passenger == name then
+            clicker:set_detach()
+            clicker:set_eye_offset({ x = 0, y = 0, z = 0 }, { x = 0, y = 0, z = 0 })
+            self._passenger = nil
+            core.chat_send_player(name, "Du steigst als Mitfahrer aus.")
         elseif not self._driver then
             clicker:set_attach(self.object, "", { x = 0, y = 4, z = 0 }, { x = 0, y = 0, z = 0 })
             self._driver = name
+            self.object:set_properties({ glow = 9 })   -- Scheinwerfer
             self._motor = core.sound_play(WORLD_ID .. "_motor",
                 { object = self.object, loop = true, gain = 0.5 })
             core.chat_send_player(name,
-                "Tauchkapsel gestartet! W/S fahren, A/D lenken, " ..
-                "Springen = hoch, Schleichen = runter, Rechtsklick = aussteigen.")
+                "Tauchkapsel gestartet! W/S fahren, A/D lenken, Springen = hoch, " ..
+                "Schleichen = runter, Rechtsklick = aussteigen. " ..
+                "(Ein zweiter Spieler kann mitfahren!)")
+        elseif not self._passenger then
+            clicker:set_attach(self.object, "", { x = -4, y = 4, z = 0 }, { x = 0, y = 0, z = 0 })
+            self._passenger = name
+            core.chat_send_player(name, "Du faehrst als Mitfahrer mit! Rechtsklick = aussteigen.")
         end
     end,
 
@@ -237,6 +301,7 @@ core.register_entity(WORLD_ID .. ":tauchkapsel", {
         if not driver then
             self.object:set_velocity({ x = 0, y = 0, z = 0 })
             if self._motor then core.sound_stop(self._motor); self._motor = nil end
+            self.object:set_properties({ glow = 0 })
             self._driver = nil
             return
         end
@@ -249,6 +314,23 @@ core.register_entity(WORLD_ID .. ":tauchkapsel", {
         local fwd = (ctrl.up and SUB_SPEED) or (ctrl.down and -SUB_SPEED * 0.5) or 0
         local vy  = (ctrl.jump and SUB_SPEED * 0.6) or (ctrl.sneak and -SUB_SPEED * 0.6) or 0
         self.object:set_velocity({ x = dir.x * fwd, y = vy, z = dir.z * fwd })
+
+        -- bubble trail while moving
+        if fwd ~= 0 or vy ~= 0 then
+            self._bubble = (self._bubble or 0) + dtime
+            if self._bubble > 0.25 then
+                self._bubble = 0
+                local p = self.object:get_pos()
+                core.add_particlespawner({
+                    amount = 6, time = 0.2,
+                    minpos = vector.subtract(p, 0.5), maxpos = vector.add(p, 0.5),
+                    minvel = { x = -0.2, y = 0.4, z = -0.2 },
+                    maxvel = { x = 0.2,  y = 1.0, z = 0.2 },
+                    minexptime = 0.6, maxexptime = 1.2, minsize = 1, maxsize = 2,
+                    texture = "[fill:8x8:#cfeffd",
+                })
+            end
+        end
     end,
 })
 
@@ -286,6 +368,7 @@ local STARTER_BLOCKS = {
 local STARTER_EGGS = {
     "clownfisch", "schildkroete", "blauwal", "hai",
     "anglerfisch", "krake", "seestern", "qualle",
+    "seepferdchen", "krabbe", "delfin", "rochen", "seekuh", "goldwal",
 }
 
 -- Add an item only if it is actually registered (robust across
@@ -301,7 +384,9 @@ local function give_starter_kit(player)
     local inv = player:get_inventory()
     if not inv then return end
     give_if_exists(inv, WORLD_ID .. ":logbuch")
+    give_if_exists(inv, WORLD_ID .. ":kamera")
     give_if_exists(inv, WORLD_ID .. ":tauchkapsel")
+    give_if_exists(inv, WORLD_ID .. ":koralle_setzling 5")
     for _, suffix in ipairs(STARTER_BLOCKS) do
         give_if_exists(inv, WORLD_ID .. ":" .. suffix .. " 10")
     end
@@ -309,8 +394,8 @@ local function give_starter_kit(player)
         give_if_exists(inv, WORLD_ID .. ":" .. cid)
     end
     core.chat_send_player(player:get_player_name(),
-        "Tiefsee-Retter: Startausruestung erhalten - Logbuch, Tauchkapsel, " ..
-        "Korallen und Spawn-Eier sind in deinem Inventar. Viel Spass beim Testen!")
+        "Tiefsee-Retter: Startausruestung erhalten - Logbuch, Kamera, Tauchkapsel, " ..
+        "Korallen, Setzlinge und Spawn-Eier sind in deinem Inventar. Viel Spass!")
 end
 
 core.register_on_joinplayer(function(player)
@@ -479,7 +564,115 @@ core.register_chatcommand("tiefsee_muell", {
 })
 
 -- ------------------------------------------------------------
---  F) BACKWARDS COMPATIBILITY
+--  F) EXTRA: KORALLEN PFLANZEN  (plant & grow a reef)
+--  A coral sapling you place; after a while it grows into a
+--  random coral block. Each grown coral adds to a personal
+--  "reef" counter. Fits the motto: "Bewahren".
+-- ------------------------------------------------------------
+local CORAL_GROWN = {
+    "koralle_rot", "koralle_blau", "koralle_gelb", "koralle_pink", "koralle_gruen",
+}
+local GROW_TIME = 20
+
+core.register_node(WORLD_ID .. ":koralle_setzling", {
+    description = "Korallen-Setzling\nSetzen - waechst zu einer Koralle",
+    drawtype = "plantlike",
+    paramtype = "light",
+    sunlight_propagates = true,
+    walkable = false,
+    floodable = false,
+    tiles = { "[fill:16x16:#1abc9c^[fill:6x10:5,3:#16a085" },
+    inventory_image = "[fill:16x16:#1abc9c^[fill:6x10:5,3:#16a085",
+    selection_box = { type = "fixed", fixed = { -0.3, -0.5, -0.3, 0.3, 0.2, 0.3 } },
+    groups = { dig_immediate = 3, oddly_breakable_by_hand = 3 },
+    after_place_node = function(pos, placer)
+        if placer and placer:is_player() then
+            core.get_meta(pos):set_string("planter", placer:get_player_name())
+        end
+        core.get_node_timer(pos):start(GROW_TIME)
+    end,
+    on_timer = function(pos)
+        local planter = core.get_meta(pos):get_string("planter")
+        core.set_node(pos, { name = WORLD_ID .. ":" .. CORAL_GROWN[math.random(#CORAL_GROWN)] })
+        if planter ~= "" then
+            local p = core.get_player_by_name(planter)
+            if p then
+                local meta = p:get_meta()
+                local n = meta:get_int("lernwelt_tiefsee:korallen") + 1
+                meta:set_int("lernwelt_tiefsee:korallen", n)
+                core.sound_play("lernwelt_rescue", { to_player = planter, gain = 0.6 })
+                core.chat_send_player(planter, "Eine Koralle ist gewachsen! Riff-Korallen: " .. n)
+            end
+        end
+        return false
+    end,
+})
+
+-- ------------------------------------------------------------
+--  G) EXTRA: GROSSE TIEFSEE-BASIS  (chat command)
+--  "/tiefsee_basis" builds a bigger glass-dome station in front
+--  of you: coral floor, glass shell with a doorway, the four
+--  learning boards, a Tauchkapsel and some litter. Priv: server.
+-- ------------------------------------------------------------
+core.register_chatcommand("tiefsee_basis", {
+    description = "Baut eine groessere Tiefsee-Basis vor dir (Glaskuppel, Tafeln, Tauchkapsel)",
+    privs = { server = true },
+    func = function(name)
+        local player = core.get_player_by_name(name)
+        if not player then return false, "Dieser Befehl funktioniert nur im Spiel." end
+        local b     = vector.round(player:get_pos())
+        local glass = WORLD_ID .. ":stationsglas"
+        local floor = WORLD_ID .. ":koralle_blau"
+        local R, fy = 5, b.y - 1
+        local z0    = b.z + 2
+        for dx = -R, R do
+            for dz = 0, 2 * R do
+                local x, z = b.x + dx, z0 + dz
+                core.set_node({ x = x, y = fy, z = z }, { name = floor })
+                for dy = 1, 4 do
+                    local door = (dz == 0 and dx == 0 and dy <= 2)
+                    local edge = (dx == -R or dx == R or dz == 0 or dz == 2 * R or dy == 4)
+                    core.set_node({ x = x, y = fy + dy, z = z },
+                        { name = (edge and not door) and glass or "air" })
+                end
+            end
+        end
+        local boards = { "tafel_riff", "tafel_offenes_meer", "tafel_tiefsee", "tafel_meeresboden" }
+        local xs = { -3, -1, 1, 3 }
+        for i, bd in ipairs(boards) do
+            local nn = WORLD_ID .. ":" .. bd
+            if core.registered_nodes[nn] then
+                core.set_node({ x = b.x + xs[i], y = fy + 1, z = z0 + 1 }, { name = nn, param2 = 2 })
+            end
+        end
+        core.add_entity({ x = b.x, y = fy + 1.5, z = z0 + R }, WORLD_ID .. ":tauchkapsel")
+        for _, s in ipairs({ { -2, 2 }, { 2, 3 }, { 0, 5 }, { -1, 7 } }) do
+            core.set_node({ x = b.x + s[1], y = fy + 1, z = z0 + s[2] },
+                { name = WORLD_ID .. ":muell_dose" })
+        end
+        return true, "Tiefsee-Basis gebaut! Glaskuppel mit Tuer, Tafeln, Tauchkapsel und etwas Muell."
+    end,
+})
+
+-- ------------------------------------------------------------
+--  H) EXTRA: AMBIENT-SOUND  (whale song / bubbles)
+--  Plays a gentle underwater sound to each player now and then.
+--  The .ogg files are optional (missing = silent, only a warning).
+-- ------------------------------------------------------------
+local amb_timer, amb_next = 0, 45
+core.register_globalstep(function(dtime)
+    amb_timer = amb_timer + dtime
+    if amb_timer < amb_next then return end
+    amb_timer = 0
+    amb_next = 35 + math.random(0, 40)
+    for _, player in ipairs(core.get_connected_players()) do
+        local snd = (math.random() < 0.5) and "_whale" or "_ambient"
+        core.sound_play(WORLD_ID .. snd, { to_player = player:get_player_name(), gain = 0.4 })
+    end
+end)
+
+-- ------------------------------------------------------------
+--  I) BACKWARDS COMPATIBILITY
 --  Redirect nodes/items that were built/held with the OLD,
 --  standalone "tiefsee:" mod (before it became a theme on the
 --  engine) to their new "lernwelt_tiefsee:" names. Without this,

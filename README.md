@@ -27,12 +27,15 @@ framework is theme-neutral, and themes use original names and textures.
 
 - **Peaceful config** applied at runtime + copy-paste lines for `minetest.conf`
 - **Zone system** with placeable "learning boards" (activity + curriculum + optional teleport)
-- **Tasks on the learning boards** (optional): small quizzes and rescue goals with rewards
+- **Tasks on the learning boards** (optional): quizzes, pattern-matching and rescue goals with rewards
 - **Creature spawner** for friendly, rescuable land/water animals (works with `mobs_redo` *or* `mcl_mobs` — VoxeLibre / Mineclonia)
-- **Automatic water-animal spawning** near players (light, capped, can be turned off)
-- **Per-world logbook** with creature profiles and personal rescue counters
+- **Automatic water-animal spawning** near players (light, capped, can be turned off; `rare` creatures excluded)
+- **Animal families**: a rescued parent brings its little ones along
+- **Explorer camera** per world: photograph animals to discover them in the logbook (collecting)
+- **Per-world logbook** with creature profiles, rescue counters and a "discovered" status
 - **Progress system**: ranks, HUD, auto-generated badge items, rescue sounds
 - **Lehrplan-21 tagging** with a `/lernplan` overview plus a personal `/lernfortschritt` report
+- **Accessibility**: larger-text mode and easy mode (fewer quiz options)
 - **Curriculum-agnostic**: ships with Lehrplan-21 (Swiss curriculum) as the default tag set — replace `lernwelt.fachbereiche` to use Common Core, the National Curriculum, or your own
 - **Internationalized**: English source strings + translation files (`locale/*.tr`), German included; the in-game UI follows the client language
 - **No textures required** — colours are generated via `[fill`; PNGs optional

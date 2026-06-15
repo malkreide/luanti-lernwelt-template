@@ -18,21 +18,27 @@ selbstgebaute **Tauchkapsel**, die die Engine nicht abbildet.
 - 🪸 **5 bunte Korallenblöcke** + 🟦 **Stations-Glas** (durchsichtig)
 - 🗺️ **4 Lern-Zonen** (Korallenriff, Offenes Meer, Dunkle Tiefsee, Meeresboden) mit
   platzierbaren Lern-Tafeln (Aktivität + Lehrplan-21-Bezug)
-- ❓ **Aufgaben an den Lern-Tafeln** – kleine Quiz (zählen, vergleichen, benennen) und
-  Rette-Ziele mit Belohnung; gelöste Aufgaben zählen für `/lernfortschritt`
-- 📋 **Meeres-Logbuch** – Tier-Steckbriefe mit persönlichem Rettungs-Zähler
-- 🐠 **8 rettbare Tiere** (mit Mob-API): Clownfisch, Schildkröte, Blauwal, Hai,
-  Anglerfisch (leuchtet), Krake, Seestern, Qualle (leuchtet)
+- ❓ **Aufgaben an den Lern-Tafeln** – Quiz (zählen, vergleichen, benennen), **Muster
+  nachlegen** (Farben) und Rette-Ziele mit Belohnung; zählen für `/lernfortschritt`
+- 📋 **Meeres-Logbuch** – Tier-Steckbriefe mit Rettungs-Zähler und „entdeckt"-Status
+- 📷 **Entdecker-Kamera** – Tiere fotografieren = im Logbuch entdecken (Sammeln,
+  getrennt vom Retten)
+- 🐠 **14 rettbare Tiere** (mit Mob-API): Clownfisch, Schildkröte, Blauwal, Hai,
+  Anglerfisch, Krake, Seestern, Qualle, Seepferdchen, Krabbe, Delfin, Rochen, Seekuh
+  – plus den seltenen, magischen **Goldenen Wal** 🌟
+- 👪 **Tier-Familien** – wer ein Elterntier rettet (z. B. Delfin, Schildkröte, Seekuh),
+  bringt seine Jungtiere mit
 - 🌊 **Lebendiges Meer** – die Tiere erscheinen automatisch im Wasser in deiner Nähe
   (schonend begrenzt; abschaltbar per Einstellung `lernwelt_spawn_creatures`)
-- 🧹 **Meer aufräumen** – Müll-Teile (Flasche, Dose, Tüte) einsammeln macht das Meer
-  sauberer, mit eigenem Zähler und Meilensteinen (Meeres-Putzer → Ozean-Held)
-- 🚤 **Tauchkapsel** – fahrbares Fahrzeug zum Tauchen (themen-eigenes Extra)
-- 🎒 **Startausrüstung** – beim ersten Join bekommt jede Spielerin/jeder Spieler
-  automatisch Logbuch, Tauchkapsel, Korallenblöcke und je ein Spawn-Ei pro Tier
-  (praktisch zum sofortigen Testen; abschaltbar per Einstellung)
+- 🧹 **Meer aufräumen** – Müll einsammeln macht das Meer sauberer (Zähler + Meilensteine)
+- 🪸 **Korallen pflanzen** – Setzlinge wachsen zu Korallen, eigener Riff-Zähler
+- 🚤 **Tauchkapsel** mit Upgrades – Scheinwerfer-Glühen, Blasenspur, **Doppelsitz**
+  für Eltern + Kind
+- 🎒 **Startausrüstung** beim ersten Join: Logbuch, Kamera, Tauchkapsel, Korallen,
+  Setzlinge und je ein Spawn-Ei (abschaltbar per Einstellung)
 - 🏆 **Ränge & Abzeichen**: Frischling → Tauchschüler → Junior-Retter → Meeresheld → Kapitän
-- 🔊 **Sound-Hooks** – Rettungs-/Rang-Sounds aus der Engine, Motor-Sound aus diesem Thema
+- 🔊 **Sound-Hooks** – Rettungs-/Rang-Sounds aus der Engine, Motor- und Ambient-/
+  Walgesang-Sounds aus diesem Thema
 
 ## Abhängigkeiten
 
@@ -79,6 +85,8 @@ Platzieren → Rechtsklick zum Einsteigen → **W/S** fahren, **A/D** lenken,
   (Glasboden, alle 4 Lern-Tafeln, eine Tauchkapsel, etwas Müll). Praktisch zum
   Testen oder zum Vorbereiten durch die Erwachsenen. Benötigt das `server`-Privileg
   (im Einzelspieler automatisch vorhanden); überschreibt die Blöcke am Bauort.
+- `/tiefsee_basis` – baut eine **größere** Glaskuppel-Basis mit Tür, Tafeln,
+  Tauchkapsel und Müll (Priv `server`)
 - `/tiefsee_muell` – verteilt etwas Müll zum Aufräumen um dich herum (Priv `server`)
 - `/lernfortschritt` – dein persönlicher Lernfortschritt: Rang, Rettungen, gelöste
   Aufgaben, getroffene Tiere und berührte Lernbereiche (aus der Engine)

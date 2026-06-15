@@ -4,3 +4,10 @@ lernwelt_show_hud (Show learning-progress HUD) bool true
 #    Let the engine spawn the world's water animals in water near players
 #    (a light, capped spawner). Turn off to place animals only via spawn eggs.
 lernwelt_spawn_creatures (Spawn water animals automatically) bool true
+
+#    Larger text on the learning boards (easier to read for young children).
+lernwelt_big_text (Larger board text) bool false
+
+#    Easy mode: quizzes on the learning boards show only two options
+#    (the correct one and one other).
+lernwelt_easy_mode (Easy mode (fewer quiz options)) bool false

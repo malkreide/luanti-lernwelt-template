@@ -8,6 +8,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- **Pattern task type** (engine): boards support a `pattern` task — reproduce a
+  colour sequence with palette buttons
+- **Accessibility settings** (engine): `lernwelt_big_text` (larger board font)
+  and `lernwelt_easy_mode` (quizzes show only the correct answer + one other)
+- **Explorer camera** (engine): per-world `<id>:kamera` item — left-click
+  photographs the nearest undiscovered animal and marks it in the logbook; the
+  logbook now shows a "discovered" status and an "X/N discovered" count
+- **Animal families** (engine): a creature with `family = N` spawns N little
+  ones when its (non-baby) parent is rescued, with a reunion message
+- **`rare` creature flag** (engine): rare creatures are excluded from the
+  automatic water spawner (egg/manual only)
+- **`lernwelt_tiefsee` content**: six more animals (Seepferdchen, Krabbe,
+  Delfin, Rochen, Seekuh and the rare, glowing legendary "Goldener Wal"),
+  families on Delfin/Schildkröte/Seekuh, a colour-pattern board task, a naming
+  quiz, a coral-planting mini-game (saplings grow into corals with a reef
+  counter), submarine upgrades (headlight glow, bubble trail, a second seat),
+  a bigger `/tiefsee_basis` glass-dome station command, and ambient whale/bubble
+  sound hooks; camera + saplings added to the starter kit
+
 - **Tasks on learning boards** (engine): zones may carry an optional `tasks`
   list — `quiz` (multiple-choice) and `rescue` (reach a rescue count) — shown
   on the board with answer buttons and progress; solving one gives a sound +
