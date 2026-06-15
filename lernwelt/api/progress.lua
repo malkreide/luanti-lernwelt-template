@@ -146,3 +146,54 @@ end)
 core.register_on_leaveplayer(function(player)
     huds[player:get_player_name()] = nil
 end)
+
+-- Number of learning tasks (see zones.lua) the player has solved.
+function lernwelt.get_tasks(player, world_id)
+    return player:get_meta():get_int("lernwelt:" .. world_id .. ":tasks")
+end
+
+-- Distinct curriculum subject areas covered by a world's zones.
+local function world_fachbereiche(world)
+    local seen, list = {}, {}
+    for _, z in ipairs(world.zones or {}) do
+        for _, code in ipairs(z.lehrplan or {}) do
+            local fach = lernwelt.fach_of(code)
+            if fach and not seen[fach] then
+                seen[fach] = true
+                list[#list + 1] = fach
+            end
+        end
+    end
+    return list
+end
+
+-- Personal progress report (for the child, parent or teacher).
+core.register_chatcommand("lernfortschritt", {
+    description = S("Show your personal learning progress"),
+    func = function(name)
+        local player = core.get_player_by_name(name)
+        if not player then return false, S("This command only works in game.") end
+        local meta = player:get_meta()
+        local out  = {}
+        for wid, w in pairs(lernwelt.worlds) do
+            local total = lernwelt.get_rescues(player, wid)
+            out[#out + 1] = "=== " .. (w.title or wid) .. " ==="
+            out[#out + 1] = S("Rank: @1 | @2 rescued.", lernwelt.get_rank(wid, total), total)
+            out[#out + 1] = S("Tasks solved: @1", lernwelt.get_tasks(player, wid))
+            local any = false
+            for _, c in ipairs(w.creatures or {}) do
+                local n = meta:get_int("lernwelt:" .. wid .. ":c_" .. c.id)
+                if n > 0 then
+                    if not any then out[#out + 1] = S("Animals rescued:"); any = true end
+                    out[#out + 1] = "  " .. (c.name or c.id) .. ": " .. n
+                end
+            end
+            local fb = world_fachbereiche(w)
+            if #fb > 0 then
+                out[#out + 1] = S("Learning areas: @1", table.concat(fb, ", "))
+            end
+        end
+        if #out == 0 then out[1] = S("Nothing yet - go and explore!") end
+        return true, table.concat(out, "\n")
+    end,
+})

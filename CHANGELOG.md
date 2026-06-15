@@ -8,6 +8,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- **Tasks on learning boards** (engine): zones may carry an optional `tasks`
+  list — `quiz` (multiple-choice) and `rescue` (reach a rescue count) — shown
+  on the board with answer buttons and progress; solving one gives a sound +
+  message and counts towards the new progress report
+- **`/lernfortschritt`** (engine): personal progress report — rank, rescues,
+  tasks solved, animals rescued and the curriculum areas covered
+- **Automatic water-animal spawning** (engine): a light, capped, backend-agnostic
+  spawner adds a world's `swims` creatures in water near players; toggle with the
+  new `lernwelt_spawn_creatures` setting
+- **Ocean-cleanup mini-game** (`lernwelt_tiefsee`): breakable litter nodes
+  (bottle, can, bag) with a personal cleanup counter and milestones
+  (Meeres-Putzer → Riff-Retter → Ozean-Held); `/tiefsee_muell` (priv `server`)
+  scatters test litter, and `/tiefsee_teststation` now includes some
+- Example tasks in the `lernwelt_tiefsee` zones (one or two per zone)
 - Second example theme `lernwelt_tiefsee` (Tiefsee-Retter): a brand-free
   underwater learning world built on the engine — coral blocks, station glass,
   four learning zones, eight rescuable sea animals, a Meeres-Logbuch, ranks and

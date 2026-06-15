@@ -52,5 +52,21 @@ Curriculum:=Lehrplan 21:
 Teleport here=Hierher beamen
 Learning board: @1=Lern-Tafel: @1
 
+# --- Aufgaben an den Lern-Tafeln ---
+Tasks:=Aufgaben:
+Rescue @1: @2/@3=Rette @1: @2/@3
+Solved=Geloest
+Well done!=Gut gemacht!
+Try again!=Versuch es nochmal!
+
+# --- Fortschritts-Bericht (/lernfortschritt) ---
+Show your personal learning progress=Zeigt deinen persoenlichen Lernfortschritt
+This command only works in game.=Dieser Befehl funktioniert nur im Spiel.
+Tasks solved: @1=Geloeste Aufgaben: @1
+Animals rescued:=Gerettete Tiere:
+Learning areas: @1=Lernbereiche: @1
+Nothing yet - go and explore!=Noch nichts - geh auf Entdeckungsreise!
+
 # --- Einstellungen (settingtypes) ---
 Show learning-progress HUD=Lernfortschritt-Anzeige
+Spawn water animals automatically=Wassertiere automatisch spawnen

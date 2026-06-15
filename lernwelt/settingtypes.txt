@@ -1,2 +1,6 @@
 #    Show the learning-progress HUD (top left: world, rank, count).
 lernwelt_show_hud (Show learning-progress HUD) bool true
+
+#    Let the engine spawn the world's water animals in water near players
+#    (a light, capped spawner). Turn off to place animals only via spawn eggs.
+lernwelt_spawn_creatures (Spawn water animals automatically) bool true

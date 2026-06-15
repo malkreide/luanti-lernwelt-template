@@ -18,9 +18,15 @@ selbstgebaute **Tauchkapsel**, die die Engine nicht abbildet.
 - 🪸 **5 bunte Korallenblöcke** + 🟦 **Stations-Glas** (durchsichtig)
 - 🗺️ **4 Lern-Zonen** (Korallenriff, Offenes Meer, Dunkle Tiefsee, Meeresboden) mit
   platzierbaren Lern-Tafeln (Aktivität + Lehrplan-21-Bezug)
+- ❓ **Aufgaben an den Lern-Tafeln** – kleine Quiz (zählen, vergleichen, benennen) und
+  Rette-Ziele mit Belohnung; gelöste Aufgaben zählen für `/lernfortschritt`
 - 📋 **Meeres-Logbuch** – Tier-Steckbriefe mit persönlichem Rettungs-Zähler
 - 🐠 **8 rettbare Tiere** (mit Mob-API): Clownfisch, Schildkröte, Blauwal, Hai,
   Anglerfisch (leuchtet), Krake, Seestern, Qualle (leuchtet)
+- 🌊 **Lebendiges Meer** – die Tiere erscheinen automatisch im Wasser in deiner Nähe
+  (schonend begrenzt; abschaltbar per Einstellung `lernwelt_spawn_creatures`)
+- 🧹 **Meer aufräumen** – Müll-Teile (Flasche, Dose, Tüte) einsammeln macht das Meer
+  sauberer, mit eigenem Zähler und Meilensteinen (Meeres-Putzer → Ozean-Held)
 - 🚤 **Tauchkapsel** – fahrbares Fahrzeug zum Tauchen (themen-eigenes Extra)
 - 🎒 **Startausrüstung** – beim ersten Join bekommt jede Spielerin/jeder Spieler
   automatisch Logbuch, Tauchkapsel, Korallenblöcke und je ein Spawn-Ei pro Tier
@@ -70,9 +76,12 @@ Platzieren → Rechtsklick zum Einsteigen → **W/S** fahren, **A/D** lenken,
 ## Nützliche Befehle
 
 - `/tiefsee_teststation` – baut eine kleine fertige Test-Station vor dir
-  (Glasboden, alle 4 Lern-Tafeln, eine Tauchkapsel). Praktisch zum Testen oder
-  zum Vorbereiten durch die Erwachsenen. Benötigt das `server`-Privileg
+  (Glasboden, alle 4 Lern-Tafeln, eine Tauchkapsel, etwas Müll). Praktisch zum
+  Testen oder zum Vorbereiten durch die Erwachsenen. Benötigt das `server`-Privileg
   (im Einzelspieler automatisch vorhanden); überschreibt die Blöcke am Bauort.
+- `/tiefsee_muell` – verteilt etwas Müll zum Aufräumen um dich herum (Priv `server`)
+- `/lernfortschritt` – dein persönlicher Lernfortschritt: Rang, Rettungen, gelöste
+  Aufgaben, getroffene Tiere und berührte Lernbereiche (aus der Engine)
 - `/lernplan` – Übersicht aller Lern-Zonen und ihrer Lehrplan-21-Bezüge (für Eltern/Lehrpersonen, aus der Engine)
 - `/lernwelt` – Status + empfohlene `minetest.conf`-Zeilen (aus der Engine)
 

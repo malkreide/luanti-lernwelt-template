@@ -20,6 +20,9 @@
 
 local S = core.get_translator("lernwelt")
 
+-- world_id -> list of full creature names that swim (filled at register time)
+lernwelt.water_spawns = lernwelt.water_spawns or {}
+
 local function rescue_effect(pos, color)
     core.add_particlespawner({
         amount = 20, time = 0.4,
@@ -103,8 +106,77 @@ function lernwelt.register_creatures(world_id, world)
 
         lernwelt.mobs.register_mob(full, props)
         lernwelt.mobs.register_egg(full, S("@1 (spawn egg)", cr.name or id), col)
+
+        -- Remember water animals so the engine can spawn them in water.
+        if cr.swims then
+            lernwelt.water_spawns[world_id] = lernwelt.water_spawns[world_id] or {}
+            table.insert(lernwelt.water_spawns[world_id], full)
+        end
     end
 end
+
+-- ------------------------------------------------------------
+--  WATER SPAWNER (optional, on by default)
+--  A light, backend-agnostic spawner: every so often it tries to
+--  add one water animal of the active world near a player, inside
+--  water, capped so the sea never gets crowded. Turn off with the
+--  setting "lernwelt_spawn_creatures".
+-- ------------------------------------------------------------
+local WATER = {
+    ["default:water_source"] = true, ["default:water_flowing"] = true,
+    ["mcl_core:water_source"] = true, ["mcl_core:water_flowing"] = true,
+    ["mcla:water_source"] = true, ["mcla:water_flowing"] = true,
+}
+
+local spawn_timer = 0
+core.register_globalstep(function(dtime)
+    if not lernwelt.mobs.available() then return end
+    if not core.settings:get_bool("lernwelt_spawn_creatures", true) then return end
+
+    spawn_timer = spawn_timer + dtime
+    if spawn_timer < 11 then return end
+    spawn_timer = 0
+
+    local wid  = lernwelt.active_world_id
+    local list = wid and lernwelt.water_spawns[wid]
+    if not list or #list == 0 then return end
+
+    for _, player in ipairs(core.get_connected_players()) do
+        if math.random() < 0.7 then
+            local pp   = player:get_pos()
+            local ang  = math.random() * math.pi * 2
+            local dist = 10 + math.random(0, 16)
+            local cx   = math.floor(pp.x + math.cos(ang) * dist)
+            local cz   = math.floor(pp.z + math.sin(ang) * dist)
+
+            -- find a water node (with water above it) near the player's depth
+            local spawn_pos
+            for dy = 2, -8, -1 do
+                local p = { x = cx, y = math.floor(pp.y) + dy, z = cz }
+                if WATER[core.get_node(p).name]
+                   and WATER[core.get_node({ x = p.x, y = p.y + 1, z = p.z }).name] then
+                    spawn_pos = p
+                    break
+                end
+            end
+
+            if spawn_pos then
+                -- cap: at most 5 of this world's creatures nearby
+                local count = 0
+                local prefix = wid .. ":"
+                for _, obj in ipairs(core.get_objects_inside_radius(spawn_pos, 24)) do
+                    local le = obj:get_luaentity()
+                    if le and le.name and le.name:sub(1, #prefix) == prefix then
+                        count = count + 1
+                    end
+                end
+                if count < 5 then
+                    core.add_entity(spawn_pos, list[math.random(#list)])
+                end
+            end
+        end
+    end
+end)
 
 -- ------------------------------------------------------------
 --  LOGBOOK  (one item per world: profiles + personal counters)
