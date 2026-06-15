@@ -23,6 +23,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Backwards-compatibility `register_alias` entries so existing builds survive
   the renames: old standalone `tiefsee:*` → `lernwelt_tiefsee:*` (blocks, items,
   spawn eggs, badges) and old example `gluehpilz:*` → `lernwelt_beispiel:*`
+- `lernwelt_tiefsee/WELT-EINRICHTEN.md` — guide for creating a water-rich world,
+  with ready-made mapgen configs ("flat sea" and "natural ocean") and setup steps
 
 ### Changed
 - Renamed the theme folder/mod `tiefsee` → `lernwelt_tiefsee` (mod name now

@@ -43,6 +43,14 @@ selbstgebaute **Tauchkapsel**, die die Engine nicht abbildet.
 3. In der Welt-Konfiguration **beide** Mods aktivieren (`lernwelt` + `lernwelt_tiefsee`).
 4. Empfehlung für Kinder: **Kreativ-Modus + friedlich** (setzt die Engine automatisch).
 
+## Passende Welt (Wasser!)
+
+Die Meerestiere schwimmen nur in **Wasser** – am besten ein Meer. Wie du eine
+wasserreiche Welt erstellst (fertige Mapgen-Einstellungen für „flaches Meer" oder
+„natürlicher Ozean") steht in **[WELT-EINRICHTEN.md](WELT-EINRICHTEN.md)**.
+Kein eigenes Meer nötig: ein selbst gefülltes Becken reicht, denn die Tiere setzt du
+mit den Spawn-Eiern aus der Startausrüstung.
+
 ## Schnell testen
 
 Beim **ersten Betreten** der Welt bekommst du automatisch eine **Startausrüstung**
