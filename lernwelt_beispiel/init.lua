@@ -132,4 +132,23 @@ lernwelt.register_world({
     },
 })
 
+-- ------------------------------------------------------------
+--  Backwards compatibility: when this example's id was aligned
+--  to the mod name, its nodes/items moved from "gluehpilz:" to
+--  "lernwelt_beispiel:". These aliases keep anything built or
+--  held under the old prefix from becoming unknown. The suffixes
+--  are unchanged, so it is a plain prefix swap.
+-- ------------------------------------------------------------
+local legacy_suffixes = {
+    "pilz_rot", "pilz_blau", "pilz_gelb", "pilz_gruen", "pilz_pink",
+    "weg", "haus_glas",                                  -- blocks
+    "logbuch", "badge_10", "badge_25",                  -- held items
+    "tafel_dorf", "tafel_hoehle", "tafel_wiese",        -- learning boards
+    "schnecke", "marienkaefer", "gluehkaefer",          -- creatures / spawn eggs
+    "fledermaus", "igel", "molch",
+}
+for _, suffix in ipairs(legacy_suffixes) do
+    core.register_alias("gluehpilz:" .. suffix, "lernwelt_beispiel:" .. suffix)
+end
+
 core.log("action", "[lernwelt_beispiel] Gluehpilz-Wald registered.")

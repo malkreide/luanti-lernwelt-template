@@ -20,6 +20,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `lernwelt_tiefsee` chat command `/tiefsee_teststation` (priv: `server`) that
   builds a small ready-made station — glass floor, the four learning boards and
   a Tauchkapsel — in front of the player
+- Backwards-compatibility `register_alias` entries so existing builds survive
+  the renames: old standalone `tiefsee:*` → `lernwelt_tiefsee:*` (blocks, items,
+  spawn eggs, badges) and old example `gluehpilz:*` → `lernwelt_beispiel:*`
 
 ### Changed
 - Renamed the theme folder/mod `tiefsee` → `lernwelt_tiefsee` (mod name now

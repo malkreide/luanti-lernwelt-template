@@ -354,4 +354,40 @@ core.register_chatcommand("tiefsee_teststation", {
     end,
 })
 
+-- ------------------------------------------------------------
+--  E) BACKWARDS COMPATIBILITY
+--  Redirect nodes/items that were built/held with the OLD,
+--  standalone "tiefsee:" mod (before it became a theme on the
+--  engine) to their new "lernwelt_tiefsee:" names. Without this,
+--  existing builds would turn into unknown nodes after the
+--  rename. Aliases are harmless if those old names never existed.
+-- ------------------------------------------------------------
+local legacy_aliases = {
+    -- placeable blocks
+    ["tiefsee:coral_rot"]     = WORLD_ID .. ":koralle_rot",
+    ["tiefsee:coral_blau"]    = WORLD_ID .. ":koralle_blau",
+    ["tiefsee:coral_gelb"]    = WORLD_ID .. ":koralle_gelb",
+    ["tiefsee:coral_pink"]    = WORLD_ID .. ":koralle_pink",
+    ["tiefsee:coral_gruen"]   = WORLD_ID .. ":koralle_gruen",
+    ["tiefsee:station_glass"] = WORLD_ID .. ":stationsglas",
+    -- held items
+    ["tiefsee:logbuch"]       = WORLD_ID .. ":logbuch",
+    ["tiefsee:tauchkapsel"]   = WORLD_ID .. ":tauchkapsel",
+    -- spawn eggs (old English ids -> new German ids)
+    ["tiefsee:clownfish"]     = WORLD_ID .. ":clownfisch",
+    ["tiefsee:whale"]         = WORLD_ID .. ":blauwal",
+    ["tiefsee:octopus"]       = WORLD_ID .. ":krake",
+    ["tiefsee:anglerfish"]    = WORLD_ID .. ":anglerfisch",
+    ["tiefsee:turtle"]        = WORLD_ID .. ":schildkroete",
+    ["tiefsee:shark"]         = WORLD_ID .. ":hai",
+    ["tiefsee:starfish"]      = WORLD_ID .. ":seestern",
+    -- honour badges (old fixed names -> new threshold-based names)
+    ["tiefsee:badge_junior"]  = WORLD_ID .. ":badge_10",
+    ["tiefsee:badge_held"]    = WORLD_ID .. ":badge_25",
+    ["tiefsee:badge_captain"] = WORLD_ID .. ":badge_50",
+}
+for old, new in pairs(legacy_aliases) do
+    core.register_alias(old, new)
+end
+
 core.log("action", "[lernwelt_tiefsee] Theme 'Tiefsee-Retter' registered (on lernwelt engine).")
