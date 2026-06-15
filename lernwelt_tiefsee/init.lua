@@ -59,24 +59,50 @@ lernwelt.register_world({
             activity = "Fische und Korallen nach Farben sortieren, " ..
                        "Tiere zaehlen und benennen.",
             lehrplan = { "MA.1", "NMG.2", "D.2" },
+            tasks = {
+                { type = "quiz", question = "Welche Farbe hat ein Clownfisch meistens?",
+                  options = { "Orange", "Lila", "Grau" }, answer = 1,
+                  done = "Richtig! Clownfische sind orange-weiss." },
+                { type = "rescue", creature = "clownfisch", count = 2,
+                  done = "Stark! Zwei Clownfische gerettet." },
+            },
         },
         {
             id = "offenes_meer", title = "Offenes Meer", color = "#2980b9",
             activity = "Grosse und kleine Tiere vergleichen, Groessen " ..
                        "ordnen, mutig hinausschwimmen.",
             lehrplan = { "MA.2", "NMG.2", "BS.2" },
+            tasks = {
+                { type = "quiz", question = "Wer ist groesser?",
+                  options = { "Blauwal", "Hai" }, answer = 1,
+                  done = "Genau! Der Blauwal ist riesig." },
+                { type = "rescue", creature = "blauwal", count = 1,
+                  done = "Toll! Den grossen Blauwal gerettet." },
+            },
         },
         {
             id = "tiefsee", title = "Dunkle Tiefsee", color = "#283747",
             activity = "Im Dunkeln leuchtende Tiere suchen, hell und " ..
                        "dunkel unterscheiden, ruhig erkunden.",
             lehrplan = { "NMG.3", "NMG.2" },
+            tasks = {
+                { type = "quiz", question = "Welches Tier leuchtet in der Tiefe?",
+                  options = { "Anglerfisch", "Schildkroete", "Krabbe" }, answer = 1,
+                  done = "Richtig! Der Anglerfisch leuchtet." },
+            },
         },
         {
             id = "meeresboden", title = "Meeresboden", color = "#16a085",
             activity = "Muster legen (rot-gelb-rot-gelb), Formen erkennen, " ..
                        "Tiere am Boden entdecken.",
             lehrplan = { "MA.2", "NMG.2", "MI.1" },
+            tasks = {
+                { type = "quiz", question = "Wie viele Arme hat ein Seestern?",
+                  options = { "5", "3", "8" }, answer = 1,
+                  done = "Richtig! Ein Seestern hat 5 Arme." },
+                { type = "rescue", creature = "seestern", count = 2,
+                  done = "Klasse! Zwei Seesterne gerettet." },
+            },
         },
     },
 
@@ -337,6 +363,14 @@ local function build_test_station(player)
     -- a Tauchkapsel ready to board
     core.add_entity({ x = base.x, y = floor_y + 1.5, z = base.z + 5 },
         WORLD_ID .. ":tauchkapsel")
+
+    -- a few litter pieces for the ocean-cleanup mini-game
+    local litter = { "muell_flasche", "muell_dose", "muell_tuete" }
+    local spots  = { { -2, 2 }, { 0, 4 }, { 2, 2 }, { -1, 5 }, { 1, 4 } }
+    for _, s in ipairs(spots) do
+        core.set_node({ x = base.x + s[1], y = floor_y + 1, z = base.z + s[2] },
+            { name = WORLD_ID .. ":" .. litter[math.random(#litter)] })
+    end
 end
 
 core.register_chatcommand("tiefsee_teststation", {
@@ -350,12 +384,102 @@ core.register_chatcommand("tiefsee_teststation", {
         end
         build_test_station(player)
         return true, "Test-Station gebaut! Sie steht vor dir Richtung Norden " ..
-                     "(+Z): Glasboden, vier Lern-Tafeln und eine Tauchkapsel."
+                     "(+Z): Glasboden, vier Lern-Tafeln, eine Tauchkapsel und " ..
+                     "etwas Muell zum Aufraeumen."
     end,
 })
 
 -- ------------------------------------------------------------
---  E) BACKWARDS COMPATIBILITY
+--  E) EXTRA: MEER AUFRAEUMEN  (ocean-cleanup mini-game)
+--  Litter nodes you can break to clean the sea. Each piece adds
+--  to a personal cleanup counter with small milestones. Place
+--  test litter with "/tiefsee_muell" (priv: server) or via the
+--  test station. Fits the theme's motto: "Bewahren".
+-- ------------------------------------------------------------
+local TRASH = {
+    { suffix = "muell_flasche", name = "Plastikflasche (Muell)", color = "#5dade2" },
+    { suffix = "muell_dose",    name = "Blechdose (Muell)",      color = "#b2babb" },
+    { suffix = "muell_tuete",   name = "Plastiktuete (Muell)",   color = "#d5f5e3" },
+}
+
+local CLEAN_MILESTONES = {
+    [5]  = "Meeres-Putzer",
+    [15] = "Riff-Retter",
+    [30] = "Ozean-Held",
+}
+
+local function collect_trash(player)
+    if not (player and player:is_player()) then return end
+    local meta = player:get_meta()
+    local n = meta:get_int("lernwelt_tiefsee:muell") + 1
+    meta:set_int("lernwelt_tiefsee:muell", n)
+    local name = player:get_player_name()
+    core.sound_play("lernwelt_rescue", { to_player = name, gain = 0.8 })
+    core.chat_send_player(name, "Muell eingesammelt! Sauberes Meer: " .. n .. " Stueck.")
+    local title = CLEAN_MILESTONES[n]
+    if title then
+        core.sound_play("lernwelt_rankup", { to_player = name, gain = 1.0 })
+        core.chat_send_player(name, "Toll! Du bist jetzt: " .. title .. "!")
+    end
+end
+
+for _, t in ipairs(TRASH) do
+    core.register_node(WORLD_ID .. ":" .. t.suffix, {
+        description = t.name .. "\nAbbauen = Meer saeubern",
+        drawtype = "nodebox",
+        node_box = { type = "fixed", fixed = { -0.25, -0.5, -0.25, 0.25, -0.05, 0.25 } },
+        tiles = { "[fill:16x16:" .. t.color },
+        paramtype = "light",
+        sunlight_propagates = true,
+        walkable = false,
+        floodable = false,
+        groups = { oddly_breakable_by_hand = 3, dig_immediate = 3 },
+        drop = "",
+        after_dig_node = function(pos, oldnode, oldmeta, digger)
+            collect_trash(digger)
+        end,
+    })
+end
+
+-- nodes the litter-scatter command may replace (air or water)
+local CLEAN_SPACE = {
+    ["air"] = true,
+    ["default:water_source"] = true, ["default:water_flowing"] = true,
+    ["mcl_core:water_source"] = true, ["mcl_core:water_flowing"] = true,
+    ["mcla:water_source"] = true, ["mcla:water_flowing"] = true,
+}
+
+core.register_chatcommand("tiefsee_muell", {
+    description = "Verteilt etwas Muell zum Aufraeumen um dich herum (zum Testen)",
+    privs = { server = true },
+    func = function(name)
+        local player = core.get_player_by_name(name)
+        if not player then return false, "Dieser Befehl funktioniert nur im Spiel." end
+        local base, placed = vector.round(player:get_pos()), 0
+        for _ = 1, 12 do
+            local x = base.x + math.random(-6, 6)
+            local z = base.z + math.random(-6, 6)
+            for dy = 2, -4, -1 do
+                local q     = { x = x, y = base.y + dy, z = z }
+                local here  = core.get_node(q).name
+                local below = core.get_node({ x = x, y = q.y - 1, z = z }).name
+                if CLEAN_SPACE[here] and below ~= "air" and below ~= "ignore" then
+                    local t = TRASH[math.random(#TRASH)]
+                    core.set_node(q, { name = WORLD_ID .. ":" .. t.suffix })
+                    placed = placed + 1
+                    break
+                end
+            end
+        end
+        if placed == 0 then
+            return true, "Kein passender Platz gefunden - geh ans/ins Wasser und versuch es nochmal."
+        end
+        return true, placed .. " Stueck Muell verteilt - sammle sie ein (abbauen)!"
+    end,
+})
+
+-- ------------------------------------------------------------
+--  F) BACKWARDS COMPATIBILITY
 --  Redirect nodes/items that were built/held with the OLD,
 --  standalone "tiefsee:" mod (before it became a theme on the
 --  engine) to their new "lernwelt_tiefsee:" names. Without this,
