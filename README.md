@@ -123,4 +123,4 @@ is responsible for using original, non-infringing names and assets.
 
 ## Author
 
-{DEIN-NAME} · [{DEIN-GITHUB}](https://github.com/{DEIN-GITHUB})
+Hayal Oezkan · [malkreide](https://github.com/malkreide)
