@@ -57,7 +57,7 @@ Ein vollständiges Thema ist nur eine deklarative Tabelle:
 
 ```lua
 lernwelt.register_world({
-    id    = "gluehpilz",
+    id    = "gluehpilz",   -- muss dem Mod-Namen entsprechen (Ordner / mod.conf); darf entfallen
     title = "Gluehpilz-Wald",
     config    = { peaceful = true, damage = false, freeze_time = "day" },
     blocks    = { { suffix = "pilz_rot", name = "Roter Leuchtpilz", color = "#e74c3c", glow = 7 } },
@@ -79,9 +79,16 @@ Im Spiel:
 ## Eigene Welt bauen
 
 1. `lernwelt_beispiel` kopieren, Ordner umbenennen (z.B. `lernwelt_drachenhort`)
-2. `name` in der `mod.conf` ändern
-3. `init.lua` bearbeiten: `id`, `title`, Blöcke, Zonen, Tiere, Ränge, Tags tauschen
+2. `name` in der `mod.conf` auf genau diesen Ordnernamen setzen
+3. `init.lua` bearbeiten: `id` auf den **gleichen** Mod-Namen setzen (oder `id`
+   weglassen — dann wird automatisch der Mod-Name verwendet), dann `title`,
+   Blöcke, Zonen, Tiere, Ränge und Tags tauschen
 4. Optional: eigene PNG-Texturen ablegen und angeben
+
+> **Warum `id` = Mod-Name?** Jeder Block, jedes Item und jedes Tier wird im
+> Namensraum `<id>:` registriert, und Luanti erlaubt einem Mod nur den eigenen
+> Namensraum. Die Engine erzwingt das und bricht bei Abweichung früh mit einer
+> klaren Meldung ab.
 
 ## Projektstruktur
 
