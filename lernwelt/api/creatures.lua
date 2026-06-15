@@ -11,8 +11,11 @@
 --      swims=false, glow=0,
 --      rescue_text="Rescued! The snail crawls off happily." }
 --
---  Without mobs_redo the blocks/zones/logbook still work - only
---  the living animals are missing.
+--  The living animals need a mob API: mobs_redo (Minetest Game)
+--  or mcl_mobs (VoxeLibre / Mineclonia). The mob adapter
+--  (mobs_adapter.lua) picks whichever is present. Without any
+--  mob API the blocks/zones/logbook still work - only the living
+--  animals are missing.
 -- ------------------------------------------------------------
 
 local S = core.get_translator("lernwelt")
@@ -43,10 +46,10 @@ function lernwelt.rescue(self, clicker, world_id, creature_id, heart_color, mess
 end
 
 function lernwelt.register_creatures(world_id, world)
-    if not core.get_modpath("mobs") then
-        core.log("warning", "[lernwelt] mobs_redo not found - world '" ..
-            world_id .. "' runs without rescuable animals " ..
-            "(blocks, zones and logbook still work).")
+    if not lernwelt.mobs.available() then
+        core.log("warning", "[lernwelt] no mob API found (mobs_redo or " ..
+            "mcl_mobs) - world '" .. world_id .. "' runs without " ..
+            "rescuable animals (blocks, zones and logbook still work).")
         return
     end
 
@@ -98,8 +101,8 @@ function lernwelt.register_creatures(world_id, world)
             end
         end
 
-        mobs:register_mob(full, props)
-        mobs:register_egg(full, S("@1 (spawn egg)", cr.name or id), "[fill:16x16:" .. col)
+        lernwelt.mobs.register_mob(full, props)
+        lernwelt.mobs.register_egg(full, S("@1 (spawn egg)", cr.name or id), col)
     end
 end
 

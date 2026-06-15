@@ -27,7 +27,7 @@ framework is theme-neutral, and themes use original names and textures.
 
 - **Peaceful config** applied at runtime + copy-paste lines for `minetest.conf`
 - **Zone system** with placeable "learning boards" (activity + curriculum + optional teleport)
-- **Creature spawner** for friendly, rescuable land/water animals (needs `mobs_redo`)
+- **Creature spawner** for friendly, rescuable land/water animals (works with `mobs_redo` *or* `mcl_mobs` — VoxeLibre / Mineclonia)
 - **Per-world logbook** with creature profiles and personal rescue counters
 - **Progress system**: ranks, HUD, auto-generated badge items, rescue sounds
 - **Lehrplan-21 tagging** with a `/lernplan` overview for parents and teachers
@@ -39,7 +39,7 @@ framework is theme-neutral, and themes use original names and textures.
 
 - Luanti / Minetest 5.x
 - A base game, recommended: **Mineclonia** or **Minetest Game**
-- `mobs_redo` (Mobs Redo API) — optional, only needed for living animals
+- A mob API for the living animals — optional. `mobs_redo` (Minetest Game) or `mcl_mobs` (built into VoxeLibre / Mineclonia); the engine auto-detects whichever is present
 
 ## Installation
 
@@ -97,6 +97,7 @@ lernwelt-template/
 │       ├── blocks.lua        # colour-block generator
 │       ├── zones.lua         # zones + learning boards
 │       ├── progress.lua      # ranks, HUD, badges, reward()
+│       ├── mobs_adapter.lua  # mobs_redo / mcl_mobs abstraction
 │       ├── creatures.lua     # spawner, rescue, logbook
 │       └── register.lua      # register_world()
 └── lernwelt_beispiel/        # example theme: Gluehpilz-Wald

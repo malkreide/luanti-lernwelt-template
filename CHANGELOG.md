@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- Mob adapter (`api/mobs_adapter.lua`): the creature spawner now works with
+  `mcl_mobs` (VoxeLibre / Mineclonia) in addition to `mobs_redo`, auto-detecting
+  whichever mob API is present
+- `mcl_mobs` added to `optional_depends` of both mods
+
+### Changed
+- `register_creatures` no longer hard-requires the `mobs` mod; it uses the new
+  adapter and only skips animals when no mob API at all is available
+
 ## [1.1.0] - 2026-06-15
 
 ### Changed

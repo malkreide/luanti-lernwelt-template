@@ -18,5 +18,7 @@ Mehr Mechanik muesst ihr nicht programmieren - friedliche Config,
 Zonen-Tafeln, Logbuch, Raenge, Abzeichen und Sounds kommen aus der
 Engine-Mod "lernwelt".
 
-Empfohlenes Game: Mineclonia oder Minetest Game, mit mobs_redo fuer
-die rettbaren Tiere.
+Empfohlenes Game: VoxeLibre/Mineclonia (bringt mcl_mobs schon mit)
+oder Minetest Game mit mobs_redo. Die Engine erkennt automatisch,
+welche Mob-API vorhanden ist, und registriert die rettbaren Tiere
+entsprechend.
