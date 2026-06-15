@@ -103,14 +103,15 @@ luanti-lernwelt-template/
 │       └── register.lua      # register_world()
 ├── lernwelt_beispiel/        # Beispiel-Thema: Gluehpilz-Wald
 │   └── init.lua              # ein deklaratives register_world{...}
-└── tiefsee/                  # Beispiel-Thema: Tiefsee-Retter (Unterwasser)
-    └── init.lua              # register_world{...} + eigene Tauchkapsel
+└── lernwelt_tiefsee/         # Beispiel-Thema: Tiefsee-Retter (Unterwasser)
+    ├── init.lua              # register_world{...} + Tauchkapsel + Startausruestung
+    └── settingtypes.txt      # Schalter fuer die Startausruestung
 ```
 
 Zwei Themen sind als Beispiele dabei: **`lernwelt_beispiel`** (Gluehpilz-Wald)
-und **`tiefsee`** (Tiefsee-Retter). Letzteres zeigt, wie ein Thema **eigene
-Zusatz-Inhalte** — hier eine fahrbare Tauchkapsel — zusätzlich zur Engine
-mitbringen kann.
+und **`lernwelt_tiefsee`** (Tiefsee-Retter). Letzteres zeigt, wie ein Thema **eigene
+Zusatz-Inhalte** — hier eine fahrbare Tauchkapsel und eine Startausrüstung beim
+ersten Join — zusätzlich zur Engine mitbringen kann.
 
 ## Übersetzungen
 

@@ -1,0 +1,3 @@
+#    Give a starter kit (logbook, submarine, coral blocks, spawn eggs)
+#    to each player once, on their first join. Handy for quick testing.
+lernwelt_tiefsee_starter_kit (Give starter kit on first join) bool true
