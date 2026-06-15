@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `lernwelt/locale/lernwelt.tr` — translation template listing every engine
   source string (not loaded by Luanti; copy to `lernwelt.<lang>.tr`)
 - `CONTRIBUTING.md` with a step-by-step guide for contributing translations
+- `lernwelt/locale/lernwelt.fr.tr` — French translation (example/second locale)
 
 ## [1.2.0] - 2026-06-15
 
