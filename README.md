@@ -102,13 +102,15 @@ luanti-lernwelt-template/
 │       └── register.lua      # register_world()
 ├── lernwelt_beispiel/        # example theme: Gluehpilz-Wald
 │   └── init.lua              # one declarative register_world{...}
-└── tiefsee/                  # example theme: Tiefsee-Retter (underwater)
-    └── init.lua              # register_world{...} + a custom submarine
+└── lernwelt_tiefsee/         # example theme: Tiefsee-Retter (underwater)
+    ├── init.lua              # register_world{...} + submarine + starter kit
+    └── settingtypes.txt      # starter-kit toggle
 ```
 
 Two themes ship as examples: **`lernwelt_beispiel`** (Gluehpilz-Wald) and
-**`tiefsee`** (Tiefsee-Retter), the latter showing how a theme can add its own
-extra content — a drivable submarine — on top of the engine.
+**`lernwelt_tiefsee`** (Tiefsee-Retter), the latter showing how a theme can add
+its own extra content — a drivable submarine and a first-join starter kit — on
+top of the engine.
 
 ## Translations
 

@@ -6,14 +6,21 @@
 --  zones, rescuable animals, logbook, ranks and badges all come
 --  from the engine.
 --
---  The ONE thing the engine cannot express is the drivable
---  "Tauchkapsel" (submarine vehicle). That stays as a small
---  piece of custom code AFTER register_world (see section B).
+--  Two things the engine cannot express live as small pieces of
+--  custom code after register_world:
+--    B) the drivable "Tauchkapsel" (submarine vehicle)
+--    C) a starter kit handed out on first join (for quick
+--       testing: logbook, submarine, coral blocks, spawn eggs)
+--
+--  The mod name equals the world id ("lernwelt_tiefsee"), so all
+--  nodes/items live in the "lernwelt_tiefsee:" namespace.
 --
 --  Content is authored in German (ASCII: ae/oe/ue), like the
 --  other example theme. The engine's own UI is translated
 --  separately via lernwelt/locale/*.tr.
 -- ============================================================
+
+local WORLD_ID = "lernwelt_tiefsee"
 
 -- ------------------------------------------------------------
 --  A) THE WHOLE LEARNING WORLD AS ONE DECLARATIVE TABLE
@@ -21,8 +28,8 @@
 lernwelt.register_world({
 
     -- internal prefix; kept identical to the mod name so all
-    -- nodes/items live in the "tiefsee:" namespace
-    id    = "tiefsee",
+    -- nodes/items live in the "lernwelt_tiefsee:" namespace
+    id    = WORLD_ID,
     title = "Tiefsee-Retter",
 
     -- --- 1) Peaceful, child-friendly world ---
@@ -160,13 +167,13 @@ lernwelt.register_world({
 -- ------------------------------------------------------------
 --  B) EXTRA: TAUCHKAPSEL  (drivable submarine)
 --  Not part of the engine - a self-contained vehicle the theme
---  adds on its own. Lives in the same "tiefsee:" namespace.
---  Controls: place -> right-click to board -> W/S drive,
---  A/D steer, jump = up, sneak = down, right-click = exit.
+--  adds on its own. Lives in the same "lernwelt_tiefsee:"
+--  namespace. Controls: place -> right-click to board -> W/S
+--  drive, A/D steer, jump = up, sneak = down, right-click = exit.
 -- ------------------------------------------------------------
 local SUB_SPEED = 5
 
-core.register_entity("tiefsee:tauchkapsel", {
+core.register_entity(WORLD_ID .. ":tauchkapsel", {
     initial_properties = {
         physical = true, collide_with_objects = true,
         collisionbox = { -0.6, -0.4, -0.6, 0.6, 0.4, 0.6 },
@@ -190,7 +197,7 @@ core.register_entity("tiefsee:tauchkapsel", {
         elseif not self._driver then
             clicker:set_attach(self.object, "", { x = 0, y = 4, z = 0 }, { x = 0, y = 0, z = 0 })
             self._driver = name
-            self._motor = core.sound_play("tiefsee_motor",
+            self._motor = core.sound_play(WORLD_ID .. "_motor",
                 { object = self.object, loop = true, gain = 0.5 })
             core.chat_send_player(name,
                 "Tauchkapsel gestartet! W/S fahren, A/D lenken, " ..
@@ -219,7 +226,7 @@ core.register_entity("tiefsee:tauchkapsel", {
     end,
 })
 
-core.register_craftitem("tiefsee:tauchkapsel", {
+core.register_craftitem(WORLD_ID .. ":tauchkapsel", {
     description = "Tauchkapsel (Fahrzeug)\nPlatzieren, dann Rechtsklick zum Einsteigen",
     inventory_image = "[fill:16x16:#f1c40f^[fill:8x8:4,4:#5dade2",
     liquids_pointable = true,
@@ -229,7 +236,7 @@ core.register_craftitem("tiefsee:tauchkapsel", {
         end
         local pos = pointed_thing.above
         pos.y = pos.y + 0.5
-        core.add_entity(pos, "tiefsee:tauchkapsel")
+        core.add_entity(pos, WORLD_ID .. ":tauchkapsel")
         if not core.is_creative_enabled(placer:get_player_name()) then
             itemstack:take_item()
         end
@@ -237,4 +244,58 @@ core.register_craftitem("tiefsee:tauchkapsel", {
     end,
 })
 
-core.log("action", "[tiefsee] Theme 'Tiefsee-Retter' registered (on lernwelt engine).")
+-- ------------------------------------------------------------
+--  C) EXTRA: STARTER KIT  (handed out once on first join)
+--  Makes the world testable right away: the logbook, the
+--  submarine, a stack of each coral block + station glass, and
+--  one spawn egg per sea animal (the engine registers the eggs
+--  when a mob API is present; missing items are simply skipped).
+--  Turn off via the setting "lernwelt_tiefsee_starter_kit".
+-- ------------------------------------------------------------
+local STARTER_BLOCKS = {
+    "koralle_rot", "koralle_blau", "koralle_gelb",
+    "koralle_pink", "koralle_gruen", "stationsglas",
+}
+-- Spawn-egg item names match the creature ids (world_id:creature_id)
+local STARTER_EGGS = {
+    "clownfisch", "schildkroete", "blauwal", "hai",
+    "anglerfisch", "krake", "seestern", "qualle",
+}
+
+-- Add an item only if it is actually registered (robust across
+-- games with or without a mob API).
+local function give_if_exists(inv, itemstring)
+    local name = ItemStack(itemstring):get_name()
+    if core.registered_items[name] then
+        inv:add_item("main", itemstring)
+    end
+end
+
+local function give_starter_kit(player)
+    local inv = player:get_inventory()
+    if not inv then return end
+    give_if_exists(inv, WORLD_ID .. ":logbuch")
+    give_if_exists(inv, WORLD_ID .. ":tauchkapsel")
+    for _, suffix in ipairs(STARTER_BLOCKS) do
+        give_if_exists(inv, WORLD_ID .. ":" .. suffix .. " 10")
+    end
+    for _, cid in ipairs(STARTER_EGGS) do
+        give_if_exists(inv, WORLD_ID .. ":" .. cid)
+    end
+    core.chat_send_player(player:get_player_name(),
+        "Tiefsee-Retter: Startausruestung erhalten - Logbuch, Tauchkapsel, " ..
+        "Korallen und Spawn-Eier sind in deinem Inventar. Viel Spass beim Testen!")
+end
+
+core.register_on_joinplayer(function(player)
+    if not core.settings:get_bool("lernwelt_tiefsee_starter_kit", true) then return end
+    local meta = player:get_meta()
+    if meta:get_int("lernwelt_tiefsee:starter_given") == 1 then return end
+    meta:set_int("lernwelt_tiefsee:starter_given", 1)
+    -- slight delay so the inventory exists and the message is seen
+    core.after(1.5, function()
+        if player and player:is_player() then give_starter_kit(player) end
+    end)
+end)
+
+core.log("action", "[lernwelt_tiefsee] Theme 'Tiefsee-Retter' registered (on lernwelt engine).")

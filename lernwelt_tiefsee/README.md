@@ -22,6 +22,9 @@ selbstgebaute **Tauchkapsel**, die die Engine nicht abbildet.
 - 🐠 **8 rettbare Tiere** (mit Mob-API): Clownfisch, Schildkröte, Blauwal, Hai,
   Anglerfisch (leuchtet), Krake, Seestern, Qualle (leuchtet)
 - 🚤 **Tauchkapsel** – fahrbares Fahrzeug zum Tauchen (themen-eigenes Extra)
+- 🎒 **Startausrüstung** – beim ersten Join bekommt jede Spielerin/jeder Spieler
+  automatisch Logbuch, Tauchkapsel, Korallenblöcke und je ein Spawn-Ei pro Tier
+  (praktisch zum sofortigen Testen; abschaltbar per Einstellung)
 - 🏆 **Ränge & Abzeichen**: Frischling → Tauchschüler → Junior-Retter → Meeresheld → Kapitän
 - 🔊 **Sound-Hooks** – Rettungs-/Rang-Sounds aus der Engine, Motor-Sound aus diesem Thema
 
@@ -33,11 +36,23 @@ selbstgebaute **Tauchkapsel**, die die Engine nicht abbildet.
 
 ## Installation
 
-1. Den Ordner `lernwelt` **und** den Ordner `tiefsee` in deinen Luanti-`mods/`-Ordner kopieren.
+1. Den Ordner `lernwelt` **und** den Ordner `lernwelt_tiefsee` in deinen
+   Luanti-`mods/`-Ordner kopieren.
 2. (Optional, empfohlen) Eine Mob-API installieren bzw. ein Game mit Mobs nutzen
    (VoxeLibre/Mineclonia bringt `mcl_mobs` mit).
-3. In der Welt-Konfiguration **beide** Mods aktivieren (`lernwelt` + `tiefsee`).
+3. In der Welt-Konfiguration **beide** Mods aktivieren (`lernwelt` + `lernwelt_tiefsee`).
 4. Empfehlung für Kinder: **Kreativ-Modus + friedlich** (setzt die Engine automatisch).
+
+## Schnell testen
+
+Beim **ersten Betreten** der Welt bekommst du automatisch eine **Startausrüstung**
+ins Inventar: Meeres-Logbuch, Tauchkapsel, je 10 Korallenblöcke + Stations-Glas und
+ein Spawn-Ei pro Meerestier. Damit kannst du sofort Tiere setzen und retten, ohne
+sie erst suchen zu müssen. Im Kreativ-Modus liegen alle Items zusätzlich im
+Kreativ-Inventar.
+
+Abschalten: in der `minetest.conf` bzw. den Welt-Einstellungen
+`lernwelt_tiefsee_starter_kit = false` setzen.
 
 ## Steuerung der Tauchkapsel
 

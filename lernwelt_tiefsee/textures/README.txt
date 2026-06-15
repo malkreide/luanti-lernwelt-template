@@ -9,7 +9,7 @@ Wenn ihr eigene PNG-Texturen einsetzen wollt, legt sie hier ab
 (16x16 oder 32x32 Pixel):
 
 - Fuer BLOECKE: in der init.lua beim jeweiligen Block-Eintrag
-  texture = "tiefsee_koralle_rot.png" ergaenzen (ersetzt die Farbe).
+  texture = "lernwelt_tiefsee_koralle_rot.png" ergaenzen (ersetzt die Farbe).
 - Fuer TIERE/Items: die "[fill..."-Eintraege durch Dateinamen ersetzen.
   Eigene Tier-Texturen brauchen aktuell etwas Handarbeit, da die Engine
   die Tier-Wuerfel automatisch einfaerbt.
