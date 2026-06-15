@@ -1,0 +1,71 @@
+# textdomain: lernwelt
+#
+# TRANSLATION TEMPLATE for the Lernwelt engine.
+#
+# This file is NOT loaded by Luanti (it has no language code), it only
+# serves as the master list of source strings to translate. To add a
+# language, COPY this file to "lernwelt.<lang>.tr" (e.g. "lernwelt.fr.tr",
+# "lernwelt.es.tr") and fill in the right-hand side of each line.
+#
+# Format:   English source string=your translation
+#   - keep the part LEFT of "=" exactly as-is (it is the lookup key)
+#   - put your translation on the RIGHT of "="
+#   - "@1", "@2", ... are placeholders filled in at runtime - keep them,
+#     they may be reordered to fit your language's grammar
+#   - lines starting with "#" are comments; blank lines are ignored
+#
+# See CONTRIBUTING.md for the full step-by-step guide.
+
+# --- Curriculum subject areas (Lehrplan 21 default set) ---
+Mathematics=
+German (language)=
+Nature, people, society=
+Media and informatics=
+Visual arts=
+Textile and technical design=
+Music=
+Movement and sport=
+Foreign languages=
+Cross-curricular competencies=
+
+# --- Chat commands ---
+Show all learning zones and their Lehrplan-21 references=
+Curriculum: @1=
+No learning world registered yet.=
+Lernwelt status and recommended minetest.conf lines=
+Lernwelt engine @1=
+Registered worlds: @1=
+Recommended minetest.conf lines (the engine already sets most at runtime):=
+
+# --- Progress / ranks / badges ---
+@1 | @2 | @3 rescued=
+* BADGE: @1 *=
+@1 badge=
+(Badge of honour - right-click shows your tally)=
+Rank: @1 | @2 rescued.=
+Done!=
+No. @1!=
+NEW RANK: @1! Well done!=
+Badge received! (in your inventory)=
+
+# --- Creatures / logbook ---
+Rescued! @1 is happy.=
+@1 (spawn egg)=
+Right-click to open=
+Rank: @1=
+Total rescued: @1=
+Name: @1=
+Habitat: @1=
+Eats: @1=
+Power: @1=
+Rescued: @1 times=
+
+# --- Zones / learning boards ---
+Learning station: @1=
+Activity:=
+Curriculum:=
+Teleport here=
+Learning board: @1=
+
+# --- Settings (settingtypes.txt) ---
+Show learning-progress HUD=

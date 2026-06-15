@@ -108,10 +108,11 @@ luanti-lernwelt-template/
 
 The engine's interface strings are written in English and translated via
 `lernwelt/locale/lernwelt.<lang>.tr` (Luanti's translation system). German
-(`de`) is included. To add a language, copy `lernwelt.de.tr`, rename it
-(e.g. `lernwelt.fr.tr`) and translate the right-hand side. Theme **content**
-(animal names, activities) is authored directly in the theme and stays in
-whatever language the theme author chooses.
+(`de`) is included. To add a language, copy the template
+`lernwelt/locale/lernwelt.tr` to `lernwelt.<lang>.tr` (e.g. `lernwelt.fr.tr`)
+and fill in the right-hand side — see [CONTRIBUTING.md](CONTRIBUTING.md) for
+the full guide. Theme **content** (animal names, activities) is authored
+directly in the theme and stays in whatever language the theme author chooses.
 
 ## Changelog
 
