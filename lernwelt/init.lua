@@ -10,7 +10,7 @@
 -- ============================================================
 
 lernwelt = {}
-lernwelt.version         = "1.1.0"
+lernwelt.version         = "1.2.0"
 lernwelt.worlds          = {}   -- id -> world definition
 lernwelt.active_world_id = nil  -- first registered world (for HUD)
 

@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.0] - 2026-06-15
+
 ### Added
 - Mob adapter (`api/mobs_adapter.lua`): the creature spawner now works with
   `mcl_mobs` (VoxeLibre / Mineclonia) in addition to `mobs_redo`, auto-detecting
@@ -16,6 +18,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - `register_creatures` no longer hard-requires the `mobs` mod; it uses the new
   adapter and only skips animals when no mob API at all is available
+
+### Fixed
+- "Project Structure" tree in both READMEs now shows the correct repo root
+  (`luanti-lernwelt-template/`)
 
 ## [1.1.0] - 2026-06-15
 
