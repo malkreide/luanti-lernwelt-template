@@ -28,7 +28,7 @@ Texturen.
 
 - **Friedliche Config** zur Laufzeit gesetzt + kopierbare Zeilen für `minetest.conf`
 - **Zonen-System** mit platzierbaren Lern-Tafeln (Aktivität + Lehrplan + optionaler Teleport)
-- **Creature-Spawner** für friedliche, rettbare Land-/Wassertiere (braucht `mobs_redo`)
+- **Creature-Spawner** für friedliche, rettbare Land-/Wassertiere (funktioniert mit `mobs_redo` *oder* `mcl_mobs` — VoxeLibre / Mineclonia)
 - **Logbuch pro Welt** mit Tier-Steckbriefen und persönlichen Rettungs-Zählern
 - **Fortschritt**: Ränge, HUD, automatisch erzeugte Abzeichen-Items, Rettungs-Sounds
 - **Lehrplan-21-Tagging** mit `/lernplan`-Übersicht für Eltern und Lehrpersonen
@@ -40,7 +40,7 @@ Texturen.
 
 - Luanti / Minetest 5.x
 - Ein Basis-Game, empfohlen: **Mineclonia** oder **Minetest Game**
-- `mobs_redo` (Mobs Redo API) — optional, nur für lebende Tiere
+- Eine Mob-API für die lebenden Tiere — optional. `mobs_redo` (Minetest Game) oder `mcl_mobs` (in VoxeLibre / Mineclonia enthalten); die Engine erkennt automatisch, welche vorhanden ist
 
 ## Installation
 
@@ -98,6 +98,7 @@ lernwelt-template/
 │       ├── blocks.lua        # Farbblock-Generator
 │       ├── zones.lua         # Zonen + Lern-Tafeln
 │       ├── progress.lua      # Raenge, HUD, Abzeichen, reward()
+│       ├── mobs_adapter.lua  # mobs_redo / mcl_mobs Abstraktion
 │       ├── creatures.lua     # Spawner, Rettung, Logbuch
 │       └── register.lua      # register_world()
 └── lernwelt_beispiel/        # Beispiel-Thema: Gluehpilz-Wald
