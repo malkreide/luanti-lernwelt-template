@@ -28,10 +28,12 @@ Texturen.
 
 - **Friedliche Config** zur Laufzeit gesetzt + kopierbare Zeilen für `minetest.conf`
 - **Zonen-System** mit platzierbaren Lern-Tafeln (Aktivität + Lehrplan + optionaler Teleport)
+- **Aufgaben an den Lern-Tafeln** (optional): kleine Quiz und Rette-Ziele mit Belohnung
 - **Creature-Spawner** für friedliche, rettbare Land-/Wassertiere (funktioniert mit `mobs_redo` *oder* `mcl_mobs` — VoxeLibre / Mineclonia)
+- **Automatisches Spawnen von Wassertieren** in der Nähe der Spielenden (schonend begrenzt, abschaltbar)
 - **Logbuch pro Welt** mit Tier-Steckbriefen und persönlichen Rettungs-Zählern
 - **Fortschritt**: Ränge, HUD, automatisch erzeugte Abzeichen-Items, Rettungs-Sounds
-- **Lehrplan-21-Tagging** mit `/lernplan`-Übersicht für Eltern und Lehrpersonen
+- **Lehrplan-21-Tagging** mit `/lernplan`-Übersicht und persönlichem Bericht `/lernfortschritt`
 - **Curriculum-agnostisch**: Lehrplan 21 (Schweiz) ist nur der mitgelieferte Default — `lernwelt.fachbereiche` lässt sich gegen jeden anderen Lehrplan tauschen
 - **Internationalisiert**: englische Quellstrings + Übersetzungsfiles (`locale/*.tr`), Deutsch inklusive; die Spiel-Oberfläche folgt der Client-Sprache
 - **Keine Texturen nötig** — Farben via `[fill`; eigene PNGs optional

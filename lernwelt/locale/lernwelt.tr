@@ -67,5 +67,21 @@ Curriculum:=
 Teleport here=
 Learning board: @1=
 
+# --- Tasks on the learning boards ---
+Tasks:=
+Rescue @1: @2/@3=
+Solved=
+Well done!=
+Try again!=
+
+# --- Progress report (/lernfortschritt) ---
+Show your personal learning progress=
+This command only works in game.=
+Tasks solved: @1=
+Animals rescued:=
+Learning areas: @1=
+Nothing yet - go and explore!=
+
 # --- Settings (settingtypes.txt) ---
 Show learning-progress HUD=
+Spawn water animals automatically=
