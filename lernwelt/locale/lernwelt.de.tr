@@ -45,6 +45,16 @@ Eats: @1=Frisst: @1
 Power: @1=Superkraft: @1
 Rescued: @1 times=Schon @1 mal gerettet
 
+# --- Kamera / Entdecker + Familien ---
+Camera=Kamera
+Left-click: photograph a nearby animal=Linksklick: ein Tier in der Naehe fotografieren
+Photographed: @1!=Fotografiert: @1!
+Discovered: @1/@2=Entdeckt: @1/@2
+No new animal nearby - get closer to one.=Kein neues Tier in der Naehe - geh naeher heran.
+Discovered with the camera=Mit der Kamera entdeckt
+Not discovered yet=Noch nicht entdeckt
+@1 is reunited with its family!=@1 ist wieder mit seiner Familie vereint!
+
 # --- Zonen / Lern-Tafeln ---
 Learning station: @1=Lern-Station: @1
 Activity:=Aktivitaet:
@@ -55,6 +65,7 @@ Learning board: @1=Lern-Tafel: @1
 # --- Aufgaben an den Lern-Tafeln ---
 Tasks:=Aufgaben:
 Rescue @1: @2/@3=Rette @1: @2/@3
+Copy the pattern:=Lege das Muster nach:
 Solved=Geloest
 Well done!=Gut gemacht!
 Try again!=Versuch es nochmal!
@@ -70,3 +81,5 @@ Nothing yet - go and explore!=Noch nichts - geh auf Entdeckungsreise!
 # --- Einstellungen (settingtypes) ---
 Show learning-progress HUD=Lernfortschritt-Anzeige
 Spawn water animals automatically=Wassertiere automatisch spawnen
+Larger board text=Groessere Tafel-Schrift
+Easy mode (fewer quiz options)=Einfacher Modus (weniger Quiz-Optionen)

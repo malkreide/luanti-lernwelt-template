@@ -35,6 +35,7 @@ function lernwelt.register_world(def)
     lernwelt.register_zones(def.id, def)
     lernwelt.register_creatures(def.id, def)
     lernwelt.register_logbook(def.id, def)
+    lernwelt.register_camera(def.id, def)
 
     core.log("action", ("[lernwelt] World loaded: %s (%d zones, %d animals, %d blocks)")
         :format(def.title or def.id,

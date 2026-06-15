@@ -60,6 +60,16 @@ Eats: @1=
 Power: @1=
 Rescued: @1 times=
 
+# --- Camera / explorer + families ---
+Camera=
+Left-click: photograph a nearby animal=
+Photographed: @1!=
+Discovered: @1/@2=
+No new animal nearby - get closer to one.=
+Discovered with the camera=
+Not discovered yet=
+@1 is reunited with its family!=
+
 # --- Zones / learning boards ---
 Learning station: @1=
 Activity:=
@@ -70,6 +80,7 @@ Learning board: @1=
 # --- Tasks on the learning boards ---
 Tasks:=
 Rescue @1: @2/@3=
+Copy the pattern:=
 Solved=
 Well done!=
 Try again!=
@@ -85,3 +96,5 @@ Nothing yet - go and explore!=
 # --- Settings (settingtypes.txt) ---
 Show learning-progress HUD=
 Spawn water animals automatically=
+Larger board text=
+Easy mode (fewer quiz options)=
