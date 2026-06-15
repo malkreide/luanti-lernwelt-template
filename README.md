@@ -100,9 +100,15 @@ luanti-lernwelt-template/
 │       ├── mobs_adapter.lua  # mobs_redo / mcl_mobs abstraction
 │       ├── creatures.lua     # spawner, rescue, logbook
 │       └── register.lua      # register_world()
-└── lernwelt_beispiel/        # example theme: Gluehpilz-Wald
-    └── init.lua              # one declarative register_world{...}
+├── lernwelt_beispiel/        # example theme: Gluehpilz-Wald
+│   └── init.lua              # one declarative register_world{...}
+└── tiefsee/                  # example theme: Tiefsee-Retter (underwater)
+    └── init.lua              # register_world{...} + a custom submarine
 ```
+
+Two themes ship as examples: **`lernwelt_beispiel`** (Gluehpilz-Wald) and
+**`tiefsee`** (Tiefsee-Retter), the latter showing how a theme can add its own
+extra content — a drivable submarine — on top of the engine.
 
 ## Translations
 
