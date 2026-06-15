@@ -1,0 +1,57 @@
+# textdomain: lernwelt
+# Traduction française du moteur Lernwelt.
+# Exemple de traduction - voir CONTRIBUTING.md pour le guide complet.
+
+# --- Domaines disciplinaires (jeu de tags Lehrplan 21 par défaut) ---
+Mathematics=Mathématiques
+German (language)=Allemand (langue)
+Nature, people, society=Nature, humain, société
+Media and informatics=Médias et informatique
+Visual arts=Arts visuels
+Textile and technical design=Conception textile et technique
+Music=Musique
+Movement and sport=Mouvement et sport
+Foreign languages=Langues étrangères
+Cross-curricular competencies=Compétences transversales
+
+# --- Commandes de chat ---
+Show all learning zones and their Lehrplan-21 references=Affiche toutes les zones d'apprentissage et leurs références au Lehrplan 21
+Curriculum: @1=Plan d'études : @1
+No learning world registered yet.=Aucun monde d'apprentissage enregistré pour l'instant.
+Lernwelt status and recommended minetest.conf lines=État de Lernwelt et lignes recommandées pour minetest.conf
+Lernwelt engine @1=Moteur Lernwelt @1
+Registered worlds: @1=Mondes enregistrés : @1
+Recommended minetest.conf lines (the engine already sets most at runtime):=Lignes recommandées pour minetest.conf (le moteur en définit déjà la plupart à l'exécution) :
+
+# --- Progression / rangs / insignes ---
+@1 | @2 | @3 rescued=@1 | @2 | @3 sauvés
+* BADGE: @1 *=* INSIGNE : @1 *
+@1 badge=Insigne @1
+(Badge of honour - right-click shows your tally)=(Insigne d'honneur - clic droit pour voir ton décompte)
+Rank: @1 | @2 rescued.=Rang : @1 | @2 sauvés.
+Done!=Réussi !
+No. @1!=N° @1 !
+NEW RANK: @1! Well done!=NOUVEAU RANG : @1 ! Bravo !
+Badge received! (in your inventory)=Insigne reçu ! (dans ton inventaire)
+
+# --- Créatures / journal de bord ---
+Rescued! @1 is happy.=Sauvé ! @1 est content.
+@1 (spawn egg)=@1 (œuf d'apparition)
+Right-click to open=Clic droit pour ouvrir
+Rank: @1=Rang : @1
+Total rescued: @1=Total sauvés : @1
+Name: @1=Nom : @1
+Habitat: @1=Habitat : @1
+Eats: @1=Mange : @1
+Power: @1=Pouvoir : @1
+Rescued: @1 times=Sauvé @1 fois
+
+# --- Zones / panneaux d'apprentissage ---
+Learning station: @1=Station d'apprentissage : @1
+Activity:=Activité :
+Curriculum:=Plan d'études :
+Teleport here=Se téléporter ici
+Learning board: @1=Panneau d'apprentissage : @1
+
+# --- Paramètres (settingtypes.txt) ---
+Show learning-progress HUD=Afficher l'indicateur de progression
