@@ -8,6 +8,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- Second example theme `tiefsee` (Tiefsee-Retter): a brand-free underwater
+  learning world built on the engine — coral blocks, station glass, four
+  learning zones, eight rescuable sea animals, a Meeres-Logbuch, ranks and
+  badges via one `register_world{...}` call, plus a self-contained drivable
+  submarine ("Tauchkapsel") that demonstrates adding theme-specific content
+  the engine does not cover
 - `lernwelt/locale/lernwelt.tr` — translation template listing every engine
   source string (not loaded by Luanti; copy to `lernwelt.<lang>.tr`)
 - `CONTRIBUTING.md` with a step-by-step guide for contributing translations

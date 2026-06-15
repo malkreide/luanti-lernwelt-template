@@ -1,0 +1,240 @@
+-- ============================================================
+--  THEME:  TIEFSEE-RETTER  (deep-sea rescue team)
+--  A brand-free underwater learning world built ON TOP of the
+--  reusable "lernwelt" engine. Almost everything below is one
+--  declarative register_world{...} call - blocks, learning
+--  zones, rescuable animals, logbook, ranks and badges all come
+--  from the engine.
+--
+--  The ONE thing the engine cannot express is the drivable
+--  "Tauchkapsel" (submarine vehicle). That stays as a small
+--  piece of custom code AFTER register_world (see section B).
+--
+--  Content is authored in German (ASCII: ae/oe/ue), like the
+--  other example theme. The engine's own UI is translated
+--  separately via lernwelt/locale/*.tr.
+-- ============================================================
+
+-- ------------------------------------------------------------
+--  A) THE WHOLE LEARNING WORLD AS ONE DECLARATIVE TABLE
+-- ------------------------------------------------------------
+lernwelt.register_world({
+
+    -- internal prefix; kept identical to the mod name so all
+    -- nodes/items live in the "tiefsee:" namespace
+    id    = "tiefsee",
+    title = "Tiefsee-Retter",
+
+    -- --- 1) Peaceful, child-friendly world ---
+    config = {
+        damage      = false,   -- no damage / no dying
+        creative    = true,    -- unlimited blocks
+        peaceful    = true,    -- no monsters
+        freeze_time = "day",   -- always bright (no scary nights)
+        no_weather  = true,
+    },
+
+    -- --- 2) Colourful coral blocks + station glass (no PNG) ---
+    blocks = {
+        { suffix = "koralle_rot",   name = "Koralle (rot)",   color = "#e74c3c", glow = 5 },
+        { suffix = "koralle_blau",  name = "Koralle (blau)",  color = "#3498db", glow = 5 },
+        { suffix = "koralle_gelb",  name = "Koralle (gelb)",  color = "#f1c40f", glow = 5 },
+        { suffix = "koralle_pink",  name = "Koralle (pink)",  color = "#e84393", glow = 5 },
+        { suffix = "koralle_gruen", name = "Koralle (gruen)", color = "#2ecc71", glow = 5 },
+        { suffix = "stationsglas",  name = "Stations-Glas",   color = "#aaddff", glass = true },
+    },
+
+    -- --- 3) Learning zones (each gets a placeable learning board) ---
+    -- Zone titles double as the "habitat" shown in the logbook.
+    zones = {
+        {
+            id = "riff", title = "Korallenriff", color = "#e67e22",
+            activity = "Fische und Korallen nach Farben sortieren, " ..
+                       "Tiere zaehlen und benennen.",
+            lehrplan = { "MA.1", "NMG.2", "D.2" },
+        },
+        {
+            id = "offenes_meer", title = "Offenes Meer", color = "#2980b9",
+            activity = "Grosse und kleine Tiere vergleichen, Groessen " ..
+                       "ordnen, mutig hinausschwimmen.",
+            lehrplan = { "MA.2", "NMG.2", "BS.2" },
+        },
+        {
+            id = "tiefsee", title = "Dunkle Tiefsee", color = "#283747",
+            activity = "Im Dunkeln leuchtende Tiere suchen, hell und " ..
+                       "dunkel unterscheiden, ruhig erkunden.",
+            lehrplan = { "NMG.3", "NMG.2" },
+        },
+        {
+            id = "meeresboden", title = "Meeresboden", color = "#16a085",
+            activity = "Muster legen (rot-gelb-rot-gelb), Formen erkennen, " ..
+                       "Tiere am Boden entdecken.",
+            lehrplan = { "MA.2", "NMG.2", "MI.1" },
+        },
+    },
+
+    -- --- 4) Rescuable animals (peaceful; right-click = rescue) ---
+    creatures = {
+        {
+            id = "clownfisch", name = "Clownfisch", zone = "riff",
+            color = "#e67e22", size = 0.5, speed = 1.0, swims = true,
+            food = "Algen", power = "Wohnt in Anemonen",
+            heart = "#ff5fa2",
+            rescue_text = "Gerettet! Der Clownfisch schwimmt gluecklich nach Hause.",
+        },
+        {
+            id = "schildkroete", name = "Schildkroete", zone = "riff",
+            color = "#27ae60", size = 0.8, speed = 0.7, swims = true,
+            food = "Seegras", power = "Lebt sehr lange",
+            heart = "#82e0aa",
+            rescue_text = "Gerettet! Die Schildkroete paddelt gemuetlich davon.",
+        },
+        {
+            id = "blauwal", name = "Blauwal", zone = "offenes_meer",
+            color = "#2980b9", size = 2.0, speed = 0.6, swims = true,
+            food = "Krill", power = "Riesengross und laut",
+            heart = "#aed6f1",
+            rescue_text = "Gerettet! Der grosse Blauwal taucht zufrieden ab. WOOOSH!",
+        },
+        {
+            id = "hai", name = "Hai", zone = "offenes_meer",
+            color = "#7f8c8d", size = 1.4, speed = 1.8, swims = true,
+            food = "Fische", power = "Super-Geruchssinn",
+            heart = "#d6eaf8",
+            rescue_text = "Gerettet! Der freundliche Hai flitzt davon. Schwupp!",
+        },
+        {
+            id = "anglerfisch", name = "Anglerfisch", zone = "tiefsee",
+            color = "#34495e", size = 0.6, speed = 0.8, swims = true, glow = 14,
+            food = "kleine Fische", power = "Leuchtet im Dunkeln",
+            heart = "#f9e79f",
+            rescue_text = "Gerettet! Der Anglerfisch leuchtet dir dankbar nach.",
+        },
+        {
+            id = "krake", name = "Krake", zone = "tiefsee",
+            color = "#9b59b6", size = 0.7, speed = 1.5, swims = true,
+            food = "Krabben", power = "Spritzt Tinte",
+            heart = "#9b59b6",
+            rescue_text = "Die Krake spritzt eine grosse Tintenwolke und flitzt davon!",
+        },
+        {
+            id = "seestern", name = "Seestern", zone = "meeresboden",
+            color = "#e67e22", size = 0.6, speed = 0.3, swims = true,
+            food = "Muscheln", power = "Arme wachsen nach",
+            heart = "#f8c471",
+            rescue_text = "Gerettet! Der Seestern kriecht langsam zurueck ins Riff.",
+        },
+        {
+            id = "qualle", name = "Qualle", zone = "meeresboden",
+            color = "#1abc9c", size = 0.6, speed = 0.4, swims = true, glow = 8,
+            food = "Plankton", power = "Glibberig und leuchtet",
+            heart = "#a3e4d7",
+            rescue_text = "Gerettet! Die Qualle schwebt sanft davon.",
+        },
+    },
+
+    -- --- 5) Ranks (3rd field = colour -> creates a badge item) ---
+    ranks = {
+        { 0,  "Frischling" },
+        { 5,  "Tauchschueler" },
+        { 10, "Junior-Retter", "#3498db" },
+        { 25, "Meeresheld",    "#27ae60" },
+        { 50, "Kapitaen",      "#f1c40f" },
+    },
+
+    -- --- 6) Logbook item ---
+    logbook = { title = "Meeres-Logbuch", item_color = "#f1c40f" },
+
+    -- --- 7) Plain texts for curriculum codes (for /lernplan & boards) ---
+    kompetenzen = {
+        ["MA.1"]  = "Mengen erfassen und zaehlen",
+        ["MA.2"]  = "Muster, Reihen und Groessen ordnen",
+        ["D.2"]   = "Tiere benennen und beschreiben",
+        ["NMG.2"] = "Tiere und Lebensraeume im Meer erkunden",
+        ["NMG.3"] = "Hell und dunkel erleben, sich orientieren",
+        ["MI.1"]  = "Einfache Ablaeufe und Muster planen",
+        ["BS.2"]  = "Sich mutig und geschickt bewegen",
+    },
+})
+
+-- ------------------------------------------------------------
+--  B) EXTRA: TAUCHKAPSEL  (drivable submarine)
+--  Not part of the engine - a self-contained vehicle the theme
+--  adds on its own. Lives in the same "tiefsee:" namespace.
+--  Controls: place -> right-click to board -> W/S drive,
+--  A/D steer, jump = up, sneak = down, right-click = exit.
+-- ------------------------------------------------------------
+local SUB_SPEED = 5
+
+core.register_entity("tiefsee:tauchkapsel", {
+    initial_properties = {
+        physical = true, collide_with_objects = true,
+        collisionbox = { -0.6, -0.4, -0.6, 0.6, 0.4, 0.6 },
+        visual = "cube", visual_size = { x = 1.1, y = 0.9, z = 1.5 },
+        textures = {
+            "[fill:16x16:#f1c40f", "[fill:16x16:#e67e22",
+            "[fill:16x16:#f1c40f", "[fill:16x16:#f1c40f",
+            "[fill:16x16:#5dade2", "[fill:16x16:#f1c40f",
+        },
+    },
+    _driver = nil, _motor = nil,
+
+    on_rightclick = function(self, clicker)
+        if not (clicker and clicker:is_player()) then return end
+        local name = clicker:get_player_name()
+        if self._driver == name then
+            clicker:set_detach()
+            clicker:set_eye_offset({ x = 0, y = 0, z = 0 }, { x = 0, y = 0, z = 0 })
+            self._driver = nil
+            if self._motor then core.sound_stop(self._motor); self._motor = nil end
+        elseif not self._driver then
+            clicker:set_attach(self.object, "", { x = 0, y = 4, z = 0 }, { x = 0, y = 0, z = 0 })
+            self._driver = name
+            self._motor = core.sound_play("tiefsee_motor",
+                { object = self.object, loop = true, gain = 0.5 })
+            core.chat_send_player(name,
+                "Tauchkapsel gestartet! W/S fahren, A/D lenken, " ..
+                "Springen = hoch, Schleichen = runter, Rechtsklick = aussteigen.")
+        end
+    end,
+
+    on_step = function(self, dtime)
+        self.object:set_acceleration({ x = 0, y = 0, z = 0 })
+        local driver = self._driver and core.get_player_by_name(self._driver)
+        if not driver then
+            self.object:set_velocity({ x = 0, y = 0, z = 0 })
+            if self._motor then core.sound_stop(self._motor); self._motor = nil end
+            self._driver = nil
+            return
+        end
+        local ctrl = driver:get_player_control()
+        local yaw  = self.object:get_yaw()
+        if ctrl.left  then yaw = yaw + 0.05 end
+        if ctrl.right then yaw = yaw - 0.05 end
+        self.object:set_yaw(yaw)
+        local dir = core.yaw_to_dir(yaw)
+        local fwd = (ctrl.up and SUB_SPEED) or (ctrl.down and -SUB_SPEED * 0.5) or 0
+        local vy  = (ctrl.jump and SUB_SPEED * 0.6) or (ctrl.sneak and -SUB_SPEED * 0.6) or 0
+        self.object:set_velocity({ x = dir.x * fwd, y = vy, z = dir.z * fwd })
+    end,
+})
+
+core.register_craftitem("tiefsee:tauchkapsel", {
+    description = "Tauchkapsel (Fahrzeug)\nPlatzieren, dann Rechtsklick zum Einsteigen",
+    inventory_image = "[fill:16x16:#f1c40f^[fill:8x8:4,4:#5dade2",
+    liquids_pointable = true,
+    on_place = function(itemstack, placer, pointed_thing)
+        if pointed_thing.type ~= "node" or not (placer and placer:is_player()) then
+            return itemstack
+        end
+        local pos = pointed_thing.above
+        pos.y = pos.y + 0.5
+        core.add_entity(pos, "tiefsee:tauchkapsel")
+        if not core.is_creative_enabled(placer:get_player_name()) then
+            itemstack:take_item()
+        end
+        return itemstack
+    end,
+})
+
+core.log("action", "[tiefsee] Theme 'Tiefsee-Retter' registered (on lernwelt engine).")
