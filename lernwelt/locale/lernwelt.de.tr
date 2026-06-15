@@ -1,0 +1,56 @@
+# textdomain: lernwelt
+# Deutsche Uebersetzung der Lernwelt-Engine (Schweizer Rechtschreibung)
+
+# --- Fachbereiche Lehrplan 21 ---
+Mathematics=Mathematik
+German (language)=Deutsch (Sprache)
+Nature, people, society=Natur, Mensch, Gesellschaft
+Media and informatics=Medien und Informatik
+Visual arts=Bildnerisches Gestalten
+Textile and technical design=Textiles und Technisches Gestalten
+Music=Musik
+Movement and sport=Bewegung und Sport
+Foreign languages=Fremdsprachen
+Cross-curricular competencies=Ueberfachliche Kompetenzen
+
+# --- Chatbefehle ---
+Show all learning zones and their Lehrplan-21 references=Zeigt alle Lernzonen und ihre Lehrplan-21-Bezuege
+Curriculum: @1=Lehrplan 21: @1
+No learning world registered yet.=Noch keine Lernwelt registriert.
+Lernwelt status and recommended minetest.conf lines=Status der Lernwelt + empfohlene minetest.conf-Zeilen
+Lernwelt engine @1=Lernwelt-Engine @1
+Registered worlds: @1=Registrierte Welten: @1
+Recommended minetest.conf lines (the engine already sets most at runtime):=Empfohlene minetest.conf-Zeilen (die Engine setzt das Meiste schon zur Laufzeit):
+
+# --- Fortschritt / Raenge / Abzeichen ---
+@1 | @2 | @3 rescued=@1 | @2 | @3 gerettet
+* BADGE: @1 *=* ABZEICHEN: @1 *
+@1 badge=@1-Abzeichen
+(Badge of honour - right-click shows your tally)=(Ehrenabzeichen - Rechtsklick zeigt deine Bilanz)
+Rank: @1 | @2 rescued.=Rang: @1 | @2 gerettet.
+Done!=Geschafft!
+No. @1!=Nr. @1!
+NEW RANK: @1! Well done!=NEUER RANG: @1! Super gemacht!
+Badge received! (in your inventory)=Abzeichen erhalten! (in deinem Inventar)
+
+# --- Kreaturen / Logbuch ---
+Rescued! @1 is happy.=Gerettet! @1 ist gluecklich.
+@1 (spawn egg)=@1 (Spawn-Ei)
+Right-click to open=Rechtsklick zum Oeffnen
+Rank: @1=Rang: @1
+Total rescued: @1=Gerettet gesamt: @1
+Name: @1=Name: @1
+Habitat: @1=Lebensraum: @1
+Eats: @1=Frisst: @1
+Power: @1=Superkraft: @1
+Rescued: @1 times=Schon @1 mal gerettet
+
+# --- Zonen / Lern-Tafeln ---
+Learning station: @1=Lern-Station: @1
+Activity:=Aktivitaet:
+Curriculum:=Lehrplan 21:
+Teleport here=Hierher beamen
+Learning board: @1=Lern-Tafel: @1
+
+# --- Einstellungen (settingtypes) ---
+Show learning-progress HUD=Lernfortschritt-Anzeige

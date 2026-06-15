@@ -1,0 +1,128 @@
+# Luanti Lernwelt Template
+
+![Version](https://img.shields.io/badge/version-1.1.0-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Luanti](https://img.shields.io/badge/Luanti-5.x-orange)
+
+> Ein wiederverwendbares Framework für kindgerechte Lernwelten in Luanti (Minetest) — Namen und Texturen tauschen, die Mechanik bleibt.
+
+[🇬🇧 English Version](README.md)
+
+## Übersicht
+
+`lernwelt` ist eine Luanti-Engine-Mod, die alles kapselt, was eine kleine,
+kuratierte Lernwelt für Vorschulkinder braucht: eine friedliche
+Konfiguration (kein Schaden, keine Monster, eingefrorener Tag), ein
+**Zonen-System** mit Lern-Tafeln, einen **Creature-Spawner** mit
+Rettungs-Mechanik und Logbuch, ein **Fortschritts-System** (Ränge, HUD,
+Abzeichen) und **Lehrplan-21-Tagging**.
+
+Ein Thema besteht aus einem einzigen deklarativen `register_world{...}`-
+Aufruf — kein weiterer Lua-Code nötig. Themen sind austauschbar: dasselbe
+bewährte Gerüst wird so zum Glühpilz-Wald, zum Drachenhort, zur
+Roboter-Werkstatt. Das umgeht das Copyright-Problem grundsätzlich, denn
+das Framework ist themenneutral und Themen verwenden eigene Namen und
+Texturen.
+
+## Funktionen
+
+- **Friedliche Config** zur Laufzeit gesetzt + kopierbare Zeilen für `minetest.conf`
+- **Zonen-System** mit platzierbaren Lern-Tafeln (Aktivität + Lehrplan + optionaler Teleport)
+- **Creature-Spawner** für friedliche, rettbare Land-/Wassertiere (braucht `mobs_redo`)
+- **Logbuch pro Welt** mit Tier-Steckbriefen und persönlichen Rettungs-Zählern
+- **Fortschritt**: Ränge, HUD, automatisch erzeugte Abzeichen-Items, Rettungs-Sounds
+- **Lehrplan-21-Tagging** mit `/lernplan`-Übersicht für Eltern und Lehrpersonen
+- **Curriculum-agnostisch**: Lehrplan 21 (Schweiz) ist nur der mitgelieferte Default — `lernwelt.fachbereiche` lässt sich gegen jeden anderen Lehrplan tauschen
+- **Internationalisiert**: englische Quellstrings + Übersetzungsfiles (`locale/*.tr`), Deutsch inklusive; die Spiel-Oberfläche folgt der Client-Sprache
+- **Keine Texturen nötig** — Farben via `[fill`; eigene PNGs optional
+
+## Voraussetzungen
+
+- Luanti / Minetest 5.x
+- Ein Basis-Game, empfohlen: **Mineclonia** oder **Minetest Game**
+- `mobs_redo` (Mobs Redo API) — optional, nur für lebende Tiere
+
+## Installation
+
+```bash
+# Beide Mods in den Luanti-Mods-Ordner kopieren:
+#   <luanti>/mods/lernwelt            (die Engine)
+#   <luanti>/mods/lernwelt_beispiel   (das Beispiel-Thema)
+# Danach im Menue "Mods auswaehlen" fuer die Welt aktivieren.
+```
+
+## Verwendung / Schnellstart
+
+Ein vollständiges Thema ist nur eine deklarative Tabelle:
+
+```lua
+lernwelt.register_world({
+    id    = "gluehpilz",
+    title = "Gluehpilz-Wald",
+    config    = { peaceful = true, damage = false, freeze_time = "day" },
+    blocks    = { { suffix = "pilz_rot", name = "Roter Leuchtpilz", color = "#e74c3c", glow = 7 } },
+    zones     = { { id = "wiese", title = "Bach-Wiese", activity = "Muster legen", lehrplan = { "MA.2" } } },
+    creatures = { { id = "schnecke", name = "Schnecke", zone = "wiese", color = "#f39c12", speed = 0.3 } },
+    ranks     = { { 0, "Frischling" }, { 10, "Forscher", "#2ecc71" } },
+    logbook   = { title = "Forscher-Logbuch" },
+})
+```
+
+Im Spiel:
+
+- Rechtsklick auf ein Tier → retten (Zähler, Rang, Sound)
+- Rechtsklick auf das Logbuch-Item → Steckbriefe + deine Zähler
+- Lern-Tafel platzieren und anklicken → Aktivität + Lehrplan-Bezug
+- `/lernplan` → Übersicht aller Zonen und ihrer Lehrplan-21-Bezüge
+- `/lernwelt` → Status + empfohlene `minetest.conf`-Zeilen
+
+## Eigene Welt bauen
+
+1. `lernwelt_beispiel` kopieren, Ordner umbenennen (z.B. `lernwelt_drachenhort`)
+2. `name` in der `mod.conf` ändern
+3. `init.lua` bearbeiten: `id`, `title`, Blöcke, Zonen, Tiere, Ränge, Tags tauschen
+4. Optional: eigene PNG-Texturen ablegen und angeben
+
+## Projektstruktur
+
+```
+lernwelt-template/
+├── lernwelt/                 # Engine-Mod (das wiederverwendbare Framework)
+│   ├── init.lua              # laedt die API-Module
+│   ├── settingtypes.txt      # HUD-Schalter
+│   ├── locale/
+│   │   └── lernwelt.de.tr     # deutsche Uebersetzung (weitere: lernwelt.<lang>.tr)
+│   └── api/
+│       ├── config.lua        # friedliche Config + /lernwelt
+│       ├── lehrplan.lua      # Lehrplan-21-Tagging + /lernplan
+│       ├── blocks.lua        # Farbblock-Generator
+│       ├── zones.lua         # Zonen + Lern-Tafeln
+│       ├── progress.lua      # Raenge, HUD, Abzeichen, reward()
+│       ├── creatures.lua     # Spawner, Rettung, Logbuch
+│       └── register.lua      # register_world()
+└── lernwelt_beispiel/        # Beispiel-Thema: Gluehpilz-Wald
+    └── init.lua              # ein deklaratives register_world{...}
+```
+
+## Übersetzungen
+
+Die Oberflächen-Texte der Engine sind auf Englisch geschrieben und werden
+über `lernwelt/locale/lernwelt.<lang>.tr` (Luantis Übersetzungssystem)
+übersetzt. Deutsch (`de`) ist dabei. Für eine weitere Sprache `lernwelt.de.tr`
+kopieren, umbenennen (z.B. `lernwelt.fr.tr`) und die rechte Seite übersetzen.
+Die **Inhalte** eines Themas (Tiernamen, Aktivitäten) stehen direkt im Thema
+und bleiben in der Sprache, die der Themen-Autor wählt.
+
+## Changelog
+
+Siehe [CHANGELOG.md](CHANGELOG.md)
+
+## Lizenz
+
+MIT License — siehe [LICENSE](LICENSE). Der Code ist themenneutral; jedes
+Thema ist selbst dafür verantwortlich, eigene, nicht rechtsverletzende
+Namen und Assets zu verwenden.
+
+## Autor
+
+{DEIN-NAME} · [{DEIN-GITHUB}](https://github.com/{DEIN-GITHUB})

@@ -1,0 +1,2 @@
+#    Show the learning-progress HUD (top left: world, rank, count).
+lernwelt_show_hud (Show learning-progress HUD) bool true
