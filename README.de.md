@@ -125,4 +125,4 @@ Namen und Assets zu verwenden.
 
 ## Autor
 
-{DEIN-NAME} · [{DEIN-GITHUB}](https://github.com/{DEIN-GITHUB})
+Hayal Oezkan · [malkreide](https://github.com/malkreide)
