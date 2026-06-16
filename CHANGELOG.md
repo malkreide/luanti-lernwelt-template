@@ -77,6 +77,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `CONTRIBUTING.md` with a step-by-step guide for contributing translations
 - `lernwelt/locale/lernwelt.fr.tr` — French translation (example/second locale)
 
+### Fixed
+- Startup error `Client: Don't know how to load file "lernwelt.tr"`: the
+  translation template lived in `locale/` as `lernwelt.tr`, which has no
+  language code, so newer Luanti builds try (and fail) to load it as a
+  translation. Renamed it to `lernwelt/locale/template.txt` so it is kept as
+  the master source-string list but never loaded as a `.tr` file. The real
+  `lernwelt.de.tr` / `lernwelt.fr.tr` translations are unchanged.
+
 ## [1.2.0] - 2026-06-15
 
 ### Added

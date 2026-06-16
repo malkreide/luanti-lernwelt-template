@@ -17,17 +17,17 @@ the player's client reports (e.g. `fr`, `es`, `it`, `pt`, `pl`, `de`).
 Start from the master template, which lists every translatable string:
 
 ```
-lernwelt/locale/lernwelt.tr   ->   lernwelt/locale/lernwelt.<lang>.tr
+lernwelt/locale/template.txt   ->   lernwelt/locale/lernwelt.<lang>.tr
 ```
 
 For example, for French:
 
 ```bash
-cp lernwelt/locale/lernwelt.tr lernwelt/locale/lernwelt.fr.tr
+cp lernwelt/locale/template.txt lernwelt/locale/lernwelt.fr.tr
 ```
 
-(`lernwelt.tr` itself has no language code, so Luanti never loads it as a
-translation — it stays as the template.)
+(`template.txt` is not a `.tr` file, so Luanti never tries to load it as a
+translation — it stays as the master template.)
 
 ### 2. Fill in the translations
 
@@ -78,7 +78,7 @@ a missing `# textdomain: lernwelt` header.
 ### 4. Keep the template in sync (maintainers)
 
 When you add or change a `S("…")` source string in the engine code, also
-add it to `lernwelt/locale/lernwelt.tr` so translators see it. You can
+add it to `lernwelt/locale/template.txt` so translators see it. You can
 regenerate the template with Luanti's translation update tool
 (`mod_translation_updater.py`) if you prefer.
 
