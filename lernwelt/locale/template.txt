@@ -2,7 +2,7 @@
 #
 # TRANSLATION TEMPLATE for the Lernwelt engine.
 #
-# This file is NOT loaded by Luanti (it has no language code), it only
+# This file is NOT loaded by Luanti (it is template.txt, not a .tr file), it only
 # serves as the master list of source strings to translate. To add a
 # language, COPY this file to "lernwelt.<lang>.tr" (e.g. "lernwelt.fr.tr",
 # "lernwelt.es.tr") and fill in the right-hand side of each line.

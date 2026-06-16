@@ -131,7 +131,7 @@ Die Oberflächen-Texte der Engine sind auf Englisch geschrieben und werden
 über `lernwelt/locale/lernwelt.<lang>.tr` (Luantis Übersetzungssystem)
 übersetzt. Deutsch (`de`) und Französisch (`fr`) sind dabei. Für eine weitere
 Sprache die Vorlage
-`lernwelt/locale/lernwelt.tr` nach `lernwelt.<lang>.tr` kopieren (z.B.
+`lernwelt/locale/template.txt` nach `lernwelt.<lang>.tr` kopieren (z.B.
 `lernwelt.fr.tr`) und die rechte Seite ausfüllen — die vollständige Anleitung
 steht in [CONTRIBUTING.md](CONTRIBUTING.md). Die **Inhalte** eines Themas
 (Tiernamen, Aktivitäten) stehen direkt im Thema und bleiben in der Sprache,
