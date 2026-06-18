@@ -7,6 +7,15 @@
 --  Entry in the world definition:
 --    { suffix="pilz_rot", name="Red mushroom block",
 --      color="#e74c3c", glow=6, glass=false }
+--
+--  The look of a block (in order of precedence):
+--    texture = "file.png"  -- a single image/pattern for all faces
+--                             (any Luanti texture string, incl. "[fill" patterns)
+--    color   = "#rrggbb"   -- a single flat colour for all faces (default)
+--  Per-face options (override the single look):
+--    tiles  = { ... }      -- a raw Luanti tiles list (1-6 entries)
+--    top / bottom / side   -- convenience: different faces, e.g. a chest
+--                             with a lid on top and plain wood on the sides
 -- ------------------------------------------------------------
 
 function lernwelt.register_blocks(world_id, list)
@@ -26,7 +35,15 @@ function lernwelt.register_blocks(world_id, list)
             def.paramtype           = "light"
             def.sunlight_propagates = true
         else
-            def.tiles = { b.texture or ("[fill:16x16:" .. (b.color or "#888888")) }
+            local base = b.texture or ("[fill:16x16:" .. (b.color or "#888888"))
+            if b.tiles then
+                def.tiles = b.tiles
+            elseif b.top or b.bottom or b.side then
+                -- 3-entry tiles = { top, bottom, sides }
+                def.tiles = { b.top or base, b.bottom or base, b.side or base }
+            else
+                def.tiles = { base }
+            end
             if glow > 0 then def.paramtype = "light" end
         end
         core.register_node(nodename, def)
