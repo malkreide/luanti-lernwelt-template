@@ -8,6 +8,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- **Per-face block textures** (engine): block definitions accept `tiles` (a raw
+  Luanti tiles list) or the convenience fields `top` / `side` / `bottom`, so a
+  block can have a different look per face (e.g. a chest with a lid)
+- More `lernwelt_tiefsee` decoration blocks: fish scales, anchor, ship's wheel,
+  and a real per-face **treasure chest** (`truhe`)
+- **Letter blocks A–Z** (`buchstabe_a`…`buchstabe_z`) in `lernwelt_tiefsee`,
+  rendered from a tiny procedural 5×7 pixel font — for laying out words
+- A commented-out example in the theme for using your own painted **PNG** as a block
+- `lernwelt_tiefsee/KINDER-KURZ.md` — a one-page, print-friendly kids' quick guide
+  (big text, emojis, minimal words)
+- `lernwelt_tiefsee/GUIDE.md` — an English translation of the player guide
+  (ANLEITUNG.md), cross-linked both ways
 - Patterned decoration blocks in `lernwelt_tiefsee` (stripes, dots, checker,
   frame, treasure chest, sand-with-shell, waves) — built purely from procedural
   texture modifiers (layered `[fill`), no image files needed; documented in
