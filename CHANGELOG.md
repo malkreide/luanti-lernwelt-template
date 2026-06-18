@@ -8,6 +8,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- Patterned decoration blocks in `lernwelt_tiefsee` (stripes, dots, checker,
+  frame, treasure chest, sand-with-shell, waves) — built purely from procedural
+  texture modifiers (layered `[fill`), no image files needed; documented in
+  ANLEITUNG.md and `textures/README.txt` (blocks already supported a `texture`
+  field, including own PNGs)
 - `lernwelt_tiefsee/ANLEITUNG.md` — a complete German player guide: every block,
   item, creature, zone and task, how to use them, the commands, the settings, a
   parents/teachers section, small missions and troubleshooting (linked from the

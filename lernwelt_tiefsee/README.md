@@ -19,6 +19,8 @@ selbstgebaute **Tauchkapsel**, die die Engine nicht abbildet.
 ## Funktionen
 
 - 🪸 **5 bunte Korallenblöcke** + 🟦 **Stations-Glas** (durchsichtig)
+- 🎨 **7 gemusterte Bau-Blöcke** (Streifen, Punkte, Schachbrett, Rahmen, Schatzkiste,
+  Sand mit Muschel, Wellen) – Muster rein prozedural, ganz ohne Bilddateien
 - 🗺️ **4 Lern-Zonen** (Korallenriff, Offenes Meer, Dunkle Tiefsee, Meeresboden) mit
   platzierbaren Lern-Tafeln (Aktivität + Lehrplan-21-Bezug)
 - ❓ **Aufgaben an den Lern-Tafeln** – Quiz (zählen, vergleichen, benennen), **Muster
