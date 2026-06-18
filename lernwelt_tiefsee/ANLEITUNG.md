@@ -209,6 +209,20 @@ oder `/giveme`) beginnen mit `lernwelt_tiefsee:`.
 `muell_flasche/dose/tuete` (Müll) · `tafel_riff/offenes_meer/tiefsee/meeresboden`
 (Lern-Tafeln).
 
+**Gemusterte Bau-Blöcke** (nicht einfarbig): `muster_streifen` (Streifen-Koralle) ·
+`muster_punkte` (Punkte) · `muster_schach` (Schachbrett) · `muster_rahmen` (Rahmen) ·
+`schatzkiste` · `sand_muschel` (Sand mit Muschel) · `wellen` (Wellen). Im
+Kreativ-Modus findest du alle Blöcke im Bau-Menü.
+
+> **Eigene Muster oder Bilder an Blöcke hängen?** Ja! Im Block kann statt
+> `color = "#..."` ein `texture = "..."` stehen:
+> - **Muster ohne Datei** – mehrere Farbflächen übereinanderlegen, z. B.
+>   `texture = "[fill:16x16:#3498db^[fill:8x8:0,0:#ffffff^[fill:8x8:8,8:#ffffff"`
+>   (Schachbrett). Format der Auflagen: `^[fill:BreitexHoehe:X,Y:#farbe`.
+> - **Echtes Bild** – eine PNG (16×16 oder 32×32) in den `textures/`-Ordner legen
+>   und `texture = "lernwelt_tiefsee_meinbild.png"` setzen.
+> Mehr dazu in `textures/README.txt`.
+
 **Items:** `logbuch` · `kamera` · `tauchkapsel` · die Spawn-Eier (z. B.
 `clownfisch`, `delfin`, `goldwal`) · Abzeichen (`badge_10/25/50`).
 

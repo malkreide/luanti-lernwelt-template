@@ -49,6 +49,26 @@ lernwelt.register_world({
         { suffix = "koralle_pink",  name = "Koralle (pink)",  color = "#e84393", glow = 5 },
         { suffix = "koralle_gruen", name = "Koralle (gruen)", color = "#2ecc71", glow = 5 },
         { suffix = "stationsglas",  name = "Stations-Glas",   color = "#aaddff", glass = true },
+
+        -- Patterned decoration blocks (procedural, no image files needed).
+        -- The "texture" field is a Luanti texture-modifier string: a base
+        -- "[fill" plus overlaid "^[fill:WxH:X,Y:#colour" rectangles.
+        { suffix = "muster_streifen", name = "Streifen-Koralle",
+          texture = "[fill:16x16:#e74c3c^[fill:3x16:3,0:#ffffff^[fill:3x16:10,0:#ffffff" },
+        { suffix = "muster_punkte", name = "Punkte-Block",
+          texture = "[fill:16x16:#3498db^[fill:3x3:2,2:#ffffff^[fill:3x3:11,2:#ffffff" ..
+                    "^[fill:3x3:2,11:#ffffff^[fill:3x3:11,11:#ffffff^[fill:3x3:6,6:#ffffff" },
+        { suffix = "muster_schach", name = "Schachbrett-Block",
+          texture = "[fill:16x16:#f1c40f^[fill:8x8:0,0:#34495e^[fill:8x8:8,8:#34495e" },
+        { suffix = "muster_rahmen", name = "Rahmen-Block",
+          texture = "[fill:16x16:#1e8449^[fill:12x12:2,2:#2ecc71" },
+        { suffix = "schatzkiste", name = "Schatzkiste",
+          texture = "[fill:16x16:#8d6e3a^[fill:16x3:0,3:#f1c40f^[fill:16x3:0,10:#f1c40f" ..
+                    "^[fill:4x4:6,6:#4a2f15" },
+        { suffix = "sand_muschel", name = "Sand mit Muschel",
+          texture = "[fill:16x16:#f4e3c1^[fill:5x4:6,8:#e8a0b0^[fill:3x2:7,6:#d98aa0" },
+        { suffix = "wellen", name = "Wellen-Block",
+          texture = "[fill:16x16:#5dade2^[fill:16x2:0,4:#2980b9^[fill:16x2:0,11:#2980b9" },
     },
 
     -- --- 3) Learning zones (each gets a placeable learning board) ---
