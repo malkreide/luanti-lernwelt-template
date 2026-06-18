@@ -75,7 +75,7 @@ Gelöste Aufgaben geben einen Ton + Lob und zählen in deinen Fortschritt
 | Zone | Aufgaben |
 |---|---|
 | Korallenriff | Quiz „Farbe des Clownfischs" · Rette 2 Clownfische · Quiz „Womit beginnt *Krabbe*?" |
-| Offenes Meer | Quiz „Wer ist größer?" · Rette 1 Blauwal |
+| Offenes Meer | Quiz „Wer ist grösser?" · Rette 1 Blauwal |
 | Dunkle Tiefsee | Quiz „Welches Tier leuchtet?" |
 | Meeresboden | Quiz „Wie viele Arme hat ein Seestern?" · Rette 2 Seesterne · **Muster** rot-gelb-rot |
 
@@ -94,7 +94,7 @@ einen Ton, einen Zähler-Eintrag und (ab genug Rettungen) einen neuen Rang.
 | Schildkröte | Riff | Seegras | Lebt sehr lange | 👪 Familie |
 | Seepferdchen | Riff | Plankton | Schwimmt aufrecht | |
 | Krabbe | Riff | Algen | Läuft seitwärts | |
-| Blauwal | Offenes Meer | Krill | Riesengroß & laut | |
+| Blauwal | Offenes Meer | Krill | Riesengross & laut | |
 | Hai | Offenes Meer | Fische | Super-Geruchssinn | freundlich |
 | Delfin | Offenes Meer | Fische | Springt & klickt | 👪 Familie |
 | Anglerfisch | Dunkle Tiefsee | kleine Fische | Leuchtet | 💡 leuchtet |
@@ -222,7 +222,7 @@ oder `/giveme`) beginnen mit `lernwelt_tiefsee:`.
 | `/lernplan` | Übersicht aller Zonen + Lehrplan-21-Bezüge (für Eltern/Lehrpersonen) | alle |
 | `/lernwelt` | Status + empfohlene `minetest.conf`-Zeilen | alle |
 | `/tiefsee_teststation` | Kleine fertige Station (Tafeln, Tauchkapsel, Müll) | Admin¹ |
-| `/tiefsee_basis` | Größere Glaskuppel-Basis mit Tür | Admin¹ |
+| `/tiefsee_basis` | Grössere Glaskuppel-Basis mit Tür | Admin¹ |
 | `/tiefsee_muell` | Verteilt Müll zum Aufräumen | Admin¹ |
 
 ¹ Braucht das `server`-Privileg — im **Einzelspieler automatisch vorhanden**.
@@ -237,7 +237,7 @@ Im Menü unter **Einstellungen → Alle Einstellungen → Mods** (oder in `minet
 |---|---|---|
 | `lernwelt_show_hud` | an | Fortschritts-Anzeige oben links |
 | `lernwelt_spawn_creatures` | an | Tiere erscheinen automatisch im Wasser |
-| `lernwelt_big_text` | aus | **Größere Schrift** auf den Lern-Tafeln |
+| `lernwelt_big_text` | aus | **Grössere Schrift** auf den Lern-Tafeln |
 | `lernwelt_easy_mode` | aus | **Einfacher Modus**: Quiz zeigt nur 2 Antworten |
 | `lernwelt_tiefsee_starter_kit` | an | Startausrüstung beim ersten Join |
 
@@ -246,12 +246,12 @@ Im Menü unter **Einstellungen → Alle Einstellungen → Mods** (oder in `minet
 ## 15. Für Eltern & Lehrpersonen 👪
 
 - **Lehrplan 21 (1. Zyklus):** Jede Zone und Aufgabe ist mit Kompetenzbereichen
-  getaggt — Mathematik (zählen, Muster, Größen), Deutsch (benennen), NMG (Tiere &
+  getaggt — Mathematik (zählen, Muster, Grössen), Deutsch (benennen), NMG (Tiere &
   Lebensräume, hell/dunkel), Medien & Informatik (Abläufe/Muster), Bewegung.
 - `/lernplan` zeigt alle Zonen und ihre Bezüge auf einen Blick.
 - `/lernfortschritt` zeigt pro Kind: Rang, Rettungen, gelöste Aufgaben, getroffene
   Tiere und berührte Lernbereiche.
-- **Barrierearm:** `lernwelt_big_text` (Großschrift) und `lernwelt_easy_mode`
+- **Barrierearm:** `lernwelt_big_text` (Grossschrift) und `lernwelt_easy_mode`
   (weniger Quiz-Optionen) erleichtern den Einstieg.
 
 ---
@@ -264,7 +264,7 @@ Im Menü unter **Einstellungen → Alle Einstellungen → Mods** (oder in `minet
 - 🧹 **Saubermann/-frau:** 15 Müll einsammeln → „Riff-Retter".
 - 🪸 **Riff-Baumeister:** 10 Korallen pflanzen.
 - 🌟 **Legende:** den seltenen Goldenen Wal retten.
-- 👨‍👧 **Team-Tauchgang:** zu zweit in der Tauchkapsel auf große Fahrt.
+- 👨‍👧 **Team-Tauchgang:** zu zweit in der Tauchkapsel auf grosse Fahrt.
 
 ---
 
@@ -280,4 +280,4 @@ Im Menü unter **Einstellungen → Alle Einstellungen → Mods** (oder in `minet
   es braucht eine Mob-API (VoxeLibre/Mineclonia oder `mobs_redo`). Du kannst Tiere
   jederzeit mit **Spawn-Eiern** setzen.
 
-Viel Spaß beim Entdecken, Helfen und Bewahren! 🐙🌊
+Viel Spass beim Entdecken, Helfen und Bewahren! 🐙🌊
