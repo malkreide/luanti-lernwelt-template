@@ -123,7 +123,9 @@ luanti-lernwelt-template/
 Zwei Themen sind als Beispiele dabei: **`lernwelt_beispiel`** (Gluehpilz-Wald)
 und **`lernwelt_tiefsee`** (Tiefsee-Retter). Letzteres zeigt, wie ein Thema **eigene
 Zusatz-Inhalte** — hier eine fahrbare Tauchkapsel und eine Startausrüstung beim
-ersten Join — zusätzlich zur Engine mitbringen kann.
+ersten Join — zusätzlich zur Engine mitbringen kann. Eine vollständige
+**Spielanleitung** dazu (alle Elemente, Bedienung, Aufgaben & Ziele) steht in
+[`lernwelt_tiefsee/ANLEITUNG.md`](lernwelt_tiefsee/ANLEITUNG.md).
 
 ## Übersetzungen
 

@@ -122,7 +122,8 @@ luanti-lernwelt-template/
 Two themes ship as examples: **`lernwelt_beispiel`** (Gluehpilz-Wald) and
 **`lernwelt_tiefsee`** (Tiefsee-Retter), the latter showing how a theme can add
 its own extra content — a drivable submarine and a first-join starter kit — on
-top of the engine.
+top of the engine. A full **player guide** for it (every element, controls,
+tasks & goals) lives in [`lernwelt_tiefsee/ANLEITUNG.md`](lernwelt_tiefsee/ANLEITUNG.md).
 
 ## Translations
 
