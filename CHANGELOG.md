@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- `lernwelt_tiefsee/ANLEITUNG.md` — a complete German player guide: every block,
+  item, creature, zone and task, how to use them, the commands, the settings, a
+  parents/teachers section, small missions and troubleshooting (linked from the
+  theme README and both root READMEs)
 - **Pattern task type** (engine): boards support a `pattern` task — reproduce a
   colour sequence with palette buttons
 - **Accessibility settings** (engine): `lernwelt_big_text` (larger board font)

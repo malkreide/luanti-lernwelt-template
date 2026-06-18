@@ -7,6 +7,9 @@ rund um ein Unterwasser-Rettungsteam. Gedacht zum **gemeinsamen Spielen von Elte
 
 > Motto: **Entdecken · Helfen · Bewahren**
 
+📖 **Vollständige Spielanleitung (alle Elemente, Bedienung, Aufgaben & Ziele):
+[ANLEITUNG.md](ANLEITUNG.md)** — ideal zum Mitlesen für Eltern & Kind.
+
 Dieses Mod ist ein **Thema** für das [Lernwelt-Template](../README.de.md): Die gesamte
 Spielmechanik (friedliche Config, Lern-Tafeln, Logbuch, Ränge, Abzeichen, Rettungs-Sounds,
 Lehrplan-21-Tagging) kommt aus der Engine-Mod **`lernwelt`**. Das Thema selbst ist im
