@@ -22,6 +22,13 @@ selbstgebauten Extras, die die Engine nicht abbildet: den **Raumgleiter** und di
 
 - 🪐 **6 bunte Planetenblöcke** (Mars, Sonne, Jupiter …) + 🟦 **Bullaugen-Glas** (durchsichtig)
   – glühend, ideal zum **Zählen** und für **Farben**
+- 🕳️ **Schwarzes Loch** – ein Block, der Spieler sanft ansaugt (Gravitations-Sog,
+  kinderfreundlich, kein Schaden) – passt zum Schwerkraft-Thema
+- ☄️ **Meteoritenschauer** – fallende Meteore mit Feuerschweif (`/kosmo_meteore`); die
+  gelandeten **Meteoriten** einsammeln und **zählen** (Meilensteine)
+- 🌠 **Sternschnuppen** – huschen gelegentlich am Himmel vorbei (Atmosphäre, „wünsch dir was")
+- ☀️ **Leuchtende Sonne** – ein hell strahlender Sonnenblock + `/kosmo_sonne` baut eine
+  kleine Sonnenkugel als Lichtquelle
 - 🌑 **Mond-Schwerkraft** – das Highlight: stell dich auf einen Block und verändere, wie du
   dich bewegst:
   - **Mond-Boden** → leichte Schwerkraft, du springst federleicht und hoch
@@ -107,6 +114,8 @@ Platzieren → Rechtsklick zum Einsteigen → **W/S** fliegen, **A/D** lenken,
 - `/kosmo_basis` – baut eine **grössere** Glaskuppel-Station mit Tür, Tafeln, Raumgleiter,
   Mond-Boden/Sprung-Pad und Schrott (Priv `server`)
 - `/kosmo_schrott` – verteilt etwas Weltraumschrott zum Aufräumen um dich herum (Priv `server`)
+- `/kosmo_meteore` – löst einen Meteoritenschauer über dir aus (zum Sammeln/Zählen) (Priv `server`)
+- `/kosmo_sonne` – baut eine kleine leuchtende Sonne über dir (Priv `server`)
 - `/lernfortschritt` – dein persönlicher Lernfortschritt: Rang, Rettungen, gelöste
   Aufgaben, getroffene Freunde und berührte Lernbereiche (aus der Engine)
 - `/lernplan` – Übersicht aller Lern-Zonen und ihrer Lehrplan-21-Bezüge (aus der Engine)

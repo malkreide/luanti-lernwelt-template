@@ -538,6 +538,7 @@ local STARTER_BLOCKS = {
     "planet_rot", "planet_blau", "planet_gelb", "planet_gruen", "planet_lila",
     "bullaugen_glas", "stationswand",
     "mond_boden", "sprung_pad", "schwerelos_feld", "schwerkraft_normal",
+    "schwarzes_loch", "sonne",
 }
 -- Spawn-egg item names match the creature ids (world_id:creature_id)
 local STARTER_EGGS = {
@@ -842,6 +843,13 @@ local function build_test_station(player)
         core.set_node({ x = base.x + s[1], y = floor_y + 1, z = base.z + s[2] },
             { name = WORLD_ID .. ":" .. junk[math.random(#junk)] })
     end
+
+    -- a small leuchtende Sonne high above and a schwarzes Loch off to the
+    -- side (node names resolve at runtime; both are registered below)
+    core.set_node({ x = base.x + 3, y = floor_y + 6, z = base.z + 4 },
+        { name = WORLD_ID .. ":sonne" })
+    core.set_node({ x = base.x - 3, y = floor_y + 2, z = base.z + 2 },
+        { name = WORLD_ID .. ":schwarzes_loch" })
 end
 
 core.register_chatcommand("kosmo_teststation", {
@@ -987,5 +995,278 @@ for letter, rows in pairs(FONT5x7) do
         is_ground_content = false,
     })
 end
+
+-- ------------------------------------------------------------
+--  L) EXTRA: SCHWARZES LOCH  (a gentle gravity well)
+--  A placeable node that softly pulls nearby players towards its
+--  centre - child-friendly: no damage (already off), the pull is
+--  gentle and capped, and right at the core you just get a little
+--  star-burst and a fun message. A throttled globalstep finds the
+--  nearest black hole near each player (via find_node_near) and
+--  nudges them inward. Fits the world's gravity/physics theme and
+--  the celestial-bodies learning goal (NMG).
+-- ------------------------------------------------------------
+core.register_node(WORLD_ID .. ":schwarzes_loch", {
+    description = "Schwarzes Loch\nZieht alles sanft an (kein Schaden)",
+    drawtype = "glasslike",
+    paramtype = "light",
+    light_source = 3,
+    sunlight_propagates = true,
+    -- a dark core with a faint glowing accretion ring around it
+    tiles = { "[fill:16x16:#05050f^[fill:14x14:1,1:#1a0a2e^[fill:10x10:3,3:#3a1d5e" ..
+              "^[fill:6x6:5,5:#11091f^[fill:2x2:7,7:#000000" },
+    groups = { cracky = 3, oddly_breakable_by_hand = 2 },
+    is_ground_content = false,
+})
+
+local BH_RADIUS = 12       -- how far the pull reaches
+local BH_STRENGTH = 5      -- gentle nudge strength
+local bh_timer = 0
+
+core.register_globalstep(function(dtime)
+    bh_timer = bh_timer + dtime
+    if bh_timer < 0.3 then return end
+    bh_timer = 0
+    for _, player in ipairs(core.get_connected_players()) do
+        local pos = player:get_pos()
+        local hole = core.find_node_near(pos, BH_RADIUS, WORLD_ID .. ":schwarzes_loch")
+        if hole then
+            local dir  = vector.subtract(hole, pos)
+            local dist = vector.length(dir)
+            if dist > 1.2 then
+                -- pull strength grows a little as you get closer (still gentle)
+                local pull = BH_STRENGTH * (1 - dist / (BH_RADIUS + 2))
+                if pull > 0 then
+                    local n = vector.normalize(dir)
+                    player_add_velocity(player, {
+                        x = n.x * pull * dtime * 6,
+                        y = n.y * pull * dtime * 6,
+                        z = n.z * pull * dtime * 6,
+                    })
+                end
+            else
+                -- reached the core: a friendly star-burst, no harm
+                local name = player:get_player_name()
+                core.add_particlespawner({
+                    amount = 25, time = 0.3,
+                    minpos = vector.subtract(hole, 0.6), maxpos = vector.add(hole, 0.6),
+                    minvel = { x = -2, y = -2, z = -2 }, maxvel = { x = 2, y = 2, z = 2 },
+                    minexptime = 0.4, maxexptime = 0.9, minsize = 1, maxsize = 3,
+                    texture = "[fill:8x8:#b39ddb",
+                })
+                core.sound_play(WORLD_ID .. "_funk", { to_player = name, gain = 0.5 })
+            end
+        end
+    end
+end)
+
+-- ------------------------------------------------------------
+--  M) EXTRA: METEORE / METEORITENSCHAUER  (count the meteors)
+--  Falling meteor entities with a fire trail. Where they land they
+--  leave a glowing "meteorit" node you can break to collect (a
+--  personal counter -> a counting / NMG learning hook). Trigger a
+--  shower over yourself with "/kosmo_meteore" (priv: server), or
+--  via the test station. Child-friendly: meteors do no damage.
+-- ------------------------------------------------------------
+local METEOR_MILESTONES = {
+    [3]  = "Meteor-Sammler",
+    [10] = "Sternjaeger",
+    [20] = "Meteor-Meister",
+}
+
+local function collect_meteor(player)
+    if not (player and player:is_player()) then return end
+    local meta = player:get_meta()
+    local n = meta:get_int("lernwelt_kosmo:meteoriten") + 1
+    meta:set_int("lernwelt_kosmo:meteoriten", n)
+    local name = player:get_player_name()
+    core.sound_play("lernwelt_rescue", { to_player = name, gain = 0.7 })
+    core.chat_send_player(name, "Meteorit eingesammelt! Gefundene Meteoriten: " .. n)
+    local title = METEOR_MILESTONES[n]
+    if title then
+        core.sound_play("lernwelt_rankup", { to_player = name, gain = 1.0 })
+        core.chat_send_player(name, "Toll! Du bist jetzt: " .. title .. "!")
+    end
+end
+
+-- The landed rock you collect.
+core.register_node(WORLD_ID .. ":meteorit", {
+    description = "Meteorit\nAbbauen = einsammeln (Meteore zaehlen)",
+    drawtype = "nodebox",
+    node_box = { type = "fixed", fixed = { -0.35, -0.5, -0.35, 0.35, -0.02, 0.35 } },
+    paramtype = "light",
+    light_source = 6,
+    sunlight_propagates = true,
+    tiles = { "[fill:16x16:#5d4037^[fill:5x5:2,2:#3e2723^[fill:4x4:9,8:#3e2723" ..
+              "^[fill:3x3:10,2:#ff7043^[fill:2x2:4,10:#ffab40" },
+    groups = { oddly_breakable_by_hand = 2, dig_immediate = 2 },
+    drop = "",
+    after_dig_node = function(pos, oldnode, oldmeta, digger)
+        collect_meteor(digger)
+    end,
+})
+
+-- The falling meteor entity (fire trail; lands -> places a meteorit).
+core.register_entity(WORLD_ID .. ":meteor", {
+    initial_properties = {
+        physical = true, collide_with_objects = false,
+        collisionbox = { -0.3, -0.3, -0.3, 0.3, 0.3, 0.3 },
+        visual = "cube", visual_size = { x = 0.6, y = 0.6, z = 0.6 },
+        textures = {
+            "[fill:16x16:#5d4037", "[fill:16x16:#5d4037", "[fill:16x16:#5d4037",
+            "[fill:16x16:#5d4037", "[fill:16x16:#5d4037", "[fill:16x16:#5d4037",
+        },
+        glow = 9,
+    },
+    _life = 0,
+    on_activate = function(self)
+        self.object:set_acceleration({ x = 0, y = -9, z = 0 })
+        self.object:set_velocity({ x = math.random(-2, 2), y = -8, z = math.random(-2, 2) })
+    end,
+    on_step = function(self, dtime)
+        self._life = self._life + dtime
+        local p = self.object:get_pos()
+        if not p then return end
+        -- fiery trail
+        core.add_particlespawner({
+            amount = 8, time = 0.1,
+            minpos = vector.subtract(p, 0.3), maxpos = vector.add(p, 0.3),
+            minvel = { x = -0.5, y = 0.5, z = -0.5 }, maxvel = { x = 0.5, y = 1.5, z = 0.5 },
+            minexptime = 0.3, maxexptime = 0.7, minsize = 1, maxsize = 3,
+            texture = "[fill:8x8:#ff7043",
+        })
+        -- landed (solid below) or lived too long -> become a meteorit node
+        local below = core.get_node({ x = p.x, y = p.y - 0.6, z = p.z })
+        local bdef  = core.registered_nodes[below.name]
+        local landed = bdef and bdef.walkable ~= false and below.name ~= "air"
+        if landed or self._life > 8 then
+            local np = vector.round(p)
+            if core.get_node(np).name == "air" then
+                core.set_node(np, { name = WORLD_ID .. ":meteorit" })
+            end
+            core.add_particlespawner({
+                amount = 16, time = 0.2,
+                minpos = vector.subtract(p, 0.4), maxpos = vector.add(p, 0.4),
+                minvel = { x = -2, y = 0, z = -2 }, maxvel = { x = 2, y = 2, z = 2 },
+                minexptime = 0.3, maxexptime = 0.7, minsize = 1, maxsize = 3,
+                texture = "[fill:8x8:#ffab40",
+            })
+            self.object:remove()
+        end
+    end,
+})
+
+local function meteor_shower(player, count)
+    local base = vector.round(player:get_pos())
+    for _ = 1, count do
+        local p = {
+            x = base.x + math.random(-7, 7),
+            y = base.y + 14 + math.random(0, 4),
+            z = base.z + math.random(-7, 7),
+        }
+        core.add_entity(p, WORLD_ID .. ":meteor")
+    end
+end
+
+core.register_chatcommand("kosmo_meteore", {
+    description = "Loest einen Meteoritenschauer ueber dir aus (zum Sammeln/Zaehlen)",
+    privs = { server = true },
+    func = function(name)
+        local player = core.get_player_by_name(name)
+        if not player then return false, "Dieser Befehl funktioniert nur im Spiel." end
+        meteor_shower(player, 8)
+        return true, "Achtung, Meteoritenschauer! Schau nach oben - sammle die " ..
+                     "gelandeten Meteoriten ein (abbauen) und zaehle sie."
+    end,
+})
+
+-- ------------------------------------------------------------
+--  N) EXTRA: STERNSCHNUPPEN  (shooting stars - pure atmosphere)
+--  Now and then a bright streak races across the sky above a
+--  player. Purely visual (a fast glowing particle with a short
+--  tail); occasionally a gentle "make a wish" message. No gameplay,
+--  no blocks - just wonder.
+-- ------------------------------------------------------------
+local ss_timer, ss_next = 0, 25
+core.register_globalstep(function(dtime)
+    ss_timer = ss_timer + dtime
+    if ss_timer < ss_next then return end
+    ss_timer = 0
+    ss_next = 20 + math.random(0, 30)
+    for _, player in ipairs(core.get_connected_players()) do
+        if math.random() < 0.7 then
+            local pp  = player:get_pos()
+            local ang = math.random() * math.pi * 2
+            local start = {
+                x = pp.x + math.cos(ang) * 18,
+                y = pp.y + 16 + math.random(0, 6),
+                z = pp.z + math.sin(ang) * 18,
+            }
+            -- a fast streak flying sideways and slightly down
+            local vel = {
+                x = -math.cos(ang) * 14 + math.random(-3, 3),
+                y = -4 - math.random(0, 3),
+                z = -math.sin(ang) * 14 + math.random(-3, 3),
+            }
+            core.add_particle({
+                pos = start, velocity = vel, acceleration = { x = 0, y = 0, z = 0 },
+                expirationtime = 1.6, size = 4, glow = 14,
+                texture = "[fill:8x8:#fff2a8",
+            })
+            -- a short sparkling tail
+            core.add_particlespawner({
+                amount = 18, time = 1.4,
+                minpos = start, maxpos = start,
+                minvel = vector.multiply(vel, 0.9), maxvel = vector.multiply(vel, 1.0),
+                minexptime = 0.4, maxexptime = 1.0, minsize = 1, maxsize = 2, glow = 12,
+                texture = "[fill:8x8:#ffffff",
+            })
+            if math.random() < 0.25 then
+                core.chat_send_player(player:get_player_name(),
+                    "Eine Sternschnuppe! Wuensch dir was. *")
+            end
+        end
+    end
+end)
+
+-- ------------------------------------------------------------
+--  O) EXTRA: LEUCHTENDE SONNE  (a big glowing sun)
+--  A very bright sun block (max light) plus "/kosmo_sonne" which
+--  builds a small glowing sun ball above you - a warm light source
+--  and a landmark. Fits "Himmelskoerper": Sonne, Mond, Planeten.
+-- ------------------------------------------------------------
+core.register_node(WORLD_ID .. ":sonne", {
+    description = "Leuchtende Sonne (helle Lichtquelle)",
+    paramtype = "light",
+    light_source = 14,   -- maximum brightness
+    tiles = { "[fill:16x16:#ffd24a^[fill:12x12:2,2:#ffec80^[fill:6x6:5,5:#fffbe6" ..
+              "^[fill:2x2:0,7:#ff9d2e^[fill:2x2:14,7:#ff9d2e^[fill:2x2:7,0:#ff9d2e" ..
+              "^[fill:2x2:7,14:#ff9d2e" },
+    groups = { cracky = 3, oddly_breakable_by_hand = 2 },
+    is_ground_content = false,
+})
+
+core.register_chatcommand("kosmo_sonne", {
+    description = "Baut eine kleine leuchtende Sonne ueber dir",
+    privs = { server = true },
+    func = function(name)
+        local player = core.get_player_by_name(name)
+        if not player then return false, "Dieser Befehl funktioniert nur im Spiel." end
+        local b   = vector.round(player:get_pos())
+        local cy  = b.y + 8
+        local sun = WORLD_ID .. ":sonne"
+        -- a small 3-radius ball of sun blocks
+        for dx = -2, 2 do
+            for dy = -2, 2 do
+                for dz = -2, 2 do
+                    if dx * dx + dy * dy + dz * dz <= 5 then
+                        core.set_node({ x = b.x + dx, y = cy + dy, z = b.z + dz }, { name = sun })
+                    end
+                end
+            end
+        end
+        return true, "Eine leuchtende Sonne strahlt jetzt ueber dir!"
+    end,
+})
 
 core.log("action", "[lernwelt_kosmo] Theme 'Kosmo-Station' registered (on lernwelt engine).")
