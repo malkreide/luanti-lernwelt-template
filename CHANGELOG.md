@@ -8,6 +8,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- **New example theme `lernwelt_kosmo` (Kosmo-Station, outer space):** a
+  brand-free space-station learning world built on the engine. Four learning
+  zones (Bunte Planeten, Asteroidengürtel, Sternennebel-Höhle, Mond-Basis),
+  6 glowing planet blocks + station wall + window glass, 14 rescuable space
+  friends (with families and a rare Golden comet), a drivable **Raumgleiter**
+  (space glider with a second seat), space-junk cleanup, star-seed planting,
+  letter blocks A–Z, test-station commands (`/kosmo_teststation`, `/kosmo_basis`,
+  `/kosmo_schrott`) and a first-join starter kit. Its special feature is
+  **Mond-Schwerkraft**: stand-on **jump/physics blocks** (`mond_boden` low
+  gravity, `sprung_pad` trampoline bounce, `schwerelos_feld` weightless,
+  `schwerkraft_normal` reset) that change how you move. Tasks cover counting
+  planets (MA.1), colours, comparing sizes (MA.2), the rocket **launch-order**
+  pattern (MI.1 mission sequence), light/dark and celestial bodies (NMG), and
+  moon-jumping (BS.2). Full DE/EN guides (`ANLEITUNG.md`, `GUIDE.md`,
+  `KINDER-KURZ.md`, `WELT-EINRICHTEN.md`); a custom ground spawner brings the
+  land-walking friends to life
 - `INSTALL.md` — a step-by-step install guide with per-OS sections for
   **Windows 11**, **macOS** and **Linux** (Luanti + base game + both mods +
   water-rich world setup); linked from both root READMEs

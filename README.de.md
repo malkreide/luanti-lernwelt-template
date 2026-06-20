@@ -118,17 +118,23 @@ luanti-lernwelt-template/
 │       └── register.lua      # register_world()
 ├── lernwelt_beispiel/        # Beispiel-Thema: Gluehpilz-Wald
 │   └── init.lua              # ein deklaratives register_world{...}
-└── lernwelt_tiefsee/         # Beispiel-Thema: Tiefsee-Retter (Unterwasser)
-    ├── init.lua              # register_world{...} + Tauchkapsel + Startausruestung
+├── lernwelt_tiefsee/         # Beispiel-Thema: Tiefsee-Retter (Unterwasser)
+│   ├── init.lua              # register_world{...} + Tauchkapsel + Startausruestung
+│   └── settingtypes.txt      # Schalter fuer die Startausruestung
+└── lernwelt_kosmo/           # Beispiel-Thema: Kosmo-Station (Weltraum)
+    ├── init.lua              # register_world{...} + Raumgleiter + Mond-Schwerkraft
     └── settingtypes.txt      # Schalter fuer die Startausruestung
 ```
 
-Zwei Themen sind als Beispiele dabei: **`lernwelt_beispiel`** (Gluehpilz-Wald)
-und **`lernwelt_tiefsee`** (Tiefsee-Retter). Letzteres zeigt, wie ein Thema **eigene
-Zusatz-Inhalte** — hier eine fahrbare Tauchkapsel und eine Startausrüstung beim
-ersten Join — zusätzlich zur Engine mitbringen kann. Eine vollständige
-**Spielanleitung** dazu (alle Elemente, Bedienung, Aufgaben & Ziele) steht in
-[`lernwelt_tiefsee/ANLEITUNG.md`](lernwelt_tiefsee/ANLEITUNG.md).
+Drei Themen sind als Beispiele dabei: **`lernwelt_beispiel`** (Gluehpilz-Wald),
+**`lernwelt_tiefsee`** (Tiefsee-Retter) und **`lernwelt_kosmo`** (Kosmo-Station).
+Die letzten beiden zeigen, wie ein Thema **eigene Zusatz-Inhalte** zusätzlich zur
+Engine mitbringen kann — die Tiefsee eine fahrbare Tauchkapsel, die Kosmo-Station
+einen Raumgleiter plus **Mond-Schwerkraft-Blöcke** (Sprung-/Physik-Blöcke) — je mit
+einer Startausrüstung beim ersten Join. Vollständige **Spielanleitungen** dazu (alle
+Elemente, Bedienung, Aufgaben & Ziele) stehen in
+[`lernwelt_tiefsee/ANLEITUNG.md`](lernwelt_tiefsee/ANLEITUNG.md) und
+[`lernwelt_kosmo/ANLEITUNG.md`](lernwelt_kosmo/ANLEITUNG.md).
 
 ## Übersetzungen
 
