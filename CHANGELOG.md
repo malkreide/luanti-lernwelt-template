@@ -8,6 +8,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- **New example theme `lernwelt_schrauber` (Schrauber-Werkstatt, robots & simple
+  logic):** a brand-free tinkerer's workshop built on the engine. Three learning zones —
+  **Fließband** (conveyor), **Energieraum** and **Recyclinghof**. Its signature learning
+  feature is a self-contained **logic system** (the direct **bridge to Mesecons**):
+  wire up **Schalter → Leitung → Lampe → Tür** and watch cause produce effect ("wenn-dann")
+  — a connected wire network is powered as soon as any switch/button on it is on, then every
+  lamp lights, every door opens and the wire glows. If the optional **`mesecons`** mod is
+  installed, the switch/button also act as real Mesecons receptors and the lamp/door as real
+  effectors, so they interoperate with real Mesecons wire; without Mesecons the mini-logic
+  runs on its own. A second signature feature, **assembling a robot in the right order**
+  (Beine → Körper → Arme → Kopf — a wrong part is refused with a hint, so the **order is the
+  algorithm**); the finished robot powers on, glows and follows its builder. A **Fließband**
+  (conveyor) pushes players and objects in its arrow direction (cause & effect to stand on),
+  and a **Recycler** + scrap heaps turn **Schrott** into new robot parts (Materialkreislauf).
+  Logic, robot assembly, conveyor and recycler are the theme's own code and work **even
+  without a mob API**. Board tasks focus on **cause & effect**, **simple if-then logic** and
+  **sequencing/algorithms** (Lehrplan 21: Medien & Informatik — Informatik-Grundlagen). Ten
+  peaceful, repairable robots (with families and a rare **Meisterbot**), ~13 declarative
+  workshop blocks (workbench, steel/diamond plate, gear & bolt blocks, hazard stripes, glowing
+  energy block, robot sheet metal), letter blocks A–Z, a robot land spawner, ambient sounds, a
+  first-join starter kit, and commands (`/schrauber_werkstatt` builds the signature **workshop**
+  base, `/schrauber_logik`, `/schrauber_teststation`, `/schrauber_roboter`). Full DE/EN guides
+  (`ANLEITUNG.md`, `GUIDE.md`, `KINDER-KURZ.md`, `WELT-EINRICHTEN.md`)
 - **New example theme `lernwelt_drachenhort` (Drachenhort, friendly dragons):** a
   brand-free dragon world built on the engine. Three learning zones — **Drachenberg**
   (mountain), **Lavafreier Krater** (a warm but completely safe, lava-free crater with
