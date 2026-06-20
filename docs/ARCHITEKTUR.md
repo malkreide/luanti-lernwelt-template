@@ -216,6 +216,23 @@ alles im selben `lernwelt_schrauber:`-Namensraum.
 Eine vollständige Spieleranleitung liegt in
 [`../lernwelt_schrauber/ANLEITUNG.md`](../lernwelt_schrauber/ANLEITUNG.md).
 
+### 🐻‍❄️ Eisbär-Bucht · `lernwelt_eisbaer`
+
+Zeigt, wie ein Thema rund um **NMG.2 (Tiere & Lebensräume)** gebaut wird: Kälte-Tiere ihrem
+Lebensraum zuordnen, dazu **Blau-Weiss-Muster** gestalten – alles im selben
+`lernwelt_eisbaer:`-Namensraum.
+
+| | |
+|---|---|
+| Blöcke | ~16 deklarativ (Schnee, Pack-/Blaues/Klares Eis, Iglu-Block & Eisziegel, 5 Blau-Weiss-Muster, Eiskristall, verschneiter Fels, Lagerfeuer, Proviantkiste Per-Face) + 26 Buchstaben (A–Z) + Polarlicht (farbwechselnd), Futterstelle, Eisblumen-Setzling |
+| Zonen | 3 (Gefrorener See, Schneewald, Polarlicht-Höhle) – **mit Aufgaben** (Tiere & Lebensräume, Blau-Weiss-Muster nachlegen, Hilfe-Ziel) |
+| Tiere | 12 friedliche Kälte-Tiere (Wasser- & Land-Tiere, mit Familien; ein seltener leuchtender Polarlicht-Bär) |
+| Ränge | 5 (davon 3 mit Abzeichen) |
+| Theme-Extras (eigener Lua-Code) | fahrbarer **Schlitten** (gleitet über Schnee/Eis, zu zweit), **Polarlicht** (Aurora-Knoten, die per Node-Timer langsam die Farbe wechseln), **Tiere füttern** (Futterstelle + Fisch, Pflege-Zähler), **Eisblumen pflanzen** (wachsen zu Blau-Weiss-Muster-Blöcken), **Startausrüstung**, Tier-Land-Spawner (Wasser-Tiere über die Engine), Ambient-Sound, **Buchstaben-Blöcke**, Bau-Befehle (`/eisbaer_eispalast`, `/eisbaer_iglu`, `/eisbaer_teststation`) |
+
+Eine vollständige Spieleranleitung liegt in
+[`../lernwelt_eisbaer/ANLEITUNG.md`](../lernwelt_eisbaer/ANLEITUNG.md).
+
 ---
 
 ## Eigene Welt bauen – die Kurzfassung

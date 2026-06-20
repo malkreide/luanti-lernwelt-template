@@ -131,30 +131,36 @@ luanti-lernwelt-template/
 ├── lernwelt_drachenhort/     # example theme: Drachenhort (friendly dragons)
 │   ├── init.lua              # register_world{...} + baby-dragon raising + flying mount
 │   └── settingtypes.txt      # starter-kit toggle
-└── lernwelt_schrauber/       # example theme: Schrauber-Werkstatt (robots & logic)
-    ├── init.lua              # register_world{...} + switch/lamp/door logic + robot assembly
+├── lernwelt_schrauber/       # example theme: Schrauber-Werkstatt (robots & logic)
+│   ├── init.lua              # register_world{...} + switch/lamp/door logic + robot assembly
+│   └── settingtypes.txt      # starter-kit toggle
+└── lernwelt_eisbaer/         # example theme: Eisbaer-Bucht (polar world, cold animals)
+    ├── init.lua              # register_world{...} + sled + colour-cycling aurora + feeding
     └── settingtypes.txt      # starter-kit toggle
 ```
 
-The repo ships a minimal copy-me skeleton, **`lernwelt_beispiel`**, plus five
+The repo ships a minimal copy-me skeleton, **`lernwelt_beispiel`**, plus six
 fully built example themes: **`lernwelt_gluehpilz`** (Gluehpilz-Wald),
 **`lernwelt_tiefsee`** (Tiefsee-Retter), **`lernwelt_kosmo`** (Kosmo-Station),
-**`lernwelt_drachenhort`** (Drachenhort) and **`lernwelt_schrauber`**
-(Schrauber-Werkstatt).
+**`lernwelt_drachenhort`** (Drachenhort), **`lernwelt_schrauber`**
+(Schrauber-Werkstatt) and **`lernwelt_eisbaer`** (Eisbaer-Bucht).
 They show how a theme can add its own extra content on top of the engine —
 Gluehpilz-Wald a rideable glow-beetle plus **day/night mushrooms** (a child-controlled
 time-of-day cycle), Tiefsee a drivable submarine, Kosmo a space glider plus
 **moon-gravity jump/physics blocks**, Drachenhort **raising a baby dragon**
 (hatch an egg, then patiently feed & tame it — responsibility & patience) plus a
-**flying dragon mount**, and Schrauber-Werkstatt a self-contained **switch → wire →
+**flying dragon mount**, Schrauber-Werkstatt a self-contained **switch → wire →
 lamp → door logic system** (a gentle bridge to Mesecons) plus **assembling a robot in
-the right order** (an algorithm) — together with a first-join starter kit. Full
+the right order** (an algorithm), and Eisbaer-Bucht a drivable **sled**, a glowing
+**aurora** that slowly cycles colour, and a feeding station for **cold animals &
+their habitats** (NMG.2) — together with a first-join starter kit. Full
 **player guides** (every element, controls, tasks & goals) live in
 [`lernwelt_gluehpilz/ANLEITUNG.md`](lernwelt_gluehpilz/ANLEITUNG.md),
 [`lernwelt_tiefsee/ANLEITUNG.md`](lernwelt_tiefsee/ANLEITUNG.md),
 [`lernwelt_kosmo/ANLEITUNG.md`](lernwelt_kosmo/ANLEITUNG.md),
-[`lernwelt_drachenhort/ANLEITUNG.md`](lernwelt_drachenhort/ANLEITUNG.md) and
-[`lernwelt_schrauber/ANLEITUNG.md`](lernwelt_schrauber/ANLEITUNG.md).
+[`lernwelt_drachenhort/ANLEITUNG.md`](lernwelt_drachenhort/ANLEITUNG.md),
+[`lernwelt_schrauber/ANLEITUNG.md`](lernwelt_schrauber/ANLEITUNG.md) and
+[`lernwelt_eisbaer/ANLEITUNG.md`](lernwelt_eisbaer/ANLEITUNG.md).
 
 ## Translations
 

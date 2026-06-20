@@ -1,0 +1,4 @@
+#    Give a starter kit (Polar-Logbuch, camera, sled, fish + feeding station, ice-flower
+#    saplings, snow/ice/pattern blocks and spawn eggs) to each player once, on their first
+#    join. Handy for quick testing.
+lernwelt_eisbaer_starter_kit (Give starter kit on first join) bool true
