@@ -1,0 +1,4 @@
+#    Give a starter kit (Drachen-Tagebuch, camera, Reitdrache, dragon food,
+#    Brut-Eier, dragon blocks, counting eggs, spawn eggs) to each player once,
+#    on their first join. Handy for quick testing.
+lernwelt_drachenhort_starter_kit (Give starter kit on first join) bool true
