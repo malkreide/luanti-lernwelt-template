@@ -126,23 +126,30 @@ luanti-lernwelt-template/
 ├── lernwelt_tiefsee/         # Beispiel-Thema: Tiefsee-Retter (Unterwasser)
 │   ├── init.lua              # register_world{...} + Tauchkapsel + Startausruestung
 │   └── settingtypes.txt      # Schalter fuer die Startausruestung
-└── lernwelt_kosmo/           # Beispiel-Thema: Kosmo-Station (Weltraum)
-    ├── init.lua              # register_world{...} + Raumgleiter + Mond-Schwerkraft
+├── lernwelt_kosmo/           # Beispiel-Thema: Kosmo-Station (Weltraum)
+│   ├── init.lua              # register_world{...} + Raumgleiter + Mond-Schwerkraft
+│   └── settingtypes.txt      # Schalter fuer die Startausruestung
+└── lernwelt_drachenhort/     # Beispiel-Thema: Drachenhort (freundliche Drachen)
+    ├── init.lua              # register_world{...} + Drachenbaby grossziehen + Flugdrache
     └── settingtypes.txt      # Schalter fuer die Startausruestung
 ```
 
-Dabei sind eine minimale Kopiervorlage, **`lernwelt_beispiel`**, sowie drei voll
+Dabei sind eine minimale Kopiervorlage, **`lernwelt_beispiel`**, sowie vier voll
 ausgebaute Beispiel-Themen: **`lernwelt_gluehpilz`** (Gluehpilz-Wald),
-**`lernwelt_tiefsee`** (Tiefsee-Retter) und **`lernwelt_kosmo`** (Kosmo-Station).
+**`lernwelt_tiefsee`** (Tiefsee-Retter), **`lernwelt_kosmo`** (Kosmo-Station)
+und **`lernwelt_drachenhort`** (Drachenhort).
 Sie zeigen, wie ein Thema **eigene Zusatz-Inhalte** zusätzlich zur Engine mitbringen
 kann — der Glühpilz-Wald einen reitbaren Leucht-Käfer plus **Tag-Nacht-Pilze** (ein
 kindgesteuerter Tag-Nacht-Wechsel), die Tiefsee eine fahrbare Tauchkapsel, die
-Kosmo-Station einen Raumgleiter plus **Mond-Schwerkraft-Blöcke** — je mit einer
+Kosmo-Station einen Raumgleiter plus **Mond-Schwerkraft-Blöcke**, und der Drachenhort
+das **Großziehen eines Drachenbabys** (ein Ei ausbrüten, dann geduldig füttern & zähmen —
+Verantwortung & Geduld) plus einen **fliegenden Reitdrachen** — je mit einer
 Startausrüstung beim ersten Join. Vollständige **Spielanleitungen** dazu (alle
 Elemente, Bedienung, Aufgaben & Ziele) stehen in
 [`lernwelt_gluehpilz/ANLEITUNG.md`](lernwelt_gluehpilz/ANLEITUNG.md),
-[`lernwelt_tiefsee/ANLEITUNG.md`](lernwelt_tiefsee/ANLEITUNG.md) und
-[`lernwelt_kosmo/ANLEITUNG.md`](lernwelt_kosmo/ANLEITUNG.md).
+[`lernwelt_tiefsee/ANLEITUNG.md`](lernwelt_tiefsee/ANLEITUNG.md),
+[`lernwelt_kosmo/ANLEITUNG.md`](lernwelt_kosmo/ANLEITUNG.md) und
+[`lernwelt_drachenhort/ANLEITUNG.md`](lernwelt_drachenhort/ANLEITUNG.md).
 
 ## Übersetzungen
 

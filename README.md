@@ -125,22 +125,29 @@ luanti-lernwelt-template/
 ├── lernwelt_tiefsee/         # example theme: Tiefsee-Retter (underwater)
 │   ├── init.lua              # register_world{...} + submarine + starter kit
 │   └── settingtypes.txt      # starter-kit toggle
-└── lernwelt_kosmo/           # example theme: Kosmo-Station (outer space)
-    ├── init.lua              # register_world{...} + space glider + moon gravity
+├── lernwelt_kosmo/           # example theme: Kosmo-Station (outer space)
+│   ├── init.lua              # register_world{...} + space glider + moon gravity
+│   └── settingtypes.txt      # starter-kit toggle
+└── lernwelt_drachenhort/     # example theme: Drachenhort (friendly dragons)
+    ├── init.lua              # register_world{...} + baby-dragon raising + flying mount
     └── settingtypes.txt      # starter-kit toggle
 ```
 
-The repo ships a minimal copy-me skeleton, **`lernwelt_beispiel`**, plus three
+The repo ships a minimal copy-me skeleton, **`lernwelt_beispiel`**, plus four
 fully built example themes: **`lernwelt_gluehpilz`** (Gluehpilz-Wald),
-**`lernwelt_tiefsee`** (Tiefsee-Retter) and **`lernwelt_kosmo`** (Kosmo-Station).
+**`lernwelt_tiefsee`** (Tiefsee-Retter), **`lernwelt_kosmo`** (Kosmo-Station)
+and **`lernwelt_drachenhort`** (Drachenhort).
 They show how a theme can add its own extra content on top of the engine —
 Gluehpilz-Wald a rideable glow-beetle plus **day/night mushrooms** (a child-controlled
 time-of-day cycle), Tiefsee a drivable submarine, Kosmo a space glider plus
-**moon-gravity jump/physics blocks** — together with a first-join starter kit. Full
+**moon-gravity jump/physics blocks**, and Drachenhort **raising a baby dragon**
+(hatch an egg, then patiently feed & tame it — responsibility & patience) plus a
+**flying dragon mount** — together with a first-join starter kit. Full
 **player guides** (every element, controls, tasks & goals) live in
 [`lernwelt_gluehpilz/ANLEITUNG.md`](lernwelt_gluehpilz/ANLEITUNG.md),
-[`lernwelt_tiefsee/ANLEITUNG.md`](lernwelt_tiefsee/ANLEITUNG.md) and
-[`lernwelt_kosmo/ANLEITUNG.md`](lernwelt_kosmo/ANLEITUNG.md).
+[`lernwelt_tiefsee/ANLEITUNG.md`](lernwelt_tiefsee/ANLEITUNG.md),
+[`lernwelt_kosmo/ANLEITUNG.md`](lernwelt_kosmo/ANLEITUNG.md) and
+[`lernwelt_drachenhort/ANLEITUNG.md`](lernwelt_drachenhort/ANLEITUNG.md).
 
 ## Translations
 

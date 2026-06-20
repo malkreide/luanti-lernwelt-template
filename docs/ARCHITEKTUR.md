@@ -183,6 +183,22 @@ abdeckt – alles im selben `lernwelt_tiefsee:`-Namensraum.
 Eine vollständige Spieleranleitung liegt in
 [`../lernwelt_tiefsee/ANLEITUNG.md`](../lernwelt_tiefsee/ANLEITUNG.md).
 
+### 🐉 Drachenhort · `lernwelt_drachenhort`
+
+Zeigt, wie ein Thema eine **eigene, langfristige Pflege-Mechanik** ergänzt, die die
+Engine nicht abdeckt – alles im selben `lernwelt_drachenhort:`-Namensraum.
+
+| | |
+|---|---|
+| Blöcke | ~16 deklarativ (Drachensteine, Wolken-/Bergstein, Kristallglas, kalte Lava, Schuppen-, Per-Face-Nest, Goldhort) + 26 Buchstaben (A–Z) + 5 Zähl-Eier + Brut-Ei |
+| Zonen | 3 (Drachenberg, Lavafreier Krater, Himmelsinseln) – **mit Aufgaben** (Eier zählen, Farben zuordnen, Anfreund-Ziel) |
+| Tiere | 10 friedliche Drachen (mit Familien; ein seltener Sternendrache) |
+| Ränge | 5 (davon 3 mit Abzeichen) |
+| Theme-Extras (eigener Lua-Code) | **Drachenbaby großziehen** (Brut-Ei ausbrüten → geduldig füttern → zähmen; Verantwortung & Geduld, läuft auch ohne Mob-API), fliegender **Reitdrache**, **Startausrüstung**, Land-Spawner, Ambient-Sound, **Buchstaben-Blöcke**, Test-Befehle (`/drachenhort_nest`, `/drachenhort_teststation`, `/drachenhort_baby`) |
+
+Eine vollständige Spieleranleitung liegt in
+[`../lernwelt_drachenhort/ANLEITUNG.md`](../lernwelt_drachenhort/ANLEITUNG.md).
+
 ---
 
 ## Eigene Welt bauen – die Kurzfassung

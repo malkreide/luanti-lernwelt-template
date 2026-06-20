@@ -8,6 +8,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- **New example theme `lernwelt_drachenhort` (Drachenhort, friendly dragons):** a
+  brand-free dragon world built on the engine. Three learning zones — **Drachenberg**
+  (mountain), **Lavafreier Krater** (a warm but completely safe, lava-free crater with
+  harmless glowing "kalte Lava") and **Himmelsinseln** (sky islands). Its signature
+  learning feature is **raising a baby dragon** (responsibility & patience): place a
+  warm **Brut-Ei**, it **hatches** into a baby dragon, then feed it again and again with
+  **Drachenfutter** — with a patience cooldown ("still full, be patient") — until, after
+  several patient feedings, it is **tamed** (Animalia/`mobs_redo`-style tame-by-feeding,
+  with an owner) and gently **follows** its child. Baby dragons, hatching eggs and feeding
+  are the theme's own code and work **even without a mob API**. Board tasks focus on
+  **counting eggs** (MA.1) and **matching colours** (MA.2) plus caring/patience (NMG);
+  colourful **counting eggs** (`ei_rot/blau/gruen/gelb/lila`) can be laid out and counted.
+  Ten peaceful, befriendable dragons (with families and a rare **Sternendrache**), a
+  **flying Reitdrache** mount with a spark trail and a second seat, ~16 declarative blocks
+  (glowing dragon stones, cloud block, mountain stone, crystal glass, scales, gold hoard,
+  a per-face dragon **nest**), letter blocks A–Z, a land spawner, ambient sounds, a
+  first-join starter kit, and commands (`/drachenhort_nest` builds the signature **dragon
+  nest** base, `/drachenhort_teststation`, `/drachenhort_baby`). Full DE/EN guides
+  (`ANLEITUNG.md`, `GUIDE.md`, `KINDER-KURZ.md`, `WELT-EINRICHTEN.md`)
 - **New example theme `lernwelt_gluehpilz` (Gluehpilz-Wald, cosy mushroom realm):**
   a brand-free, very low-threshold "first world" built on the engine. Three learning
   zones (Pilzwald, Glüh-Höhle, Bach), ~30 declarative blocks (6 glowing mushrooms,
