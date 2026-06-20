@@ -1,0 +1,4 @@
+#    Give a starter kit (Wald-Tagebuch, camera, Leucht-Kaefer, glow mushrooms,
+#    forest blocks, Tag-Nacht-Pilze, mushroom seeds, spawn eggs) to each player
+#    once, on their first join. Handy for quick testing.
+lernwelt_gluehpilz_starter_kit (Give starter kit on first join) bool true

@@ -132,11 +132,12 @@ ohne Konflikt funktionieren:
 
 ---
 
-## Die zwei Themenwelten
+## Die Themenwelten
 
-Beide Themen nutzen dasselbe Geruest, zeigen aber zwei Stufen:
+Die Themen nutzen dasselbe Gerüst, zeigen aber verschiedene Stufen – von der
+minimalen Kopiervorlage bis zum voll ausgebauten Thema mit eigenem Extra-Code:
 
-### 🍄 Gluehpilz-Wald · `lernwelt_beispiel`
+### 🍄 Gluehpilz-Wald (Vorlage) · `lernwelt_beispiel`
 
 Das **minimale Referenz-Thema** – rein deklarativ, ohne jeglichen Extra-Code.
 Die ideale Kopiervorlage für eine eigene Welt.
@@ -148,6 +149,23 @@ Die ideale Kopiervorlage für eine eigene Welt.
 | Tiere | 6 (Schnecke, Marienkäfer, Glühkäfer, Fledermaus, Igel, Molch) |
 | Ränge | 4 (davon 2 mit Abzeichen) |
 | Besonderheit | rein deklarativ; Legacy-Aliase nach Umbenennung |
+
+### 🍄 Gluehpilz-Wald (voll ausgebaut) · `lernwelt_gluehpilz`
+
+Die **kuschelige Erstwelt** – sehr niederschwellig, gleicher Titel wie die Vorlage,
+aber als komplettes Thema mit eigenem Theme-Code (im `lernwelt_gluehpilz:`-Namensraum).
+
+| | |
+|---|---|
+| Blöcke | ~30 deklarativ (Gluehpilze, Moos/Waldboden/Pilzhaus, Muster-, Per-Face-Blöcke) + 26 Buchstaben (A–Z) + Müll & Setzling + Tag-Nacht-Pilze |
+| Zonen | 3 (Pilzwald, Glüh-Höhle, Bach) – **mit Aufgaben** (Quiz, Farb-Muster, Rettungsziel) |
+| Tiere | 14 (u. a. Igel, Glühwürmchen, Biber, Wassermaus; ein seltener Traum-Falter) |
+| Ränge | 5 (davon 3 mit Abzeichen) |
+| Theme-Extras (eigener Lua-Code) | **Tag-Nacht-Pilze** (kindgesteuerter Tag-Nacht-Wechsel), reitbarer **Leucht-Käfer**, **Startausrüstung**, Wald-aufräumen, Pilze pflanzen, Glüh-Sporen, Ambient-Sound, **Buchstaben-Blöcke**, Befehle (`/pilzwald_haus`, `/pilzwald_teststation`, `/pilzwald_muell`) |
+| Lernidee | nach Farbe sortieren (MA.2), gross/klein vergleichen (MA.1/2), Tag-Nacht erleben (NMG.1) |
+
+Eine vollständige Spieleranleitung liegt in
+[`../lernwelt_gluehpilz/ANLEITUNG.md`](../lernwelt_gluehpilz/ANLEITUNG.md).
 
 ### 🌊 Tiefsee-Retter · `lernwelt_tiefsee`
 

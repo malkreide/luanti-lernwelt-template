@@ -8,6 +8,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- **New example theme `lernwelt_gluehpilz` (Gluehpilz-Wald, cosy mushroom realm):**
+  a brand-free, very low-threshold "first world" built on the engine. Three learning
+  zones (Pilzwald, Glüh-Höhle, Bach), ~30 declarative blocks (6 glowing mushrooms,
+  moss/forest/mushroom-house parts, patterned + per-face blocks), 14 rescuable forest
+  friends (with families and a rare Traum-Falter), a rideable **Leucht-Käfer** (glow-beetle
+  mount with a second seat), forest-cleanup, mushroom-seed planting, drifting night
+  **Glüh-Sporen**, letter blocks A–Z, and commands (`/pilzwald_haus` builds the signature
+  **big mushroom house** base, `/pilzwald_teststation`, `/pilzwald_muell`) plus a
+  first-join starter kit. Its special feature is **Tag-Nacht-Pilze**: right-click
+  glowing mushrooms (`tag_pilz`, `daemmer_pilz`, `nacht_pilz`) to switch the whole
+  world between day, dusk and night — a calm, child-controlled day/night cycle where the
+  glow mushrooms light up the night. Tasks cover sorting by colour (MA.2), counting
+  (MA.1), comparing big/small (MA.1/2) and experiencing day/night and light/dark
+  (NMG.1). Full DE/EN guides (`ANLEITUNG.md`, `GUIDE.md`, `KINDER-KURZ.md`,
+  `WELT-EINRICHTEN.md`); a custom ground spawner brings the land-walking friends to life
 - **More space elements in `lernwelt_kosmo`:** a **Schwarzes Loch** (`schwarzes_loch`)
   that gently pulls nearby players in (child-friendly gravity well, no damage); a
   **Meteoritenschauer** — falling meteor entities with a fire trail that leave a
