@@ -57,7 +57,7 @@ Texturen.
 # Danach im Menue "Mods auswaehlen" fuer die Welt aktivieren.
 ```
 
-> 🪟 **Windows 11, Schritt für Schritt:** siehe [INSTALL-WINDOWS.md](INSTALL-WINDOWS.md).
+> 🪟🍎🐧 **Schritt für Schritt (Windows, macOS, Linux):** siehe [INSTALL.md](INSTALL.md).
 
 ## Verwendung / Schnellstart
 
