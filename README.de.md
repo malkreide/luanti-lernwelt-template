@@ -132,31 +132,37 @@ luanti-lernwelt-template/
 ├── lernwelt_drachenhort/     # Beispiel-Thema: Drachenhort (freundliche Drachen)
 │   ├── init.lua              # register_world{...} + Drachenbaby grossziehen + Flugdrache
 │   └── settingtypes.txt      # Schalter fuer die Startausruestung
-└── lernwelt_schrauber/       # Beispiel-Thema: Schrauber-Werkstatt (Roboter & Logik)
-    ├── init.lua              # register_world{...} + Schalter/Lampe/Tuer-Logik + Roboterbau
+├── lernwelt_schrauber/       # Beispiel-Thema: Schrauber-Werkstatt (Roboter & Logik)
+│   ├── init.lua              # register_world{...} + Schalter/Lampe/Tuer-Logik + Roboterbau
+│   └── settingtypes.txt      # Schalter fuer die Startausruestung
+└── lernwelt_eisbaer/         # Beispiel-Thema: Eisbaer-Bucht (Polarwelt, Kaelte-Tiere)
+    ├── init.lua              # register_world{...} + Schlitten + farbwechselnde Aurora + Fuettern
     └── settingtypes.txt      # Schalter fuer die Startausruestung
 ```
 
-Dabei sind eine minimale Kopiervorlage, **`lernwelt_beispiel`**, sowie fünf voll
+Dabei sind eine minimale Kopiervorlage, **`lernwelt_beispiel`**, sowie sechs voll
 ausgebaute Beispiel-Themen: **`lernwelt_gluehpilz`** (Gluehpilz-Wald),
 **`lernwelt_tiefsee`** (Tiefsee-Retter), **`lernwelt_kosmo`** (Kosmo-Station),
-**`lernwelt_drachenhort`** (Drachenhort) und **`lernwelt_schrauber`**
-(Schrauber-Werkstatt).
+**`lernwelt_drachenhort`** (Drachenhort), **`lernwelt_schrauber`**
+(Schrauber-Werkstatt) und **`lernwelt_eisbaer`** (Eisbaer-Bucht).
 Sie zeigen, wie ein Thema **eigene Zusatz-Inhalte** zusätzlich zur Engine mitbringen
 kann — der Glühpilz-Wald einen reitbaren Leucht-Käfer plus **Tag-Nacht-Pilze** (ein
 kindgesteuerter Tag-Nacht-Wechsel), die Tiefsee eine fahrbare Tauchkapsel, die
 Kosmo-Station einen Raumgleiter plus **Mond-Schwerkraft-Blöcke**, der Drachenhort
 das **Großziehen eines Drachenbabys** (ein Ei ausbrüten, dann geduldig füttern & zähmen —
-Verantwortung & Geduld) plus einen **fliegenden Reitdrachen**, und die Schrauber-Werkstatt
+Verantwortung & Geduld) plus einen **fliegenden Reitdrachen**, die Schrauber-Werkstatt
 ein selbstständiges **Schalter → Leitung → Lampe → Tür-Logiksystem** (sanfte Brücke zu
-Mesecons) plus **einen Roboter in der richtigen Reihenfolge zusammenbauen** (ein Algorithmus)
-— je mit einer Startausrüstung beim ersten Join. Vollständige **Spielanleitungen** dazu (alle
-Elemente, Bedienung, Aufgaben & Ziele) stehen in
+Mesecons) plus **einen Roboter in der richtigen Reihenfolge zusammenbauen** (ein Algorithmus),
+und die Eisbär-Bucht einen fahrbaren **Schlitten**, ein leuchtendes **Polarlicht**, das
+langsam die Farbe wechselt, und eine Futterstelle für **Kälte-Tiere & ihre Lebensräume**
+(NMG.2) — je mit einer Startausrüstung beim ersten Join. Vollständige **Spielanleitungen**
+dazu (alle Elemente, Bedienung, Aufgaben & Ziele) stehen in
 [`lernwelt_gluehpilz/ANLEITUNG.md`](lernwelt_gluehpilz/ANLEITUNG.md),
 [`lernwelt_tiefsee/ANLEITUNG.md`](lernwelt_tiefsee/ANLEITUNG.md),
 [`lernwelt_kosmo/ANLEITUNG.md`](lernwelt_kosmo/ANLEITUNG.md),
-[`lernwelt_drachenhort/ANLEITUNG.md`](lernwelt_drachenhort/ANLEITUNG.md) und
-[`lernwelt_schrauber/ANLEITUNG.md`](lernwelt_schrauber/ANLEITUNG.md).
+[`lernwelt_drachenhort/ANLEITUNG.md`](lernwelt_drachenhort/ANLEITUNG.md),
+[`lernwelt_schrauber/ANLEITUNG.md`](lernwelt_schrauber/ANLEITUNG.md) und
+[`lernwelt_eisbaer/ANLEITUNG.md`](lernwelt_eisbaer/ANLEITUNG.md).
 
 ## Übersetzungen
 

@@ -8,6 +8,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- **New example theme `lernwelt_eisbaer` (Eisbär-Bucht, polar world / cold animals):**
+  a brand-free polar learning world built on the engine. Its base is an **Iglu/Eispalast**
+  and it has three learning zones — **Gefrorener See** (frozen lake), **Schneewald** (snow
+  forest) and **Polarlicht-Höhle** (aurora cave). The learning focus is **cold animals & their
+  habitats** (Lehrplan 21: **NMG.2 Tiere & Lebensräume**) plus **blue-white patterns**: twelve
+  peaceful, helpable animals (penguin, seal, walrus, beluga, narwhal, snow hare, arctic fox,
+  reindeer, snowy owl, polar bear, aurora fox and a rare glowing **Polarlicht-Bär**), each shown
+  with its **habitat** in the logbook. Signature theme extras (the engine cannot express these):
+  a drivable **Schlitten** (sled that glides over snow & ice, two-seater); a self-contained
+  **Polarlicht** (aurora) made of nodes that **slowly cycle colour** (blau → türkis → grün →
+  violett → weiss) for a gentle colour/pattern lesson; a **Futterstelle** + **Fisch** feeding
+  mini-game with a caring counter (Tier-Freund → Polar-Pfleger → Kälte-Kümmerer); and
+  **Eisblumen** saplings that grow into random **blue-white pattern blocks**. Sled, aurora,
+  feeding and ice flowers work **even without a mob API**. Board tasks focus on **animals &
+  habitats**, **blue-white pattern copying** and help goals. ~16 declarative snow/ice/pattern
+  blocks (snow, pack/blue/clear ice, igloo bricks, five blue-white patterns, glowing ice
+  crystal, snowy rock, a warm campfire, a per-face supply crate), letter blocks A–Z, an animal
+  land spawner (water animals auto-spawn in water via the engine), ambient sounds, a first-join
+  starter kit, and commands (`/eisbaer_eispalast` builds the signature **ice palace** base,
+  `/eisbaer_iglu`, `/eisbaer_teststation`). Full DE/EN guides (`ANLEITUNG.md`, `GUIDE.md`,
+  `KINDER-KURZ.md`, `WELT-EINRICHTEN.md`)
 - **New example theme `lernwelt_schrauber` (Schrauber-Werkstatt, robots & simple
   logic):** a brand-free tinkerer's workshop built on the engine. Three learning zones —
   **Fließband** (conveyor), **Energieraum** and **Recyclinghof**. Its signature learning
