@@ -38,7 +38,8 @@ framework is theme-neutral, and themes use original names and textures.
 - **Accessibility**: larger-text mode and easy mode (fewer quiz options)
 - **Curriculum-agnostic**: ships with Lehrplan-21 (Swiss curriculum) as the default tag set — replace `lernwelt.fachbereiche` to use Common Core, the National Curriculum, or your own
 - **Internationalized**: English source strings + translation files (`locale/*.tr`), German included; the in-game UI follows the client language
-- **No textures required** — colours are generated via `[fill`; PNGs optional
+- **No textures required** — colours via `[fill`; **patterns** (layered `[fill`),
+  **per-face textures** (`top`/`side`/`bottom`) and own **PNGs** optional
 
 ## Prerequisites
 

@@ -69,6 +69,30 @@ lernwelt.register_world({
           texture = "[fill:16x16:#f4e3c1^[fill:5x4:6,8:#e8a0b0^[fill:3x2:7,6:#d98aa0" },
         { suffix = "wellen", name = "Wellen-Block",
           texture = "[fill:16x16:#5dade2^[fill:16x2:0,4:#2980b9^[fill:16x2:0,11:#2980b9" },
+        { suffix = "fischschuppen", name = "Fischschuppen-Block",
+          texture = "[fill:16x16:#3498db^[fill:3x3:1,1:#85c1e9^[fill:3x3:7,1:#85c1e9" ..
+                    "^[fill:3x3:13,1:#85c1e9^[fill:3x3:4,5:#85c1e9^[fill:3x3:10,5:#85c1e9" ..
+                    "^[fill:3x3:1,9:#85c1e9^[fill:3x3:7,9:#85c1e9^[fill:3x3:13,9:#85c1e9" },
+        { suffix = "anker", name = "Anker-Block",
+          texture = "[fill:16x16:#5dade2^[fill:2x10:7,3:#34495e^[fill:4x2:6,2:#34495e" ..
+                    "^[fill:8x2:4,6:#34495e^[fill:3x2:3,11:#34495e^[fill:3x2:10,11:#34495e" ..
+                    "^[fill:2x2:4,13:#34495e^[fill:2x2:10,13:#34495e" },
+        { suffix = "steuerrad", name = "Steuerrad-Block",
+          texture = "[fill:16x16:#5dade2^[fill:12x12:2,2:#7e5109^[fill:8x8:4,4:#5dade2" ..
+                    "^[fill:2x12:7,2:#7e5109^[fill:12x2:2,7:#7e5109^[fill:4x4:6,6:#7e5109" ..
+                    "^[fill:2x2:7,0:#7e5109^[fill:2x2:7,14:#7e5109^[fill:2x2:0,7:#7e5109" ..
+                    "^[fill:2x2:14,7:#7e5109" },
+
+        -- Per-face block: a real treasure chest (lid on top, wood on the sides).
+        { suffix = "truhe", name = "Schatztruhe",
+          top    = "[fill:16x16:#8d6e3a^[fill:16x2:0,0:#f1c40f^[fill:16x2:0,14:#f1c40f^[fill:2x2:7,7:#4a2f15",
+          side   = "[fill:16x16:#8d6e3a^[fill:16x3:0,6:#f1c40f^[fill:4x5:6,6:#4a2f15",
+          bottom = "[fill:16x16:#6e552c" },
+
+        -- Eigenes gemaltes Bild als Block? Lege eine PNG (16x16 oder 32x32)
+        -- "lernwelt_tiefsee_meinbild.png" in den textures/-Ordner und entferne
+        -- die zwei Minuszeichen vor der naechsten Zeile:
+        -- { suffix = "meinbild", name = "Mein Bild", texture = "lernwelt_tiefsee_meinbild.png" },
     },
 
     -- --- 3) Learning zones (each gets a placeable learning board) ---
@@ -692,7 +716,65 @@ core.register_globalstep(function(dtime)
 end)
 
 -- ------------------------------------------------------------
---  I) BACKWARDS COMPATIBILITY
+--  I) EXTRA: BUCHSTABEN-BLOECKE  (A-Z, zum Woerterlegen)
+--  A tiny 5x7 pixel font rendered into each block's texture with
+--  layered "[fill" - no image files. Nice for "Deutsch / benennen":
+--  lay out names and simple words from letter blocks.
+--  (For Umlauts use AE/OE/UE.)
+-- ------------------------------------------------------------
+local FONT5x7 = {
+    A = { ".###.", "#...#", "#...#", "#####", "#...#", "#...#", "#...#" },
+    B = { "####.", "#...#", "#...#", "####.", "#...#", "#...#", "####." },
+    C = { ".####", "#....", "#....", "#....", "#....", "#....", ".####" },
+    D = { "####.", "#...#", "#...#", "#...#", "#...#", "#...#", "####." },
+    E = { "#####", "#....", "#....", "####.", "#....", "#....", "#####" },
+    F = { "#####", "#....", "#....", "####.", "#....", "#....", "#...." },
+    G = { ".####", "#....", "#....", "#..##", "#...#", "#...#", ".####" },
+    H = { "#...#", "#...#", "#...#", "#####", "#...#", "#...#", "#...#" },
+    I = { "#####", "..#..", "..#..", "..#..", "..#..", "..#..", "#####" },
+    J = { "..###", "...#.", "...#.", "...#.", "#..#.", "#..#.", ".##.." },
+    K = { "#...#", "#..#.", "#.#..", "##...", "#.#..", "#..#.", "#...#" },
+    L = { "#....", "#....", "#....", "#....", "#....", "#....", "#####" },
+    M = { "#...#", "##.##", "#.#.#", "#.#.#", "#...#", "#...#", "#...#" },
+    N = { "#...#", "##..#", "#.#.#", "#.#.#", "#..##", "#...#", "#...#" },
+    O = { ".###.", "#...#", "#...#", "#...#", "#...#", "#...#", ".###." },
+    P = { "####.", "#...#", "#...#", "####.", "#....", "#....", "#...." },
+    Q = { ".###.", "#...#", "#...#", "#...#", "#.#.#", "#..#.", ".##.#" },
+    R = { "####.", "#...#", "#...#", "####.", "#.#..", "#..#.", "#...#" },
+    S = { ".####", "#....", "#....", ".###.", "....#", "....#", "####." },
+    T = { "#####", "..#..", "..#..", "..#..", "..#..", "..#..", "..#.." },
+    U = { "#...#", "#...#", "#...#", "#...#", "#...#", "#...#", ".###." },
+    V = { "#...#", "#...#", "#...#", "#...#", "#...#", ".#.#.", "..#.." },
+    W = { "#...#", "#...#", "#...#", "#.#.#", "#.#.#", "##.##", "#...#" },
+    X = { "#...#", "#...#", ".#.#.", "..#..", ".#.#.", "#...#", "#...#" },
+    Y = { "#...#", "#...#", ".#.#.", "..#..", "..#..", "..#..", "..#.." },
+    Z = { "#####", "....#", "...#.", "..#..", ".#...", "#....", "#####" },
+}
+
+local function letter_texture(rows)
+    local t = { "[fill:16x16:#f4e3c1" }
+    for r = 1, #rows do
+        local row = rows[r]
+        for c = 1, #row do
+            if row:sub(c, c) == "#" then
+                t[#t + 1] = ("^[fill:2x2:%d,%d:#34495e"):format(3 + (c - 1) * 2, 1 + (r - 1) * 2)
+            end
+        end
+    end
+    return table.concat(t)
+end
+
+for letter, rows in pairs(FONT5x7) do
+    core.register_node(WORLD_ID .. ":buchstabe_" .. letter:lower(), {
+        description = "Buchstabe " .. letter,
+        tiles = { letter_texture(rows) },
+        groups = { cracky = 3, oddly_breakable_by_hand = 2 },
+        is_ground_content = false,
+    })
+end
+
+-- ------------------------------------------------------------
+--  J) BACKWARDS COMPATIBILITY
 --  Redirect nodes/items that were built/held with the OLD,
 --  standalone "tiefsee:" mod (before it became a theme on the
 --  engine) to their new "lernwelt_tiefsee:" names. Without this,

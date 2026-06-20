@@ -23,6 +23,18 @@ MUSTER OHNE DATEIEN (Textur-Modifier):
     Streifen:    [fill:16x16:#e74c3c^[fill:3x16:3,0:#ffffff^[fill:3x16:10,0:#ffffff
 - So lassen sich beliebige einfache Muster bauen, ganz ohne Bilddateien.
 
+PRO SEITE VERSCHIEDENE BILDER (top/side/bottom):
+- Ein Block kann je Seite anders aussehen. Im Block-Eintrag statt "texture":
+    top    = "...",   -- Oberseite (z. B. Deckel)
+    side   = "...",   -- alle vier Seitenflaechen
+    bottom = "...",   -- Unterseite
+  Beispiel: der "truhe"-Block in der init.lua (Deckel oben, Holz an den Seiten).
+
+EIGENES GEMALTES BILD ALS BLOCK:
+- In der init.lua steht bereits ein auskommentiertes Beispiel ("meinbild").
+- PNG (16x16 oder 32x32) hier ablegen, z. B. lernwelt_tiefsee_meinbild.png,
+  dann in der init.lua die zwei Minuszeichen "--" vor der Beispielzeile entfernen.
+
 WICHTIG (Urheberrecht):
 - Verwendet nur SELBST erstellte oder frei lizenzierte Grafiken/Modelle.
 - Keine Bilder, Figuren oder Logos aus geschuetzten Marken/Serien einbauen.

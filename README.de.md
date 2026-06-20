@@ -39,7 +39,8 @@ Texturen.
 - **Barrierearm**: Großschrift-Modus und Einfacher Modus (weniger Quiz-Optionen)
 - **Curriculum-agnostisch**: Lehrplan 21 (Schweiz) ist nur der mitgelieferte Default — `lernwelt.fachbereiche` lässt sich gegen jeden anderen Lehrplan tauschen
 - **Internationalisiert**: englische Quellstrings + Übersetzungsfiles (`locale/*.tr`), Deutsch inklusive; die Spiel-Oberfläche folgt der Client-Sprache
-- **Keine Texturen nötig** — Farben via `[fill`; eigene PNGs optional
+- **Keine Texturen nötig** — Farben via `[fill`; **Muster** (geschichtete `[fill`),
+  **Pro-Seiten-Texturen** (`top`/`side`/`bottom`) und eigene **PNGs** optional
 
 ## Voraussetzungen
 

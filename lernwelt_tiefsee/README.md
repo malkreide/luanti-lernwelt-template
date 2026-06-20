@@ -7,8 +7,9 @@ rund um ein Unterwasser-Rettungsteam. Gedacht zum **gemeinsamen Spielen von Elte
 
 > Motto: **Entdecken · Helfen · Bewahren**
 
-📖 **Vollständige Spielanleitung (alle Elemente, Bedienung, Aufgaben & Ziele):
-[ANLEITUNG.md](ANLEITUNG.md)** — ideal zum Mitlesen für Eltern & Kind.
+📖 **Spielanleitung:** [ANLEITUNG.md](ANLEITUNG.md) (vollständig, DE) ·
+🧒 [KINDER-KURZ.md](KINDER-KURZ.md) (einseitig zum Ausdrucken) ·
+🇬🇧 [GUIDE.md](GUIDE.md) (English).
 
 Dieses Mod ist ein **Thema** für das [Lernwelt-Template](../README.de.md): Die gesamte
 Spielmechanik (friedliche Config, Lern-Tafeln, Logbuch, Ränge, Abzeichen, Rettungs-Sounds,
@@ -19,8 +20,11 @@ selbstgebaute **Tauchkapsel**, die die Engine nicht abbildet.
 ## Funktionen
 
 - 🪸 **5 bunte Korallenblöcke** + 🟦 **Stations-Glas** (durchsichtig)
-- 🎨 **7 gemusterte Bau-Blöcke** (Streifen, Punkte, Schachbrett, Rahmen, Schatzkiste,
-  Sand mit Muschel, Wellen) – Muster rein prozedural, ganz ohne Bilddateien
+- 🎨 **Gemusterte Bau-Blöcke** (Streifen, Punkte, Schachbrett, Rahmen, Schatzkiste,
+  Sand mit Muschel, Wellen, Fischschuppen, Anker, Steuerrad) – Muster rein
+  prozedural, ganz ohne Bilddateien
+- 📦 **Schatztruhe** mit echtem Deckel (Pro-Seiten-Textur: Bild oben, Holz an den Seiten)
+- 🔤 **Buchstaben-Blöcke A–Z** zum Wörterlegen (passt zu „Deutsch / benennen")
 - 🗺️ **4 Lern-Zonen** (Korallenriff, Offenes Meer, Dunkle Tiefsee, Meeresboden) mit
   platzierbaren Lern-Tafeln (Aktivität + Lehrplan-21-Bezug)
 - ❓ **Aufgaben an den Lern-Tafeln** – Quiz (zählen, vergleichen, benennen), **Muster
