@@ -56,7 +56,7 @@ framework is theme-neutral, and themes use original names and textures.
 # Then enable them for your world in the "Select Mods" menu.
 ```
 
-> 🪟 **Windows 11 step-by-step:** see [INSTALL-WINDOWS.md](INSTALL-WINDOWS.md) (in German).
+> 🪟🍎🐧 **Step-by-step (Windows, macOS, Linux):** see [INSTALL.md](INSTALL.md) (in German).
 
 ## Usage / Quickstart
 

@@ -1,8 +1,10 @@
-# Installation auf Windows 11 — Schritt für Schritt 🪟🌊
+# Installation — Schritt für Schritt 🪟🍎🐧🌊
 
 Diese Anleitung zeigt, wie du das **Luanti Lernwelt Template** und das Thema
-**`lernwelt_tiefsee`** (Tiefsee-Retter) auf einem Windows-11-PC installierst, sodass
-**alle Funktionen** laufen — Tiere, Lern-Tafeln, Tauchkapsel und Startausrüstung.
+**`lernwelt_tiefsee`** (Tiefsee-Retter) installierst, sodass **alle Funktionen** laufen —
+Tiere, Lern-Tafeln, Tauchkapsel und Startausrüstung. Es gibt einen eigenen
+Installations-Abschnitt für **Windows 11**, **macOS (Apple)** und **Linux**; die übrigen
+Schritte sind auf allen Systemen gleich.
 
 > 🇬🇧 An English version of the general setup is in [README.md](README.md).
 > · 🐙 Die vollständige Spielanleitung steht in
@@ -12,13 +14,41 @@ Diese Anleitung zeigt, wie du das **Luanti Lernwelt Template** und das Thema
 
 ## 1. Luanti installieren
 
-Du brauchst zuerst **Luanti 5.x** (früher „Minetest" genannt):
+Du brauchst zuerst **Luanti 5.x** (früher „Minetest" genannt). Wähle dein System:
+
+### 🪟 Windows 11
 
 - **Empfohlen (am einfachsten):** Microsoft Store öffnen → nach **„Luanti"** suchen →
   installieren. Alternativ über die offizielle Seite **[luanti.org](https://www.luanti.org)**
   den Windows-Download holen.
 - Beim Download von luanti.org bekommst du eine ZIP-Datei. Entpacke sie z. B. nach
   `C:\Games\luanti\`. Gestartet wird mit `luanti.exe` im Ordner `bin`.
+
+### 🍎 macOS (Apple)
+
+- **Empfohlen:** Auf **[luanti.org](https://www.luanti.org)** den macOS-Download holen
+  (eine `.dmg`-Datei, läuft sowohl auf Apple-Silicon- als auch auf Intel-Macs).
+- DMG öffnen und **Luanti.app** in den Ordner **Programme** ziehen. Per Doppelklick
+  starten.
+- Beim ersten Start meldet sich macOS evtl. mit „App von unbekanntem Entwickler". Dann
+  **Rechtsklick auf die App → „Öffnen"** und bestätigen (oder unter
+  **Systemeinstellungen → Datenschutz & Sicherheit** freigeben).
+- Alternativ per Homebrew: `brew install --cask minetest` (Paketname kann je nach
+  Version `minetest` oder `luanti` heißen).
+
+### 🐧 Linux
+
+- **Empfohlen:** Über **Flatpak** (funktioniert auf allen Distributionen):
+  ```bash
+  flatpak install flathub net.minetest.Minetest
+  flatpak run net.minetest.Minetest
+  ```
+- Oder über den Paketmanager deiner Distribution:
+  - Debian/Ubuntu: `sudo apt install minetest`
+  - Fedora: `sudo dnf install minetest`
+  - Arch: `sudo pacman -S minetest`
+- Hinweis: Distributions-Pakete sind manchmal älter. Wenn dein Luanti unter 5.x liegt,
+  nimm lieber Flatpak oder das offizielle AppImage von [luanti.org](https://www.luanti.org).
 
 ## 2. Ein passendes Game installieren
 
@@ -32,6 +62,8 @@ Tier-API (`mcl_mobs`) für die lebenden Meerestiere schon mitbringen.
 3. (Minetest Game mit `mobs_redo` geht auch, aber VoxeLibre/Mineclonia ist die
    einfachere Wahl.)
 
+Dieser Schritt ist auf allen Systemen identisch (ContentDB lädt direkt im Spiel).
+
 ## 3. Die beiden Mods herunterladen
 
 Du brauchst **zwei Ordner** aus dem Repository: die Engine `lernwelt` **und** das Thema
@@ -39,35 +71,71 @@ Du brauchst **zwei Ordner** aus dem Repository: die Engine `lernwelt` **und** da
 
 1. Gehe auf <https://github.com/malkreide/luanti-lernwelt-template>
 2. Grüner Button **„Code" → „Download ZIP"**.
-3. Entpacke die ZIP (z. B. auf den Desktop). Du erhältst einen Ordner
-   `luanti-lernwelt-template-main` mit u. a. diesen Unterordnern:
+3. Entpacke die ZIP. Du erhältst einen Ordner `luanti-lernwelt-template-main` mit u. a.
+   diesen Unterordnern:
    - `lernwelt` ← die Engine (**Pflicht**)
    - `lernwelt_tiefsee` ← das Tiefsee-Thema (das willst du spielen)
    - `lernwelt_beispiel` ← optionales zweites Beispiel-Thema (Glühpilz-Wald)
 
+Auf Linux/macOS geht das auch im Terminal:
+```bash
+git clone https://github.com/malkreide/luanti-lernwelt-template.git
+```
+
 ## 4. Die Mods in den richtigen Ordner kopieren
 
-Luanti sucht Mods in deinem Benutzer-Ordner. Öffne den Windows-Explorer und gib in die
-Adressleiste ein:
+Luanti sucht Mods in deinem Benutzer-Ordner. Der Pfad unterscheidet sich je nach System.
+Kopiere die **zwei Ordner** `lernwelt` und `lernwelt_tiefsee` dorthin.
 
+### 🪟 Windows 11
+
+Öffne den Explorer und gib in die Adressleiste ein:
 ```
 %APPDATA%\Luanti\mods
 ```
+> **Pfad-Hinweis:** Existiert `%APPDATA%\Luanti` nicht, probiere `%APPDATA%\Minetest\mods`.
+> Bei der portablen ZIP-Version liegt der Mods-Ordner direkt im entpackten Luanti-Ordner:
+> `…\luanti\mods`. Welcher Pfad gilt, zeigt Luanti unter **Einstellungen** an.
 
-> **Hinweis zum Pfad:** Bei der Microsoft-Store-Version kann der Pfad abweichen — wenn
-> `%APPDATA%\Luanti` nicht existiert, probiere `%APPDATA%\Minetest\mods`. Bei der
-> portablen ZIP-Version liegt der Mods-Ordner direkt im entpackten Luanti-Ordner:
-> `…\luanti\mods`. Welcher Pfad bei dir gilt, zeigt Luanti unter **Einstellungen** an.
-
-Kopiere jetzt aus dem entpackten GitHub-Ordner diese **zwei Ordner** komplett dorthin:
-
+Ergebnis:
 ```
 %APPDATA%\Luanti\mods\lernwelt\
 %APPDATA%\Luanti\mods\lernwelt_tiefsee\
 ```
 
-> ⚠️ **Wichtig:** Es muss direkt `mods\lernwelt\init.lua` geben — **nicht**
-> `mods\lernwelt\lernwelt\init.lua`. Falls beim Entpacken ein doppelter Ordner
+### 🍎 macOS (Apple)
+
+Der Mods-Ordner liegt im versteckten `Library`-Ordner:
+```
+~/Library/Application Support/minetest/mods
+```
+Im Finder erreichst du ihn über **„Gehe zu" → „Gehe zu Ordner…"** (⇧⌘G) und Einfügen des
+Pfads. Oder im Terminal:
+```bash
+mkdir -p ~/Library/Application\ Support/minetest/mods
+cp -R lernwelt lernwelt_tiefsee ~/Library/Application\ Support/minetest/mods/
+```
+> Falls du Luanti per Homebrew/neuere Version installiert hast, kann der Ordner
+> `~/Library/Application Support/Luanti/mods` heißen — der in Luanti unter
+> **Einstellungen** angezeigte Pfad gilt.
+
+### 🐧 Linux
+
+Bei einer normalen Installation:
+```
+~/.minetest/mods
+```
+Im Terminal:
+```bash
+mkdir -p ~/.minetest/mods
+cp -R lernwelt lernwelt_tiefsee ~/.minetest/mods/
+```
+> **Flatpak-Hinweis:** Bei der Flatpak-Version liegt der Pfad stattdessen unter
+> `~/.var/app/net.minetest.Minetest/.minetest/mods`. Neuere Versionen nutzen evtl.
+> `~/.local/share/luanti/mods` — der in Luanti angezeigte Pfad gilt.
+
+> ⚠️ **Auf allen Systemen wichtig:** Es muss direkt `mods/lernwelt/init.lua` geben —
+> **nicht** `mods/lernwelt/lernwelt/init.lua`. Falls beim Entpacken ein doppelter Ordner
 > entsteht, eine Ebene hochziehen.
 
 ## 5. Wasserreiche Welt vorbereiten (VOR dem Erstellen!)
@@ -76,9 +144,9 @@ Die Meerestiere schwimmen nur in **Wasser**. Stelle deshalb **vor** dem Erstelle
 Welt eine wasserreiche Karte ein. Diese Mapgen-Werte werden beim Welt-Erstellen fest
 geschrieben und lassen sich danach **nicht mehr ändern**.
 
-Öffne `minetest.conf` (über **Einstellungen → erweitert**, oder direkt
-`%APPDATA%\Luanti\minetest.conf`) und trage diese Zeilen ein — Variante „Flaches Meer"
-(empfohlen zum Testen):
+Öffne die Datei `minetest.conf` (über **Einstellungen → erweitert** im Spiel, oder direkt
+in deinem Benutzer-Ordner — siehe Schritt 4) und trage diese Zeilen ein — Variante
+„Flaches Meer" (empfohlen zum Testen):
 
 ```
 mg_name = flat
@@ -137,8 +205,12 @@ Unter **Einstellungen → Alle Einstellungen → Mods** (oder in `minetest.conf`
   es braucht ein Game mit Mob-API (VoxeLibre/Mineclonia oder Minetest Game + `mobs_redo`).
   Mit Spawn-Eiern kannst du Tiere aber jederzeit selbst setzen.
 - **Kein Ton:** Sound-Dateien sind optional — ohne sie läuft alles, nur leise.
-- **Mods werden nicht angezeigt:** Prüfe die Ordnerstruktur (`mods\lernwelt\init.lua`
-  direkt, kein doppelter Ordner) und ob du den richtigen Mods-Ordner getroffen hast.
+- **Mods werden nicht angezeigt:** Prüfe die Ordnerstruktur (`mods/lernwelt/init.lua`
+  direkt, kein doppelter Ordner) und ob du den richtigen Mods-Ordner getroffen hast (der
+  in Luanti unter **Einstellungen** angezeigte Pfad ist maßgeblich).
+- **macOS – App startet nicht:** Rechtsklick auf die App → „Öffnen" (Gatekeeper-Freigabe).
+- **Linux – falscher Mods-Ordner bei Flatpak:** Pfad unter
+  `~/.var/app/net.minetest.Minetest/.minetest/mods` verwenden.
 
 ---
 
