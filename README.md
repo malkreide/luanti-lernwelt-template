@@ -117,8 +117,11 @@ luanti-lernwelt-template/
 │       ├── mobs_adapter.lua  # mobs_redo / mcl_mobs abstraction
 │       ├── creatures.lua     # spawner, rescue, logbook
 │       └── register.lua      # register_world()
-├── lernwelt_beispiel/        # example theme: Gluehpilz-Wald
+├── lernwelt_beispiel/        # minimal copy-me template (titled Gluehpilz-Wald)
 │   └── init.lua              # one declarative register_world{...}
+├── lernwelt_gluehpilz/       # example theme: Gluehpilz-Wald (cosy first world)
+│   ├── init.lua              # register_world{...} + glow-beetle + day/night mushrooms
+│   └── settingtypes.txt      # starter-kit toggle
 ├── lernwelt_tiefsee/         # example theme: Tiefsee-Retter (underwater)
 │   ├── init.lua              # register_world{...} + submarine + starter kit
 │   └── settingtypes.txt      # starter-kit toggle
@@ -127,12 +130,15 @@ luanti-lernwelt-template/
     └── settingtypes.txt      # starter-kit toggle
 ```
 
-Three themes ship as examples: **`lernwelt_beispiel`** (Gluehpilz-Wald),
+The repo ships a minimal copy-me skeleton, **`lernwelt_beispiel`**, plus three
+fully built example themes: **`lernwelt_gluehpilz`** (Gluehpilz-Wald),
 **`lernwelt_tiefsee`** (Tiefsee-Retter) and **`lernwelt_kosmo`** (Kosmo-Station).
-The latter two show how a theme can add its own extra content on top of the
-engine — Tiefsee a drivable submarine, Kosmo a space glider plus **moon-gravity
-jump/physics blocks** — together with a first-join starter kit. Full **player
-guides** (every element, controls, tasks & goals) live in
+They show how a theme can add its own extra content on top of the engine —
+Gluehpilz-Wald a rideable glow-beetle plus **day/night mushrooms** (a child-controlled
+time-of-day cycle), Tiefsee a drivable submarine, Kosmo a space glider plus
+**moon-gravity jump/physics blocks** — together with a first-join starter kit. Full
+**player guides** (every element, controls, tasks & goals) live in
+[`lernwelt_gluehpilz/ANLEITUNG.md`](lernwelt_gluehpilz/ANLEITUNG.md),
 [`lernwelt_tiefsee/ANLEITUNG.md`](lernwelt_tiefsee/ANLEITUNG.md) and
 [`lernwelt_kosmo/ANLEITUNG.md`](lernwelt_kosmo/ANLEITUNG.md).
 

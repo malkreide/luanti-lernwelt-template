@@ -118,8 +118,11 @@ luanti-lernwelt-template/
 │       ├── mobs_adapter.lua  # mobs_redo / mcl_mobs Abstraktion
 │       ├── creatures.lua     # Spawner, Rettung, Logbuch
 │       └── register.lua      # register_world()
-├── lernwelt_beispiel/        # Beispiel-Thema: Gluehpilz-Wald
+├── lernwelt_beispiel/        # minimale Kopiervorlage (Titel Gluehpilz-Wald)
 │   └── init.lua              # ein deklaratives register_world{...}
+├── lernwelt_gluehpilz/       # Beispiel-Thema: Gluehpilz-Wald (kuschelige Erstwelt)
+│   ├── init.lua              # register_world{...} + Leucht-Kaefer + Tag-Nacht-Pilze
+│   └── settingtypes.txt      # Schalter fuer die Startausruestung
 ├── lernwelt_tiefsee/         # Beispiel-Thema: Tiefsee-Retter (Unterwasser)
 │   ├── init.lua              # register_world{...} + Tauchkapsel + Startausruestung
 │   └── settingtypes.txt      # Schalter fuer die Startausruestung
@@ -128,13 +131,16 @@ luanti-lernwelt-template/
     └── settingtypes.txt      # Schalter fuer die Startausruestung
 ```
 
-Drei Themen sind als Beispiele dabei: **`lernwelt_beispiel`** (Gluehpilz-Wald),
+Dabei sind eine minimale Kopiervorlage, **`lernwelt_beispiel`**, sowie drei voll
+ausgebaute Beispiel-Themen: **`lernwelt_gluehpilz`** (Gluehpilz-Wald),
 **`lernwelt_tiefsee`** (Tiefsee-Retter) und **`lernwelt_kosmo`** (Kosmo-Station).
-Die letzten beiden zeigen, wie ein Thema **eigene Zusatz-Inhalte** zusätzlich zur
-Engine mitbringen kann — die Tiefsee eine fahrbare Tauchkapsel, die Kosmo-Station
-einen Raumgleiter plus **Mond-Schwerkraft-Blöcke** (Sprung-/Physik-Blöcke) — je mit
-einer Startausrüstung beim ersten Join. Vollständige **Spielanleitungen** dazu (alle
+Sie zeigen, wie ein Thema **eigene Zusatz-Inhalte** zusätzlich zur Engine mitbringen
+kann — der Glühpilz-Wald einen reitbaren Leucht-Käfer plus **Tag-Nacht-Pilze** (ein
+kindgesteuerter Tag-Nacht-Wechsel), die Tiefsee eine fahrbare Tauchkapsel, die
+Kosmo-Station einen Raumgleiter plus **Mond-Schwerkraft-Blöcke** — je mit einer
+Startausrüstung beim ersten Join. Vollständige **Spielanleitungen** dazu (alle
 Elemente, Bedienung, Aufgaben & Ziele) stehen in
+[`lernwelt_gluehpilz/ANLEITUNG.md`](lernwelt_gluehpilz/ANLEITUNG.md),
 [`lernwelt_tiefsee/ANLEITUNG.md`](lernwelt_tiefsee/ANLEITUNG.md) und
 [`lernwelt_kosmo/ANLEITUNG.md`](lernwelt_kosmo/ANLEITUNG.md).
 
