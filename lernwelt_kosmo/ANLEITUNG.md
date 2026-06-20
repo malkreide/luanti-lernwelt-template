@@ -104,6 +104,30 @@ Himmelskörper (NMG). Die Blöcke sind in der Startausrüstung und im Kreativ-In
 
 ---
 
+## 5b. Weltraum-Phänomene: Schwarzes Loch, Meteore, Sternschnuppen, Sonne 🌌
+
+Vier besondere Himmels-Elemente sorgen für Staunen — alle kinderfreundlich, **kein
+Schaden**:
+
+- 🕳️ **Schwarzes Loch** (`schwarzes_loch`): setz den Block hin — er **zieht dich sanft
+  an**, wenn du in die Nähe kommst (Gravitations-Sog). Genau im Kern gibt es nur ein
+  kleines Funkeln, nichts Schlimmes. Toll, um die **Schwerkraft** zu erleben (NMG/BS).
+  Stell dich daneben und spür den Sog — oder bau eine „Falle" für Spaß-Sprünge.
+- ☄️ **Meteoritenschauer** (`/kosmo_meteore`): über dir regnet es **fallende Meteore**
+  mit Feuerschweif. Wo sie landen, bleibt ein **Meteorit** liegen. Sammle die
+  Meteoriten ein (**Linksklick / abbauen**) und **zähle** sie — mit Meilensteinen
+  (Meteor-Sammler bei 3, Sternjäger bei 10, Meteor-Meister bei 20). Schöne Zähl-Übung!
+- 🌠 **Sternschnuppen:** ab und zu **huscht eine leuchtende Sternschnuppe** am Himmel
+  vorbei (nur Optik). Manchmal kommt „Wünsch dir was!" — einfach hochschauen und staunen.
+- ☀️ **Leuchtende Sonne** (`sonne` / `/kosmo_sonne`): ein **hell strahlender** Block.
+  Der Befehl baut eine kleine **Sonnenkugel** über dir — eine warme Lichtquelle und ein
+  Orientierungspunkt am Himmel. Passt zu „Himmelskörper: Sonne, Mond, Planeten".
+
+> Tipp: `/kosmo_teststation` stellt dir gleich eine **Sonne** und ein **Schwarzes Loch**
+> dazu. Alle vier Blöcke liegen auch in der Startausrüstung und im Kreativ-Inventar.
+
+---
+
 ## 6. Weltraum-Freunde retten 👽
 
 **Bedienung:** Freund mit **Rechtsklick** antippen = **retten** (zur Station bringen).
@@ -234,6 +258,10 @@ Alles wird ohne externe Bilder erzeugt. Interne Namen (für die Kreativ-Suche od
 **Schwerkraft-Blöcke:** `mond_boden` · `sprung_pad` (Trampolin) · `schwerelos_feld` ·
 `schwerkraft_normal`.
 
+**Weltraum-Phänomene:** `schwarzes_loch` (Gravitations-Sog) · `sonne` (helle Lichtquelle) ·
+`meteorit` (gelandeter Meteor zum Einsammeln). Sternschnuppen und fallende Meteore sind
+Effekte (kein Block).
+
 **Gemusterte Bau-Blöcke:** `muster_sterne/streifen/punkte/schach/rahmen`,
 `raketenrumpf`, `steuerpult`, `solarpanel`, `mondgestein`, `asteroid`, `sternenstaub`,
 `vorratskiste` (echte Kiste mit Deckel oben) und `buchstabe_a` … `buchstabe_z`
@@ -258,6 +286,8 @@ Alles wird ohne externe Bilder erzeugt. Interne Namen (für die Kreativ-Suche od
 | `/kosmo_teststation` | Kleine fertige Station (Tafeln, Raumgleiter, Mond-Boden, Schrott) | Admin¹ |
 | `/kosmo_basis` | Grössere Glaskuppel-Station mit Tür | Admin¹ |
 | `/kosmo_schrott` | Verteilt Schrott zum Aufräumen | Admin¹ |
+| `/kosmo_meteore` | Löst einen Meteoritenschauer über dir aus (sammeln/zählen) | Admin¹ |
+| `/kosmo_sonne` | Baut eine kleine leuchtende Sonne über dir | Admin¹ |
 
 ¹ Benötigt das `server`-Privileg — **im Einzelspieler automatisch vorhanden**.
 
@@ -302,6 +332,8 @@ Im Menü unter **Einstellungen → Alle Einstellungen → Mods** (oder in `minet
 - 🧹 **Aufräumer:** sammle 15 Schrott → „Orbit-Reiniger".
 - ⭐ **Galaxie-Bauer:** pflanze 10 Sterne.
 - 🔤 **Wortspiel:** lege deinen Namen mit den Buchstaben-Blöcken (`buchstabe_*`).
+- ☄️ **Meteor-Sammler:** löse einen Meteoritenschauer aus und sammle 10 Meteoriten.
+- 🕳️ **Mutprobe:** spür den Sog am Schwarzen Loch (und spring rechtzeitig weg!).
 - 🌟 **Legende:** rette den seltenen Goldenen Kometen.
 - 👨‍👧 **Team-Flug:** fliegt zu zweit im Raumgleiter.
 

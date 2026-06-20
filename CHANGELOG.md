@@ -8,6 +8,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- **More space elements in `lernwelt_kosmo`:** a **Schwarzes Loch** (`schwarzes_loch`)
+  that gently pulls nearby players in (child-friendly gravity well, no damage); a
+  **Meteoritenschauer** — falling meteor entities with a fire trail that leave a
+  collectible glowing `meteorit` node (counting hook with milestones), triggered with
+  `/kosmo_meteore`; **Sternschnuppen** (purely visual shooting-star streaks that pass
+  the sky now and then, with an occasional "make a wish"); and a **leuchtende Sonne**
+  (`sonne`, max light) plus `/kosmo_sonne` to build a small sun ball. The black hole and
+  sun are added to the starter kit and the `/kosmo_teststation`; docs updated
+  (README/ANLEITUNG/GUIDE)
 - **New example theme `lernwelt_kosmo` (Kosmo-Station, outer space):** a
   brand-free space-station learning world built on the engine. Four learning
   zones (Bunte Planeten, Asteroidengürtel, Sternennebel-Höhle, Mond-Basis),

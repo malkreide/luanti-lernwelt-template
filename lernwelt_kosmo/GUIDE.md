@@ -90,6 +90,26 @@ build a ready-made moon-hop strip.
 
 ---
 
+## 5b. Space phenomena: black hole, meteors, shooting stars, sun 🌌
+
+Four extra celestial elements, all child-friendly (**no damage**):
+
+- 🕳️ **Schwarzes Loch** (black hole, `schwarzes_loch`): place it and it **gently pulls
+  you in** when you get close. At the core there's just a little sparkle — nothing bad.
+  Great for feeling gravity (NMG/BS).
+- ☄️ **Meteoritenschauer** (meteor shower, `/kosmo_meteore`): falling meteors with a fire
+  trail rain down; each leaves a **meteorit** where it lands. Collect them (left-click)
+  and **count** them — milestones at 3, 10 and 20.
+- 🌠 **Sternschnuppen** (shooting stars): a bright streak occasionally races across the
+  sky (visual only; sometimes a "make a wish" message).
+- ☀️ **Leuchtende Sonne** (glowing sun, `sonne` / `/kosmo_sonne`): a very bright block;
+  the command builds a small **sun ball** above you as a warm light source and landmark.
+
+`/kosmo_teststation` also places a sun and a black hole; all four are in the starter kit
+and creative inventory.
+
+---
+
 ## 6. Rescuing space friends 👽
 
 **Use:** right-click a friend = **rescue** (bring it back to the station). You get
@@ -177,6 +197,8 @@ trail, and a **second seat** so a **second player** can ride along (parent + chi
 | `/kosmo_teststation` | Small ready-made station (boards, glider, moon ground, junk) | admin¹ |
 | `/kosmo_basis` | Bigger glass-dome base with a door | admin¹ |
 | `/kosmo_schrott` | Scatters junk to clean up | admin¹ |
+| `/kosmo_meteore` | Triggers a meteor shower above you (collect/count) | admin¹ |
+| `/kosmo_sonne` | Builds a small glowing sun above you | admin¹ |
 
 ¹ Needs the `server` privilege — **automatically available in single-player**.
 
