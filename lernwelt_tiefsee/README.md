@@ -3,7 +3,7 @@
 Ein kinderfreundliches **Lernwelt-Thema für [Luanti](https://www.luanti.org/)** (früher Minetest)
 rund um ein Unterwasser-Rettungsteam. Gedacht zum **gemeinsamen Spielen von Eltern und Kind**
 (ca. 5–7 Jahre) – spielerisch passend zum Schweizer **Lehrplan 21, 1. Zyklus**
-(Natur-Mensch-Gesellschaft, Mathematik, Sprache, Medien & Informatik).
+(Natur-Mensch-Gesellschaft, Mathematik, Sprache, Medien und Informatik).
 
 > Motto: **Entdecken · Helfen · Bewahren**
 
@@ -45,7 +45,7 @@ selbstgebaute **Tauchkapsel**, die die Engine nicht abbildet.
   für Eltern + Kind
 - 🎒 **Startausrüstung** beim ersten Join: Logbuch, Kamera, Tauchkapsel, Korallen,
   Setzlinge und je ein Spawn-Ei (abschaltbar per Einstellung)
-- 🏆 **Ränge & Abzeichen**: Frischling → Tauchschüler → Junior-Retter → Meeresheld → Kapitän
+- 🏆 **Ränge und Abzeichen**: Frischling → Tauchschüler → Junior-Retter → Meeresheld → Kapitän
 - 🔊 **Sound-Hooks** – Rettungs-/Rang-Sounds aus der Engine, Motor- und Ambient-/
   Walgesang-Sounds aus diesem Thema
 
@@ -53,7 +53,7 @@ selbstgebaute **Tauchkapsel**, die die Engine nicht abbildet.
 
 - **`lernwelt`** (die Engine) – *erforderlich*. Ohne sie startet das Thema nicht.
 - Eine **Mob-API** – *optional*: `mobs_redo` (Minetest Game) **oder** `mcl_mobs`
-  (VoxeLibre / Mineclonia). Ohne Mob-API funktioniert alles außer den lebenden Tieren.
+  (VoxeLibre / Mineclonia). Ohne Mob-API funktioniert alles ausser den lebenden Tieren.
 
 ## Installation
 
@@ -94,7 +94,7 @@ Platzieren → Rechtsklick zum Einsteigen → **W/S** fahren, **A/D** lenken,
   (Glasboden, alle 4 Lern-Tafeln, eine Tauchkapsel, etwas Müll). Praktisch zum
   Testen oder zum Vorbereiten durch die Erwachsenen. Benötigt das `server`-Privileg
   (im Einzelspieler automatisch vorhanden); überschreibt die Blöcke am Bauort.
-- `/tiefsee_basis` – baut eine **größere** Glaskuppel-Basis mit Tür, Tafeln,
+- `/tiefsee_basis` – baut eine **grössere** Glaskuppel-Basis mit Tür, Tafeln,
   Tauchkapsel und Müll (Priv `server`)
 - `/tiefsee_muell` – verteilt etwas Müll zum Aufräumen um dich herum (Priv `server`)
 - `/lernfortschritt` – dein persönlicher Lernfortschritt: Rang, Rettungen, gelöste
@@ -102,7 +102,7 @@ Platzieren → Rechtsklick zum Einsteigen → **W/S** fahren, **A/D** lenken,
 - `/lernplan` – Übersicht aller Lern-Zonen und ihrer Lehrplan-21-Bezüge (für Eltern/Lehrpersonen, aus der Engine)
 - `/lernwelt` – Status + empfohlene `minetest.conf`-Zeilen (aus der Engine)
 
-## Eigene Grafiken & Sounds
+## Eigene Grafiken und Sounds
 
 Das Thema läuft **ohne externe Dateien** (Farben via `[fill`-Generator der Engine).
 Eigene Texturen/Sounds können ergänzt werden – siehe `textures/README.txt`
