@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- `INSTALL.md` — a step-by-step install guide with per-OS sections for
+  **Windows 11**, **macOS** and **Linux** (Luanti + base game + both mods +
+  water-rich world setup); linked from both root READMEs
 - **Per-face block textures** (engine): block definitions accept `tiles` (a raw
   Luanti tiles list) or the convenience fields `top` / `side` / `bottom`, so a
   block can have a different look per face (e.g. a chest with a lid)
