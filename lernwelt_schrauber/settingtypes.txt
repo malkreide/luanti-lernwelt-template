@@ -1,0 +1,4 @@
+#    Give a starter kit (Roboter-Katalog, camera, robot kits + parts, the logic kit
+#    of switch/button/wire/lamp/door, a conveyor, a recycler + scrap, build blocks
+#    and spawn eggs) to each player once, on their first join. Handy for quick testing.
+lernwelt_schrauber_starter_kit (Give starter kit on first join) bool true

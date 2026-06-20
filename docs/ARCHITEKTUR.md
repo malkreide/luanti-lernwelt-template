@@ -199,6 +199,23 @@ Engine nicht abdeckt – alles im selben `lernwelt_drachenhort:`-Namensraum.
 Eine vollständige Spieleranleitung liegt in
 [`../lernwelt_drachenhort/ANLEITUNG.md`](../lernwelt_drachenhort/ANLEITUNG.md).
 
+### 🤖 Schrauber-Werkstatt · `lernwelt_schrauber`
+
+Zeigt, wie ein Thema ein **eigenes interaktives System** (einfache Logik) ergänzt und – wenn
+vorhanden – mit einer **anderen Mod (Mesecons) zusammenspielt**, ohne sie vorauszusetzen –
+alles im selben `lernwelt_schrauber:`-Namensraum.
+
+| | |
+|---|---|
+| Blöcke | ~13 deklarativ (Werkbank Per-Face, Stahl-/Riffelblech, Zahnrad-/Schrauben-Block, Warnband, Bodenfliese, Glaswand, Energie-Block, Roboterblech) + 26 Buchstaben (A–Z) + Logik-Kit (Schalter, Taster, Leitung, Lampe, Tür) + Fließband, Recycler, Schrotthaufen |
+| Zonen | 3 (Fließband, Energieraum, Recyclinghof) – **mit Aufgaben** (Ursache & Wirkung, Reihenfolge/Algorithmus, Reparier-Ziel) |
+| Tiere | 10 friedliche Roboter zum Reparieren (mit Familien; ein seltener Meisterbot) |
+| Ränge | 5 (davon 3 mit Abzeichen) |
+| Theme-Extras (eigener Lua-Code) | **Logik-System** Schalter → Leitung → Lampe → Tür (selbstständiges Mini-Mesecons mit Netzwerk-Flood-Fill; **optionale echte Mesecons-Brücke** Receptor/Effector, guard-codiert), **Roboter zusammenbauen** (Bauteile in fester Reihenfolge = Algorithmus, läuft auch ohne Mob-API), **Fließband** (schiebt Spieler/Objekte), **Recycler + Schrotthaufen** (Materialkreislauf), **Startausrüstung**, Roboter-Land-Spawner, Ambient-Sound, **Buchstaben-Blöcke**, Test-Befehle (`/schrauber_werkstatt`, `/schrauber_logik`, `/schrauber_teststation`, `/schrauber_roboter`) |
+
+Eine vollständige Spieleranleitung liegt in
+[`../lernwelt_schrauber/ANLEITUNG.md`](../lernwelt_schrauber/ANLEITUNG.md).
+
 ---
 
 ## Eigene Welt bauen – die Kurzfassung
