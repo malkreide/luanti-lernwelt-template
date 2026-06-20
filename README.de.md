@@ -135,16 +135,20 @@ luanti-lernwelt-template/
 ├── lernwelt_schrauber/       # Beispiel-Thema: Schrauber-Werkstatt (Roboter & Logik)
 │   ├── init.lua              # register_world{...} + Schalter/Lampe/Tuer-Logik + Roboterbau
 │   └── settingtypes.txt      # Schalter fuer die Startausruestung
-└── lernwelt_eisbaer/         # Beispiel-Thema: Eisbaer-Bucht (Polarwelt, Kaelte-Tiere)
-    ├── init.lua              # register_world{...} + Schlitten + farbwechselnde Aurora + Fuettern
+├── lernwelt_eisbaer/         # Beispiel-Thema: Eisbaer-Bucht (Polarwelt, Kaelte-Tiere)
+│   ├── init.lua              # register_world{...} + Schlitten + farbwechselnde Aurora + Fuettern
+│   └── settingtypes.txt      # Schalter fuer die Startausruestung
+└── lernwelt_baumhaus/        # Beispiel-Thema: Baumhaus-Forscher (Dschungel, Raumorientierung)
+    ├── init.lua              # register_world{...} + Bild-Hinweis-Rahmen + Schnitzeljagd + Kompass
     └── settingtypes.txt      # Schalter fuer die Startausruestung
 ```
 
-Dabei sind eine minimale Kopiervorlage, **`lernwelt_beispiel`**, sowie sechs voll
+Dabei sind eine minimale Kopiervorlage, **`lernwelt_beispiel`**, sowie sieben voll
 ausgebaute Beispiel-Themen: **`lernwelt_gluehpilz`** (Gluehpilz-Wald),
 **`lernwelt_tiefsee`** (Tiefsee-Retter), **`lernwelt_kosmo`** (Kosmo-Station),
 **`lernwelt_drachenhort`** (Drachenhort), **`lernwelt_schrauber`**
-(Schrauber-Werkstatt) und **`lernwelt_eisbaer`** (Eisbaer-Bucht).
+(Schrauber-Werkstatt), **`lernwelt_eisbaer`** (Eisbaer-Bucht) und
+**`lernwelt_baumhaus`** (Baumhaus-Forscher).
 Sie zeigen, wie ein Thema **eigene Zusatz-Inhalte** zusätzlich zur Engine mitbringen
 kann — der Glühpilz-Wald einen reitbaren Leucht-Käfer plus **Tag-Nacht-Pilze** (ein
 kindgesteuerter Tag-Nacht-Wechsel), die Tiefsee eine fahrbare Tauchkapsel, die
@@ -153,16 +157,20 @@ das **Großziehen eines Drachenbabys** (ein Ei ausbrüten, dann geduldig fütter
 Verantwortung & Geduld) plus einen **fliegenden Reitdrachen**, die Schrauber-Werkstatt
 ein selbstständiges **Schalter → Leitung → Lampe → Tür-Logiksystem** (sanfte Brücke zu
 Mesecons) plus **einen Roboter in der richtigen Reihenfolge zusammenbauen** (ein Algorithmus),
-und die Eisbär-Bucht einen fahrbaren **Schlitten**, ein leuchtendes **Polarlicht**, das
+die Eisbär-Bucht einen fahrbaren **Schlitten**, ein leuchtendes **Polarlicht**, das
 langsam die Farbe wechselt, und eine Futterstelle für **Kälte-Tiere & ihre Lebensräume**
-(NMG.2) — je mit einer Startausrüstung beim ersten Join. Vollständige **Spielanleitungen**
-dazu (alle Elemente, Bedienung, Aufgaben & Ziele) stehen in
+(NMG.2), und der Baumhaus-Forscher ein **Dschungel-Baumhaus** rund um die
+**Raumorientierung** (NMG.3): die Stockwerke des Waldes (oben/unten über kletterbare
+Lianen & Strickleitern), eine **Schnitzeljagd mit Bild-Hinweisen in Bilderrahmen** und
+einen **Forscher-Kompass** — je mit einer Startausrüstung beim ersten Join. Vollständige
+**Spielanleitungen** dazu (alle Elemente, Bedienung, Aufgaben & Ziele) stehen in
 [`lernwelt_gluehpilz/ANLEITUNG.md`](lernwelt_gluehpilz/ANLEITUNG.md),
 [`lernwelt_tiefsee/ANLEITUNG.md`](lernwelt_tiefsee/ANLEITUNG.md),
 [`lernwelt_kosmo/ANLEITUNG.md`](lernwelt_kosmo/ANLEITUNG.md),
 [`lernwelt_drachenhort/ANLEITUNG.md`](lernwelt_drachenhort/ANLEITUNG.md),
-[`lernwelt_schrauber/ANLEITUNG.md`](lernwelt_schrauber/ANLEITUNG.md) und
-[`lernwelt_eisbaer/ANLEITUNG.md`](lernwelt_eisbaer/ANLEITUNG.md).
+[`lernwelt_schrauber/ANLEITUNG.md`](lernwelt_schrauber/ANLEITUNG.md),
+[`lernwelt_eisbaer/ANLEITUNG.md`](lernwelt_eisbaer/ANLEITUNG.md) und
+[`lernwelt_baumhaus/ANLEITUNG.md`](lernwelt_baumhaus/ANLEITUNG.md).
 
 ## Übersetzungen
 
