@@ -119,16 +119,22 @@ luanti-lernwelt-template/
 │       └── register.lua      # register_world()
 ├── lernwelt_beispiel/        # example theme: Gluehpilz-Wald
 │   └── init.lua              # one declarative register_world{...}
-└── lernwelt_tiefsee/         # example theme: Tiefsee-Retter (underwater)
-    ├── init.lua              # register_world{...} + submarine + starter kit
+├── lernwelt_tiefsee/         # example theme: Tiefsee-Retter (underwater)
+│   ├── init.lua              # register_world{...} + submarine + starter kit
+│   └── settingtypes.txt      # starter-kit toggle
+└── lernwelt_kosmo/           # example theme: Kosmo-Station (outer space)
+    ├── init.lua              # register_world{...} + space glider + moon gravity
     └── settingtypes.txt      # starter-kit toggle
 ```
 
-Two themes ship as examples: **`lernwelt_beispiel`** (Gluehpilz-Wald) and
-**`lernwelt_tiefsee`** (Tiefsee-Retter), the latter showing how a theme can add
-its own extra content — a drivable submarine and a first-join starter kit — on
-top of the engine. A full **player guide** for it (every element, controls,
-tasks & goals) lives in [`lernwelt_tiefsee/ANLEITUNG.md`](lernwelt_tiefsee/ANLEITUNG.md).
+Three themes ship as examples: **`lernwelt_beispiel`** (Gluehpilz-Wald),
+**`lernwelt_tiefsee`** (Tiefsee-Retter) and **`lernwelt_kosmo`** (Kosmo-Station).
+The latter two show how a theme can add its own extra content on top of the
+engine — Tiefsee a drivable submarine, Kosmo a space glider plus **moon-gravity
+jump/physics blocks** — together with a first-join starter kit. Full **player
+guides** (every element, controls, tasks & goals) live in
+[`lernwelt_tiefsee/ANLEITUNG.md`](lernwelt_tiefsee/ANLEITUNG.md) and
+[`lernwelt_kosmo/ANLEITUNG.md`](lernwelt_kosmo/ANLEITUNG.md).
 
 ## Translations
 

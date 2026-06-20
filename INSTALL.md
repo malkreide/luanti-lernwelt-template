@@ -75,7 +75,12 @@ Du brauchst **zwei Ordner** aus dem Repository: die Engine `lernwelt` **und** da
    diesen Unterordnern:
    - `lernwelt` ← die Engine (**Pflicht**)
    - `lernwelt_tiefsee` ← das Tiefsee-Thema (das willst du spielen)
+   - `lernwelt_kosmo` ← optionales Weltraum-Thema (Kosmo-Station, mit Mond-Schwerkraft)
    - `lernwelt_beispiel` ← optionales zweites Beispiel-Thema (Glühpilz-Wald)
+
+> Diese Anleitung beschreibt die **Tiefsee**-Welt; die **Kosmo-Station** wird genauso
+> installiert (Engine `lernwelt` + Thema `lernwelt_kosmo` aktivieren). Sie braucht
+> **kein Wasser** — Details in [`lernwelt_kosmo/WELT-EINRICHTEN.md`](lernwelt_kosmo/WELT-EINRICHTEN.md).
 
 Auf Linux/macOS geht das auch im Terminal:
 ```bash

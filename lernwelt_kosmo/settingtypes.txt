@@ -1,0 +1,4 @@
+#    Give a starter kit (logbook, camera, space glider, planet blocks,
+#    gravity blocks, star seeds, spawn eggs) to each player once, on their
+#    first join. Handy for quick testing.
+lernwelt_kosmo_starter_kit (Give starter kit on first join) bool true
