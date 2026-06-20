@@ -1,0 +1,213 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1480" height="1200" viewBox="0 0 1480 1200" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0f1a2b"/>
+      <stop offset="1" stop-color="#16243a"/>
+    </linearGradient>
+    <linearGradient id="theme" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7d3cff"/>
+      <stop offset="1" stop-color="#5a26c4"/>
+    </linearGradient>
+    <linearGradient id="engine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1f9d8f"/>
+      <stop offset="1" stop-color="#147a6f"/>
+    </linearGradient>
+    <linearGradient id="game" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e67e22"/>
+      <stop offset="1" stop-color="#c0651a"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#9fb3c8"/>
+    </marker>
+  </defs>
+
+  <rect width="1480" height="1200" fill="url(#bg)"/>
+
+  <!-- ====================== HEADER ====================== -->
+  <text x="50" y="58" fill="#ffffff" font-size="38" font-weight="700">Luanti Lernwelt-Template</text>
+  <text x="50" y="90" fill="#9fb3c8" font-size="19">Architektur &amp; Themenwelten auf einen Blick &#183; ein wiederverwendbares Geruest fuer kindgerechte Lernwelten</text>
+  <g transform="translate(1300,34)">
+    <rect width="130" height="34" rx="17" fill="#1f9d8f" opacity="0.25" stroke="#1f9d8f"/>
+    <text x="65" y="22" fill="#7fe9da" font-size="15" font-weight="600" text-anchor="middle">Engine v1.2.0</text>
+  </g>
+
+  <!-- ====================== LAYER 1: THEME AUTHOR ====================== -->
+  <g filter="url(#shadow)">
+    <rect x="50" y="120" width="1380" height="250" rx="16" fill="#1a2740" stroke="#7d3cff" stroke-width="1.5"/>
+  </g>
+  <rect x="50" y="120" width="280" height="250" rx="16" fill="url(#theme)" opacity="0.18"/>
+  <text x="72" y="158" fill="#c9a8ff" font-size="16" font-weight="700" letter-spacing="2">1 &#183; THEME-AUTOR:IN</text>
+  <text x="72" y="186" fill="#ffffff" font-size="22" font-weight="700">Nur eine Datei:</text>
+  <text x="72" y="214" fill="#ffffff" font-size="22" font-weight="700">init.lua</text>
+  <text x="72" y="252" fill="#9fb3c8" font-size="14.5">Eine deklarative</text>
+  <text x="72" y="272" fill="#9fb3c8" font-size="14.5">Tabelle &#8211; kein</text>
+  <text x="72" y="292" fill="#9fb3c8" font-size="14.5">weiteres Lua noetig.</text>
+  <text x="72" y="330" fill="#9fb3c8" font-size="14.5">Namen, Farben,</text>
+  <text x="72" y="350" fill="#9fb3c8" font-size="14.5">Texturen tauschen.</text>
+
+  <!-- code card -->
+  <rect x="352" y="142" width="1056" height="206" rx="12" fill="#0c1421" stroke="#2c3e57"/>
+  <text x="372" y="170" fill="#7d8ea3" font-size="14" font-family="'Courier New', monospace">-- mein_thema/init.lua</text>
+  <text x="372" y="196" fill="#c9a8ff" font-size="15.5" font-family="'Courier New', monospace">lernwelt.register_world({</text>
+  <text x="392" y="220" fill="#e6edf3" font-size="15" font-family="'Courier New', monospace">title     = "Meine Welt",</text>
+  <text x="392" y="242" fill="#e6edf3" font-size="15" font-family="'Courier New', monospace">config    = { peaceful=true, freeze_time="day" },   <tspan fill="#5b7088">-- friedlich</tspan></text>
+  <text x="392" y="264" fill="#e6edf3" font-size="15" font-family="'Courier New', monospace">blocks    = { { suffix="pilz", color="#e74c3c", glow=7 } },  <tspan fill="#5b7088">-- bunte Bloecke</tspan></text>
+  <text x="392" y="286" fill="#e6edf3" font-size="15" font-family="'Courier New', monospace">zones     = { { id="wiese", activity="...", lehrplan={"MA.2"}, tasks={...} } },</text>
+  <text x="392" y="308" fill="#e6edf3" font-size="15" font-family="'Courier New', monospace">creatures = { { id="schnecke", zone="wiese", swims=false } },  <tspan fill="#5b7088">-- Tiere</tspan></text>
+  <text x="392" y="330" fill="#e6edf3" font-size="15" font-family="'Courier New', monospace">ranks     = { {0,"Frischling"}, {10,"Forscher","#2ecc71"} },  <tspan fill="#5b7088">-- + Abzeichen</tspan></text>
+
+  <!-- arrow down 1->2 -->
+  <line x1="740" y1="370" x2="740" y2="408" stroke="#9fb3c8" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect x="600" y="378" width="280" height="26" rx="13" fill="#0c1421" stroke="#7d3cff"/>
+  <text x="740" y="396" fill="#c9a8ff" font-size="14" font-weight="600" text-anchor="middle" font-family="'Courier New', monospace">register_world(def)</text>
+
+  <!-- ====================== LAYER 2: ENGINE ====================== -->
+  <g filter="url(#shadow)">
+    <rect x="50" y="418" width="1380" height="396" rx="16" fill="#13243a" stroke="#1f9d8f" stroke-width="1.5"/>
+  </g>
+  <text x="72" y="452" fill="#7fe9da" font-size="16" font-weight="700" letter-spacing="2">2 &#183; ENGINE  &#8211;  mod "lernwelt" (api/*.lua)</text>
+  <text x="1408" y="452" fill="#5b7088" font-size="13.5" text-anchor="end">init.lua laedt die Module &#183; register.lua verdrahtet alles</text>
+
+  <!-- register.lua hub -->
+  <g filter="url(#shadow)">
+    <rect x="540" y="470" width="400" height="64" rx="12" fill="url(#engine)"/>
+  </g>
+  <text x="740" y="498" fill="#ffffff" font-size="19" font-weight="700" text-anchor="middle">register.lua</text>
+  <text x="740" y="522" fill="#d6fff8" font-size="13.5" text-anchor="middle">prueft id == mod-name &#183; ruft jedes Modul auf</text>
+
+  <!-- connectors hub -> modules -->
+  <g stroke="#1f9d8f" stroke-width="1.6" opacity="0.55">
+    <line x1="640" y1="534" x2="180" y2="576"/>
+    <line x1="660" y1="534" x2="490" y2="576"/>
+    <line x1="710" y1="534" x2="800" y2="576"/>
+    <line x1="760" y1="534" x2="1110" y2="576"/>
+    <line x1="820" y1="534" x2="1300" y2="576"/>
+  </g>
+
+  <!-- module cards row 1 -->
+  <g>
+    <!-- config -->
+    <rect x="74" y="576" width="312" height="104" rx="11" fill="#0e1c30" stroke="#1f9d8f"/>
+    <text x="92" y="604" fill="#7fe9da" font-size="17" font-weight="700" font-family="'Courier New', monospace">config.lua</text>
+    <text x="92" y="628" fill="#cdd9e5" font-size="13.5">Friedliche Welt: kein Schaden,</text>
+    <text x="92" y="648" fill="#cdd9e5" font-size="13.5">Tag eingefroren, keine Monster.</text>
+    <text x="92" y="670" fill="#5b7088" font-size="12.5">Chat: /lernwelt</text>
+
+    <!-- blocks -->
+    <rect x="398" y="576" width="312" height="104" rx="11" fill="#0e1c30" stroke="#1f9d8f"/>
+    <text x="416" y="604" fill="#7fe9da" font-size="17" font-weight="700" font-family="'Courier New', monospace">blocks.lua</text>
+    <text x="416" y="628" fill="#cdd9e5" font-size="13.5">Bunte Bloecke aus Farbe (&#91;fill)</text>
+    <text x="416" y="648" fill="#cdd9e5" font-size="13.5">&#8211; ganz ohne PNG. Glow, Glas,</text>
+    <text x="416" y="670" fill="#cdd9e5" font-size="13.5">Muster &amp; eigene Texturen moeglich.</text>
+
+    <!-- zones -->
+    <rect x="722" y="576" width="312" height="104" rx="11" fill="#0e1c30" stroke="#1f9d8f"/>
+    <text x="740" y="604" fill="#7fe9da" font-size="17" font-weight="700" font-family="'Courier New', monospace">zones.lua</text>
+    <text x="740" y="628" fill="#cdd9e5" font-size="13.5">Lern-Tafeln (Nodes) mit Aktivitaet,</text>
+    <text x="740" y="648" fill="#cdd9e5" font-size="13.5">Lehrplan &amp; Aufgaben: Quiz, Muster,</text>
+    <text x="740" y="670" fill="#cdd9e5" font-size="13.5">Rettungsziel + Teleport.</text>
+
+    <!-- progress -->
+    <rect x="1046" y="576" width="362" height="104" rx="11" fill="#0e1c30" stroke="#1f9d8f"/>
+    <text x="1064" y="604" fill="#7fe9da" font-size="17" font-weight="700" font-family="'Courier New', monospace">progress.lua</text>
+    <text x="1064" y="628" fill="#cdd9e5" font-size="13.5">Zaehler, Raenge, HUD, Abzeichen-Items,</text>
+    <text x="1064" y="648" fill="#cdd9e5" font-size="13.5">reward(). Chat: /lernfortschritt</text>
+    <text x="1064" y="670" fill="#5b7088" font-size="12.5">persoenlicher Lernbericht</text>
+  </g>
+
+  <!-- module cards row 2 -->
+  <g>
+    <!-- lehrplan -->
+    <rect x="74" y="694" width="312" height="104" rx="11" fill="#0e1c30" stroke="#1f9d8f"/>
+    <text x="92" y="722" fill="#7fe9da" font-size="17" font-weight="700" font-family="'Courier New', monospace">lehrplan.lua</text>
+    <text x="92" y="746" fill="#cdd9e5" font-size="13.5">Lehrplan-21-Tags (MA, D, NMG ...).</text>
+    <text x="92" y="766" fill="#cdd9e5" font-size="13.5">Austauschbar (Common Core etc.).</text>
+    <text x="92" y="788" fill="#5b7088" font-size="12.5">Chat: /lernplan</text>
+
+    <!-- mobs_adapter -->
+    <rect x="398" y="694" width="312" height="104" rx="11" fill="#0e1c30" stroke="#1f9d8f"/>
+    <text x="416" y="722" fill="#7fe9da" font-size="17" font-weight="700" font-family="'Courier New', monospace">mobs_adapter.lua</text>
+    <text x="416" y="746" fill="#cdd9e5" font-size="13.5">Abstrahiert die Mob-API:</text>
+    <text x="416" y="766" fill="#cdd9e5" font-size="13.5">mobs_redo  &lt;-&gt;  mcl_mobs.</text>
+    <text x="416" y="788" fill="#5b7088" font-size="12.5">erkennt automatisch das Spiel</text>
+
+    <!-- creatures -->
+    <rect x="722" y="694" width="312" height="104" rx="11" fill="#0e1c30" stroke="#1f9d8f"/>
+    <text x="740" y="722" fill="#7fe9da" font-size="17" font-weight="700" font-family="'Courier New', monospace">creatures.lua</text>
+    <text x="740" y="746" fill="#cdd9e5" font-size="13.5">Tiere, Rettung, Familien, Wasser-</text>
+    <text x="740" y="766" fill="#cdd9e5" font-size="13.5">Spawner, Logbuch + Kamera</text>
+    <text x="740" y="788" fill="#cdd9e5" font-size="13.5">(Entdecken/Sammeln).</text>
+
+    <!-- register (already shown as hub) - reuse slot for data flow note -->
+    <rect x="1046" y="694" width="362" height="104" rx="11" fill="#0e1c30" stroke="#3a4d66" stroke-dasharray="5 4"/>
+    <text x="1064" y="722" fill="#9fb3c8" font-size="15" font-weight="700">Pro Spieler gespeichert (player meta)</text>
+    <text x="1064" y="746" fill="#cdd9e5" font-size="13.5">Rettungen, Rang, geloeste Aufgaben,</text>
+    <text x="1064" y="766" fill="#cdd9e5" font-size="13.5">gerettete Tiere je Art, "entdeckt".</text>
+    <text x="1064" y="788" fill="#5b7088" font-size="12.5">je Welt eigener Namensraum</text>
+  </g>
+
+  <!-- arrow down 2->3 -->
+  <line x1="740" y1="814" x2="740" y2="852" stroke="#9fb3c8" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect x="565" y="822" width="350" height="26" rx="13" fill="#0c1421" stroke="#e67e22"/>
+  <text x="740" y="840" fill="#f0a868" font-size="13.5" font-weight="600" text-anchor="middle">registriert Nodes, Items, Mobs, HUD, Befehle</text>
+
+  <!-- ====================== LAYER 3: IN GAME ====================== -->
+  <g filter="url(#shadow)">
+    <rect x="50" y="862" width="1380" height="150" rx="16" fill="#2a1e12" stroke="#e67e22" stroke-width="1.5"/>
+  </g>
+  <text x="72" y="896" fill="#f0a868" font-size="16" font-weight="700" letter-spacing="2">3 &#183; IM SPIEL (Luanti 5.x &#183; Mineclonia / Minetest Game)</text>
+
+  <g font-size="14" fill="#f6e7d8">
+    <rect x="74" y="910" width="250" height="86" rx="10" fill="#3a2a18"/>
+    <text x="90" y="938" font-weight="700" fill="#ffd9a8" font-size="15">Bauen &amp; Erkunden</text>
+    <text x="90" y="962">Bunte Bloecke, Lern-Tafeln,</text>
+    <text x="90" y="982">friedliche, helle Welt.</text>
+
+    <rect x="338" y="910" width="250" height="86" rx="10" fill="#3a2a18"/>
+    <text x="354" y="938" font-weight="700" fill="#ffd9a8" font-size="15">Tiere retten</text>
+    <text x="354" y="962">Rechtsklick &#8594; Herz-Partikel,</text>
+    <text x="354" y="982">Sound, Zaehler, Rang.</text>
+
+    <rect x="602" y="910" width="250" height="86" rx="10" fill="#3a2a18"/>
+    <text x="618" y="938" font-weight="700" fill="#ffd9a8" font-size="15">Lernen &amp; Loesen</text>
+    <text x="618" y="962">Quiz, Muster legen,</text>
+    <text x="618" y="982">Rettungsziele an Tafeln.</text>
+
+    <rect x="866" y="910" width="250" height="86" rx="10" fill="#3a2a18"/>
+    <text x="882" y="938" font-weight="700" fill="#ffd9a8" font-size="15">Sammeln</text>
+    <text x="882" y="962">Logbuch + Kamera:</text>
+    <text x="882" y="982">Tiere fotografieren.</text>
+
+    <rect x="1130" y="910" width="278" height="86" rx="10" fill="#3a2a18"/>
+    <text x="1146" y="938" font-weight="700" fill="#ffd9a8" font-size="15">Fortschritt zeigen</text>
+    <text x="1146" y="962">Raenge, Abzeichen, HUD,</text>
+    <text x="1146" y="982">/lernplan &amp; /lernfortschritt.</text>
+  </g>
+
+  <!-- ====================== THEMENWELTEN PANEL ====================== -->
+  <text x="50" y="1058" fill="#ffffff" font-size="22" font-weight="700">Mitgelieferte Themenwelten</text>
+  <text x="50" y="1082" fill="#9fb3c8" font-size="14.5">Gleiches Geruest, andere Inhalte &#8211; das Template umgeht Urheberrecht: Engine ist themenneutral, Themen nutzen eigene Namen &amp; Texturen.</text>
+
+  <!-- World 1 -->
+  <g filter="url(#shadow)">
+    <rect x="50" y="1098" width="680" height="88" rx="12" fill="#241338" stroke="#7d3cff"/>
+  </g>
+  <circle cx="86" cy="1142" r="16" fill="#7d3cff"/>
+  <text x="86" y="1148" fill="#fff" font-size="18" text-anchor="middle">&#9883;</text>
+  <text x="118" y="1130" fill="#ffffff" font-size="18" font-weight="700">Gluehpilz-Wald  <tspan fill="#9b8bbf" font-size="13" font-weight="400">(lernwelt_beispiel)</tspan></text>
+  <text x="118" y="1153" fill="#cdd9e5" font-size="13.5">Leuchtpilz-Wald. Das minimale Referenz-Thema: rein deklarativ, kein Extra-Code.</text>
+  <text x="118" y="1174" fill="#9fb3c8" font-size="13">7 Bloecke &#183; 3 Zonen &#183; 6 Tiere &#183; 4 Raenge (2 Abzeichen)</text>
+
+  <!-- World 2 -->
+  <g filter="url(#shadow)">
+    <rect x="750" y="1098" width="680" height="88" rx="12" fill="#0c2a3a" stroke="#1f9d8f"/>
+  </g>
+  <circle cx="786" cy="1142" r="16" fill="#1f9d8f"/>
+  <text x="786" y="1148" fill="#fff" font-size="16" text-anchor="middle">&#127754;</text>
+  <text x="818" y="1130" fill="#ffffff" font-size="18" font-weight="700">Tiefsee-Retter  <tspan fill="#7fcdc2" font-size="13" font-weight="400">(lernwelt_tiefsee)</tspan></text>
+  <text x="818" y="1153" fill="#cdd9e5" font-size="13.5">Unterwasser-Welt. Zeigt Theme-Extras: Tauchkapsel, Startset, Muster-/Buchstaben-Bloecke.</text>
+  <text x="818" y="1174" fill="#9fb3c8" font-size="13">17+26 Bloecke &#183; 4 Zonen (mit Aufgaben) &#183; 14 Tiere &#183; 5 Raenge (3 Abzeichen) + eigener Lua-Code</text>
+</svg>

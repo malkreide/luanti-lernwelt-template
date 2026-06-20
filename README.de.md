@@ -8,6 +8,8 @@
 
 [🇬🇧 English Version](README.md)
 
+> 🗺️ **Aufbau & Mechanik auf einen Blick:** siehe die [Architektur-Visualisierung](docs/ARCHITEKTUR.md).
+
 ## Übersicht
 
 `lernwelt` ist eine Luanti-Engine-Mod, die alles kapselt, was eine kleine,

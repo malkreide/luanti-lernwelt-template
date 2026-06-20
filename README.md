@@ -8,6 +8,8 @@
 
 [🇩🇪 Deutsche Version](README.de.md)
 
+> 🗺️ **Architecture & themes at a glance:** see the [visual guide](docs/ARCHITEKTUR.md) (in German, with diagrams).
+
 ## Overview
 
 `lernwelt` is a Luanti engine mod that encapsulates everything a small,
