@@ -26,6 +26,20 @@ Roboter-Werkstatt. Das umgeht das Copyright-Problem grundsätzlich, denn
 das Framework ist themenneutral und Themen verwenden eigene Namen und
 Texturen.
 
+## Screenshots
+
+Visuelle Repos werden deutlich häufiger geöffnet — schon ein Bild der
+**Lern-Tafel** und des **Logbuchs** wirkt stark. Aufnahme-Anleitung &
+Shot-Liste: [`docs/img/`](docs/img/).
+
+<!-- Screenshot-Slot — sobald die Dateien in docs/img/ liegen, diesen Block einkommentieren:
+<p align="center">
+  <img src="docs/img/lerntafel.png" alt="Lern-Tafel: Aktivität + Lehrplan-Bezug" width="48%">
+  &nbsp;
+  <img src="docs/img/logbuch.png" alt="Logbuch: Tier-Steckbriefe & Rettungs-Zähler" width="48%">
+</p>
+-->
+
 ## Funktionen
 
 - **Friedliche Config** zur Laufzeit gesetzt + kopierbare Zeilen für `minetest.conf`

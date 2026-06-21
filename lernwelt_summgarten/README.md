@@ -6,6 +6,10 @@
 ![Mathematik](https://img.shields.io/badge/Mathematik-MA.1,%20MA.2-1565c0)
 ![Bildnerisches Gestalten](https://img.shields.io/badge/Bildnerisches%20Gestalten-BG.1-ad1457)
 
+<!-- Screenshot-Slot — sobald docs/img/lernwelt_summgarten.png existiert, die nächste Zeile einkommentieren:
+![Screenshot der Welt lernwelt_summgarten](../docs/img/lernwelt_summgarten.png)
+-->
+
 Ein kinderfreundliches **Lernwelt-Thema für [Luanti](https://www.luanti.org/)** (früher Minetest)
 rund um einen **Bienen-und-Blumen-Garten**. Gedacht zum **gemeinsamen Spielen von Eltern und
 Kind** (ca. 5–8 Jahre) – spielerisch passend zum Schweizer **Lehrplan 21, 1./2. Zyklus**: das

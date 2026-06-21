@@ -5,6 +5,10 @@
 ![Mathematik](https://img.shields.io/badge/Mathematik-MA.1,%20MA.3-1565c0)
 ![Natur, Mensch, Gesellschaft](https://img.shields.io/badge/Natur,%20Mensch,%20Gesellschaft-NMG.2,%20NMG.3-2e7d32)
 
+<!-- Screenshot-Slot — sobald docs/img/lernwelt_schatzinsel.png existiert, die nächste Zeile einkommentieren:
+![Screenshot der Welt lernwelt_schatzinsel](../docs/img/lernwelt_schatzinsel.png)
+-->
+
 Ein kinderfreundliches **Lernwelt-Thema für [Luanti](https://www.luanti.org/)** (früher Minetest)
 rund um eine **freundliche Schatzinsel**. Gedacht zum **gemeinsamen Spielen von Eltern und Kind**
 (ca. 5–7 Jahre) – spielerisch passend zum Schweizer **Lehrplan 21, 1. Zyklus**

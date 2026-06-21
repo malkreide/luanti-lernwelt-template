@@ -25,6 +25,20 @@ scaffold can become a glowing-mushroom forest, a dragon sanctuary, a
 robot workshop, and so on. This sidesteps copyright entirely: the
 framework is theme-neutral, and themes use original names and textures.
 
+## Screenshots
+
+Visual repos get opened far more often — so a single shot of a **learning
+board** and the **logbook** is high-impact. Capture guide and shot list:
+[`docs/img/`](docs/img/).
+
+<!-- Screenshot-Slot — once the files exist in docs/img/, uncomment this block:
+<p align="center">
+  <img src="docs/img/lerntafel.png" alt="Learning board: activity + curriculum" width="48%">
+  &nbsp;
+  <img src="docs/img/logbuch.png" alt="Logbook: creature profiles & rescue counters" width="48%">
+</p>
+-->
+
 ## Features
 
 - **Peaceful config** applied at runtime + copy-paste lines for `minetest.conf`

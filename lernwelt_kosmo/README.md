@@ -8,6 +8,10 @@
 ![Deutsch (Sprache)](https://img.shields.io/badge/Deutsch%20(Sprache)-D.2-c62828)
 ![Medien und Informatik](https://img.shields.io/badge/Medien%20und%20Informatik-MI.1-6a1b9a)
 
+<!-- Screenshot-Slot — sobald docs/img/lernwelt_kosmo.png existiert, die nächste Zeile einkommentieren:
+![Screenshot der Welt lernwelt_kosmo](../docs/img/lernwelt_kosmo.png)
+-->
+
 Ein kinderfreundliches **Lernwelt-Thema für [Luanti](https://www.luanti.org/)** (früher Minetest)
 rund um eine **Weltraum-Forschungsstation**. Gedacht zum **gemeinsamen Spielen von Eltern und
 Kind** (ca. 5–7 Jahre) – spielerisch passend zum Schweizer **Lehrplan 21, 1. Zyklus**
