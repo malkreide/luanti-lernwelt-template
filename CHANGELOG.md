@@ -8,6 +8,31 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- **New example theme `lernwelt_sonnenhof` (Sonnenhof, magic farm / plants & animals):**
+  a brand-free farm learning world built on the engine. Its base is a **Scheune** (barn) and it
+  has three learning zones — **Felder** (fields), **Tiergehege** (animal pen) and **Mühle**
+  (mill). The learning focus is **NMG** (Lehrplan 21: **NMG.2** plants & animals, **NMG.3** from
+  seed to bread / origin of food), plus animal care, the food chain, counting (MA.1) and
+  **patience** (EZ). Unlike the other themes — which build everything themselves — Sonnenhof is
+  designed to **need very little custom content** by using existing mods directly: when
+  **Farming Redo** (`farming`) is installed the **Zaubermühle** grinds real `farming:wheat` to
+  `farming:flour` and bakes `farming:bread`, the **Zauber-Giesskanne** grows real Farming-Redo
+  crops, and the starter kit adds real seeds; when **Animalia** (`animalia`) is installed the
+  starter kit adds real animal spawn eggs and the **Futtertrog** pets nearby Animalia mobs. It
+  **still works without them**: it ships its own small **Weizen** crop (seed → 4 stages →
+  harvest) and 13 peaceful, helpable farm animals via the engine (chicken, cow, sheep, pig,
+  goat, duck, donkey, farm cat, farm dog, bee, field mouse, stork and a rare, glowing **Goldenes
+  Glückshuhn**). Signature theme extras (the engine cannot express these): the whole
+  **"vom Samen zum Brot"** chain (sow → water → harvest → grind → bake); a **Zauber-Giesskanne**
+  that advances any growing crop nearby (own + Farming-Redo); a **Zaubermühle** (grain → flour →
+  bread, with milestones); and a **Futtertrog** for **Tierpflege** (feeds all nearby animals,
+  own + Animalia). Watering can, mill, trough and the wheat field all work **even without a mob
+  API**. ~12 declarative farm blocks (barn boards, timber frame, tiled roof, beam, hay bale,
+  straw floor, tilled soil, flower meadow, cobbled path, pasture fence, flour sack, glowing barn
+  lantern) plus sunflowers, a creature land spawner (the duck auto-spawns in water via the
+  engine), ambient farm sounds, a first-join starter kit, and commands
+  (`/sonnenhof_scheune` builds the signature **barn farm** base, `/sonnenhof_teststation`). Full
+  DE/EN guides (`ANLEITUNG.md`, `GUIDE.md`, `KINDER-KURZ.md`, `WELT-EINRICHTEN.md`)
 - **New example theme `lernwelt_naschwerk` (Naschwerk-Tal, sweets world / early maths):**
   a brand-free, extremely colourful candy learning world built on the engine. Its base is a
   **Lebkuchenhaus** (gingerbread house) and it has three learning zones — **Schoko-Fluss**
