@@ -138,17 +138,21 @@ luanti-lernwelt-template/
 ├── lernwelt_eisbaer/         # Beispiel-Thema: Eisbaer-Bucht (Polarwelt, Kaelte-Tiere)
 │   ├── init.lua              # register_world{...} + Schlitten + farbwechselnde Aurora + Fuettern
 │   └── settingtypes.txt      # Schalter fuer die Startausruestung
-└── lernwelt_baumhaus/        # Beispiel-Thema: Baumhaus-Forscher (Dschungel, Raumorientierung)
-    ├── init.lua              # register_world{...} + Bild-Hinweis-Rahmen + Schnitzeljagd + Kompass
+├── lernwelt_baumhaus/        # Beispiel-Thema: Baumhaus-Forscher (Dschungel, Raumorientierung)
+│   ├── init.lua              # register_world{...} + Bild-Hinweis-Rahmen + Schnitzeljagd + Kompass
+│   └── settingtypes.txt      # Schalter fuer die Startausruestung
+└── lernwelt_naschwerk/       # Beispiel-Thema: Naschwerk-Tal (Suessigkeiten / fruehe Mathematik)
+    ├── init.lua              # register_world{...} + Zaehl-Spiel + Naschwagen + farbwechselnder Lolli
     └── settingtypes.txt      # Schalter fuer die Startausruestung
 ```
 
-Dabei sind eine minimale Kopiervorlage, **`lernwelt_beispiel`**, sowie sieben voll
+Dabei sind eine minimale Kopiervorlage, **`lernwelt_beispiel`**, sowie acht voll
 ausgebaute Beispiel-Themen: **`lernwelt_gluehpilz`** (Gluehpilz-Wald),
 **`lernwelt_tiefsee`** (Tiefsee-Retter), **`lernwelt_kosmo`** (Kosmo-Station),
 **`lernwelt_drachenhort`** (Drachenhort), **`lernwelt_schrauber`**
-(Schrauber-Werkstatt), **`lernwelt_eisbaer`** (Eisbaer-Bucht) und
-**`lernwelt_baumhaus`** (Baumhaus-Forscher).
+(Schrauber-Werkstatt), **`lernwelt_eisbaer`** (Eisbaer-Bucht),
+**`lernwelt_baumhaus`** (Baumhaus-Forscher) und **`lernwelt_naschwerk`**
+(Naschwerk-Tal).
 Sie zeigen, wie ein Thema **eigene Zusatz-Inhalte** zusätzlich zur Engine mitbringen
 kann — der Glühpilz-Wald einen reitbaren Leucht-Käfer plus **Tag-Nacht-Pilze** (ein
 kindgesteuerter Tag-Nacht-Wechsel), die Tiefsee eine fahrbare Tauchkapsel, die
@@ -162,15 +166,20 @@ langsam die Farbe wechselt, und eine Futterstelle für **Kälte-Tiere & ihre Leb
 (NMG.2), und der Baumhaus-Forscher ein **Dschungel-Baumhaus** rund um die
 **Raumorientierung** (NMG.3): die Stockwerke des Waldes (oben/unten über kletterbare
 Lianen & Strickleitern), eine **Schnitzeljagd mit Bild-Hinweisen in Bilderrahmen** und
-einen **Forscher-Kompass** — je mit einer Startausrüstung beim ersten Join. Vollständige
+einen **Forscher-Kompass**, und das Naschwerk-Tal ein knallbuntes **Süssigkeiten-Tal**
+rund um die **frühe Mathematik** (MA.1): ein interaktives **Zähl-Spiel** (Zähl-Naschtisch
+— „Wie viele Bonbons?"), **Muster-Tafeln** (rot–gelb–rot …), einen fahrbaren **Naschwagen**
+und einen leuchtenden **Regenbogen-Lolli**, der langsam die Farbe wechselt — je mit einer
+Startausrüstung beim ersten Join. Vollständige
 **Spielanleitungen** dazu (alle Elemente, Bedienung, Aufgaben & Ziele) stehen in
 [`lernwelt_gluehpilz/ANLEITUNG.md`](lernwelt_gluehpilz/ANLEITUNG.md),
 [`lernwelt_tiefsee/ANLEITUNG.md`](lernwelt_tiefsee/ANLEITUNG.md),
 [`lernwelt_kosmo/ANLEITUNG.md`](lernwelt_kosmo/ANLEITUNG.md),
 [`lernwelt_drachenhort/ANLEITUNG.md`](lernwelt_drachenhort/ANLEITUNG.md),
 [`lernwelt_schrauber/ANLEITUNG.md`](lernwelt_schrauber/ANLEITUNG.md),
-[`lernwelt_eisbaer/ANLEITUNG.md`](lernwelt_eisbaer/ANLEITUNG.md) und
-[`lernwelt_baumhaus/ANLEITUNG.md`](lernwelt_baumhaus/ANLEITUNG.md).
+[`lernwelt_eisbaer/ANLEITUNG.md`](lernwelt_eisbaer/ANLEITUNG.md),
+[`lernwelt_baumhaus/ANLEITUNG.md`](lernwelt_baumhaus/ANLEITUNG.md) und
+[`lernwelt_naschwerk/ANLEITUNG.md`](lernwelt_naschwerk/ANLEITUNG.md).
 
 ## Übersetzungen
 
