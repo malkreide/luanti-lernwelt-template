@@ -202,6 +202,13 @@ steht in [CONTRIBUTING.md](CONTRIBUTING.md). Die **Inhalte** eines Themas
 (Tiernamen, Aktivitäten) stehen direkt im Thema und bleiben in der Sprache,
 die der Themen-Autor wählt.
 
+## Mitmachen
+
+Beiträge sind willkommen — Übersetzungen, Bugfixes, Doku und neue
+Beispiel-Themen. Wie es geht, steht in [CONTRIBUTING.md](CONTRIBUTING.md). Von
+allen Beteiligten wird erwartet, dass sie unseren
+[Verhaltenskodex](CODE_OF_CONDUCT.md) einhalten.
+
 ## Changelog
 
 Siehe [CHANGELOG.md](CHANGELOG.md)
