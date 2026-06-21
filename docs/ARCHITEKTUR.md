@@ -289,6 +289,25 @@ Zeigt, wie ein Thema rund um **Raumorientierung (NMG.3 / MA.3)** und **Zählen (
 Eine vollständige Spieleranleitung liegt in
 [`../lernwelt_schatzinsel/ANLEITUNG.md`](../lernwelt_schatzinsel/ANLEITUNG.md).
 
+### 🐝 Summ-Garten · `lernwelt_summgarten`
+
+Zeigt, wie ein Thema **NMG mit Geometrie/Mathematik verbindet**: **Bestäubung** (NMG.1) anfassbar
+machen und das **Sechseck-Muster** der **Waben** (MA.2 – Form & Raum) erkennen und fortsetzen,
+dazu **Farben** (BG.1) und **Zählen** (MA.1) – in einem freundlichen Bienen-und-Blumen-Garten,
+alles im selben `lernwelt_summgarten:`-Namensraum. Das Waben-Muster wird **per Code** erzeugt
+(Funktion `honeycomb()`: versetzte Sechseck-Zellen auf Wachs-Rand).
+
+| | |
+|---|---|
+| Blöcke | ~16 deklarativ (Bienenstock, Bienenkasten, leere & farbige Waben/Sechseck-Muster, Wachsblock, Honigglas, Blumenwiese, Gartenerde, Gartenweg, Gartenzaun, Blütenhecke, Obstbaum-Stamm & -Laub, leuchtende Gartenlaterne, Obstkiste) + Honigschleuder, gefüllte/leere Honigwabe, 6 Blumen, Obstblüte + Frucht (3 Stufen) |
+| Zonen | 3 (Blumenwiese, Obstgarten, Honiglager) – **mit Aufgaben** (Bestäubungs-/Beine-/Sechseck-Quiz, Blumen-Farbmuster & Waben-Muster nachlegen, Hilfe-Ziel) |
+| Tiere | 13 friedliche Garten-Tiere (Bienen, Hummel, Schmetterling, Marienkäfer, Raupe, Libelle, Regenwurm, Ameise, Grashüpfer, Igel, Amsel, Bienenkönigin, mit Familien; eine seltene leuchtende Goldene Honigbiene) |
+| Ränge | 5 (davon 3 mit Abzeichen) |
+| Theme-Extras (eigener Lua-Code) | **Bestäubungs-Pinsel** (bestäubt Blumen & Blüten in der Nähe, sammelt Nektar, lässt Obstblüten zu Früchten wachsen – das NMG.1-Herzstück), **Obstblüte-Beet** (bestäubte Blüte → reift in Stufen → Apfel; ohne Bestäubung keine Frucht), **Honigschleuder** (Nektar → Honig, mit Meilensteinen), **Honigwabe zum Zählen** (gefüllte Wabe rechtsklicken = ein Honigtropfen + persönlicher Zähler mit Meilensteinen, das MA.1-Herzstück; füllt sich per Node-Timer wieder), **Waben-Sechseck-Blöcke** (per `honeycomb()` erzeugt – eigenes Muster bauen, MA.2), sechs bunte **Blumen** (Farben), **Startausrüstung**, Tier-Land-Spawner über die Engine, Ambient-Summen, Pollen-/Honig-Partikel, Bau-Befehle (`/summgarten_bienenstock`, `/summgarten_teststation`) |
+
+Eine vollständige Spieleranleitung liegt in
+[`../lernwelt_summgarten/ANLEITUNG.md`](../lernwelt_summgarten/ANLEITUNG.md).
+
 ---
 
 ## Eigene Welt bauen – die Kurzfassung

@@ -146,19 +146,22 @@ luanti-lernwelt-template/
 ├── lernwelt_schatzinsel/     # example theme: Schatzinsel (friendly pirates, maps & counting)
 │   ├── init.lua              # register_world{...} + compass + map + signpost treasure hunt + coin counting + raft
 │   └── settingtypes.txt      # starter-kit toggle
-└── lernwelt_sonnenhof/       # example theme: Sonnenhof (magic farm; uses Farming Redo + Animalia)
-    ├── init.lua              # register_world{...} + seed-to-bread + watering can + magic mill + trough
+├── lernwelt_sonnenhof/       # example theme: Sonnenhof (magic farm; uses Farming Redo + Animalia)
+│   ├── init.lua              # register_world{...} + seed-to-bread + watering can + magic mill + trough
+│   └── settingtypes.txt      # starter-kit toggle
+└── lernwelt_summgarten/      # example theme: Summ-Garten (bees & flowers; NMG + geometry)
+    ├── init.lua              # register_world{...} + pollen brush + honey extractor + honeycomb hexagons + honey counting
     └── settingtypes.txt      # starter-kit toggle
 ```
 
-The repo ships a minimal copy-me skeleton, **`lernwelt_beispiel`**, plus ten
+The repo ships a minimal copy-me skeleton, **`lernwelt_beispiel`**, plus eleven
 fully built example themes: **`lernwelt_gluehpilz`** (Gluehpilz-Wald),
 **`lernwelt_tiefsee`** (Tiefsee-Retter), **`lernwelt_kosmo`** (Kosmo-Station),
 **`lernwelt_drachenhort`** (Drachenhort), **`lernwelt_schrauber`**
 (Schrauber-Werkstatt), **`lernwelt_eisbaer`** (Eisbaer-Bucht),
 **`lernwelt_baumhaus`** (Baumhaus-Forscher), **`lernwelt_naschwerk`**
-(Naschwerk-Tal), **`lernwelt_schatzinsel`** (Schatzinsel) and
-**`lernwelt_sonnenhof`** (Sonnenhof).
+(Naschwerk-Tal), **`lernwelt_schatzinsel`** (Schatzinsel),
+**`lernwelt_sonnenhof`** (Sonnenhof) and **`lernwelt_summgarten`** (Summ-Garten).
 They show how a theme can add its own extra content on top of the engine —
 Gluehpilz-Wald a rideable glow-beetle plus **day/night mushrooms** (a child-controlled
 time-of-day cycle), Tiefsee a drivable submarine, Kosmo a space glider plus
@@ -186,7 +189,13 @@ and Sonnenhof a **magic farm** built around **plants & animals** (NMG): the whol
 at a feeding trough and a food-chain lesson — and, unlike the other themes, it leans
 on existing mods, using **Farming Redo** (seeds, flour, bread) and **Animalia**
 (chicken, cow, sheep …) directly when installed, with its own fallback crop & animals
-otherwise — together with a first-join starter kit. Full
+otherwise, and Summ-Garten a **bees-and-flowers garden** that **connects NMG with
+geometry**: making **pollination** tangible (a **pollen brush** pollinates flowers and
+blossoms so a blossom grows into a **fruit**), recognising and continuing the **hexagon
+pattern** of the **honeycomb** (MA.2 – form & space), naming the **colours** of the
+flowers and **counting honey drops** (MA.1) at a refilling comb — plus a **honey
+extractor** (nectar → honey) and three zones (flower meadow, orchard, honey store) —
+together with a first-join starter kit. Full
 **player guides** (every element, controls, tasks & goals) live in
 [`lernwelt_gluehpilz/ANLEITUNG.md`](lernwelt_gluehpilz/ANLEITUNG.md),
 [`lernwelt_tiefsee/ANLEITUNG.md`](lernwelt_tiefsee/ANLEITUNG.md),
@@ -196,8 +205,9 @@ otherwise — together with a first-join starter kit. Full
 [`lernwelt_eisbaer/ANLEITUNG.md`](lernwelt_eisbaer/ANLEITUNG.md),
 [`lernwelt_baumhaus/ANLEITUNG.md`](lernwelt_baumhaus/ANLEITUNG.md),
 [`lernwelt_naschwerk/ANLEITUNG.md`](lernwelt_naschwerk/ANLEITUNG.md),
-[`lernwelt_schatzinsel/ANLEITUNG.md`](lernwelt_schatzinsel/ANLEITUNG.md) and
-[`lernwelt_sonnenhof/ANLEITUNG.md`](lernwelt_sonnenhof/ANLEITUNG.md).
+[`lernwelt_schatzinsel/ANLEITUNG.md`](lernwelt_schatzinsel/ANLEITUNG.md),
+[`lernwelt_sonnenhof/ANLEITUNG.md`](lernwelt_sonnenhof/ANLEITUNG.md) and
+[`lernwelt_summgarten/ANLEITUNG.md`](lernwelt_summgarten/ANLEITUNG.md).
 
 ## Translations
 

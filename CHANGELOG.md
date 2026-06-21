@@ -8,6 +8,36 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- **New example theme `lernwelt_summgarten` (Summ-Garten, bees & flowers / NMG + geometry):**
+  a brand-free bees-and-flowers garden learning world built on the engine that deliberately
+  **connects NMG with mathematics/geometry**. Its base is a **Bienenstock** (beehive) and it has
+  three learning zones — **Blumenwiese** (flower meadow), **Obstgarten** (orchard) and
+  **Honiglager** (honey store). The learning focus pairs **NMG.1** (exploring nature:
+  **Bestäubung**/pollination, habitats) with **MA.2** (Form & Raum: the **Sechseck-Muster** of the
+  honeycomb — a comb cell is a hexagon, many cells make a pattern), plus **MA.1** (counting honey
+  drops, bees, blossoms), **BG.1** (the colours of the flowers) and **NMG.2** (naming insects &
+  plants). Thirteen peaceful, helpable garden animals (bee, bumblebee, butterfly, ladybug,
+  caterpillar, dragonfly, earthworm, ant, grasshopper, hedgehog, blackbird, queen bee and a rare,
+  glowing **Goldene Honigbiene**), each shown with its zone in the logbook; non-rare creatures
+  auto-spawn near the player via a small land spawner. Signature theme extras (the engine cannot
+  express these): a **Bestäubungs-Pinsel** (pollen brush — right-click a flower/blossom to puff
+  pollen, collect Nektar and turn nearby **Obstblüten** into growing fruit; no pollination → no
+  fruit); an **Obstblüte crop** (pollinated blossom → ripens through stages → **Apfel**); a
+  **Honigschleuder** (nectar → honey, with milestones); a **Honigwabe** — a filled, glowing
+  honeycomb cell you right-click to harvest one **honey drop** with a personal counter (MA.1
+  Zählen) that refills on a timer so kids can keep counting; six colourful **flowers** (red,
+  yellow, blue, purple, white, orange) for colours & meadows; and procedurally generated
+  **honeycomb (Waben) blocks** (a code-built hexagon-cell pattern) to lay your own Sechseck
+  patterns. Brush, extractor, honey-counting comb, flowers and blossoms all work **even without a
+  mob API**. Board tasks focus on pollination, colours, counting ("how many legs has a bee?"),
+  geometry ("how many corners has a hexagon?") and copying patterns (a flower colour pattern and
+  the honeycomb hexagon pattern). ~16 declarative blocks (beehive skep & wooden hive box, empty &
+  coloured honeycombs, beeswax, honey jar, flower meadow, garden soil & path, garden fence,
+  flowering hedge, fruit-tree trunk & blossoming leaves, glowing garden lantern, fruit crate),
+  ambient buzzing sounds, pollen/honey particles, a first-join starter kit, and commands
+  (`/summgarten_bienenstock` builds the signature **garden + beehive** base,
+  `/summgarten_teststation`). Full DE/EN guides (`ANLEITUNG.md`, `GUIDE.md`, `KINDER-KURZ.md`,
+  `WELT-EINRICHTEN.md`)
 - **New example theme `lernwelt_schatzinsel` (Schatzinsel, friendly pirates / maps & counting):**
   a brand-free treasure-island learning world built on the engine. Its base is a **Schiff + Steg**
   (ship + dock) and it has three learning zones — **Insel** (island), **Tropfsteinhöhle**
