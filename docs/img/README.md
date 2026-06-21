@@ -8,6 +8,9 @@ In den READMEs sind die Einbettungs-Stellen bereits als **HTML-Kommentar**
 vorbereitet (Suche nach `Screenshot-Slot`). Sobald die passende Datei hier
 liegt, einfach den Kommentar entfernen – fertig.
 
+> 📸 **Konkretes Schritt-für-Schritt-Rezept** (mit echten Befehlen) für die
+> Lern-Tafel- und Logbuch-Bilder: **[REZEPT.md](REZEPT.md)**.
+
 ## Shot-Liste (Wunschbilder)
 
 | Datei | Motiv | Format |
