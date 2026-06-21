@@ -156,20 +156,23 @@ luanti-lernwelt-template/
 ├── lernwelt_saurier/         # Beispiel-Thema: Saurier-Forscher (freundliche Pflanzenfresser-Dinos; NMG + Groessen)
 │   ├── init.lua              # register_world{...} + Fossilien ausgraben + Forscher-Jeep + Eier ausbrueten + Groessen-Parade
 │   └── settingtypes.txt      # Schalter fuer die Startausruestung
-└── lernwelt_bimmelbahn/      # Beispiel-Thema: Bimmelbahn-Land (kleine Zuege, bunte Doerfer; MI Reihenfolge)
-    ├── init.lua              # register_world{...} + Routen-Auftrag + Weiche/Signal-Demo + fahrbare Bimmelbahn
+├── lernwelt_bimmelbahn/      # Beispiel-Thema: Bimmelbahn-Land (kleine Zuege, bunte Doerfer; MI Reihenfolge)
+│   ├── init.lua              # register_world{...} + Routen-Auftrag + Weiche/Signal-Demo + fahrbare Bimmelbahn
+│   └── settingtypes.txt      # Schalter fuer die Startausruestung
+└── lernwelt_himmelsdorf/     # Beispiel-Thema: Himmelsdorf (Wolkenstadt; NMG Wetter & Raumorientierung)
+    ├── init.lua              # register_world{...} + Heissluftballon + Wetter-Station + farbwechselnder Regenbogen + Hoehenmesser
     └── settingtypes.txt      # Schalter fuer die Startausruestung
 ```
 
-Dabei sind eine minimale Kopiervorlage, **`lernwelt_beispiel`**, sowie dreizehn voll
+Dabei sind eine minimale Kopiervorlage, **`lernwelt_beispiel`**, sowie vierzehn voll
 ausgebaute Beispiel-Themen: **`lernwelt_gluehpilz`** (Gluehpilz-Wald),
 **`lernwelt_tiefsee`** (Tiefsee-Retter), **`lernwelt_kosmo`** (Kosmo-Station),
 **`lernwelt_drachenhort`** (Drachenhort), **`lernwelt_schrauber`**
 (Schrauber-Werkstatt), **`lernwelt_eisbaer`** (Eisbaer-Bucht),
 **`lernwelt_baumhaus`** (Baumhaus-Forscher), **`lernwelt_naschwerk`**
 (Naschwerk-Tal), **`lernwelt_schatzinsel`** (Schatzinsel), **`lernwelt_sonnenhof`** (Sonnenhof),
-**`lernwelt_summgarten`** (Summ-Garten), **`lernwelt_saurier`** (Saurier-Forscher)
-und **`lernwelt_bimmelbahn`** (Bimmelbahn-Land).
+**`lernwelt_summgarten`** (Summ-Garten), **`lernwelt_saurier`** (Saurier-Forscher),
+**`lernwelt_bimmelbahn`** (Bimmelbahn-Land) und **`lernwelt_himmelsdorf`** (Himmelsdorf).
 Sie zeigen, wie ein Thema **eigene Zusatz-Inhalte** zusätzlich zur Engine mitbringen
 kann — der Glühpilz-Wald einen reitbaren Leucht-Käfer plus **Tag-Nacht-Pilze** (ein
 kindgesteuerter Tag-Nacht-Wechsel), die Tiefsee eine fahrbare Tauchkapsel, die
@@ -222,7 +225,14 @@ dieser Reihenfolge** halten), eine sanft vereinfachte **Weichen- & Signal-Logik*
 umstellbare Weiche und ein rot/grünes Signal mit einem selbstfahrenden **Demo-Zug**, der
 bei Rot hält und bei Grün fährt — eine weiche Brücke zu Mesecons/Basic-Trains „wenn–dann"),
 **Farben zuordnen**, eine zweisitzige **fahrbare Bimmelbahn**, die pfeift und dampft, und
-eine **Wagen-Parade**, die bunte Wagen der Reihe nach aufstellt. Vollständige
+eine **Wagen-Parade**, die bunte Wagen der Reihe nach aufstellt, und Himmelsdorf eine
+**Wolkenstadt** auf einer Schwebeinsel rund um **Wetter & Raumorientierung** (NMG): eine
+anfassbare **Wetter-Station**, die den Himmel durch **Sonne → Wolken → Regen → Gewitter →
+Regenbogen** schaltet, ein leuchtender **Regenbogen**-Block, der langsam die **sieben
+Regenbogenfarben** durchläuft, ein echter **Heissluftballon** zum Fliegen (warme Luft
+steigt — Flug-Physik) und ein **Höhenmesser** plus oben/unten-Quizze für die
+**Raumorientierung**, über drei Zonen (Regenbogenbrücke, Wolkenfelder, Ballonhafen).
+Vollständige
 **Spielanleitungen** dazu (alle Elemente, Bedienung, Aufgaben & Ziele) stehen in
 [`lernwelt_gluehpilz/ANLEITUNG.md`](lernwelt_gluehpilz/ANLEITUNG.md),
 [`lernwelt_tiefsee/ANLEITUNG.md`](lernwelt_tiefsee/ANLEITUNG.md),
@@ -235,8 +245,9 @@ eine **Wagen-Parade**, die bunte Wagen der Reihe nach aufstellt. Vollständige
 [`lernwelt_schatzinsel/ANLEITUNG.md`](lernwelt_schatzinsel/ANLEITUNG.md),
 [`lernwelt_sonnenhof/ANLEITUNG.md`](lernwelt_sonnenhof/ANLEITUNG.md),
 [`lernwelt_summgarten/ANLEITUNG.md`](lernwelt_summgarten/ANLEITUNG.md),
-[`lernwelt_saurier/ANLEITUNG.md`](lernwelt_saurier/ANLEITUNG.md) und
-[`lernwelt_bimmelbahn/ANLEITUNG.md`](lernwelt_bimmelbahn/ANLEITUNG.md).
+[`lernwelt_saurier/ANLEITUNG.md`](lernwelt_saurier/ANLEITUNG.md),
+[`lernwelt_bimmelbahn/ANLEITUNG.md`](lernwelt_bimmelbahn/ANLEITUNG.md) und
+[`lernwelt_himmelsdorf/ANLEITUNG.md`](lernwelt_himmelsdorf/ANLEITUNG.md).
 
 ## Übersetzungen
 

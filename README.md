@@ -155,12 +155,15 @@ luanti-lernwelt-template/
 ├── lernwelt_saurier/         # example theme: Saurier-Forscher (friendly herbivore dinos; NMG + sizes)
 │   ├── init.lua              # register_world{...} + fossil digging + jeep + egg hatching + size parade
 │   └── settingtypes.txt      # starter-kit toggle
-└── lernwelt_bimmelbahn/      # example theme: Bimmelbahn-Land (little trains, colourful villages; MI sequence)
-    ├── init.lua              # register_world{...} + route order game + switch/signal demo + drivable train
+├── lernwelt_bimmelbahn/      # example theme: Bimmelbahn-Land (little trains, colourful villages; MI sequence)
+│   ├── init.lua              # register_world{...} + route order game + switch/signal demo + drivable train
+│   └── settingtypes.txt      # starter-kit toggle
+└── lernwelt_himmelsdorf/     # example theme: Himmelsdorf (cloud city; NMG weather & spatial orientation)
+    ├── init.lua              # register_world{...} + hot-air balloon + weather station + colour-cycling rainbow + altimeter
     └── settingtypes.txt      # starter-kit toggle
 ```
 
-The repo ships a minimal copy-me skeleton, **`lernwelt_beispiel`**, plus thirteen
+The repo ships a minimal copy-me skeleton, **`lernwelt_beispiel`**, plus fourteen
 fully built example themes: **`lernwelt_gluehpilz`** (Gluehpilz-Wald),
 **`lernwelt_tiefsee`** (Tiefsee-Retter), **`lernwelt_kosmo`** (Kosmo-Station),
 **`lernwelt_drachenhort`** (Drachenhort), **`lernwelt_schrauber`**
@@ -168,8 +171,8 @@ fully built example themes: **`lernwelt_gluehpilz`** (Gluehpilz-Wald),
 **`lernwelt_baumhaus`** (Baumhaus-Forscher), **`lernwelt_naschwerk`**
 (Naschwerk-Tal), **`lernwelt_schatzinsel`** (Schatzinsel),
 **`lernwelt_sonnenhof`** (Sonnenhof), **`lernwelt_summgarten`** (Summ-Garten),
-**`lernwelt_saurier`** (Saurier-Forscher) and **`lernwelt_bimmelbahn`**
-(Bimmelbahn-Land).
+**`lernwelt_saurier`** (Saurier-Forscher), **`lernwelt_bimmelbahn`**
+(Bimmelbahn-Land) and **`lernwelt_himmelsdorf`** (Himmelsdorf).
 They show how a theme can add its own extra content on top of the engine —
 Gluehpilz-Wald a rideable glow-beetle plus **day/night mushrooms** (a child-controlled
 time-of-day cycle), Tiefsee a drivable submarine, Kosmo a space glider plus
@@ -219,7 +222,13 @@ colour station signs **in exactly that order**), a gently simplified **switch & 
 logic** (a toggleable Weiche and a red/green Signal, with a self-running **demo train**
 that stops at red and goes at green — a soft bridge to Mesecons/Basic-Trains "if–then"),
 **colour matching**, a two-seat **drivable Bimmelbahn** that whistles and steams and a
-**wagon parade** that lines up colourful wagons in order. Full
+**wagon parade** that lines up colourful wagons in order, and Himmelsdorf a **cloud
+city** on a floating island built around **weather & spatial orientation** (NMG): a
+hands-on **weather station** that cycles the sky through **sun → clouds → rain →
+thunderstorm → rainbow**, a glowing **rainbow** block that slowly cycles the **seven
+rainbow colours**, a real **hot-air balloon** you fly (warm air rises — flight physics)
+and an **altimeter** plus up/down quizzes for **oben/unten** (spatial orientation),
+across three zones (rainbow bridge, cloud fields, balloon harbour). Full
 **player guides** (every element, controls, tasks & goals) live in
 [`lernwelt_gluehpilz/ANLEITUNG.md`](lernwelt_gluehpilz/ANLEITUNG.md),
 [`lernwelt_tiefsee/ANLEITUNG.md`](lernwelt_tiefsee/ANLEITUNG.md),
@@ -232,8 +241,9 @@ that stops at red and goes at green — a soft bridge to Mesecons/Basic-Trains "
 [`lernwelt_schatzinsel/ANLEITUNG.md`](lernwelt_schatzinsel/ANLEITUNG.md),
 [`lernwelt_sonnenhof/ANLEITUNG.md`](lernwelt_sonnenhof/ANLEITUNG.md),
 [`lernwelt_summgarten/ANLEITUNG.md`](lernwelt_summgarten/ANLEITUNG.md),
-[`lernwelt_saurier/ANLEITUNG.md`](lernwelt_saurier/ANLEITUNG.md) and
-[`lernwelt_bimmelbahn/ANLEITUNG.md`](lernwelt_bimmelbahn/ANLEITUNG.md).
+[`lernwelt_saurier/ANLEITUNG.md`](lernwelt_saurier/ANLEITUNG.md),
+[`lernwelt_bimmelbahn/ANLEITUNG.md`](lernwelt_bimmelbahn/ANLEITUNG.md) and
+[`lernwelt_himmelsdorf/ANLEITUNG.md`](lernwelt_himmelsdorf/ANLEITUNG.md).
 
 ## Translations
 

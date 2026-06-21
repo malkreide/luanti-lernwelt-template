@@ -8,6 +8,31 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- **New example theme `lernwelt_himmelsdorf` (Himmelsdorf / Wolkenstadt, a cloud city / NMG weather & spatial orientation):**
+  a brand-free sky learning world built on the engine. Its base is a **Schwebeinsel** (floating
+  island) and it has three learning zones — **Regenbogenbrücke** (rainbow bridge), **Wolkenfelder**
+  (cloud fields) and **Ballonhafen** (balloon harbour). The learning focus is **NMG** — observing
+  and describing the **weather** (NMG.1), explaining phenomena / **flight physics** (NMG.3, "why does
+  warm air rise / a balloon fly?") and sky **animals & their habitat** (NMG.2) — plus **MA.2**
+  (spatial orientation: oben/unten, hoch/tief), **MA.3** (colour sequences), **BG.1** (the seven
+  rainbow colours) and **D.2** (naming). Twelve peaceful, friendly **sky animals** (Regenbogen-Kolibri,
+  Sonnenfalter, Sonnenvogel, Wolkenschaf, Wolkenkatze, Schwalbe, Himmelsqualle, Sturmvogel, Windgeist,
+  Wetterfrosch, Donnervogel and a rare, glowing **Regenbogen-Pegasus**); families bring their babies
+  along, and non-rare animals auto-spawn on the cloud platforms near the player via a small sky
+  spawner. Signature theme extras (the engine cannot express these): a hands-on **Wetter-Station**
+  that cycles the weather for everyone — **Sonne → Wolken → Regen → Gewitter → Regenbogen** — changing
+  the sky colour, the clouds and player-attached rain (NMG.1); a glowing **Regenbogen** block that
+  slowly cycles the **seven rainbow colours** (BG.1 / MA.3); a real **Heissluftballon** you fly (jump
+  = up, since warm air rises — flight physics, NMG.3) that seats two; a **Höhenmesser** (altimeter)
+  that reports your height and whether you are up high or down low (MA.2); and **Regenbogen-Samen**
+  that grow into random rainbow colour blocks. ~22 declarative blocks (cloud, glass cloud, cloud
+  brick, per-face floating-island ground & balloon basket, sky stone, glowing sun/star/cloud-lamp,
+  four pattern blocks and the seven rainbow colour blocks), **letter blocks A–Z** for laying out
+  animal names, ambient wind/birdsong/thunder sounds, a first-join starter kit, and commands
+  (`/himmelsdorf_wolkenstadt` builds the signature cloud-city base with a rainbow-bridge arch,
+  `/himmelsdorf_schwebeinsel`, `/himmelsdorf_teststation`). The weather station, rainbow, balloon,
+  altimeter, seeds, blocks, zones and logbook all work **even without a mob API**. Full DE/EN guides
+  (`ANLEITUNG.md`, `GUIDE.md`, `KINDER-KURZ.md`, `WELT-EINRICHTEN.md`)
 - **New example theme `lernwelt_bimmelbahn` (Bimmelbahn-Land, little colourful trains / MI sequence + colours):**
   a brand-free little-train learning world built on the engine. Its base is a **Hauptbahnhof**
   (main station) connected by rails to four **colourful villages** — **Rotdorf**, **Gelbdorf**,
