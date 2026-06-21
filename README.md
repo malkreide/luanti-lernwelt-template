@@ -43,6 +43,30 @@ framework is theme-neutral, and themes use original names and textures.
 - **No textures required** — colours via `[fill`; **patterns** (layered `[fill`),
   **per-face textures** (`top`/`side`/`bottom`) and own **PNGs** optional
 
+## Theme worlds
+
+The repo ships a minimal copy-me skeleton (`lernwelt_beispiel`) plus **fourteen**
+fully built example themes. Each world has its own README, a complete player
+guide (`ANLEITUNG.md`), a one-page kids' sheet (`KINDER-KURZ.md`), an English
+guide (`GUIDE.md`) and a setup note (`WELT-EINRICHTEN.md`).
+
+| World | Theme | Learning focus | Guide |
+|---|---|---|---|
+| [Glühpilz-Wald 🍄](lernwelt_gluehpilz/README.md) | cosy mushroom realm (ideal first world) | sorting, early maths, day/night cycle | [ANLEITUNG](lernwelt_gluehpilz/ANLEITUNG.md) · [EN](lernwelt_gluehpilz/GUIDE.md) |
+| [Tiefsee-Retter 🌊](lernwelt_tiefsee/README.md) | underwater rescue | rescuing animals, submarine | [ANLEITUNG](lernwelt_tiefsee/ANLEITUNG.md) · [EN](lernwelt_tiefsee/GUIDE.md) |
+| [Kosmo-Station 🚀](lernwelt_kosmo/README.md) | outer-space station | moon gravity, physics | [ANLEITUNG](lernwelt_kosmo/ANLEITUNG.md) · [EN](lernwelt_kosmo/GUIDE.md) |
+| [Drachenhort 🐉](lernwelt_drachenhort/README.md) | friendly dragons | responsibility & patience (raising a baby dragon) | [ANLEITUNG](lernwelt_drachenhort/ANLEITUNG.md) · [EN](lernwelt_drachenhort/GUIDE.md) |
+| [Schrauber-Werkstatt 🔧](lernwelt_schrauber/README.md) | robots & logic | switch → lamp → door logic, algorithms | [ANLEITUNG](lernwelt_schrauber/ANLEITUNG.md) · [EN](lernwelt_schrauber/GUIDE.md) |
+| [Eisbär-Bucht 🐻‍❄️](lernwelt_eisbaer/README.md) | polar world | cold animals & habitats (NMG.2) | [ANLEITUNG](lernwelt_eisbaer/ANLEITUNG.md) · [EN](lernwelt_eisbaer/GUIDE.md) |
+| [Baumhaus-Forscher 🌳](lernwelt_baumhaus/README.md) | jungle treehouse | spatial orientation (NMG.3) | [ANLEITUNG](lernwelt_baumhaus/ANLEITUNG.md) · [EN](lernwelt_baumhaus/GUIDE.md) |
+| [Naschwerk-Tal 🍬](lernwelt_naschwerk/README.md) | candy valley | early maths / counting (MA.1) | [ANLEITUNG](lernwelt_naschwerk/ANLEITUNG.md) · [EN](lernwelt_naschwerk/GUIDE.md) |
+| [Schatzinsel 🏴‍☠️](lernwelt_schatzinsel/README.md) | friendly-pirate treasure island | spatial orientation & counting (NMG.3 / MA.1) | [ANLEITUNG](lernwelt_schatzinsel/ANLEITUNG.md) · [EN](lernwelt_schatzinsel/GUIDE.md) |
+| [Sonnenhof 🌻](lernwelt_sonnenhof/README.md) | magic farm (uses Farming Redo + Animalia) | plants & animals (NMG), seed-to-bread | [ANLEITUNG](lernwelt_sonnenhof/ANLEITUNG.md) · [EN](lernwelt_sonnenhof/GUIDE.md) |
+| [Summ-Garten 🐝](lernwelt_summgarten/README.md) | bees & flowers | NMG + geometry (MA.2) | [ANLEITUNG](lernwelt_summgarten/ANLEITUNG.md) · [EN](lernwelt_summgarten/GUIDE.md) |
+| [Saurier-Forscher 🦕](lernwelt_saurier/README.md) | dinosaur research station | science (NMG) & comparing sizes (MA) | [ANLEITUNG](lernwelt_saurier/ANLEITUNG.md) · [EN](lernwelt_saurier/GUIDE.md) |
+| [Bimmelbahn-Land 🚂](lernwelt_bimmelbahn/README.md) | little-train land | media & informatics (MI sequencing), colours (BG) | [ANLEITUNG](lernwelt_bimmelbahn/ANLEITUNG.md) · [EN](lernwelt_bimmelbahn/GUIDE.md) |
+| [Himmelsdorf 🌈](lernwelt_himmelsdorf/README.md) | cloud city | weather & spatial orientation (NMG) | [ANLEITUNG](lernwelt_himmelsdorf/ANLEITUNG.md) · [EN](lernwelt_himmelsdorf/GUIDE.md) |
+
 ## Prerequisites
 
 - Luanti / Minetest 5.x

@@ -44,6 +44,31 @@ Texturen.
 - **Keine Texturen nötig** — Farben via `[fill`; **Muster** (geschichtete `[fill`),
   **Pro-Seiten-Texturen** (`top`/`side`/`bottom`) und eigene **PNGs** optional
 
+## Themenwelten
+
+Mitgeliefert werden eine minimale Kopiervorlage (`lernwelt_beispiel`) sowie
+**vierzehn** voll ausgebaute Beispiel-Themen. Jede Welt hat eine eigene README,
+eine vollständige Spielanleitung (`ANLEITUNG.md`), eine einseitige Kinder-Karte
+(`KINDER-KURZ.md`), eine englische Anleitung (`GUIDE.md`) und eine Einrichtungs-
+Notiz (`WELT-EINRICHTEN.md`).
+
+| Welt | Thema | Schwerpunkt | Anleitung |
+|---|---|---|---|
+| [Glühpilz-Wald 🍄](lernwelt_gluehpilz/README.md) | kuscheliges Pilzreich (ideale Erstwelt) | Sortieren, frühe Mathematik, Tag-Nacht-Wechsel | [ANLEITUNG](lernwelt_gluehpilz/ANLEITUNG.md) · [EN](lernwelt_gluehpilz/GUIDE.md) |
+| [Tiefsee-Retter 🌊](lernwelt_tiefsee/README.md) | Unterwasser-Rettung | Tiere retten, Tauchkapsel | [ANLEITUNG](lernwelt_tiefsee/ANLEITUNG.md) · [EN](lernwelt_tiefsee/GUIDE.md) |
+| [Kosmo-Station 🚀](lernwelt_kosmo/README.md) | Weltraum-Station | Mond-Schwerkraft, Physik | [ANLEITUNG](lernwelt_kosmo/ANLEITUNG.md) · [EN](lernwelt_kosmo/GUIDE.md) |
+| [Drachenhort 🐉](lernwelt_drachenhort/README.md) | freundliche Drachen | Verantwortung & Geduld (Drachenbaby grossziehen) | [ANLEITUNG](lernwelt_drachenhort/ANLEITUNG.md) · [EN](lernwelt_drachenhort/GUIDE.md) |
+| [Schrauber-Werkstatt 🔧](lernwelt_schrauber/README.md) | Roboter & Logik | Schalter → Lampe → Tür-Logik, Algorithmen | [ANLEITUNG](lernwelt_schrauber/ANLEITUNG.md) · [EN](lernwelt_schrauber/GUIDE.md) |
+| [Eisbär-Bucht 🐻‍❄️](lernwelt_eisbaer/README.md) | Polarwelt | Kälte-Tiere & Lebensräume (NMG.2) | [ANLEITUNG](lernwelt_eisbaer/ANLEITUNG.md) · [EN](lernwelt_eisbaer/GUIDE.md) |
+| [Baumhaus-Forscher 🌳](lernwelt_baumhaus/README.md) | Dschungel-Baumhaus | Raumorientierung (NMG.3) | [ANLEITUNG](lernwelt_baumhaus/ANLEITUNG.md) · [EN](lernwelt_baumhaus/GUIDE.md) |
+| [Naschwerk-Tal 🍬](lernwelt_naschwerk/README.md) | Süssigkeiten-Tal | frühe Mathematik / Zählen (MA.1) | [ANLEITUNG](lernwelt_naschwerk/ANLEITUNG.md) · [EN](lernwelt_naschwerk/GUIDE.md) |
+| [Schatzinsel 🏴‍☠️](lernwelt_schatzinsel/README.md) | freundliche-Piraten-Schatzinsel | Raumorientierung & Zählen (NMG.3 / MA.1) | [ANLEITUNG](lernwelt_schatzinsel/ANLEITUNG.md) · [EN](lernwelt_schatzinsel/GUIDE.md) |
+| [Sonnenhof 🌻](lernwelt_sonnenhof/README.md) | Zauber-Bauernhof (nutzt Farming Redo + Animalia) | Pflanzen & Tiere (NMG), vom Samen zum Brot | [ANLEITUNG](lernwelt_sonnenhof/ANLEITUNG.md) · [EN](lernwelt_sonnenhof/GUIDE.md) |
+| [Summ-Garten 🐝](lernwelt_summgarten/README.md) | Bienen & Blumen | NMG + Geometrie (MA.2) | [ANLEITUNG](lernwelt_summgarten/ANLEITUNG.md) · [EN](lernwelt_summgarten/GUIDE.md) |
+| [Saurier-Forscher 🦕](lernwelt_saurier/README.md) | Dinosaurier-Forscherstation | NMG & Grössenvergleich (MA) | [ANLEITUNG](lernwelt_saurier/ANLEITUNG.md) · [EN](lernwelt_saurier/GUIDE.md) |
+| [Bimmelbahn-Land 🚂](lernwelt_bimmelbahn/README.md) | Kleine-Züge-Welt | Medien & Informatik (MI – Reihenfolge), Farben (BG) | [ANLEITUNG](lernwelt_bimmelbahn/ANLEITUNG.md) · [EN](lernwelt_bimmelbahn/GUIDE.md) |
+| [Himmelsdorf 🌈](lernwelt_himmelsdorf/README.md) | Wolkenstadt | Wetter & Raumorientierung (NMG) | [ANLEITUNG](lernwelt_himmelsdorf/ANLEITUNG.md) · [EN](lernwelt_himmelsdorf/GUIDE.md) |
+
 ## Voraussetzungen
 
 - Luanti / Minetest 5.x
