@@ -250,6 +250,27 @@ ansprechenden Süssigkeitswelt, alles im selben `lernwelt_naschwerk:`-Namensraum
 Eine vollständige Spieleranleitung liegt in
 [`../lernwelt_naschwerk/ANLEITUNG.md`](../lernwelt_naschwerk/ANLEITUNG.md).
 
+### 🌻 Sonnenhof · `lernwelt_sonnenhof`
+
+Zeigt, wie ein Thema rund um **NMG (Pflanzen & Tiere)** mit **möglichst wenig Eigenbau** gebaut
+wird, indem es vorhandene Mods **direkt nutzt**: ist **Farming Redo** (`farming`) installiert,
+mahlt die **Zaubermühle** echten `farming:wheat` zu `farming:flour` und backt `farming:bread`,
+und die **Zauber-Giesskanne** lässt echte Farming-Redo-Pflanzen wachsen; ist **Animalia**
+(`animalia`) installiert, legt die Startausrüstung echte Tier-Eier dazu und der **Futtertrog**
+streichelt nahe Animalia-Tiere. Ohne diese Mods springen eine eigene **Weizen**-Pflanze und
+eigene Hoftiere ein – alles im selben `lernwelt_sonnenhof:`-Namensraum.
+
+| | |
+|---|---|
+| Blöcke | ~12 deklarativ (Scheunenwand, Fachwerk, Scheunendach, Holzbalken, Strohballen, Stroh, Ackererde, Blumenwiese, Feldweg, Weidezaun, Mehlsack, leuchtende Hoflaterne) + Zaubermühle, Futtertrog, Sonnenblume, Weizen (4 Stufen) |
+| Zonen | 3 (Felder, Tiergehege, Mühle) – **mit Aufgaben** (Pflanzen/Tiere/Nahrungskette-Quiz, Saatreihen-Muster nachlegen, Hilfe-Ziel) |
+| Tiere | 13 friedliche Hoftiere (mit Familien; die Ente schwimmt; ein seltenes leuchtendes Goldenes Glückshuhn) – plus echte Animalia-Tiere, falls vorhanden |
+| Ränge | 5 (davon 3 mit Abzeichen) |
+| Theme-Extras (eigener Lua-Code) | **Vom Samen zum Brot** (eigene Weizen-Pflanze: säen → 4 Stufen → ernten), **Zauber-Giesskanne** (lässt jede wachsende Pflanze in der Nähe wachsen – eigene **und** Farming-Redo), **Zaubermühle** (Korn → Mehl → Brot, mit Meilensteinen; nutzt Farming-Redo-Items, wenn vorhanden), **Futtertrog** (Tierpflege: füttert alle nahen Tiere, eigene **und** Animalia), Sonnenblumen, **Startausrüstung** (legt Farming-/Animalia-Items dazu, falls installiert), Tier-Land-Spawner (Ente über die Engine im Wasser), Ambient-Sound, Bau-Befehle (`/sonnenhof_scheune`, `/sonnenhof_teststation`) |
+
+Eine vollständige Spieleranleitung liegt in
+[`../lernwelt_sonnenhof/ANLEITUNG.md`](../lernwelt_sonnenhof/ANLEITUNG.md).
+
 ---
 
 ## Eigene Welt bauen – die Kurzfassung

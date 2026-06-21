@@ -1,0 +1,5 @@
+#    Give a starter kit (Sonnenhof-Logbuch, camera, magic watering can, wheat seeds, animal
+#    feed + grain, all building blocks incl. the magic mill & feeding trough, and spawn eggs)
+#    to each player once, on their first join. When Farming Redo / Animalia are installed, real
+#    farming seeds and Animalia spawn eggs are added too. Handy for quick testing.
+lernwelt_sonnenhof_starter_kit (Give starter kit on first join) bool true

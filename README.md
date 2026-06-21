@@ -140,18 +140,21 @@ luanti-lernwelt-template/
 ├── lernwelt_baumhaus/        # example theme: Baumhaus-Forscher (jungle, spatial orientation)
 │   ├── init.lua              # register_world{...} + picture-hint frames + treasure hunt + compass
 │   └── settingtypes.txt      # starter-kit toggle
-└── lernwelt_naschwerk/       # example theme: Naschwerk-Tal (sweets / early maths)
-    ├── init.lua              # register_world{...} + counting game + candy cart + colour-cycling lolli
+├── lernwelt_naschwerk/       # example theme: Naschwerk-Tal (sweets / early maths)
+│   ├── init.lua              # register_world{...} + counting game + candy cart + colour-cycling lolli
+│   └── settingtypes.txt      # starter-kit toggle
+└── lernwelt_sonnenhof/       # example theme: Sonnenhof (magic farm; uses Farming Redo + Animalia)
+    ├── init.lua              # register_world{...} + seed-to-bread + watering can + magic mill + trough
     └── settingtypes.txt      # starter-kit toggle
 ```
 
-The repo ships a minimal copy-me skeleton, **`lernwelt_beispiel`**, plus eight
+The repo ships a minimal copy-me skeleton, **`lernwelt_beispiel`**, plus nine
 fully built example themes: **`lernwelt_gluehpilz`** (Gluehpilz-Wald),
 **`lernwelt_tiefsee`** (Tiefsee-Retter), **`lernwelt_kosmo`** (Kosmo-Station),
 **`lernwelt_drachenhort`** (Drachenhort), **`lernwelt_schrauber`**
 (Schrauber-Werkstatt), **`lernwelt_eisbaer`** (Eisbaer-Bucht),
-**`lernwelt_baumhaus`** (Baumhaus-Forscher) and **`lernwelt_naschwerk`**
-(Naschwerk-Tal).
+**`lernwelt_baumhaus`** (Baumhaus-Forscher), **`lernwelt_naschwerk`**
+(Naschwerk-Tal) and **`lernwelt_sonnenhof`** (Sonnenhof).
 They show how a theme can add its own extra content on top of the engine —
 Gluehpilz-Wald a rideable glow-beetle plus **day/night mushrooms** (a child-controlled
 time-of-day cycle), Tiefsee a drivable submarine, Kosmo a space glider plus
@@ -167,8 +170,13 @@ vines & rope ladders), a **treasure hunt with picture hints in item frames**
 (Bilderrahmen) and an **explorer compass**, and Naschwerk-Tal an extremely colourful
 **candy valley** built around **early maths** (MA.1): an interactive **counting game**
 (Zähl-Naschtisch — "how many bonbons?"), **pattern boards** (red–yellow–red …), a
-drivable **candy cart** and a glowing **rainbow lolli** that slowly cycles colour —
-together with a first-join starter kit. Full
+drivable **candy cart** and a glowing **rainbow lolli** that slowly cycles colour,
+and Sonnenhof a **magic farm** built around **plants & animals** (NMG): the whole
+**"from seed to bread"** chain (sow → water → harvest → grind → bake), animal care
+at a feeding trough and a food-chain lesson — and, unlike the other themes, it leans
+on existing mods, using **Farming Redo** (seeds, flour, bread) and **Animalia**
+(chicken, cow, sheep …) directly when installed, with its own fallback crop & animals
+otherwise — together with a first-join starter kit. Full
 **player guides** (every element, controls, tasks & goals) live in
 [`lernwelt_gluehpilz/ANLEITUNG.md`](lernwelt_gluehpilz/ANLEITUNG.md),
 [`lernwelt_tiefsee/ANLEITUNG.md`](lernwelt_tiefsee/ANLEITUNG.md),
@@ -176,8 +184,9 @@ together with a first-join starter kit. Full
 [`lernwelt_drachenhort/ANLEITUNG.md`](lernwelt_drachenhort/ANLEITUNG.md),
 [`lernwelt_schrauber/ANLEITUNG.md`](lernwelt_schrauber/ANLEITUNG.md),
 [`lernwelt_eisbaer/ANLEITUNG.md`](lernwelt_eisbaer/ANLEITUNG.md),
-[`lernwelt_baumhaus/ANLEITUNG.md`](lernwelt_baumhaus/ANLEITUNG.md) and
-[`lernwelt_naschwerk/ANLEITUNG.md`](lernwelt_naschwerk/ANLEITUNG.md).
+[`lernwelt_baumhaus/ANLEITUNG.md`](lernwelt_baumhaus/ANLEITUNG.md),
+[`lernwelt_naschwerk/ANLEITUNG.md`](lernwelt_naschwerk/ANLEITUNG.md) and
+[`lernwelt_sonnenhof/ANLEITUNG.md`](lernwelt_sonnenhof/ANLEITUNG.md).
 
 ## Translations
 
