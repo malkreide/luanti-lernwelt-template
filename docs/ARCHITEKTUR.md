@@ -328,6 +328,26 @@ Grössenvergleich anfassbar wird.
 Eine vollständige Spieleranleitung liegt in
 [`../lernwelt_saurier/ANLEITUNG.md`](../lernwelt_saurier/ANLEITUNG.md).
 
+### 🚂 Bimmelbahn-Land · `lernwelt_bimmelbahn`
+
+Zeigt, wie ein Thema **Medien & Informatik mit Farben verbindet**: ein **Hauptbahnhof**, der über
+Schienen mehrere **bunte Dörfer** verbindet, wo **Routen & die Reihenfolge der Stationen** geplant
+werden (MI.1 – Abläufe/Reihenfolgen), eine **einfache Weichen- & Signal-Logik** (MI.2 / TTG.2 –
+wenn-dann) erlebt und **Farben zugeordnet** werden (BG.1) – alles im selben
+`lernwelt_bimmelbahn:`-Namensraum. Der **Routen-Auftrag** (an den farbigen Stations-Schildern in
+der richtigen Reihenfolge halten) ist das Herzstück und macht „Reihenfolge" anfassbar.
+
+| | |
+|---|---|
+| Blöcke | ~20 deklarativ (Schiene, Bahnsteig, Gleisbett, Backstein, Holz-Bohle, Prellbock, Bahnhofs-Glas, leuchtende Bahnhofs-Lampe, vier Dorf-Haus-Blöcke, vier Wagen-Blöcke, gemusterte Bahnübergang-/Zug-Fenster-/Backstein-/Bahnhofsboden-/Konfetti-Blöcke, Pro-Seiten-Bahnhofsuhr & -Koffer) + Stations-Schilder, Fahrplan-Pult, Signal (rot/grün), Weiche, Buchstaben-Blöcke A–Z, Zahlen-Blöcke 0–9 |
+| Zonen | 5 (Hauptbahnhof, Rotdorf, Gelbdorf, Blaudorf, Gründorf) – **mit Aufgaben** (Farb-/Logik-/Zähl-Quiz, Farb-Reihenfolge-Muster nachlegen, Begrüss-Ziele) |
+| Tiere | 12 freundliche Fahrgäste (Schaffner-Maus, Bahnhofs-Hund, Gepäck-Igel, Rote Reise-Katze, Reise-Fuchs, Gelbes Entlein, Sonnen-Kanari, Blauer Papagei, Blaues Häschen, Grüner Frosch, Grüne Schildkröte, mit Familien; eine seltene leuchtende Goldene Reise-Eule) |
+| Ränge | 5 (davon 3 mit Abzeichen) |
+| Theme-Extras (eigener Lua-Code) | **Routen-Auftrag** (Fahrplan-Pult gibt eine Route, an den Stations-Schildern in genau dieser Reihenfolge halten; persönlicher Routen-Zähler mit Meilensteinen, das MI.1-Herzstück), **Weiche & Signal** (umstellbar) mit selbstfahrendem **Demo-Zug** (hält bei Rot, fährt bei Grün – MI.2/TTG.2), fahrbare **Bimmelbahn** (Dampf, Pfiff, zu zweit), Fahrgast-Land-Spawner über das Theme, **Wagen-Parade** (`/bimmelbahn_wagen` stellt bunte Wagen der Reihe nach auf), **Buchstaben-Blöcke** (Stationsnamen) & **Zahlen-Blöcke** (zählen), **Startausrüstung**, Ambient-Pfiff & -Bimmeln, Bau-Befehle (`/bimmelbahn_hauptbahnhof`, `/bimmelbahn_teststation`, `/bimmelbahn_demo`, `/bimmelbahn_route`) |
+
+Eine vollständige Spieleranleitung liegt in
+[`../lernwelt_bimmelbahn/ANLEITUNG.md`](../lernwelt_bimmelbahn/ANLEITUNG.md).
+
 ---
 
 ## Eigene Welt bauen – die Kurzfassung

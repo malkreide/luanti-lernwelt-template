@@ -152,20 +152,24 @@ luanti-lernwelt-template/
 ├── lernwelt_summgarten/      # example theme: Summ-Garten (bees & flowers; NMG + geometry)
 │   ├── init.lua              # register_world{...} + pollen brush + honey extractor + honeycomb hexagons + honey counting
 │   └── settingtypes.txt      # starter-kit toggle
-└── lernwelt_saurier/         # example theme: Saurier-Forscher (friendly herbivore dinos; NMG + sizes)
-    ├── init.lua              # register_world{...} + fossil digging + jeep + egg hatching + size parade
+├── lernwelt_saurier/         # example theme: Saurier-Forscher (friendly herbivore dinos; NMG + sizes)
+│   ├── init.lua              # register_world{...} + fossil digging + jeep + egg hatching + size parade
+│   └── settingtypes.txt      # starter-kit toggle
+└── lernwelt_bimmelbahn/      # example theme: Bimmelbahn-Land (little trains, colourful villages; MI sequence)
+    ├── init.lua              # register_world{...} + route order game + switch/signal demo + drivable train
     └── settingtypes.txt      # starter-kit toggle
 ```
 
-The repo ships a minimal copy-me skeleton, **`lernwelt_beispiel`**, plus twelve
+The repo ships a minimal copy-me skeleton, **`lernwelt_beispiel`**, plus thirteen
 fully built example themes: **`lernwelt_gluehpilz`** (Gluehpilz-Wald),
 **`lernwelt_tiefsee`** (Tiefsee-Retter), **`lernwelt_kosmo`** (Kosmo-Station),
 **`lernwelt_drachenhort`** (Drachenhort), **`lernwelt_schrauber`**
 (Schrauber-Werkstatt), **`lernwelt_eisbaer`** (Eisbaer-Bucht),
 **`lernwelt_baumhaus`** (Baumhaus-Forscher), **`lernwelt_naschwerk`**
 (Naschwerk-Tal), **`lernwelt_schatzinsel`** (Schatzinsel),
-**`lernwelt_sonnenhof`** (Sonnenhof), **`lernwelt_summgarten`** (Summ-Garten)
-and **`lernwelt_saurier`** (Saurier-Forscher).
+**`lernwelt_sonnenhof`** (Sonnenhof), **`lernwelt_summgarten`** (Summ-Garten),
+**`lernwelt_saurier`** (Saurier-Forscher) and **`lernwelt_bimmelbahn`**
+(Bimmelbahn-Land).
 They show how a theme can add its own extra content on top of the engine —
 Gluehpilz-Wald a rideable glow-beetle plus **day/night mushrooms** (a child-controlled
 time-of-day cycle), Tiefsee a drivable submarine, Kosmo a space glider plus
@@ -207,7 +211,15 @@ Grössen): friendly **herbivore dinosaurs** of very different sizes across three
 **classifying** dinos (plant-eater? long-neck, horned, plated, duck-bill …),
 **learning dino names** with letter blocks, a **size parade** that lines the dinos up
 small → big, **hatching dino eggs** at the nesting place and a two-seat **research
-jeep**. Full
+jeep**, and Bimmelbahn-Land a **little-train world** built around **media & informatics**
+(MI — sequencing) and **colours** (BG): a central **Hauptbahnhof** connected by rails to
+four **colourful villages** (red, yellow, blue, green), a **route-order task** (the heart
+— the timetable desk hands you a route like *red → blue → yellow* and you must stop at the
+colour station signs **in exactly that order**), a gently simplified **switch & signal
+logic** (a toggleable Weiche and a red/green Signal, with a self-running **demo train**
+that stops at red and goes at green — a soft bridge to Mesecons/Basic-Trains "if–then"),
+**colour matching**, a two-seat **drivable Bimmelbahn** that whistles and steams and a
+**wagon parade** that lines up colourful wagons in order. Full
 **player guides** (every element, controls, tasks & goals) live in
 [`lernwelt_gluehpilz/ANLEITUNG.md`](lernwelt_gluehpilz/ANLEITUNG.md),
 [`lernwelt_tiefsee/ANLEITUNG.md`](lernwelt_tiefsee/ANLEITUNG.md),
@@ -219,8 +231,9 @@ jeep**. Full
 [`lernwelt_naschwerk/ANLEITUNG.md`](lernwelt_naschwerk/ANLEITUNG.md),
 [`lernwelt_schatzinsel/ANLEITUNG.md`](lernwelt_schatzinsel/ANLEITUNG.md),
 [`lernwelt_sonnenhof/ANLEITUNG.md`](lernwelt_sonnenhof/ANLEITUNG.md),
-[`lernwelt_summgarten/ANLEITUNG.md`](lernwelt_summgarten/ANLEITUNG.md) and
-[`lernwelt_saurier/ANLEITUNG.md`](lernwelt_saurier/ANLEITUNG.md).
+[`lernwelt_summgarten/ANLEITUNG.md`](lernwelt_summgarten/ANLEITUNG.md),
+[`lernwelt_saurier/ANLEITUNG.md`](lernwelt_saurier/ANLEITUNG.md) and
+[`lernwelt_bimmelbahn/ANLEITUNG.md`](lernwelt_bimmelbahn/ANLEITUNG.md).
 
 ## Translations
 
