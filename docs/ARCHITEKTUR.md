@@ -271,6 +271,24 @@ eigene Hoftiere ein – alles im selben `lernwelt_sonnenhof:`-Namensraum.
 Eine vollständige Spieleranleitung liegt in
 [`../lernwelt_sonnenhof/ANLEITUNG.md`](../lernwelt_sonnenhof/ANLEITUNG.md).
 
+### 🏴‍☠️ Schatzinsel · `lernwelt_schatzinsel`
+
+Zeigt, wie ein Thema rund um **Raumorientierung (NMG.3 / MA.3)** und **Zählen (MA.1)** gebaut wird:
+**Karte** und **Kompass** lesen, Himmelsrichtungen (N/O/S/W) und **oben/unten** bestimmen und
+**Goldmünzen zählen** – auf einer freundlichen Piraten-Schatzinsel, alles im selben
+`lernwelt_schatzinsel:`-Namensraum.
+
+| | |
+|---|---|
+| Blöcke | ~26 deklarativ (Strand-Sand, Sandstein, Sand mit Muschel, Palmen-Stamm & -Blatt, Deck-Planke, Schiffs-Rumpf, Steg, Segel, Tau, Fass, Kajüten-Glas, Papagei-Flagge, Kompass-Rose, Schatzkarten-Block, Höhlen-Stein, Tropfstein, Leucht-Kristall, Gold-Ader, Goldmünzen-Haufen, Lagunen-Sand, Korallen, Muster-Blöcke) + 10 Zahlen-Blöcke (0–9) + Goldmünze, Schatzkiste, Wegweiser, Strickleiter |
+| Zonen | 3 (Insel, Tropfsteinhöhle, Lagune) – **mit Aufgaben** (Goldmünzen/Fische zählen, Kompass-Richtung, oben/unten, Muster nachlegen, Hilfe-Ziel) |
+| Tiere | 14 friedliche Tiere (Insel-, Höhlen- & Lagunen-Tiere, mit Familien; ein seltener leuchtender Goldener Papagei) |
+| Ränge | 5 (davon 3 mit Abzeichen) |
+| Theme-Extras (eigener Lua-Code) | **Schatz-Kompass** (Himmelsrichtung, Ort oben/unten, gezählte Münzen), **Schatzkarte** (Richtung zum nächsten Hinweis lesen), **Wegweiser** (Bild-Hinweis-Schilder zum Durchblättern/Wählen – eigene Schnitzeljagd bauen), **Schnitzeljagd** (Befehl legt Wegweiser-Kette → Schatzkiste), **Goldmünzen zählen** (Sammel-Knoten + persönlicher Zähler mit Meilensteinen, das MA.1-Herzstück), **Zahlen-Blöcke 0–9**, kletterbare **Strickleiter** (Mast, oben/unten), fahrbares **Floss** (zu zweit), **Startausrüstung**, Tier-Land-Spawner (Lagunen-Tiere über die Engine im Wasser), Ambient-Sound, Gischt-Partikel, Bau-Befehle (`/schatzinsel_schiff`, `/schatzinsel_teststation`, `/schatzinsel_schnitzeljagd`, `/schatzinsel_muenzen`) |
+
+Eine vollständige Spieleranleitung liegt in
+[`../lernwelt_schatzinsel/ANLEITUNG.md`](../lernwelt_schatzinsel/ANLEITUNG.md).
+
 ---
 
 ## Eigene Welt bauen – die Kurzfassung

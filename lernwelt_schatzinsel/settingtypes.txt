@@ -1,0 +1,4 @@
+#    Give a starter kit (Bordbuch, compass, treasure map, raft, building
+#    blocks, gold coins, spawn eggs) to each player once, on their first
+#    join. Handy for quick testing.
+lernwelt_schatzinsel_starter_kit (Give starter kit on first join) bool true

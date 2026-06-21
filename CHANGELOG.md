@@ -8,6 +8,34 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- **New example theme `lernwelt_schatzinsel` (Schatzinsel, friendly pirates / maps & counting):**
+  a brand-free treasure-island learning world built on the engine. Its base is a **Schiff + Steg**
+  (ship + dock) and it has three learning zones — **Insel** (island), **Tropfsteinhöhle**
+  (dripstone cave) and **Lagune** (lagoon). The learning focus is **Raumorientierung** (Lehrplan
+  21: **NMG.3 / MA.3** — reading a map & compass, the cardinal directions, oben/unten) and
+  **counting** (**MA.1** — counting gold coins and animals). Fourteen peaceful, helpable animals
+  (parrot, monkey, beach crab, land turtle, seagull, bat, glow beetle, cave cricket, crystal
+  snail, colourful fish, starfish, sea turtle, octopus and a rare, glowing **Goldener Papagei**),
+  each shown with its zone in the logbook; lagoon animals auto-spawn in water via the engine, the
+  island/cave ones via a small land spawner. Signature theme extras (the engine cannot express
+  these): a **Schatz-Kompass** (tells you which way you face — N/O/S/W — where you are
+  — Strand / Höhle / Mastkorb, oben/unten — and how many coins you have counted); a **Schatzkarte**
+  that reads the direction to the nearest hint; **Wegweiser** (picture-hint signposts: island,
+  palm, wave, chest, shell, anchor, coin and direction arrows — right-click to cycle,
+  sneak+right-click to choose) to build your **own** treasure hunt; a **Schnitzeljagd** command
+  that lays out a chain of signposts ending at a treasure chest; **Goldmünzen zählen** — collect
+  coin nodes to raise a personal counter with milestones (MA.1); **Zahlen-Blöcke 0–9** to lay out
+  numbers; a climbable **Strickleiter** (mast rigging, oben/unten); and a two-seat **Floss** (a
+  little sailing raft for the lagoon). Compass, map, signposts, treasure hunt, coin counting and
+  number blocks all work **even without a mob API**. Board tasks focus on counting ("how many
+  gold coins?"), cardinal directions, oben/unten and copying patterns. ~26 declarative blocks
+  (beach sand, sandstone, palm trunk & leaves, deck plank, ship hull, dock plank, sail, rope,
+  barrel, cabin glass, a friendly parrot flag, compass-rose & map blocks, cave stone, dripstone,
+  glowing crystal, gold vein, coin pile, lagoon sand, corals, pattern blocks), ambient sea sounds,
+  drifting sea-spray, a first-join starter kit, and commands (`/schatzinsel_schiff` builds the
+  signature **ship + dock** base, `/schatzinsel_teststation`, `/schatzinsel_schnitzeljagd`,
+  `/schatzinsel_muenzen`). Full DE/EN guides (`ANLEITUNG.md`, `GUIDE.md`, `KINDER-KURZ.md`,
+  `WELT-EINRICHTEN.md`)
 - **New example theme `lernwelt_sonnenhof` (Sonnenhof, magic farm / plants & animals):**
   a brand-free farm learning world built on the engine. Its base is a **Scheune** (barn) and it
   has three learning zones — **Felder** (fields), **Tiergehege** (animal pen) and **Mühle**
