@@ -1,0 +1,4 @@
+#    Give a starter kit (Forscher-Tagebuch, camera, Forscher-Kompass, Reit-Papagei,
+#    Bilderrahmen, Lianen, Strickleitern, jungle blocks, spawn eggs) to each player
+#    once, on their first join. Handy for quick testing.
+lernwelt_baumhaus_starter_kit (Give starter kit on first join) bool true

@@ -8,6 +8,31 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- **New example theme `lernwelt_baumhaus` (Baumhaus-Forscher, jungle treehouse /
+  spatial orientation):** a brand-free jungle learning world built on the engine. Its base
+  is a big **Baumhaus** (treehouse) and it has three learning zones that double as the
+  **storeys of the forest** — **Blätterdach** (canopy, "up"), **Fluss** (river) and
+  **Alte Ruinen** (old ruins). The learning focus is **spatial orientation** (Lehrplan 21:
+  **NMG.3** — up/down, compass directions, following a plan) plus discovering animals: 14
+  peaceful, helpable jungle animals (parrot, monkey, sloth, toucan, jungle butterfly, tree
+  frog, fish, turtle, heron, dragonfly, gecko, bat, rhino beetle and a rare **Goldener
+  Jaguar**), each shown with its habitat in the logbook. Signature theme extras (the engine
+  cannot express these): **Bilderrahmen** (picture-hint item frames) that show a picture —
+  leaf, water drop, stone, paw, treasure or a direction arrow — which children read as a
+  hint (right-click to cycle the picture, sneak+right-click to choose one); a
+  **Schnitzeljagd** (`/baumhaus_schnitzeljagd`) that lays out a chain of picture-hint frames
+  with real directions (incl. one up high = "oben") ending at a **treasure chest** with
+  milestone titles; a **Forscher-Kompass** that reports which way you face (N/O/S/W), how
+  high you are (which forest storey) and where the nearest hint is; climbable **Lianen** and
+  **Strickleitern** for hands-on up/down; and a rideable **Reit-Papagei** that flies up into
+  the canopy (two-seater). Frames, treasure hunt, compass and climbing work **even without a
+  mob API**. Board tasks focus on up/down, who swims, reading arrows and a **leaves light→dark
+  pattern**. ~22 declarative jungle blocks (four leaf shades, bark trunk, planks, walls,
+  glass, bridge, river & ruin stone, gold), an animal land spawner (water animals auto-spawn
+  via the engine), drifting leaves, ambient sounds, a first-join starter kit, and commands
+  (`/baumhaus_bauen` builds the signature **treehouse** base, `/baumhaus_schnitzeljagd`,
+  `/baumhaus_teststation`). Full DE/EN guides (`ANLEITUNG.md`, `GUIDE.md`, `KINDER-KURZ.md`,
+  `WELT-EINRICHTEN.md`)
 - **New example theme `lernwelt_eisbaer` (Eisbär-Bucht, polar world / cold animals):**
   a brand-free polar learning world built on the engine. Its base is an **Iglu/Eispalast**
   and it has three learning zones — **Gefrorener See** (frozen lake), **Schneewald** (snow
