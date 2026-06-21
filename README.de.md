@@ -127,152 +127,68 @@ Im Spiel:
 
 ## Projektstruktur
 
+Alles in diesem Projekt ist eines von zwei Dingen: **die Engine** (der
+gemeinsame Maschinenraum, den jede Welt nutzt) oder **ein Thema** (eine
+fertige, spielbare Welt). Man kann das ganze Repo also lesen als *eine Engine
+plus viele austauschbare Welten*.
+
 ```
 luanti-lernwelt-template/
-├── lernwelt/                 # Engine-Mod (das wiederverwendbare Framework)
-│   ├── init.lua              # laedt die API-Module
-│   ├── settingtypes.txt      # HUD-Schalter
-│   ├── locale/
-│   │   └── lernwelt.de.tr     # deutsche Uebersetzung (weitere: lernwelt.<lang>.tr)
-│   └── api/
-│       ├── config.lua        # friedliche Config + /lernwelt
-│       ├── lehrplan.lua      # Lehrplan-21-Tagging + /lernplan
-│       ├── blocks.lua        # Farbblock-Generator
-│       ├── zones.lua         # Zonen + Lern-Tafeln
-│       ├── progress.lua      # Raenge, HUD, Abzeichen, reward()
-│       ├── mobs_adapter.lua  # mobs_redo / mcl_mobs Abstraktion
-│       ├── creatures.lua     # Spawner, Rettung, Logbuch
-│       └── register.lua      # register_world()
-├── lernwelt_beispiel/        # minimale Kopiervorlage (Titel Gluehpilz-Wald)
-│   └── init.lua              # ein deklaratives register_world{...}
-├── lernwelt_gluehpilz/       # Beispiel-Thema: Gluehpilz-Wald (kuschelige Erstwelt)
-│   ├── init.lua              # register_world{...} + Leucht-Kaefer + Tag-Nacht-Pilze
-│   └── settingtypes.txt      # Schalter fuer die Startausruestung
-├── lernwelt_tiefsee/         # Beispiel-Thema: Tiefsee-Retter (Unterwasser)
-│   ├── init.lua              # register_world{...} + Tauchkapsel + Startausruestung
-│   └── settingtypes.txt      # Schalter fuer die Startausruestung
-├── lernwelt_kosmo/           # Beispiel-Thema: Kosmo-Station (Weltraum)
-│   ├── init.lua              # register_world{...} + Raumgleiter + Mond-Schwerkraft
-│   └── settingtypes.txt      # Schalter fuer die Startausruestung
-├── lernwelt_drachenhort/     # Beispiel-Thema: Drachenhort (freundliche Drachen)
-│   ├── init.lua              # register_world{...} + Drachenbaby grossziehen + Flugdrache
-│   └── settingtypes.txt      # Schalter fuer die Startausruestung
-├── lernwelt_schrauber/       # Beispiel-Thema: Schrauber-Werkstatt (Roboter & Logik)
-│   ├── init.lua              # register_world{...} + Schalter/Lampe/Tuer-Logik + Roboterbau
-│   └── settingtypes.txt      # Schalter fuer die Startausruestung
-├── lernwelt_eisbaer/         # Beispiel-Thema: Eisbaer-Bucht (Polarwelt, Kaelte-Tiere)
-│   ├── init.lua              # register_world{...} + Schlitten + farbwechselnde Aurora + Fuettern
-│   └── settingtypes.txt      # Schalter fuer die Startausruestung
-├── lernwelt_baumhaus/        # Beispiel-Thema: Baumhaus-Forscher (Dschungel, Raumorientierung)
-│   ├── init.lua              # register_world{...} + Bild-Hinweis-Rahmen + Schnitzeljagd + Kompass
-│   └── settingtypes.txt      # Schalter fuer die Startausruestung
-├── lernwelt_naschwerk/       # Beispiel-Thema: Naschwerk-Tal (Suessigkeiten / fruehe Mathematik)
-│   ├── init.lua              # register_world{...} + Zaehl-Spiel + Naschwagen + farbwechselnder Lolli
-│   └── settingtypes.txt      # Schalter fuer die Startausruestung
-├── lernwelt_schatzinsel/     # Beispiel-Thema: Schatzinsel (freundliche Piraten, Karten & Zaehlen)
-│   ├── init.lua              # register_world{...} + Kompass + Schatzkarte + Wegweiser-Schnitzeljagd + Muenzen-Zaehlen + Floss
-│   └── settingtypes.txt      # Schalter fuer die Startausruestung
-├── lernwelt_sonnenhof/       # Beispiel-Thema: Sonnenhof (Zauber-Bauernhof; nutzt Farming Redo + Animalia)
-│   ├── init.lua              # register_world{...} + Vom Samen zum Brot + Giesskanne + Zaubermuehle + Trog
-│   └── settingtypes.txt      # Schalter fuer die Startausruestung
-├── lernwelt_summgarten/      # Beispiel-Thema: Summ-Garten (Bienen & Blumen; NMG + Geometrie)
-│   ├── init.lua              # register_world{...} + Bestaeubungs-Pinsel + Honigschleuder + Waben-Sechsecke + Honig-Zaehlen
-│   └── settingtypes.txt      # Schalter fuer die Startausruestung
-├── lernwelt_saurier/         # Beispiel-Thema: Saurier-Forscher (freundliche Pflanzenfresser-Dinos; NMG + Groessen)
-│   ├── init.lua              # register_world{...} + Fossilien ausgraben + Forscher-Jeep + Eier ausbrueten + Groessen-Parade
-│   └── settingtypes.txt      # Schalter fuer die Startausruestung
-├── lernwelt_bimmelbahn/      # Beispiel-Thema: Bimmelbahn-Land (kleine Zuege, bunte Doerfer; MI Reihenfolge)
-│   ├── init.lua              # register_world{...} + Routen-Auftrag + Weiche/Signal-Demo + fahrbare Bimmelbahn
-│   └── settingtypes.txt      # Schalter fuer die Startausruestung
-└── lernwelt_himmelsdorf/     # Beispiel-Thema: Himmelsdorf (Wolkenstadt; NMG Wetter & Raumorientierung)
-    ├── init.lua              # register_world{...} + Heissluftballon + Wetter-Station + farbwechselnder Regenbogen + Hoehenmesser
-    └── settingtypes.txt      # Schalter fuer die Startausruestung
+│
+├── lernwelt/            ← DIE ENGINE — hier liegt die gesamte gemeinsame
+│                          Mechanik. Einmal aktivieren, normalerweise nie ändern.
+│
+├── lernwelt_beispiel/   ← Eine leere Start-Welt. Diesen Ordner kopieren, um
+│                          die eigene Welt zu beginnen.
+│
+└── lernwelt_*/          ← Ein Ordner pro fertiger Welt (14 Stück, z.B.
+                           lernwelt_gluehpilz, lernwelt_drachenhort …).
+                           Die vollständige Liste ist die Tabelle „Themenwelten“ oben.
 ```
 
-Dabei sind eine minimale Kopiervorlage, **`lernwelt_beispiel`**, sowie vierzehn voll
-ausgebaute Beispiel-Themen: **`lernwelt_gluehpilz`** (Gluehpilz-Wald),
-**`lernwelt_tiefsee`** (Tiefsee-Retter), **`lernwelt_kosmo`** (Kosmo-Station),
-**`lernwelt_drachenhort`** (Drachenhort), **`lernwelt_schrauber`**
-(Schrauber-Werkstatt), **`lernwelt_eisbaer`** (Eisbaer-Bucht),
-**`lernwelt_baumhaus`** (Baumhaus-Forscher), **`lernwelt_naschwerk`**
-(Naschwerk-Tal), **`lernwelt_schatzinsel`** (Schatzinsel), **`lernwelt_sonnenhof`** (Sonnenhof),
-**`lernwelt_summgarten`** (Summ-Garten), **`lernwelt_saurier`** (Saurier-Forscher),
-**`lernwelt_bimmelbahn`** (Bimmelbahn-Land) und **`lernwelt_himmelsdorf`** (Himmelsdorf).
-Sie zeigen, wie ein Thema **eigene Zusatz-Inhalte** zusätzlich zur Engine mitbringen
-kann — der Glühpilz-Wald einen reitbaren Leucht-Käfer plus **Tag-Nacht-Pilze** (ein
-kindgesteuerter Tag-Nacht-Wechsel), die Tiefsee eine fahrbare Tauchkapsel, die
-Kosmo-Station einen Raumgleiter plus **Mond-Schwerkraft-Blöcke**, der Drachenhort
-das **Großziehen eines Drachenbabys** (ein Ei ausbrüten, dann geduldig füttern & zähmen —
-Verantwortung & Geduld) plus einen **fliegenden Reitdrachen**, die Schrauber-Werkstatt
-ein selbstständiges **Schalter → Leitung → Lampe → Tür-Logiksystem** (sanfte Brücke zu
-Mesecons) plus **einen Roboter in der richtigen Reihenfolge zusammenbauen** (ein Algorithmus),
-die Eisbär-Bucht einen fahrbaren **Schlitten**, ein leuchtendes **Polarlicht**, das
-langsam die Farbe wechselt, und eine Futterstelle für **Kälte-Tiere & ihre Lebensräume**
-(NMG.2), und der Baumhaus-Forscher ein **Dschungel-Baumhaus** rund um die
-**Raumorientierung** (NMG.3): die Stockwerke des Waldes (oben/unten über kletterbare
-Lianen & Strickleitern), eine **Schnitzeljagd mit Bild-Hinweisen in Bilderrahmen** und
-einen **Forscher-Kompass**, und das Naschwerk-Tal ein knallbuntes **Süssigkeiten-Tal**
-rund um die **frühe Mathematik** (MA.1): ein interaktives **Zähl-Spiel** (Zähl-Naschtisch
-— „Wie viele Bonbons?"), **Muster-Tafeln** (rot–gelb–rot …), einen fahrbaren **Naschwagen**
-und einen leuchtenden **Regenbogen-Lolli**, der langsam die Farbe wechselt, und die
-Schatzinsel eine freundliche-Piraten-**Schatzinsel** rund um **Raumorientierung**
-(NMG.3 / MA.3) und **Zählen** (MA.1): einen **Schatz-Kompass** (wohin du schaust,
-oben/unten, gezählte Münzen), eine **Schatzkarte**, die den Weg zum nächsten Hinweis
-liest, eine **Schnitzeljagd mit Bild- und Pfeil-Wegweisern** über drei Zonen (Insel,
-Tropfsteinhöhle, Lagune), **Goldmünzen-Sammeln & -Zählen** mit Zahlen-Blöcken 0–9 und
-ein zweisitziges **Floss** — dazu eine Schiff-und-Steg-Basis per Befehl, und der
-Sonnenhof ein **Zauber-Bauernhof** rund um **Pflanzen & Tiere** (NMG): die ganze Kette
-**„Vom Samen zum Brot"** (säen → giessen → ernten → mahlen → backen), Tierpflege am
-Futtertrog und eine Lektion zur Nahrungskette — und er stützt sich, anders als die
-übrigen Themen, auf vorhandene Mods: Er nutzt **Farming Redo** (Saat, Mehl, Brot) und
-**Animalia** (Huhn, Kuh, Schaf …) direkt, sofern installiert, sonst eigene Pflanze &
-Tiere, und der Summ-Garten ein **Bienen-und-Blumen-Garten**, der **NMG mit Geometrie
-verbindet**: **Bestäubung** anfassbar machen (ein **Bestäubungs-Pinsel** bestäubt Blumen
-und Blüten, sodass aus einer Blüte eine **Frucht** wächst), das **Sechseck-Muster** der
-**Waben** (MA.2 – Form & Raum) erkennen und fortsetzen, **Farben** der Blumen benennen
-und **Honigtropfen zählen** (MA.1) an einer sich wieder füllenden Wabe — plus
-**Honigschleuder** (Nektar → Honig) und drei Zonen (Blumenwiese, Obstgarten,
-Honiglager) — je mit einer Startausrüstung beim ersten Join, und der Saurier-Forscher
-eine freundliche **Dinosaurier-Forscherstation** rund um **NMG** und den
-**Grössenvergleich** (MA / Grössen): freundliche **Pflanzenfresser-Dinos** ganz
-unterschiedlicher Grösse über drei Zonen (Tal, Fossilien-Grabungsstätte, Nistplatz),
-das **Ausgraben von Fossilien** aus dem Sand (das Herzstück „Ausgraben" — Knochen,
-Zähne, Ammoniten, versteinerte Eier mit Meilensteinen), das **Klassifizieren** der
-Dinos (Pflanzenfresser? Langhals, Hornträger, Plattendino, Entenschnabel …), das
-**Lernen der Dino-Namen** mit Buchstaben-Blöcken, eine **Grössen-Parade**, die die
-Dinos von klein nach gross aufstellt, das **Ausbrüten von Dino-Eiern** am Nistplatz und
-einen zweisitzigen **Forscher-Jeep**, und das Bimmelbahn-Land eine **Kleine-Züge-Welt**
-rund um **Medien & Informatik** (MI — Reihenfolge) und **Farben** (BG): ein zentraler
-**Hauptbahnhof**, der über Schienen mit vier **bunten Dörfern** (rot, gelb, blau, grün)
-verbunden ist, ein **Routen-Auftrag** (das Herzstück — das Fahrplan-Pult gibt dir eine
-Route wie *Rot → Blau → Gelb*, und du musst an den farbigen Stations-Schildern **in genau
-dieser Reihenfolge** halten), eine sanft vereinfachte **Weichen- & Signal-Logik** (eine
-umstellbare Weiche und ein rot/grünes Signal mit einem selbstfahrenden **Demo-Zug**, der
-bei Rot hält und bei Grün fährt — eine weiche Brücke zu Mesecons/Basic-Trains „wenn–dann"),
-**Farben zuordnen**, eine zweisitzige **fahrbare Bimmelbahn**, die pfeift und dampft, und
-eine **Wagen-Parade**, die bunte Wagen der Reihe nach aufstellt, und Himmelsdorf eine
-**Wolkenstadt** auf einer Schwebeinsel rund um **Wetter & Raumorientierung** (NMG): eine
-anfassbare **Wetter-Station**, die den Himmel durch **Sonne → Wolken → Regen → Gewitter →
-Regenbogen** schaltet, ein leuchtender **Regenbogen**-Block, der langsam die **sieben
-Regenbogenfarben** durchläuft, ein echter **Heissluftballon** zum Fliegen (warme Luft
-steigt — Flug-Physik) und ein **Höhenmesser** plus oben/unten-Quizze für die
-**Raumorientierung**, über drei Zonen (Regenbogenbrücke, Wolkenfelder, Ballonhafen).
-Vollständige
-**Spielanleitungen** dazu (alle Elemente, Bedienung, Aufgaben & Ziele) stehen in
-[`lernwelt_gluehpilz/ANLEITUNG.md`](lernwelt_gluehpilz/ANLEITUNG.md),
-[`lernwelt_tiefsee/ANLEITUNG.md`](lernwelt_tiefsee/ANLEITUNG.md),
-[`lernwelt_kosmo/ANLEITUNG.md`](lernwelt_kosmo/ANLEITUNG.md),
-[`lernwelt_drachenhort/ANLEITUNG.md`](lernwelt_drachenhort/ANLEITUNG.md),
-[`lernwelt_schrauber/ANLEITUNG.md`](lernwelt_schrauber/ANLEITUNG.md),
-[`lernwelt_eisbaer/ANLEITUNG.md`](lernwelt_eisbaer/ANLEITUNG.md),
-[`lernwelt_baumhaus/ANLEITUNG.md`](lernwelt_baumhaus/ANLEITUNG.md),
-[`lernwelt_naschwerk/ANLEITUNG.md`](lernwelt_naschwerk/ANLEITUNG.md),
-[`lernwelt_schatzinsel/ANLEITUNG.md`](lernwelt_schatzinsel/ANLEITUNG.md),
-[`lernwelt_sonnenhof/ANLEITUNG.md`](lernwelt_sonnenhof/ANLEITUNG.md),
-[`lernwelt_summgarten/ANLEITUNG.md`](lernwelt_summgarten/ANLEITUNG.md),
-[`lernwelt_saurier/ANLEITUNG.md`](lernwelt_saurier/ANLEITUNG.md),
-[`lernwelt_bimmelbahn/ANLEITUNG.md`](lernwelt_bimmelbahn/ANLEITUNG.md) und
-[`lernwelt_himmelsdorf/ANLEITUNG.md`](lernwelt_himmelsdorf/ANLEITUNG.md).
+**Die Engine — `lernwelt/`**
+Das ist der wiederverwendbare Teil, der jeder Welt dieselben Funktionen gibt:
+die friedliche Konfiguration, die Lern-Tafeln, die Tiere und das Logbuch, die
+Ränge und Abzeichen sowie die Lehrplan-21-Tags. Ein Thema schaltet diese nur
+ein — der Engine-Code selbst wird nie angefasst.
+
+**Ein Thema — z.B. `lernwelt_gluehpilz/`**
+Das ist eine spielbare Welt. Jeder Themen-Ordner ist gleich aufgebaut: Wer
+einen versteht, versteht alle.
+
+| Datei | Was sie ist |
+|---|---|
+| `init.lua` | **Die Welt selbst** — eine `register_world{…}`-Beschreibung, plus Extras, die die Engine nicht abdeckt |
+| `mod.conf` | Luantis Mod-Steckbrief (Name + Abhängigkeiten) |
+| `README.md` | Kurze Beschreibung der Welt |
+| `ANLEITUNG.md` | Vollständige Spielanleitung (Deutsch) |
+| `GUIDE.md` | Vollständige Spielanleitung (Englisch) |
+| `KINDER-KURZ.md` | Einseitige Karte für Kinder |
+| `WELT-EINRICHTEN.md` | Wie man die Welt in Luanti einrichtet |
+
+> 💡 **Kurz gesagt:** Man *spielt* immer nur die Themen und *kopiert* eines,
+> um eine eigene Welt zu bauen. Die Engine ist der gemeinsame Werkzeugkasten
+> darunter — man muss ihre inneren Dateien nicht verstehen, um sie zu nutzen.
+
+<details>
+<summary>Im Inneren der Engine (nur wenn du neugierig bist)</summary>
+
+Die `lernwelt/`-Engine teilt ihre Arbeit in kleine Module unter `lernwelt/api/`:
+
+| Modul | Aufgabe |
+|---|---|
+| `config.lua` | friedliche Config + `/lernwelt` |
+| `lehrplan.lua` | Lehrplan-21-Tagging + `/lernplan` |
+| `blocks.lua` | Farbblock-Generator |
+| `zones.lua` | Zonen + Lern-Tafeln |
+| `progress.lua` | Ränge, HUD, Abzeichen, Belohnungen |
+| `mobs_adapter.lua` | `mobs_redo` / `mcl_mobs`-Abstraktion |
+| `creatures.lua` | Spawner, Rettung, Logbuch |
+| `register.lua` | der `register_world()`-Einstiegspunkt |
+
+Übersetzungen liegen in `lernwelt/locale/` als `lernwelt.<lang>.tr`.
+
+</details>
 
 ## Übersetzungen
 
