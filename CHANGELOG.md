@@ -8,6 +8,30 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- **New example theme `lernwelt_naschwerk` (Naschwerk-Tal, sweets world / early maths):**
+  a brand-free, extremely colourful candy learning world built on the engine. Its base is a
+  **Lebkuchenhaus** (gingerbread house) and it has three learning zones — **Schoko-Fluss**
+  (chocolate river), **Lolli-Wald** (lollipop forest) and **Gummi-Hügel** (gummy hills). The
+  learning focus is **early maths** (Lehrplan 21: **MA.1** — grasping & counting quantities)
+  plus **patterns** (red–yellow–red …, MA.2) and **colours** (BG.1). Twelve peaceful, helpable
+  candy creatures (chocolate fish, marshmallow swan, cookie turtle, fizzy jellyfish,
+  cotton-candy sheep, lollipop bird, candy rabbit, caramel squirrel, gummy bear, licorice
+  snail, sugar mouse and a rare, glowing **Regenbogen-Lolli-Fee**), each shown with its zone
+  in the logbook. Signature theme extras (the engine cannot express these): an interactive
+  **Zähl-Naschtisch** (counting game — "how many bonbons?" with milestones, the MA.1 heart);
+  a glowing **Regenbogen-Lolli** that slowly cycles colour (red → orange → yellow → green →
+  blue → violet); a drivable **Naschwagen** (candy cart that sprays colourful sprinkles,
+  two-seater); a **Naschschale** (candy bowl fed with bonbons, caring counter); and
+  **Lollis pflanzen** (saplings that grow into random colourful candy blocks). Counting game,
+  rainbow lolli, candy cart, bowl and lollis all work **even without a mob API**. Board tasks
+  focus on counting ("2 and 1 more = ?"), colours and copying patterns (red-yellow-red). ~24
+  declarative candy blocks (gingerbread & bricks, icing, milk/white chocolate, cookie, waffle,
+  cotton candy, licorice, warm caramel, translucent gummy blocks, bright drops in four colours
+  for patterns, candy cane, striped bonbon, lolli, glowing candy lamp, per-face candy box), a
+  creature land spawner (water animals auto-spawn via the engine), letter blocks A–Z, ambient
+  sounds, a first-join starter kit, and commands (`/naschwerk_lebkuchenhaus` builds the
+  signature **gingerbread house** base, `/naschwerk_teststation`). Full DE/EN guides
+  (`ANLEITUNG.md`, `GUIDE.md`, `KINDER-KURZ.md`, `WELT-EINRICHTEN.md`)
 - **New example theme `lernwelt_baumhaus` (Baumhaus-Forscher, jungle treehouse /
   spatial orientation):** a brand-free jungle learning world built on the engine. Its base
   is a big **Baumhaus** (treehouse) and it has three learning zones that double as the

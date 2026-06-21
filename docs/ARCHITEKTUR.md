@@ -233,6 +233,23 @@ Lebensraum zuordnen, dazu **Blau-Weiss-Muster** gestalten – alles im selben
 Eine vollständige Spieleranleitung liegt in
 [`../lernwelt_eisbaer/ANLEITUNG.md`](../lernwelt_eisbaer/ANLEITUNG.md).
 
+### 🍭 Naschwerk-Tal · `lernwelt_naschwerk`
+
+Zeigt, wie ein Thema rund um **frühe Mathematik (MA.1 – Mengen & Zahlen)** gebaut wird: Mengen
+zählen, **Muster** legen (rot–gelb–rot …) und Farben benennen – in einer optisch besonders
+ansprechenden Süssigkeitswelt, alles im selben `lernwelt_naschwerk:`-Namensraum.
+
+| | |
+|---|---|
+| Blöcke | ~24 deklarativ (Lebkuchen & Lebkuchen-Ziegel, Zuckerguss, Schokolade & weisse Schokolade, Keks, Waffel, Zuckerwatte rosa/blau, Lakritz, Karamell, durchscheinende Gummi-Blöcke, bunte Drops rot/gelb/blau/grün für Muster, Zuckerstange, Bonbon gestreift, Lolli, Bonbon-Lampe, Naschkiste Per-Face) + 26 Buchstaben (A–Z) + Zähl-Naschtisch, Regenbogen-Lolli (farbwechselnd), Naschschale, Lolli-Setzling |
+| Zonen | 3 (Schoko-Fluss, Lolli-Wald, Gummi-Hügel) – **mit Aufgaben** (Zählen, Farben, Muster nachlegen rot-gelb-rot, Hilfe-Ziel) |
+| Tiere | 12 friedliche Naschtiere (Wasser- & Land-Tiere, mit Familien; eine seltene leuchtende Regenbogen-Lolli-Fee) |
+| Ränge | 5 (davon 3 mit Abzeichen) |
+| Theme-Extras (eigener Lua-Code) | **Zähl-Naschtisch** (interaktives Zähl-Spiel „Wie viele Bonbons?" mit Meilensteinen, das MA.1-Herzstück), **Regenbogen-Lolli** (Knoten, die per Node-Timer langsam die Regenbogenfarbe wechseln), fahrbarer **Naschwagen** (sprüht bunte Streusel, zu zweit), **Naschtiere füttern** (Naschschale + Bonbon, Pflege-Zähler), **Lollis pflanzen** (wachsen zu bunten Süssigkeits-Blöcken), **Startausrüstung**, Tier-Land-Spawner (Wasser-Tiere über die Engine), Ambient-Sound, **Buchstaben-Blöcke**, Bau-Befehle (`/naschwerk_lebkuchenhaus`, `/naschwerk_teststation`) |
+
+Eine vollständige Spieleranleitung liegt in
+[`../lernwelt_naschwerk/ANLEITUNG.md`](../lernwelt_naschwerk/ANLEITUNG.md).
+
 ---
 
 ## Eigene Welt bauen – die Kurzfassung

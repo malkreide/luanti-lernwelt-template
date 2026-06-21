@@ -1,0 +1,4 @@
+#    Give a starter kit (Naschwerk-Logbuch, camera, candy cart, candy bowl + bonbons,
+#    lolli saplings, a counting table, all candy/pattern blocks and spawn eggs) to each
+#    player once, on their first join. Handy for quick testing.
+lernwelt_naschwerk_starter_kit (Give starter kit on first join) bool true
