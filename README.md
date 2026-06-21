@@ -198,6 +198,12 @@ and fill in the right-hand side — see [CONTRIBUTING.md](CONTRIBUTING.md) for
 the full guide. Theme **content** (animal names, activities) is authored
 directly in the theme and stays in whatever language the theme author chooses.
 
+## Contributing
+
+Contributions are welcome — translations, bug fixes, docs and new example
+themes. See [CONTRIBUTING.md](CONTRIBUTING.md) to get started. Everyone taking
+part is expected to follow our [Code of Conduct](CODE_OF_CONDUCT.md).
+
 ## Changelog
 
 See [CHANGELOG.md](CHANGELOG.md)

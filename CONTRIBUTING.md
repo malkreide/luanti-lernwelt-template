@@ -4,6 +4,9 @@ Thanks for helping improve the Lernwelt template! The most welcome
 contribution is a **translation** of the engine UI into a new language.
 This guide explains exactly how.
 
+By participating in this project, you agree to abide by our
+[Code of Conduct](CODE_OF_CONDUCT.md).
+
 ## Translating the engine (`lernwelt.<lang>.tr`)
 
 The engine's UI strings live in [`lernwelt/locale/`](lernwelt/locale/) and
