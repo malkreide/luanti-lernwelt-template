@@ -1,5 +1,12 @@
 # Sonnenhof 🌻🐄🍞
 
+**🎓 Lehrplan 21 – vermittelte Kompetenzbereiche:**
+
+![Natur, Mensch, Gesellschaft](https://img.shields.io/badge/Natur,%20Mensch,%20Gesellschaft-NMG.2,%20NMG.3-2e7d32)
+![Überfachliche Kompetenzen](https://img.shields.io/badge/%C3%9Cberfachliche%20Kompetenzen-EZ.1-00838f)
+![Mathematik](https://img.shields.io/badge/Mathematik-MA.1-1565c0)
+![Deutsch (Sprache)](https://img.shields.io/badge/Deutsch%20(Sprache)-D.2-c62828)
+
 Ein kinderfreundliches **Lernwelt-Thema für [Luanti](https://www.luanti.org/)** (früher Minetest)
 rund um einen **Zauber-Bauernhof**. Gedacht zum **gemeinsamen Spielen von Eltern und Kind**
 (ca. 5–8 Jahre) – spielerisch passend zum Schweizer **Lehrplan 21, 1./2. Zyklus**

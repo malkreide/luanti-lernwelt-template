@@ -1,5 +1,11 @@
 # Schrauber-Werkstatt 🤖🔧
 
+**🎓 Lehrplan 21 – vermittelte Kompetenzbereiche:**
+
+![Medien und Informatik](https://img.shields.io/badge/Medien%20und%20Informatik-MI.1,%20MI.2,%20MI.3-6a1b9a)
+![Textiles und Technisches Gestalten](https://img.shields.io/badge/Textiles%20und%20Technisches%20Gestalten-TTG.2-5d4037)
+![Natur, Mensch, Gesellschaft](https://img.shields.io/badge/Natur,%20Mensch,%20Gesellschaft-NMG.4-2e7d32)
+
 Ein kinderfreundliches **Lernwelt-Thema für [Luanti](https://www.luanti.org/)** (früher Minetest)
 rund um eine **Werkstatt voller Roboter**. Gedacht zum **gemeinsamen Spielen von Eltern und
 Kind** (ca. 6–9 Jahre) – spielerisch passend zum Schweizer **Lehrplan 21, 1./2. Zyklus**
