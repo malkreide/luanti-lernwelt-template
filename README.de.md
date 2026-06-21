@@ -46,18 +46,29 @@ Texturen.
 
 ## Themenwelten
 
+> 🎓 **Für Lehrpersonen — orientieren Sie sich an den Badges.** Jede
+> Themen-README beginnt mit **Lehrplan-21-Badges**, die auf einen Blick zeigen,
+> welche Kompetenzbereiche die Welt vermittelt — samt der exakten Codes von den
+> Lern-Tafeln (z.B. `MA.1`, `NMG.2`). Die Farben sind in jeder Welt gleich, Sie
+> können also direkt nach Ihrem Fachbereich scannen:
+>
+> ![Mathematik](https://img.shields.io/badge/Mathematik-MA-1565c0)
+> ![Deutsch](https://img.shields.io/badge/Deutsch%20(Sprache)-D-c62828)
+> ![Natur, Mensch, Gesellschaft](https://img.shields.io/badge/Natur,%20Mensch,%20Gesellschaft-NMG-2e7d32)
+> ![Medien und Informatik](https://img.shields.io/badge/Medien%20und%20Informatik-MI-6a1b9a)
+> ![Bildnerisches Gestalten](https://img.shields.io/badge/Bildnerisches%20Gestalten-BG-ad1457)
+> ![Bewegung und Sport](https://img.shields.io/badge/Bewegung%20und%20Sport-BS-ef6c00)
+> ![Textiles und Technisches Gestalten](https://img.shields.io/badge/Textiles%20und%20Technisches%20Gestalten-TTG-5d4037)
+> ![Überfachliche Kompetenzen](https://img.shields.io/badge/%C3%9Cberfachliche%20Kompetenzen-EZ-00838f)
+>
+> Lieber die Liste im Spiel? Der Befehl `/lernplan` zeigt für die gerade
+> gespielte Welt alle Zonen und ihre Lehrplan-21-Bezüge.
+
 Mitgeliefert werden eine minimale Kopiervorlage (`lernwelt_beispiel`) sowie
 **vierzehn** voll ausgebaute Beispiel-Themen. Jede Welt hat eine eigene README,
 eine vollständige Spielanleitung (`ANLEITUNG.md`), eine einseitige Kinder-Karte
 (`KINDER-KURZ.md`), eine englische Anleitung (`GUIDE.md`) und eine Einrichtungs-
 Notiz (`WELT-EINRICHTEN.md`).
-
-Jede Themen-README beginnt mit **Lehrplan-21-Badges**, die auf einen Blick
-zeigen, welche Kompetenzbereiche vermittelt werden — z.B.
-![Mathematik](https://img.shields.io/badge/Mathematik-MA.1,%20MA.2-1565c0)
-![NMG](https://img.shields.io/badge/Natur,%20Mensch,%20Gesellschaft-NMG.2-2e7d32)
-![Medien und Informatik](https://img.shields.io/badge/Medien%20und%20Informatik-MI.1-6a1b9a)
-— farbcodiert pro Fachbereich, mit den exakten Tags von den Lern-Tafeln der Welt.
 
 | Welt | Thema | Schwerpunkt | Anleitung |
 |---|---|---|---|

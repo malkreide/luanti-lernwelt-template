@@ -45,17 +45,28 @@ framework is theme-neutral, and themes use original names and textures.
 
 ## Theme worlds
 
+> 🎓 **For teachers — orient yourself by the badges.** Every theme's README
+> opens with **Lehrplan-21 badges** that show at a glance which competency
+> areas the world teaches, together with the exact codes from its learning
+> boards (e.g. `MA.1`, `NMG.2`). The colours are the same in every world, so
+> you can scan straight for your subject:
+>
+> ![Mathematik](https://img.shields.io/badge/Mathematik-MA-1565c0)
+> ![Deutsch](https://img.shields.io/badge/Deutsch%20(Sprache)-D-c62828)
+> ![Natur, Mensch, Gesellschaft](https://img.shields.io/badge/Natur,%20Mensch,%20Gesellschaft-NMG-2e7d32)
+> ![Medien und Informatik](https://img.shields.io/badge/Medien%20und%20Informatik-MI-6a1b9a)
+> ![Bildnerisches Gestalten](https://img.shields.io/badge/Bildnerisches%20Gestalten-BG-ad1457)
+> ![Bewegung und Sport](https://img.shields.io/badge/Bewegung%20und%20Sport-BS-ef6c00)
+> ![Textiles und Technisches Gestalten](https://img.shields.io/badge/Textiles%20und%20Technisches%20Gestalten-TTG-5d4037)
+> ![Überfachliche Kompetenzen](https://img.shields.io/badge/%C3%9Cberfachliche%20Kompetenzen-EZ-00838f)
+>
+> Want the in-game list instead? The `/lernplan` command shows every zone and
+> its Lehrplan-21 references for the world you are playing.
+
 The repo ships a minimal copy-me skeleton (`lernwelt_beispiel`) plus **fourteen**
 fully built example themes. Each world has its own README, a complete player
 guide (`ANLEITUNG.md`), a one-page kids' sheet (`KINDER-KURZ.md`), an English
 guide (`GUIDE.md`) and a setup note (`WELT-EINRICHTEN.md`).
-
-Every theme's README opens with **Lehrplan-21 badges** that show, at a glance,
-which competency areas it teaches — e.g.
-![Mathematik](https://img.shields.io/badge/Mathematik-MA.1,%20MA.2-1565c0)
-![NMG](https://img.shields.io/badge/Natur,%20Mensch,%20Gesellschaft-NMG.2-2e7d32)
-![Medien und Informatik](https://img.shields.io/badge/Medien%20und%20Informatik-MI.1-6a1b9a)
-— colour-coded per subject, with the exact tags from the world's learning boards.
 
 | World | Theme | Learning focus | Guide |
 |---|---|---|---|
