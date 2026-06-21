@@ -1,0 +1,5 @@
+#    Give a starter kit (logbook, camera, Bimmelbahn, Fahrplan-Pult,
+#    station signs, signal, weiche, track + building blocks and spawn
+#    eggs) to each player once, on their first join. Handy for quick
+#    testing.
+lernwelt_bimmelbahn_starter_kit (Give starter kit on first join) bool true

@@ -8,6 +8,35 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- **New example theme `lernwelt_bimmelbahn` (Bimmelbahn-Land, little colourful trains / MI sequence + colours):**
+  a brand-free little-train learning world built on the engine. Its base is a **Hauptbahnhof**
+  (main station) connected by rails to four **colourful villages** — **Rotdorf**, **Gelbdorf**,
+  **Blaudorf** and **Gründorf** (five learning zones in total). The learning focus is **Medien &
+  Informatik** (**MI.1** — planning sequences and the **order** of stations; **MI.2** — simple
+  if-then switch/signal logic) and **Bildnerisches Gestalten** (**BG.1** — matching colours), plus
+  **MA.1/MA.2** (counting & ordering patterns), **NMG.7** (transport) and **TTG.2** (technology).
+  Twelve peaceful, friendly **passengers** colour-matched to the villages (Schaffner-Maus,
+  Bahnhofs-Hund, Gepäck-Igel, Rote Reise-Katze, Reise-Fuchs, Gelbes Entlein, Sonnen-Kanari, Blauer
+  Reise-Papagei, Blaues Reise-Häschen, Grüner Reise-Frosch, Grüne Schildkröte and a rare, glowing
+  **Goldene Reise-Eule**); families bring their babies along, and non-rare passengers auto-spawn on
+  solid ground near the player via a small land spawner. Signature theme extras (the engine cannot
+  express these): the **Routen-Auftrag** — the sequencing heart, where the **Fahrplan-Pult**
+  (timetable desk) hands you a route like *Rot → Blau → Gelb* and you must stop at the colour
+  **Stations-Schilder** in **exactly that order** (wrong stop resets the route), with a personal
+  route counter and milestones (MI.1); a gently simplified **Weiche & Signal** logic (a toggleable
+  switch and a red/green signal) with a self-running **Demo-Zug** that **stops at red and goes at
+  green** — a soft bridge to Mesecons/Basic-Trains "if–then" (MI.2 / TTG.2); a two-seat **drivable
+  Bimmelbahn** that whistles and steams; and a **Wagen-Parade** command that lines up colourful
+  wagons in order. ~20 declarative blocks (rail, platform, ballast, brick, plank, buffer stop,
+  station glass, glowing lamp, four colour house blocks, four colour wagon blocks, patterned level-
+  crossing/train-window/brick/station-floor/confetti blocks, a per-face station clock and suitcase
+  crate), **letter blocks A–Z** for laying out station names and **number blocks 0–9** for counting,
+  ambient whistle & station-bell sounds, a first-join starter kit, and commands
+  (`/bimmelbahn_hauptbahnhof` builds the signature glass-hall base, `/bimmelbahn_teststation`,
+  `/bimmelbahn_demo` builds the switch/signal demo track, `/bimmelbahn_wagen` for the wagon parade,
+  `/bimmelbahn_route` for a fresh route). The route task, switch/signal logic, blocks, zones and
+  logbook all work **even without a mob API**. Full DE/EN guides
+  (`ANLEITUNG.md`, `GUIDE.md`, `KINDER-KURZ.md`, `WELT-EINRICHTEN.md`)
 - **New example theme `lernwelt_saurier` (Saurier-Forscher, friendly herbivore dinosaurs / NMG + sizes):**
   a brand-free dinosaur-research learning world built on the engine. Its base is a
   **Forscherstation** (research station) and it has three learning zones — **Tal** (valley),
