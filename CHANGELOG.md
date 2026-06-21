@@ -8,6 +8,34 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- **New example theme `lernwelt_saurier` (Saurier-Forscher, friendly herbivore dinosaurs / NMG + sizes):**
+  a brand-free dinosaur-research learning world built on the engine. Its base is a
+  **Forscherstation** (research station) and it has three learning zones — **Tal** (valley),
+  **Fossilien-Grabungsstätte** (fossil dig site) and **Nistplatz** (nesting place). The learning
+  focus is **NMG** (animals & habitats, how researchers explore the past) and **Mathematik /
+  Grössen** (**MA.3** — comparing and ordering sizes klein–mittel–gross), plus **MA.1** (counting
+  eggs & fossils), **NMG.8** (fossils / the past), **D.2** (naming dinos) and **MA.2** (patterns).
+  Fourteen peaceful, friendly **herbivore dinosaurs** of deliberately different sizes
+  (Brachiosaurus, Diplodocus, Triceratops, Stegosaurus, Parasaurolophus, Ankylosaurus, Iguanodon,
+  Pachycephalosaurus, Protoceratops, Microceratus, Maiasaura, Apatosaurus, Hadrosaurus and a rare,
+  glowing **Regenbogen-Saurier**), each shown with its zone in the logbook; families bring their
+  babies along, and non-rare dinos auto-spawn on solid ground near the player via a small land
+  spawner. Signature theme extras (the engine cannot express these): **«Ausgraben»** — the
+  dig-for-fossils heart, where fossils (bone, tooth, ammonite, petrified egg) hide in
+  **Grabungssand** that you break to "search" the sand, with a personal find counter and milestones
+  (NMG.8 / MA.1); **hatching dino eggs** at the nesting place (place an egg → a little dino hatches,
+  with a counter); a **Grössen-Parade** command that lines the dinos up small → big for a hands-on
+  size comparison (MA.3); and a two-seat **Forscher-Jeep** (ground vehicle with a dust trail).
+  Board tasks cover naming ("who has the long neck?"), comparing sizes ("who is bigger?",
+  a klein–mittel–gross pattern), **classifying** ("plant-eater or meat-eater?", how many horns),
+  counting eggs and research goals. ~15 declarative blocks (ancient rock, sandstone, desert sand,
+  jungle leaf, volcanic rock, glowing amber, station glass, patterned footprint/bone/nest/scale/
+  fern/lava/checker blocks, a per-face research crate), **letter blocks A–Z** for laying out dino
+  names and **number blocks 0–9** for counting, ambient dino calls, a first-join starter kit, and
+  commands (`/saurier_forscherstation` builds the signature glass-dome base, `/saurier_teststation`,
+  `/saurier_grabung` lays out a dig field, `/saurier_groessen` for the size parade). The digging,
+  egg-hatching, blocks, zones and logbook all work **even without a mob API**. Full DE/EN guides
+  (`ANLEITUNG.md`, `GUIDE.md`, `KINDER-KURZ.md`, `WELT-EINRICHTEN.md`)
 - **New example theme `lernwelt_summgarten` (Summ-Garten, bees & flowers / NMG + geometry):**
   a brand-free bees-and-flowers garden learning world built on the engine that deliberately
   **connects NMG with mathematics/geometry**. Its base is a **Bienenstock** (beehive) and it has

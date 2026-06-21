@@ -308,6 +308,26 @@ alles im selben `lernwelt_summgarten:`-Namensraum. Das Waben-Muster wird **per C
 Eine vollständige Spieleranleitung liegt in
 [`../lernwelt_summgarten/ANLEITUNG.md`](../lernwelt_summgarten/ANLEITUNG.md).
 
+### 🦕 Saurier-Forscher · `lernwelt_saurier`
+
+Zeigt, wie ein Thema **NMG mit Mathematik/Grössen verbindet**: eine **Forscherstation** bei
+freundlichen **Pflanzenfresser-Dinosauriern**, die **Dino-Namen** lernen (D.2), **Grössen
+vergleichen** (MA.3 – klein/mittel/gross), Fossilien **«Ausgraben»** (NMG.8 / MA.1) und Dinos
+**klassifizieren** (Pflanzenfresser? Langhals, Hornträger, Plattendino, Entenschnabel) – alles im
+selben `lernwelt_saurier:`-Namensraum. Die Dinos sind absichtlich unterschiedlich gross, damit der
+Grössenvergleich anfassbar wird.
+
+| | |
+|---|---|
+| Blöcke | ~15 deklarativ (Urzeit-Fels, Sandstein, Wüsten-Sand, Dschungel-Blatt, Vulkangestein, leuchtender Bernstein, Stations-Glas, gemusterte Fussabdruck-/Knochen-/Nest-/Schuppen-/Farn-/Lava-/Schachbrett-Blöcke, Pro-Seiten-Forscher-Kiste) + Grabungssand, Dino-Ei, Buchstaben-Blöcke A–Z, Zahlen-Blöcke 0–9, Fossilien-Items |
+| Zonen | 3 (Tal, Fossilien-Grabungsstätte, Nistplatz) – **mit Aufgaben** (Namen-/Grössen-/Klassifizier-Quiz, Muster klein-mittel-gross & Ei-Mama-Ei nachlegen, Forsch-Ziele) |
+| Tiere | 14 freundliche Pflanzenfresser-Dinos (Brachiosaurus, Diplodocus, Triceratops, Stegosaurus, Parasaurolophus, Ankylosaurus, Iguanodon, Pachycephalosaurus, Protoceratops, Microceratus, Maiasaura, Apatosaurus, Hadrosaurus, mit Familien; ein seltener leuchtender Regenbogen-Saurier) |
+| Ränge | 5 (davon 3 mit Abzeichen) |
+| Theme-Extras (eigener Lua-Code) | **Ausgraben** (Fossilien im Grabungssand abbauen = im Sand suchen; persönlicher Fund-Zähler mit Meilensteinen, das NMG.8/MA.1-Herzstück), **Dino-Eier ausbrüten** (Ei setzen → kleiner Dino schlüpft, mit Zähler), **Grössen-Parade** (`/saurier_groessen` stellt die Dinos von klein nach gross auf – MA.3), fahrbarer **Forscher-Jeep** (Staubwolke, zu zweit), Dino-Land-Spawner über das Theme, **Buchstaben-Blöcke** (Dino-Namen) & **Zahlen-Blöcke** (zählen), **Startausrüstung**, Ambient-Dino-Rufe, Bau-Befehle (`/saurier_forscherstation`, `/saurier_teststation`, `/saurier_grabung`) |
+
+Eine vollständige Spieleranleitung liegt in
+[`../lernwelt_saurier/ANLEITUNG.md`](../lernwelt_saurier/ANLEITUNG.md).
+
 ---
 
 ## Eigene Welt bauen – die Kurzfassung
