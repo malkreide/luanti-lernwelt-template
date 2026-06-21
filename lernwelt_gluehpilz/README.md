@@ -1,5 +1,11 @@
 # Glühpilz-Wald 🍄
 
+**🎓 Lehrplan 21 – vermittelte Kompetenzbereiche:**
+
+![Mathematik](https://img.shields.io/badge/Mathematik-MA.1,%20MA.2-1565c0)
+![Natur, Mensch, Gesellschaft](https://img.shields.io/badge/Natur,%20Mensch,%20Gesellschaft-NMG.1-2e7d32)
+![Deutsch (Sprache)](https://img.shields.io/badge/Deutsch%20(Sprache)-D.2-c62828)
+
 Ein besonders **niederschwelliges, „kuscheliges" Lernwelt-Thema für
 [Luanti](https://www.luanti.org/)** (früher Minetest) rund um ein **gemütliches
 Pilzreich** – gedacht als **ideale Erstwelt** für die Jüngsten. Zum **gemeinsamen Spielen

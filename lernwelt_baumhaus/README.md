@@ -1,5 +1,11 @@
 # Baumhaus-Forscher 🌳🔭
 
+**🎓 Lehrplan 21 – vermittelte Kompetenzbereiche:**
+
+![Natur, Mensch, Gesellschaft](https://img.shields.io/badge/Natur,%20Mensch,%20Gesellschaft-NMG.2,%20NMG.3-2e7d32)
+![Deutsch (Sprache)](https://img.shields.io/badge/Deutsch%20(Sprache)-D.2-c62828)
+![Mathematik](https://img.shields.io/badge/Mathematik-MA.3-1565c0)
+
 Ein **Lernwelt-Thema für [Luanti](https://www.luanti.org/)** (früher Minetest) rund um
 ein **Dschungel-Baumhaus**. Kinder erkunden die **Stockwerke des Waldes** – oben das
 **Blätterdach**, unten der **Fluss** und die **alten Ruinen** – und üben dabei

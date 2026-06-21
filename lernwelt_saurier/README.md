@@ -1,5 +1,11 @@
 # Saurier-Forscher 🦕
 
+**🎓 Lehrplan 21 – vermittelte Kompetenzbereiche:**
+
+![Mathematik](https://img.shields.io/badge/Mathematik-MA.1,%20MA.3-1565c0)
+![Natur, Mensch, Gesellschaft](https://img.shields.io/badge/Natur,%20Mensch,%20Gesellschaft-NMG.2,%20NMG.8-2e7d32)
+![Deutsch (Sprache)](https://img.shields.io/badge/Deutsch%20(Sprache)-D.2-c62828)
+
 Ein kinderfreundliches **Lernwelt-Thema für [Luanti](https://www.luanti.org/)** (früher Minetest)
 rund um eine **Forscherstation bei freundlichen Pflanzenfresser-Dinosauriern**. Gedacht zum
 **gemeinsamen Spielen von Eltern und Kind** (ca. 5–7 Jahre) – spielerisch passend zum

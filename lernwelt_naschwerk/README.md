@@ -1,5 +1,11 @@
 # Naschwerk-Tal 🍭🍫🐻
 
+**🎓 Lehrplan 21 – vermittelte Kompetenzbereiche:**
+
+![Mathematik](https://img.shields.io/badge/Mathematik-MA.1,%20MA.2-1565c0)
+![Bildnerisches Gestalten](https://img.shields.io/badge/Bildnerisches%20Gestalten-BG.1-ad1457)
+![Deutsch (Sprache)](https://img.shields.io/badge/Deutsch%20(Sprache)-D.2-c62828)
+
 Ein kinderfreundliches **Lernwelt-Thema für [Luanti](https://www.luanti.org/)** (früher Minetest)
 rund um ein **knallbuntes Süssigkeiten-Tal**. Gedacht zum **gemeinsamen Spielen von Eltern und
 Kind** (ca. 5–8 Jahre) – spielerisch passend zum Schweizer **Lehrplan 21, 1./2. Zyklus**

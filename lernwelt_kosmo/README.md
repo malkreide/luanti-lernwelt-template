@@ -1,5 +1,13 @@
 # Kosmo-Station 🚀
 
+**🎓 Lehrplan 21 – vermittelte Kompetenzbereiche:**
+
+![Mathematik](https://img.shields.io/badge/Mathematik-MA.1,%20MA.2-1565c0)
+![Natur, Mensch, Gesellschaft](https://img.shields.io/badge/Natur,%20Mensch,%20Gesellschaft-NMG.2,%20NMG.3-2e7d32)
+![Bewegung und Sport](https://img.shields.io/badge/Bewegung%20und%20Sport-BS.2-ef6c00)
+![Deutsch (Sprache)](https://img.shields.io/badge/Deutsch%20(Sprache)-D.2-c62828)
+![Medien und Informatik](https://img.shields.io/badge/Medien%20und%20Informatik-MI.1-6a1b9a)
+
 Ein kinderfreundliches **Lernwelt-Thema für [Luanti](https://www.luanti.org/)** (früher Minetest)
 rund um eine **Weltraum-Forschungsstation**. Gedacht zum **gemeinsamen Spielen von Eltern und
 Kind** (ca. 5–7 Jahre) – spielerisch passend zum Schweizer **Lehrplan 21, 1. Zyklus**

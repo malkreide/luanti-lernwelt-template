@@ -50,6 +50,13 @@ fully built example themes. Each world has its own README, a complete player
 guide (`ANLEITUNG.md`), a one-page kids' sheet (`KINDER-KURZ.md`), an English
 guide (`GUIDE.md`) and a setup note (`WELT-EINRICHTEN.md`).
 
+Every theme's README opens with **Lehrplan-21 badges** that show, at a glance,
+which competency areas it teaches — e.g.
+![Mathematik](https://img.shields.io/badge/Mathematik-MA.1,%20MA.2-1565c0)
+![NMG](https://img.shields.io/badge/Natur,%20Mensch,%20Gesellschaft-NMG.2-2e7d32)
+![Medien und Informatik](https://img.shields.io/badge/Medien%20und%20Informatik-MI.1-6a1b9a)
+— colour-coded per subject, with the exact tags from the world's learning boards.
+
 | World | Theme | Learning focus | Guide |
 |---|---|---|---|
 | [Glühpilz-Wald 🍄](lernwelt_gluehpilz/README.md) | cosy mushroom realm (ideal first world) | sorting, early maths, day/night cycle | [ANLEITUNG](lernwelt_gluehpilz/ANLEITUNG.md) · [EN](lernwelt_gluehpilz/GUIDE.md) |

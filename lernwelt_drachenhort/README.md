@@ -1,5 +1,10 @@
 # Drachenhort 🐉
 
+**🎓 Lehrplan 21 – vermittelte Kompetenzbereiche:**
+
+![Mathematik](https://img.shields.io/badge/Mathematik-MA.1,%20MA.2-1565c0)
+![Natur, Mensch, Gesellschaft](https://img.shields.io/badge/Natur,%20Mensch,%20Gesellschaft-NMG.1,%20NMG.2,%20NMG.3-2e7d32)
+
 Ein kinderfreundliches **Lernwelt-Thema für [Luanti](https://www.luanti.org/)** (früher Minetest)
 rund um einen Hort **freundlicher Drachen**. Gedacht zum **gemeinsamen Spielen von Eltern und
 Kind** (ca. 5–7 Jahre) – spielerisch passend zum Schweizer **Lehrplan 21, 1. Zyklus**

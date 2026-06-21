@@ -52,6 +52,13 @@ eine vollständige Spielanleitung (`ANLEITUNG.md`), eine einseitige Kinder-Karte
 (`KINDER-KURZ.md`), eine englische Anleitung (`GUIDE.md`) und eine Einrichtungs-
 Notiz (`WELT-EINRICHTEN.md`).
 
+Jede Themen-README beginnt mit **Lehrplan-21-Badges**, die auf einen Blick
+zeigen, welche Kompetenzbereiche vermittelt werden — z.B.
+![Mathematik](https://img.shields.io/badge/Mathematik-MA.1,%20MA.2-1565c0)
+![NMG](https://img.shields.io/badge/Natur,%20Mensch,%20Gesellschaft-NMG.2-2e7d32)
+![Medien und Informatik](https://img.shields.io/badge/Medien%20und%20Informatik-MI.1-6a1b9a)
+— farbcodiert pro Fachbereich, mit den exakten Tags von den Lern-Tafeln der Welt.
+
 | Welt | Thema | Schwerpunkt | Anleitung |
 |---|---|---|---|
 | [Glühpilz-Wald 🍄](lernwelt_gluehpilz/README.md) | kuscheliges Pilzreich (ideale Erstwelt) | Sortieren, frühe Mathematik, Tag-Nacht-Wechsel | [ANLEITUNG](lernwelt_gluehpilz/ANLEITUNG.md) · [EN](lernwelt_gluehpilz/GUIDE.md) |
