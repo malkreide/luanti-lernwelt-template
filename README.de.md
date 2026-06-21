@@ -69,6 +69,10 @@ Notiz (`WELT-EINRICHTEN.md`).
 | [Bimmelbahn-Land 🚂](lernwelt_bimmelbahn/README.md) | Kleine-Züge-Welt | Medien & Informatik (MI – Reihenfolge), Farben (BG) | [ANLEITUNG](lernwelt_bimmelbahn/ANLEITUNG.md) · [EN](lernwelt_bimmelbahn/GUIDE.md) |
 | [Himmelsdorf 🌈](lernwelt_himmelsdorf/README.md) | Wolkenstadt | Wetter & Raumorientierung (NMG) | [ANLEITUNG](lernwelt_himmelsdorf/ANLEITUNG.md) · [EN](lernwelt_himmelsdorf/GUIDE.md) |
 
+> 💡 **Eine Idee für eine neue Welt?** Schlage sie über das geführte Formular vor:
+> [**New issue → 💡 Themenwelt vorschlagen / Suggest a theme world**](https://github.com/malkreide/luanti-lernwelt-template/issues/new/choose).
+> Du füllst nur aus, was du schon weisst — Programmieren ist nicht nötig.
+
 ## Voraussetzungen
 
 - Luanti / Minetest 5.x

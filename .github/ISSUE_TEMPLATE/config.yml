@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: "📖 Mitmachen / Contributing guide"
+    url: https://github.com/malkreide/luanti-lernwelt-template/blob/main/CONTRIBUTING.md
+    about: "Übersetzungen, Bugfixes und eigene Themen beisteuern. / Translations, bug fixes and your own themes."
