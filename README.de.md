@@ -144,18 +144,21 @@ luanti-lernwelt-template/
 ├── lernwelt_naschwerk/       # Beispiel-Thema: Naschwerk-Tal (Suessigkeiten / fruehe Mathematik)
 │   ├── init.lua              # register_world{...} + Zaehl-Spiel + Naschwagen + farbwechselnder Lolli
 │   └── settingtypes.txt      # Schalter fuer die Startausruestung
+├── lernwelt_schatzinsel/     # Beispiel-Thema: Schatzinsel (freundliche Piraten, Karten & Zaehlen)
+│   ├── init.lua              # register_world{...} + Kompass + Schatzkarte + Wegweiser-Schnitzeljagd + Muenzen-Zaehlen + Floss
+│   └── settingtypes.txt      # Schalter fuer die Startausruestung
 └── lernwelt_sonnenhof/       # Beispiel-Thema: Sonnenhof (Zauber-Bauernhof; nutzt Farming Redo + Animalia)
     ├── init.lua              # register_world{...} + Vom Samen zum Brot + Giesskanne + Zaubermuehle + Trog
     └── settingtypes.txt      # Schalter fuer die Startausruestung
 ```
 
-Dabei sind eine minimale Kopiervorlage, **`lernwelt_beispiel`**, sowie neun voll
+Dabei sind eine minimale Kopiervorlage, **`lernwelt_beispiel`**, sowie zehn voll
 ausgebaute Beispiel-Themen: **`lernwelt_gluehpilz`** (Gluehpilz-Wald),
 **`lernwelt_tiefsee`** (Tiefsee-Retter), **`lernwelt_kosmo`** (Kosmo-Station),
 **`lernwelt_drachenhort`** (Drachenhort), **`lernwelt_schrauber`**
 (Schrauber-Werkstatt), **`lernwelt_eisbaer`** (Eisbaer-Bucht),
 **`lernwelt_baumhaus`** (Baumhaus-Forscher), **`lernwelt_naschwerk`**
-(Naschwerk-Tal) und **`lernwelt_sonnenhof`** (Sonnenhof).
+(Naschwerk-Tal), **`lernwelt_schatzinsel`** (Schatzinsel) und **`lernwelt_sonnenhof`** (Sonnenhof).
 Sie zeigen, wie ein Thema **eigene Zusatz-Inhalte** zusätzlich zur Engine mitbringen
 kann — der Glühpilz-Wald einen reitbaren Leucht-Käfer plus **Tag-Nacht-Pilze** (ein
 kindgesteuerter Tag-Nacht-Wechsel), die Tiefsee eine fahrbare Tauchkapsel, die
@@ -172,7 +175,13 @@ Lianen & Strickleitern), eine **Schnitzeljagd mit Bild-Hinweisen in Bilderrahmen
 einen **Forscher-Kompass**, und das Naschwerk-Tal ein knallbuntes **Süssigkeiten-Tal**
 rund um die **frühe Mathematik** (MA.1): ein interaktives **Zähl-Spiel** (Zähl-Naschtisch
 — „Wie viele Bonbons?"), **Muster-Tafeln** (rot–gelb–rot …), einen fahrbaren **Naschwagen**
-und einen leuchtenden **Regenbogen-Lolli**, der langsam die Farbe wechselt, und der
+und einen leuchtenden **Regenbogen-Lolli**, der langsam die Farbe wechselt, und die
+Schatzinsel eine freundliche-Piraten-**Schatzinsel** rund um **Raumorientierung**
+(NMG.3 / MA.3) und **Zählen** (MA.1): einen **Schatz-Kompass** (wohin du schaust,
+oben/unten, gezählte Münzen), eine **Schatzkarte**, die den Weg zum nächsten Hinweis
+liest, eine **Schnitzeljagd mit Bild- und Pfeil-Wegweisern** über drei Zonen (Insel,
+Tropfsteinhöhle, Lagune), **Goldmünzen-Sammeln & -Zählen** mit Zahlen-Blöcken 0–9 und
+ein zweisitziges **Floss** — dazu eine Schiff-und-Steg-Basis per Befehl, und der
 Sonnenhof ein **Zauber-Bauernhof** rund um **Pflanzen & Tiere** (NMG): die ganze Kette
 **„Vom Samen zum Brot"** (säen → giessen → ernten → mahlen → backen), Tierpflege am
 Futtertrog und eine Lektion zur Nahrungskette — und er stützt sich, anders als die
@@ -187,7 +196,8 @@ Tiere — je mit einer Startausrüstung beim ersten Join. Vollständige
 [`lernwelt_schrauber/ANLEITUNG.md`](lernwelt_schrauber/ANLEITUNG.md),
 [`lernwelt_eisbaer/ANLEITUNG.md`](lernwelt_eisbaer/ANLEITUNG.md),
 [`lernwelt_baumhaus/ANLEITUNG.md`](lernwelt_baumhaus/ANLEITUNG.md),
-[`lernwelt_naschwerk/ANLEITUNG.md`](lernwelt_naschwerk/ANLEITUNG.md) und
+[`lernwelt_naschwerk/ANLEITUNG.md`](lernwelt_naschwerk/ANLEITUNG.md),
+[`lernwelt_schatzinsel/ANLEITUNG.md`](lernwelt_schatzinsel/ANLEITUNG.md) und
 [`lernwelt_sonnenhof/ANLEITUNG.md`](lernwelt_sonnenhof/ANLEITUNG.md).
 
 ## Übersetzungen

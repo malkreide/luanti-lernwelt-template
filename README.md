@@ -143,18 +143,22 @@ luanti-lernwelt-template/
 ├── lernwelt_naschwerk/       # example theme: Naschwerk-Tal (sweets / early maths)
 │   ├── init.lua              # register_world{...} + counting game + candy cart + colour-cycling lolli
 │   └── settingtypes.txt      # starter-kit toggle
+├── lernwelt_schatzinsel/     # example theme: Schatzinsel (friendly pirates, maps & counting)
+│   ├── init.lua              # register_world{...} + compass + map + signpost treasure hunt + coin counting + raft
+│   └── settingtypes.txt      # starter-kit toggle
 └── lernwelt_sonnenhof/       # example theme: Sonnenhof (magic farm; uses Farming Redo + Animalia)
     ├── init.lua              # register_world{...} + seed-to-bread + watering can + magic mill + trough
     └── settingtypes.txt      # starter-kit toggle
 ```
 
-The repo ships a minimal copy-me skeleton, **`lernwelt_beispiel`**, plus nine
+The repo ships a minimal copy-me skeleton, **`lernwelt_beispiel`**, plus ten
 fully built example themes: **`lernwelt_gluehpilz`** (Gluehpilz-Wald),
 **`lernwelt_tiefsee`** (Tiefsee-Retter), **`lernwelt_kosmo`** (Kosmo-Station),
 **`lernwelt_drachenhort`** (Drachenhort), **`lernwelt_schrauber`**
 (Schrauber-Werkstatt), **`lernwelt_eisbaer`** (Eisbaer-Bucht),
 **`lernwelt_baumhaus`** (Baumhaus-Forscher), **`lernwelt_naschwerk`**
-(Naschwerk-Tal) and **`lernwelt_sonnenhof`** (Sonnenhof).
+(Naschwerk-Tal), **`lernwelt_schatzinsel`** (Schatzinsel) and
+**`lernwelt_sonnenhof`** (Sonnenhof).
 They show how a theme can add its own extra content on top of the engine —
 Gluehpilz-Wald a rideable glow-beetle plus **day/night mushrooms** (a child-controlled
 time-of-day cycle), Tiefsee a drivable submarine, Kosmo a space glider plus
@@ -171,6 +175,12 @@ vines & rope ladders), a **treasure hunt with picture hints in item frames**
 **candy valley** built around **early maths** (MA.1): an interactive **counting game**
 (Zähl-Naschtisch — "how many bonbons?"), **pattern boards** (red–yellow–red …), a
 drivable **candy cart** and a glowing **rainbow lolli** that slowly cycles colour,
+and Schatzinsel a friendly-pirate **treasure island** built around **spatial
+orientation** (NMG.3 / MA.3) and **counting** (MA.1): a **treasure compass**
+(which way you face, up/down, coins counted), a **treasure map** that reads the way to
+the next clue, a **signpost treasure hunt** with picture & arrow hints across three
+zones (island, dripstone cave, lagoon), **gold-coin collecting & counting** with number
+blocks 0–9, and a two-seat **raft** — a ship-and-dock base you build with one command,
 and Sonnenhof a **magic farm** built around **plants & animals** (NMG): the whole
 **"from seed to bread"** chain (sow → water → harvest → grind → bake), animal care
 at a feeding trough and a food-chain lesson — and, unlike the other themes, it leans
@@ -185,7 +195,8 @@ otherwise — together with a first-join starter kit. Full
 [`lernwelt_schrauber/ANLEITUNG.md`](lernwelt_schrauber/ANLEITUNG.md),
 [`lernwelt_eisbaer/ANLEITUNG.md`](lernwelt_eisbaer/ANLEITUNG.md),
 [`lernwelt_baumhaus/ANLEITUNG.md`](lernwelt_baumhaus/ANLEITUNG.md),
-[`lernwelt_naschwerk/ANLEITUNG.md`](lernwelt_naschwerk/ANLEITUNG.md) and
+[`lernwelt_naschwerk/ANLEITUNG.md`](lernwelt_naschwerk/ANLEITUNG.md),
+[`lernwelt_schatzinsel/ANLEITUNG.md`](lernwelt_schatzinsel/ANLEITUNG.md) and
 [`lernwelt_sonnenhof/ANLEITUNG.md`](lernwelt_sonnenhof/ANLEITUNG.md).
 
 ## Translations
