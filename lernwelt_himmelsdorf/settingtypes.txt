@@ -1,0 +1,4 @@
+#    Give a starter kit (Himmels-Logbuch, camera, hot-air balloon, altimeter, weather
+#    station, rainbow seeds, sky/cloud/rainbow blocks and spawn eggs) to each player once,
+#    on their first join. Handy for quick testing.
+lernwelt_himmelsdorf_starter_kit (Give starter kit on first join) bool true

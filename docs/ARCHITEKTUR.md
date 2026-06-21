@@ -348,6 +348,27 @@ der richtigen Reihenfolge halten) ist das Herzstück und macht „Reihenfolge" a
 Eine vollständige Spieleranleitung liegt in
 [`../lernwelt_bimmelbahn/ANLEITUNG.md`](../lernwelt_bimmelbahn/ANLEITUNG.md).
 
+### 🌈 Himmelsdorf · `lernwelt_himmelsdorf`
+
+Zeigt, wie ein Thema **NMG-Wetter mit Raumorientierung verbindet**: eine **Wolkenstadt** auf einer
+**Schwebeinsel**, wo das **Wetter** beobachtet (NMG.1 – Sonne, Wolken, Regen, Gewitter, Regenbogen),
+die **Flug-Physik** erklärt (NMG.3 – warme Luft steigt, darum fliegt der Ballon) und **oben/unten**
+erlebt wird (MA.2 – Raumorientierung), dazu die **sieben Regenbogenfarben** (BG.1 / MA.3) – alles im
+selben `lernwelt_himmelsdorf:`-Namensraum. Die **Wetter-Station** (Rechtsklick schaltet das Wetter
+für alle weiter) und der **Heissluftballon** (Springen = hoch, weil warme Luft steigt) machen Wetter
+und Flug-Physik anfassbar.
+
+| | |
+|---|---|
+| Blöcke | ~22 deklarativ (Wolke, Glaswolke, Wolkenziegel, Pro-Seiten-Schwebeland & -Ballonkorb, Himmelsstein, leuchtende Sonnen-/Sternenblock & Wolkenlampe, vier Muster-Blöcke Regenbogen/Wolke/Sonne/Stern, die sieben Regenbogenfarben) + Wetter-Station, farbwechselnder Regenbogen, Regenbogen-Samen, Buchstaben-Blöcke A–Z |
+| Zonen | 3 (Regenbogenbrücke, Wolkenfelder, Ballonhafen) – **mit Aufgaben** (Farb-/Wetter-/oben-unten-/Flug-Physik-Quiz, Regenbogen-Muster nachlegen, Hilfe-Ziele) |
+| Tiere | 12 freundliche Himmels-Tiere (Regenbogen-Kolibri, Sonnenfalter, Sonnenvogel, Wolkenschaf, Wolkenkatze, Schwalbe, Himmelsqualle, Sturmvogel, Windgeist, Wetterfrosch, Donnervogel, mit Familien; ein seltener leuchtender Regenbogen-Pegasus) |
+| Ränge | 5 (davon 3 mit Abzeichen) |
+| Theme-Extras (eigener Lua-Code) | **Wetter-Station** (Sonne → Wolken → Regen → Gewitter → Regenbogen; ändert Himmelfarbe, Wolken und spielergebundenen Regen – NMG.1), farbwechselnder **Regenbogen**-Block (sieben Farben – BG.1/MA.3), fahrbarer **Heissluftballon** (fliegt, Springen = hoch, zu zweit – Flug-Physik NMG.3), **Höhenmesser** (zeigt Höhe & oben/unten – MA.2), **Regenbogen-Samen** (wachsen zu Farbblöcken), Himmels-Land-Spawner über das Theme, **Buchstaben-Blöcke** (Tiernamen), **Startausrüstung**, Ambient-Wind/-Vögel/-Donner, Bau-Befehle (`/himmelsdorf_wolkenstadt`, `/himmelsdorf_schwebeinsel`, `/himmelsdorf_teststation`) |
+
+Eine vollständige Spieleranleitung liegt in
+[`../lernwelt_himmelsdorf/ANLEITUNG.md`](../lernwelt_himmelsdorf/ANLEITUNG.md).
+
 ---
 
 ## Eigene Welt bauen – die Kurzfassung
