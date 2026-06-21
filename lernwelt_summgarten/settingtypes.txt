@@ -1,0 +1,4 @@
+#    Give a starter kit (Summ-Garten-Logbuch, camera, pollen brush, nectar + honey, flowers &
+#    blossoms, all building blocks incl. the honey extractor & a filled honey cell, and one spawn
+#    egg per garden creature) to each player once, on their first join. Handy for quick testing.
+lernwelt_summgarten_starter_kit (Give starter kit on first join) bool true

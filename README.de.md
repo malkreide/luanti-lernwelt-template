@@ -147,18 +147,22 @@ luanti-lernwelt-template/
 ├── lernwelt_schatzinsel/     # Beispiel-Thema: Schatzinsel (freundliche Piraten, Karten & Zaehlen)
 │   ├── init.lua              # register_world{...} + Kompass + Schatzkarte + Wegweiser-Schnitzeljagd + Muenzen-Zaehlen + Floss
 │   └── settingtypes.txt      # Schalter fuer die Startausruestung
-└── lernwelt_sonnenhof/       # Beispiel-Thema: Sonnenhof (Zauber-Bauernhof; nutzt Farming Redo + Animalia)
-    ├── init.lua              # register_world{...} + Vom Samen zum Brot + Giesskanne + Zaubermuehle + Trog
+├── lernwelt_sonnenhof/       # Beispiel-Thema: Sonnenhof (Zauber-Bauernhof; nutzt Farming Redo + Animalia)
+│   ├── init.lua              # register_world{...} + Vom Samen zum Brot + Giesskanne + Zaubermuehle + Trog
+│   └── settingtypes.txt      # Schalter fuer die Startausruestung
+└── lernwelt_summgarten/      # Beispiel-Thema: Summ-Garten (Bienen & Blumen; NMG + Geometrie)
+    ├── init.lua              # register_world{...} + Bestaeubungs-Pinsel + Honigschleuder + Waben-Sechsecke + Honig-Zaehlen
     └── settingtypes.txt      # Schalter fuer die Startausruestung
 ```
 
-Dabei sind eine minimale Kopiervorlage, **`lernwelt_beispiel`**, sowie zehn voll
+Dabei sind eine minimale Kopiervorlage, **`lernwelt_beispiel`**, sowie elf voll
 ausgebaute Beispiel-Themen: **`lernwelt_gluehpilz`** (Gluehpilz-Wald),
 **`lernwelt_tiefsee`** (Tiefsee-Retter), **`lernwelt_kosmo`** (Kosmo-Station),
 **`lernwelt_drachenhort`** (Drachenhort), **`lernwelt_schrauber`**
 (Schrauber-Werkstatt), **`lernwelt_eisbaer`** (Eisbaer-Bucht),
 **`lernwelt_baumhaus`** (Baumhaus-Forscher), **`lernwelt_naschwerk`**
-(Naschwerk-Tal), **`lernwelt_schatzinsel`** (Schatzinsel) und **`lernwelt_sonnenhof`** (Sonnenhof).
+(Naschwerk-Tal), **`lernwelt_schatzinsel`** (Schatzinsel), **`lernwelt_sonnenhof`** (Sonnenhof)
+und **`lernwelt_summgarten`** (Summ-Garten).
 Sie zeigen, wie ein Thema **eigene Zusatz-Inhalte** zusätzlich zur Engine mitbringen
 kann — der Glühpilz-Wald einen reitbaren Leucht-Käfer plus **Tag-Nacht-Pilze** (ein
 kindgesteuerter Tag-Nacht-Wechsel), die Tiefsee eine fahrbare Tauchkapsel, die
@@ -187,7 +191,13 @@ Sonnenhof ein **Zauber-Bauernhof** rund um **Pflanzen & Tiere** (NMG): die ganze
 Futtertrog und eine Lektion zur Nahrungskette — und er stützt sich, anders als die
 übrigen Themen, auf vorhandene Mods: Er nutzt **Farming Redo** (Saat, Mehl, Brot) und
 **Animalia** (Huhn, Kuh, Schaf …) direkt, sofern installiert, sonst eigene Pflanze &
-Tiere — je mit einer Startausrüstung beim ersten Join. Vollständige
+Tiere, und der Summ-Garten ein **Bienen-und-Blumen-Garten**, der **NMG mit Geometrie
+verbindet**: **Bestäubung** anfassbar machen (ein **Bestäubungs-Pinsel** bestäubt Blumen
+und Blüten, sodass aus einer Blüte eine **Frucht** wächst), das **Sechseck-Muster** der
+**Waben** (MA.2 – Form & Raum) erkennen und fortsetzen, **Farben** der Blumen benennen
+und **Honigtropfen zählen** (MA.1) an einer sich wieder füllenden Wabe — plus
+**Honigschleuder** (Nektar → Honig) und drei Zonen (Blumenwiese, Obstgarten,
+Honiglager) — je mit einer Startausrüstung beim ersten Join. Vollständige
 **Spielanleitungen** dazu (alle Elemente, Bedienung, Aufgaben & Ziele) stehen in
 [`lernwelt_gluehpilz/ANLEITUNG.md`](lernwelt_gluehpilz/ANLEITUNG.md),
 [`lernwelt_tiefsee/ANLEITUNG.md`](lernwelt_tiefsee/ANLEITUNG.md),
@@ -197,8 +207,9 @@ Tiere — je mit einer Startausrüstung beim ersten Join. Vollständige
 [`lernwelt_eisbaer/ANLEITUNG.md`](lernwelt_eisbaer/ANLEITUNG.md),
 [`lernwelt_baumhaus/ANLEITUNG.md`](lernwelt_baumhaus/ANLEITUNG.md),
 [`lernwelt_naschwerk/ANLEITUNG.md`](lernwelt_naschwerk/ANLEITUNG.md),
-[`lernwelt_schatzinsel/ANLEITUNG.md`](lernwelt_schatzinsel/ANLEITUNG.md) und
-[`lernwelt_sonnenhof/ANLEITUNG.md`](lernwelt_sonnenhof/ANLEITUNG.md).
+[`lernwelt_schatzinsel/ANLEITUNG.md`](lernwelt_schatzinsel/ANLEITUNG.md),
+[`lernwelt_sonnenhof/ANLEITUNG.md`](lernwelt_sonnenhof/ANLEITUNG.md) und
+[`lernwelt_summgarten/ANLEITUNG.md`](lernwelt_summgarten/ANLEITUNG.md).
 
 ## Übersetzungen
 
