@@ -125,149 +125,68 @@ In game:
 
 ## Project Structure
 
+Everything in this project is one of two things: **the engine** (the shared
+machinery that every world reuses) or **a theme** (one finished, playable
+world). So you can read the whole repo as *one engine plus many
+interchangeable worlds*.
+
 ```
 luanti-lernwelt-template/
-├── lernwelt/                 # engine mod (the reusable framework)
-│   ├── init.lua              # loads the API modules
-│   ├── settingtypes.txt      # HUD toggle
-│   ├── locale/
-│   │   └── lernwelt.de.tr     # German translation (add lernwelt.<lang>.tr for more)
-│   └── api/
-│       ├── config.lua        # peaceful config + /lernwelt
-│       ├── lehrplan.lua      # Lehrplan-21 tagging + /lernplan
-│       ├── blocks.lua        # colour-block generator
-│       ├── zones.lua         # zones + learning boards
-│       ├── progress.lua      # ranks, HUD, badges, reward()
-│       ├── mobs_adapter.lua  # mobs_redo / mcl_mobs abstraction
-│       ├── creatures.lua     # spawner, rescue, logbook
-│       └── register.lua      # register_world()
-├── lernwelt_beispiel/        # minimal copy-me template (titled Gluehpilz-Wald)
-│   └── init.lua              # one declarative register_world{...}
-├── lernwelt_gluehpilz/       # example theme: Gluehpilz-Wald (cosy first world)
-│   ├── init.lua              # register_world{...} + glow-beetle + day/night mushrooms
-│   └── settingtypes.txt      # starter-kit toggle
-├── lernwelt_tiefsee/         # example theme: Tiefsee-Retter (underwater)
-│   ├── init.lua              # register_world{...} + submarine + starter kit
-│   └── settingtypes.txt      # starter-kit toggle
-├── lernwelt_kosmo/           # example theme: Kosmo-Station (outer space)
-│   ├── init.lua              # register_world{...} + space glider + moon gravity
-│   └── settingtypes.txt      # starter-kit toggle
-├── lernwelt_drachenhort/     # example theme: Drachenhort (friendly dragons)
-│   ├── init.lua              # register_world{...} + baby-dragon raising + flying mount
-│   └── settingtypes.txt      # starter-kit toggle
-├── lernwelt_schrauber/       # example theme: Schrauber-Werkstatt (robots & logic)
-│   ├── init.lua              # register_world{...} + switch/lamp/door logic + robot assembly
-│   └── settingtypes.txt      # starter-kit toggle
-├── lernwelt_eisbaer/         # example theme: Eisbaer-Bucht (polar world, cold animals)
-│   ├── init.lua              # register_world{...} + sled + colour-cycling aurora + feeding
-│   └── settingtypes.txt      # starter-kit toggle
-├── lernwelt_baumhaus/        # example theme: Baumhaus-Forscher (jungle, spatial orientation)
-│   ├── init.lua              # register_world{...} + picture-hint frames + treasure hunt + compass
-│   └── settingtypes.txt      # starter-kit toggle
-├── lernwelt_naschwerk/       # example theme: Naschwerk-Tal (sweets / early maths)
-│   ├── init.lua              # register_world{...} + counting game + candy cart + colour-cycling lolli
-│   └── settingtypes.txt      # starter-kit toggle
-├── lernwelt_schatzinsel/     # example theme: Schatzinsel (friendly pirates, maps & counting)
-│   ├── init.lua              # register_world{...} + compass + map + signpost treasure hunt + coin counting + raft
-│   └── settingtypes.txt      # starter-kit toggle
-├── lernwelt_sonnenhof/       # example theme: Sonnenhof (magic farm; uses Farming Redo + Animalia)
-│   ├── init.lua              # register_world{...} + seed-to-bread + watering can + magic mill + trough
-│   └── settingtypes.txt      # starter-kit toggle
-├── lernwelt_summgarten/      # example theme: Summ-Garten (bees & flowers; NMG + geometry)
-│   ├── init.lua              # register_world{...} + pollen brush + honey extractor + honeycomb hexagons + honey counting
-│   └── settingtypes.txt      # starter-kit toggle
-├── lernwelt_saurier/         # example theme: Saurier-Forscher (friendly herbivore dinos; NMG + sizes)
-│   ├── init.lua              # register_world{...} + fossil digging + jeep + egg hatching + size parade
-│   └── settingtypes.txt      # starter-kit toggle
-├── lernwelt_bimmelbahn/      # example theme: Bimmelbahn-Land (little trains, colourful villages; MI sequence)
-│   ├── init.lua              # register_world{...} + route order game + switch/signal demo + drivable train
-│   └── settingtypes.txt      # starter-kit toggle
-└── lernwelt_himmelsdorf/     # example theme: Himmelsdorf (cloud city; NMG weather & spatial orientation)
-    ├── init.lua              # register_world{...} + hot-air balloon + weather station + colour-cycling rainbow + altimeter
-    └── settingtypes.txt      # starter-kit toggle
+│
+├── lernwelt/            ← THE ENGINE — all shared mechanics live here.
+│                          You enable it once and normally never edit it.
+│
+├── lernwelt_beispiel/   ← An empty starter world. Copy this folder to
+│                          begin your own theme.
+│
+└── lernwelt_*/          ← One folder per finished world (14 of them, e.g.
+                           lernwelt_gluehpilz, lernwelt_drachenhort …).
+                           The full list is the “Theme worlds” table above.
 ```
 
-The repo ships a minimal copy-me skeleton, **`lernwelt_beispiel`**, plus fourteen
-fully built example themes: **`lernwelt_gluehpilz`** (Gluehpilz-Wald),
-**`lernwelt_tiefsee`** (Tiefsee-Retter), **`lernwelt_kosmo`** (Kosmo-Station),
-**`lernwelt_drachenhort`** (Drachenhort), **`lernwelt_schrauber`**
-(Schrauber-Werkstatt), **`lernwelt_eisbaer`** (Eisbaer-Bucht),
-**`lernwelt_baumhaus`** (Baumhaus-Forscher), **`lernwelt_naschwerk`**
-(Naschwerk-Tal), **`lernwelt_schatzinsel`** (Schatzinsel),
-**`lernwelt_sonnenhof`** (Sonnenhof), **`lernwelt_summgarten`** (Summ-Garten),
-**`lernwelt_saurier`** (Saurier-Forscher), **`lernwelt_bimmelbahn`**
-(Bimmelbahn-Land) and **`lernwelt_himmelsdorf`** (Himmelsdorf).
-They show how a theme can add its own extra content on top of the engine —
-Gluehpilz-Wald a rideable glow-beetle plus **day/night mushrooms** (a child-controlled
-time-of-day cycle), Tiefsee a drivable submarine, Kosmo a space glider plus
-**moon-gravity jump/physics blocks**, Drachenhort **raising a baby dragon**
-(hatch an egg, then patiently feed & tame it — responsibility & patience) plus a
-**flying dragon mount**, Schrauber-Werkstatt a self-contained **switch → wire →
-lamp → door logic system** (a gentle bridge to Mesecons) plus **assembling a robot in
-the right order** (an algorithm), and Eisbaer-Bucht a drivable **sled**, a glowing
-**aurora** that slowly cycles colour, and a feeding station for **cold animals &
-their habitats** (NMG.2), and Baumhaus-Forscher a **jungle treehouse** built around
-**spatial orientation** (NMG.3): the storeys of the forest (up/down via climbable
-vines & rope ladders), a **treasure hunt with picture hints in item frames**
-(Bilderrahmen) and an **explorer compass**, and Naschwerk-Tal an extremely colourful
-**candy valley** built around **early maths** (MA.1): an interactive **counting game**
-(Zähl-Naschtisch — "how many bonbons?"), **pattern boards** (red–yellow–red …), a
-drivable **candy cart** and a glowing **rainbow lolli** that slowly cycles colour,
-and Schatzinsel a friendly-pirate **treasure island** built around **spatial
-orientation** (NMG.3 / MA.3) and **counting** (MA.1): a **treasure compass**
-(which way you face, up/down, coins counted), a **treasure map** that reads the way to
-the next clue, a **signpost treasure hunt** with picture & arrow hints across three
-zones (island, dripstone cave, lagoon), **gold-coin collecting & counting** with number
-blocks 0–9, and a two-seat **raft** — a ship-and-dock base you build with one command,
-and Sonnenhof a **magic farm** built around **plants & animals** (NMG): the whole
-**"from seed to bread"** chain (sow → water → harvest → grind → bake), animal care
-at a feeding trough and a food-chain lesson — and, unlike the other themes, it leans
-on existing mods, using **Farming Redo** (seeds, flour, bread) and **Animalia**
-(chicken, cow, sheep …) directly when installed, with its own fallback crop & animals
-otherwise, and Summ-Garten a **bees-and-flowers garden** that **connects NMG with
-geometry**: making **pollination** tangible (a **pollen brush** pollinates flowers and
-blossoms so a blossom grows into a **fruit**), recognising and continuing the **hexagon
-pattern** of the **honeycomb** (MA.2 – form & space), naming the **colours** of the
-flowers and **counting honey drops** (MA.1) at a refilling comb — plus a **honey
-extractor** (nectar → honey) and three zones (flower meadow, orchard, honey store) —
-together with a first-join starter kit, and Saurier-Forscher a friendly **dinosaur
-research station** built around **science** (NMG) and **comparing sizes** (MA /
-Grössen): friendly **herbivore dinosaurs** of very different sizes across three zones
-(valley, fossil dig site, nesting place), **digging up fossils** hidden in the sand
-(the "Ausgraben" heart — bones, teeth, ammonites, petrified eggs with milestones),
-**classifying** dinos (plant-eater? long-neck, horned, plated, duck-bill …),
-**learning dino names** with letter blocks, a **size parade** that lines the dinos up
-small → big, **hatching dino eggs** at the nesting place and a two-seat **research
-jeep**, and Bimmelbahn-Land a **little-train world** built around **media & informatics**
-(MI — sequencing) and **colours** (BG): a central **Hauptbahnhof** connected by rails to
-four **colourful villages** (red, yellow, blue, green), a **route-order task** (the heart
-— the timetable desk hands you a route like *red → blue → yellow* and you must stop at the
-colour station signs **in exactly that order**), a gently simplified **switch & signal
-logic** (a toggleable Weiche and a red/green Signal, with a self-running **demo train**
-that stops at red and goes at green — a soft bridge to Mesecons/Basic-Trains "if–then"),
-**colour matching**, a two-seat **drivable Bimmelbahn** that whistles and steams and a
-**wagon parade** that lines up colourful wagons in order, and Himmelsdorf a **cloud
-city** on a floating island built around **weather & spatial orientation** (NMG): a
-hands-on **weather station** that cycles the sky through **sun → clouds → rain →
-thunderstorm → rainbow**, a glowing **rainbow** block that slowly cycles the **seven
-rainbow colours**, a real **hot-air balloon** you fly (warm air rises — flight physics)
-and an **altimeter** plus up/down quizzes for **oben/unten** (spatial orientation),
-across three zones (rainbow bridge, cloud fields, balloon harbour). Full
-**player guides** (every element, controls, tasks & goals) live in
-[`lernwelt_gluehpilz/ANLEITUNG.md`](lernwelt_gluehpilz/ANLEITUNG.md),
-[`lernwelt_tiefsee/ANLEITUNG.md`](lernwelt_tiefsee/ANLEITUNG.md),
-[`lernwelt_kosmo/ANLEITUNG.md`](lernwelt_kosmo/ANLEITUNG.md),
-[`lernwelt_drachenhort/ANLEITUNG.md`](lernwelt_drachenhort/ANLEITUNG.md),
-[`lernwelt_schrauber/ANLEITUNG.md`](lernwelt_schrauber/ANLEITUNG.md),
-[`lernwelt_eisbaer/ANLEITUNG.md`](lernwelt_eisbaer/ANLEITUNG.md),
-[`lernwelt_baumhaus/ANLEITUNG.md`](lernwelt_baumhaus/ANLEITUNG.md),
-[`lernwelt_naschwerk/ANLEITUNG.md`](lernwelt_naschwerk/ANLEITUNG.md),
-[`lernwelt_schatzinsel/ANLEITUNG.md`](lernwelt_schatzinsel/ANLEITUNG.md),
-[`lernwelt_sonnenhof/ANLEITUNG.md`](lernwelt_sonnenhof/ANLEITUNG.md),
-[`lernwelt_summgarten/ANLEITUNG.md`](lernwelt_summgarten/ANLEITUNG.md),
-[`lernwelt_saurier/ANLEITUNG.md`](lernwelt_saurier/ANLEITUNG.md),
-[`lernwelt_bimmelbahn/ANLEITUNG.md`](lernwelt_bimmelbahn/ANLEITUNG.md) and
-[`lernwelt_himmelsdorf/ANLEITUNG.md`](lernwelt_himmelsdorf/ANLEITUNG.md).
+**The engine — `lernwelt/`**
+This is the reusable part that gives every world the same features: the
+peaceful setup, the learning boards, the animals and logbook, the ranks and
+badges, and the Lehrplan-21 tags. A theme simply switches these on — the
+engine code itself is never touched.
+
+**A theme — e.g. `lernwelt_gluehpilz/`**
+This is one playable world. Every theme folder is built the same way, so once
+you understand one, you understand them all:
+
+| File | What it is |
+|---|---|
+| `init.lua` | **The world itself** — one `register_world{…}` description, plus any extras the engine doesn't cover |
+| `mod.conf` | Luanti's mod card (name + dependencies) |
+| `README.md` | Short description of the world |
+| `ANLEITUNG.md` | Full player guide (German) |
+| `GUIDE.md` | Full player guide (English) |
+| `KINDER-KURZ.md` | One-page sheet for children |
+| `WELT-EINRICHTEN.md` | How to set the world up in Luanti |
+
+> 💡 **In short:** you only ever *play* the themes and *copy* one to make
+> your own. The engine is the shared toolbox underneath — you don't have to
+> understand its inner files to use it.
+
+<details>
+<summary>Inside the engine (only if you're curious)</summary>
+
+The `lernwelt/` engine keeps its work in small modules under `lernwelt/api/`:
+
+| Module | Responsibility |
+|---|---|
+| `config.lua` | peaceful config + `/lernwelt` |
+| `lehrplan.lua` | Lehrplan-21 tagging + `/lernplan` |
+| `blocks.lua` | colour-block generator |
+| `zones.lua` | zones + learning boards |
+| `progress.lua` | ranks, HUD, badges, rewards |
+| `mobs_adapter.lua` | `mobs_redo` / `mcl_mobs` abstraction |
+| `creatures.lua` | spawner, rescue, logbook |
+| `register.lua` | the `register_world()` entry point |
+
+Translations live in `lernwelt/locale/` as `lernwelt.<lang>.tr`.
+
+</details>
 
 ## Translations
 
