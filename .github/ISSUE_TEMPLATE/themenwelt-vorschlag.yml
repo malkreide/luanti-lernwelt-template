@@ -1,0 +1,83 @@
+name: "💡 Themenwelt vorschlagen / Suggest a theme world"
+description: "Eine Idee für eine neue Lernwelt einreichen. / Submit an idea for a new learning world."
+title: "[Themenwelt] "
+labels: ["themenwelt-vorschlag", "enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Danke für deinen Vorschlag! Fülle einfach aus, was du schon weisst –
+        nicht jedes Feld ist Pflicht.
+
+        _Thanks for your suggestion! Just fill in what you already know –
+        not every field is required._
+
+  - type: input
+    id: world-name
+    attributes:
+      label: "Name der Welt / World name"
+      description: "Wie soll die Welt heissen? / What should the world be called?"
+      placeholder: "z.B. Wüsten-Karawane / e.g. Desert Caravan"
+    validations:
+      required: true
+
+  - type: input
+    id: topic
+    attributes:
+      label: "Thema in einem Satz / Theme in one sentence"
+      description: "Worum geht es? / What is it about?"
+      placeholder: "z.B. eine freundliche Wüstenwelt mit Kamelen und Oasen"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: age-group
+    attributes:
+      label: "Altersgruppe / Age group"
+      description: "Für welches Alter ist die Welt gedacht? / Which age is it for?"
+      options:
+        - "3–6 Jahre / years"
+        - "6–9 Jahre / years"
+        - "9–12 Jahre / years"
+        - "Altersübergreifend / All ages"
+    validations:
+      required: false
+
+  - type: textarea
+    id: curriculum
+    attributes:
+      label: "Lehrplan-Bezug / Curriculum link"
+      description: "Welche Lernziele oder Lehrplan-21-Bereiche passen? (Mathematik, NMG, Deutsch …) / Which learning goals or curriculum areas fit?"
+      placeholder: "z.B. MA.1 Zählen, NMG.2 Tiere & Lebensräume"
+    validations:
+      required: false
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "Was passiert in der Welt? / What happens in the world?"
+      description: "Beschreibe die Welt, die Aktivitäten und was Kinder dort lernen/erleben. / Describe the world, the activities and what children learn/experience."
+      placeholder: "z.B. Kinder führen eine Karawane von Oase zu Oase, zählen Wasservorräte, ordnen Tierspuren zu …"
+    validations:
+      required: true
+
+  - type: textarea
+    id: elements
+    attributes:
+      label: "Besondere Elemente / Special elements"
+      description: "Gewünschte Tiere, Fahrzeuge, Mini-Spiele, Blöcke, Farben/Stimmung. / Wanted creatures, vehicles, mini-games, blocks, colours/mood."
+      placeholder: "z.B. reitbares Kamel, Sanddünen-Rutsche, Spur-Suchspiel, warme Sandfarben"
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: "Bestätigung / Confirmation"
+      options:
+        - label: "Die Idee verwendet eigene, nicht urheberrechtlich geschützte Namen/Inhalte. / The idea uses original, non-copyrighted names/content."
+          required: true
+        - label: "Ich habe geprüft, dass es noch keine ähnliche offene Idee gibt. / I checked there is no similar open idea yet."
+          required: false
+        - label: "Ich akzeptiere den Verhaltenskodex. / I agree to the Code of Conduct."
+          required: true

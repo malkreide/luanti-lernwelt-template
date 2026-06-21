@@ -67,6 +67,10 @@ guide (`GUIDE.md`) and a setup note (`WELT-EINRICHTEN.md`).
 | [Bimmelbahn-Land 🚂](lernwelt_bimmelbahn/README.md) | little-train land | media & informatics (MI sequencing), colours (BG) | [ANLEITUNG](lernwelt_bimmelbahn/ANLEITUNG.md) · [EN](lernwelt_bimmelbahn/GUIDE.md) |
 | [Himmelsdorf 🌈](lernwelt_himmelsdorf/README.md) | cloud city | weather & spatial orientation (NMG) | [ANLEITUNG](lernwelt_himmelsdorf/ANLEITUNG.md) · [EN](lernwelt_himmelsdorf/GUIDE.md) |
 
+> 💡 **Got an idea for a new world?** Suggest one with the guided form:
+> [**New issue → 💡 Themenwelt vorschlagen / Suggest a theme world**](https://github.com/malkreide/luanti-lernwelt-template/issues/new/choose).
+> You only fill in what you already know — no coding needed.
+
 ## Prerequisites
 
 - Luanti / Minetest 5.x

@@ -91,6 +91,14 @@ Open a pull request that adds your `lernwelt/locale/lernwelt.<lang>.tr`
 file. A one-line note in the PR mentioning the language (and the spelling
 convention, if relevant — e.g. Swiss vs. standard German) is appreciated.
 
+## Suggesting a theme world
+
+Have an idea for a new learning world but don't want to build it yourself?
+Open a suggestion with the guided form:
+**[New issue → 💡 Themenwelt vorschlagen / Suggest a theme world](https://github.com/malkreide/luanti-lernwelt-template/issues/new/choose)**.
+You only fill in what you already know (name, topic, age group, learning goal,
+wished-for elements) — no coding required.
+
 ## Other contributions
 
 Bug fixes, documentation improvements and new example themes are welcome
