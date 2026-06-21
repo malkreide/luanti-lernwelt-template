@@ -1,0 +1,4 @@
+#    Give a starter kit (logbook, camera, jeep, dino eggs, dig sand,
+#    building blocks, spawn eggs) to each player once, on their first
+#    join. Handy for quick testing.
+lernwelt_saurier_starter_kit (Give starter kit on first join) bool true

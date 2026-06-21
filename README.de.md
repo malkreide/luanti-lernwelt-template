@@ -150,19 +150,22 @@ luanti-lernwelt-template/
 ├── lernwelt_sonnenhof/       # Beispiel-Thema: Sonnenhof (Zauber-Bauernhof; nutzt Farming Redo + Animalia)
 │   ├── init.lua              # register_world{...} + Vom Samen zum Brot + Giesskanne + Zaubermuehle + Trog
 │   └── settingtypes.txt      # Schalter fuer die Startausruestung
-└── lernwelt_summgarten/      # Beispiel-Thema: Summ-Garten (Bienen & Blumen; NMG + Geometrie)
-    ├── init.lua              # register_world{...} + Bestaeubungs-Pinsel + Honigschleuder + Waben-Sechsecke + Honig-Zaehlen
+├── lernwelt_summgarten/      # Beispiel-Thema: Summ-Garten (Bienen & Blumen; NMG + Geometrie)
+│   ├── init.lua              # register_world{...} + Bestaeubungs-Pinsel + Honigschleuder + Waben-Sechsecke + Honig-Zaehlen
+│   └── settingtypes.txt      # Schalter fuer die Startausruestung
+└── lernwelt_saurier/         # Beispiel-Thema: Saurier-Forscher (freundliche Pflanzenfresser-Dinos; NMG + Groessen)
+    ├── init.lua              # register_world{...} + Fossilien ausgraben + Forscher-Jeep + Eier ausbrueten + Groessen-Parade
     └── settingtypes.txt      # Schalter fuer die Startausruestung
 ```
 
-Dabei sind eine minimale Kopiervorlage, **`lernwelt_beispiel`**, sowie elf voll
+Dabei sind eine minimale Kopiervorlage, **`lernwelt_beispiel`**, sowie zwölf voll
 ausgebaute Beispiel-Themen: **`lernwelt_gluehpilz`** (Gluehpilz-Wald),
 **`lernwelt_tiefsee`** (Tiefsee-Retter), **`lernwelt_kosmo`** (Kosmo-Station),
 **`lernwelt_drachenhort`** (Drachenhort), **`lernwelt_schrauber`**
 (Schrauber-Werkstatt), **`lernwelt_eisbaer`** (Eisbaer-Bucht),
 **`lernwelt_baumhaus`** (Baumhaus-Forscher), **`lernwelt_naschwerk`**
-(Naschwerk-Tal), **`lernwelt_schatzinsel`** (Schatzinsel), **`lernwelt_sonnenhof`** (Sonnenhof)
-und **`lernwelt_summgarten`** (Summ-Garten).
+(Naschwerk-Tal), **`lernwelt_schatzinsel`** (Schatzinsel), **`lernwelt_sonnenhof`** (Sonnenhof),
+**`lernwelt_summgarten`** (Summ-Garten) und **`lernwelt_saurier`** (Saurier-Forscher).
 Sie zeigen, wie ein Thema **eigene Zusatz-Inhalte** zusätzlich zur Engine mitbringen
 kann — der Glühpilz-Wald einen reitbaren Leucht-Käfer plus **Tag-Nacht-Pilze** (ein
 kindgesteuerter Tag-Nacht-Wechsel), die Tiefsee eine fahrbare Tauchkapsel, die
@@ -197,7 +200,16 @@ und Blüten, sodass aus einer Blüte eine **Frucht** wächst), das **Sechseck-Mu
 **Waben** (MA.2 – Form & Raum) erkennen und fortsetzen, **Farben** der Blumen benennen
 und **Honigtropfen zählen** (MA.1) an einer sich wieder füllenden Wabe — plus
 **Honigschleuder** (Nektar → Honig) und drei Zonen (Blumenwiese, Obstgarten,
-Honiglager) — je mit einer Startausrüstung beim ersten Join. Vollständige
+Honiglager) — je mit einer Startausrüstung beim ersten Join, und der Saurier-Forscher
+eine freundliche **Dinosaurier-Forscherstation** rund um **NMG** und den
+**Grössenvergleich** (MA / Grössen): freundliche **Pflanzenfresser-Dinos** ganz
+unterschiedlicher Grösse über drei Zonen (Tal, Fossilien-Grabungsstätte, Nistplatz),
+das **Ausgraben von Fossilien** aus dem Sand (das Herzstück „Ausgraben" — Knochen,
+Zähne, Ammoniten, versteinerte Eier mit Meilensteinen), das **Klassifizieren** der
+Dinos (Pflanzenfresser? Langhals, Hornträger, Plattendino, Entenschnabel …), das
+**Lernen der Dino-Namen** mit Buchstaben-Blöcken, eine **Grössen-Parade**, die die
+Dinos von klein nach gross aufstellt, das **Ausbrüten von Dino-Eiern** am Nistplatz und
+einen zweisitzigen **Forscher-Jeep**. Vollständige
 **Spielanleitungen** dazu (alle Elemente, Bedienung, Aufgaben & Ziele) stehen in
 [`lernwelt_gluehpilz/ANLEITUNG.md`](lernwelt_gluehpilz/ANLEITUNG.md),
 [`lernwelt_tiefsee/ANLEITUNG.md`](lernwelt_tiefsee/ANLEITUNG.md),
@@ -208,8 +220,9 @@ Honiglager) — je mit einer Startausrüstung beim ersten Join. Vollständige
 [`lernwelt_baumhaus/ANLEITUNG.md`](lernwelt_baumhaus/ANLEITUNG.md),
 [`lernwelt_naschwerk/ANLEITUNG.md`](lernwelt_naschwerk/ANLEITUNG.md),
 [`lernwelt_schatzinsel/ANLEITUNG.md`](lernwelt_schatzinsel/ANLEITUNG.md),
-[`lernwelt_sonnenhof/ANLEITUNG.md`](lernwelt_sonnenhof/ANLEITUNG.md) und
-[`lernwelt_summgarten/ANLEITUNG.md`](lernwelt_summgarten/ANLEITUNG.md).
+[`lernwelt_sonnenhof/ANLEITUNG.md`](lernwelt_sonnenhof/ANLEITUNG.md),
+[`lernwelt_summgarten/ANLEITUNG.md`](lernwelt_summgarten/ANLEITUNG.md) und
+[`lernwelt_saurier/ANLEITUNG.md`](lernwelt_saurier/ANLEITUNG.md).
 
 ## Übersetzungen
 
