@@ -8,6 +8,10 @@
 ![Bewegung und Sport](https://img.shields.io/badge/Bewegung%20und%20Sport-BS.2-ef6c00)
 ![Deutsch (Sprache)](https://img.shields.io/badge/Deutsch%20(Sprache)-D.2-c62828)
 
+<!-- Screenshot-Slot — sobald docs/img/lernwelt_eisbaer.png existiert, die nächste Zeile einkommentieren:
+![Screenshot der Welt lernwelt_eisbaer](../docs/img/lernwelt_eisbaer.png)
+-->
+
 Ein kinderfreundliches **Lernwelt-Thema für [Luanti](https://www.luanti.org/)** (früher Minetest)
 rund um eine **kalte Polarwelt**. Gedacht zum **gemeinsamen Spielen von Eltern und
 Kind** (ca. 6–9 Jahre) – spielerisch passend zum Schweizer **Lehrplan 21, 1./2. Zyklus**

@@ -8,6 +8,10 @@
 ![Medien und Informatik](https://img.shields.io/badge/Medien%20und%20Informatik-MI.1-6a1b9a)
 ![Natur, Mensch, Gesellschaft](https://img.shields.io/badge/Natur,%20Mensch,%20Gesellschaft-NMG.7-2e7d32)
 
+<!-- Screenshot-Slot — sobald docs/img/lernwelt_bimmelbahn.png existiert, die nächste Zeile einkommentieren:
+![Screenshot der Welt lernwelt_bimmelbahn](../docs/img/lernwelt_bimmelbahn.png)
+-->
+
 Ein kinderfreundliches **Lernwelt-Thema für [Luanti](https://www.luanti.org/)** (früher Minetest)
 rund um einen **Hauptbahnhof und mehrere bunte Dörfer**, die durch **Schienen** verbunden sind.
 Gedacht zum **gemeinsamen Spielen von Eltern und Kind** (ca. 5–7 Jahre) – spielerisch passend

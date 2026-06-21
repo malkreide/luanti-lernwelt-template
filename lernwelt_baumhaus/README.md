@@ -6,6 +6,10 @@
 ![Deutsch (Sprache)](https://img.shields.io/badge/Deutsch%20(Sprache)-D.2-c62828)
 ![Mathematik](https://img.shields.io/badge/Mathematik-MA.3-1565c0)
 
+<!-- Screenshot-Slot — sobald docs/img/lernwelt_baumhaus.png existiert, die nächste Zeile einkommentieren:
+![Screenshot der Welt lernwelt_baumhaus](../docs/img/lernwelt_baumhaus.png)
+-->
+
 Ein **Lernwelt-Thema für [Luanti](https://www.luanti.org/)** (früher Minetest) rund um
 ein **Dschungel-Baumhaus**. Kinder erkunden die **Stockwerke des Waldes** – oben das
 **Blätterdach**, unten der **Fluss** und die **alten Ruinen** – und üben dabei

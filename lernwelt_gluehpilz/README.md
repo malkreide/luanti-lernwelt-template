@@ -6,6 +6,10 @@
 ![Natur, Mensch, Gesellschaft](https://img.shields.io/badge/Natur,%20Mensch,%20Gesellschaft-NMG.1-2e7d32)
 ![Deutsch (Sprache)](https://img.shields.io/badge/Deutsch%20(Sprache)-D.2-c62828)
 
+<!-- Screenshot-Slot — sobald docs/img/lernwelt_gluehpilz.png existiert, die nächste Zeile einkommentieren:
+![Screenshot der Welt lernwelt_gluehpilz](../docs/img/lernwelt_gluehpilz.png)
+-->
+
 Ein besonders **niederschwelliges, „kuscheliges" Lernwelt-Thema für
 [Luanti](https://www.luanti.org/)** (früher Minetest) rund um ein **gemütliches
 Pilzreich** – gedacht als **ideale Erstwelt** für die Jüngsten. Zum **gemeinsamen Spielen
